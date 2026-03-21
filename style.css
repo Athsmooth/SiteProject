@@ -1,0 +1,15 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #333;
+  color: white;
+  transition: top 0.3s ease-in-out; /* This makes it slide */
+  z-index: 9999; /* Keeps it above full-screen embeds */
+}
+
+/* This class will be applied by JS to hide it */
+.nav-up {
+  top: -70px !important; /* Slightly more than height to hide shadow */
+}
