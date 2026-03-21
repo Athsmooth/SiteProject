@@ -1,110 +1,122 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // --- 1. THE DATA LISTS ---
-    const gameFiles = [
-        "html5/clicker.htm", 
-        "html5/run3.html", 
-        "html5/slope.html", 
-        "html5/papas-burgeria.html", 
-        "html5/eaglercraft-1.5.2.html", 
-        "html5/circloO2.html", 
-        "html5/stacktris.html",
-        "html5/slither.html",
-        "html5/krecakmon.html"
-    ];
+document.addEventListener("DOMContentLoaded", async () => {
+    // --- 1. FETCH DATA ---
+    let gameFiles = [];
+    try {
+        const response = await fetch('./games-list.json');
+        gameFiles = await response.json();
+    } catch (err) {
+        console.warn("Automation: games-list.json not found.");
+    }
 
-    const assetFiles = [
-        "assets/click-cookie-thumbnail.jpeg", 
-        "assets/run3-thumbnail.jpeg", 
-        "assets/slope-thumbnail.jpeg", 
-        "assets/papas-burgeria-thumbnail.jpeg", 
-        "assets/minecraft-thumbnail.jpeg", 
-        "assets/circlo0-thumbnail.jpeg", 
-        "assets/stacktris-thumbnail.jpeg",
-        "assets/slither.jpeg"
-        // Note: krecakmon is missing a thumbnail here to test the fallback
-    ];
-
-    // --- 2. THE STYLES ---
+    // --- 2. STYLES ---
     const style = document.createElement('style');
     style.textContent = `
-        .my-nav { background: #1a1a1a; padding: 15px; display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; border-bottom: 2px solid #333; position: sticky; top: 0; z-index: 1000; }
-        .my-nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .panic-btn { background: #ff4444; padding: 8px 16px; border-radius: 4px; color: white; cursor: pointer; border: none; font-weight: bold; }
+        :root { --accent: #ff9800; --bg: #1a1a1a; --panel: #2a2a2a; }
         
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, 200px); gap: 20px; justify-content: center; margin: 30px auto; max-width: 900px; }
-        .game-link { text-decoration: none; transition: 0.2s; }
-        
-        .projects-grid img { width: 200px; height: 200px; border-radius: 8px; border: 2px solid transparent; transition: 0.2s; object-fit: cover; }
-        .game-link:hover img { transform: scale(1.05); border-color: #ff9800; }
-
-        /* Style for buttons when thumbnail is missing */
-        .no-thumb { 
-            width: 200px; 
-            height: 200px; 
-            background: #2a2a2a; 
-            color: #ff9800; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            text-transform: uppercase;
-            text-align: center;
-            padding: 15px;
-            box-sizing: border-box;
-            border: 2px solid #444;
-            font-family: sans-serif;
-            transition: 0.2s;
+        .my-nav { 
+            background: var(--bg); padding: 10px 20px; 
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; 
+            font-family: 'Segoe UI', sans-serif; border-bottom: 2px solid #333; 
+            position: sticky; top: 0; z-index: 1000; gap: 15px;
         }
-        .game-link:hover .no-thumb { 
-            transform: scale(1.05); 
-            border-color: #ff9800; 
-            background: #333; 
+
+        .nav-left { display: flex; align-items: center; gap: 20px; }
+        .nav-logo { color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+        
+        /* Search Bar Styling */
+        .search-container { position: relative; flex-grow: 1; max-width: 400px; }
+        .search-input { 
+            width: 100%; background: var(--panel); border: 1px solid #444; 
+            padding: 8px 15px; border-radius: 20px; color: white; outline: none;
+            transition: 0.3s;
+        }
+        .search-input:focus { border-color: var(--accent); box-shadow: 0 0 8px rgba(255,152,0,0.3); }
+
+        .nav-right { display: flex; gap: 10px; align-items: center; }
+        
+        .nav-btn { 
+            background: var(--panel); color: white; border: none; 
+            padding: 8px 15px; border-radius: 6px; cursor: pointer; 
+            font-weight: 600; transition: 0.2s; font-size: 0.9rem;
+        }
+        .nav-btn:hover { background: #3a3a3a; }
+        .panic-btn { background: #ff4444; }
+        .panic-btn:hover { background: #cc0000; }
+
+        /* Grid Setup */
+        .projects-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 20px; padding: 20px; max-width: 1300px; margin: 0 auto; 
+        }
+        .game-link { text-decoration: none; transition: 0.2s; }
+        .game-card { 
+            position: relative; border-radius: 10px; overflow: hidden; 
+            background: #000; border: 2px solid #333; aspect-ratio: 1/1; 
+        }
+        .game-preview { 
+            width: 1024px; height: 1024px; transform: scale(0.18); 
+            transform-origin: 0 0; border: none; pointer-events: none; 
+        }
+        .game-label { 
+            position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.8); 
+            color: white; font-size: 11px; padding: 5px; text-align: center; 
         }
     `;
     document.head.appendChild(style);
 
-    // --- 3. INJECT TOP BAR ---
+    // --- 3. INJECT MENUBAR ---
     const navHTML = `
-        <div class="my-nav">
-            <a href="index.html">Krecak Kreations</a>
-            <div class="links">
-                <a href="index.html">Home</a>
-                <button class="panic-btn" id="panicButton">PANIC</button>
+        <nav class="my-nav">
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">Krecak Kreations</a>
+                <div class="search-container">
+                    <input type="text" id="gameSearch" class="search-input" placeholder="Search 300+ games...">
+                </div>
             </div>
-        </div>`;
+            <div class="nav-right">
+                <button class="nav-btn" id="randomBtn">Random</button>
+                <button class="nav-btn panic-btn" id="panicButton">PANIC</button>
+            </div>
+        </nav>`;
     document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-    document.getElementById('panicButton').onclick = () => {
-        window.open("https://drive.google.com", "_blank");
+    // --- 4. GRID LOGIC ---
+    const gridContainer = document.querySelector('.projects-placeholder');
+    
+    const renderGrid = (filter = "") => {
+        if (!gridContainer) return;
+        let html = '<div class="projects-grid">';
+        
+        const filteredGames = gameFiles.filter(g => {
+            const name = g.file.split('/').pop().toLowerCase();
+            return name.includes(filter.toLowerCase());
+        });
+
+        filteredGames.forEach(game => {
+            const cleanName = game.file.split('/').pop().split('.')[0].replace(/-/g, ' ');
+            html += `
+                <a href="${game.file}" class="game-link">
+                    <div class="game-card">
+                        <iframe class="game-preview" src="${game.file}" loading="lazy"></iframe>
+                        <div class="game-label">${cleanName}</div>
+                    </div>
+                </a>`;
+        });
+        gridContainer.innerHTML = html + '</div>';
     };
 
-    // --- 4. INJECT GAME GRID ---
-    const gridContainer = document.querySelector('.projects-placeholder');
-    if (gridContainer) {
-        let gridHTML = '<div class="projects-grid">';
-        
-        gameFiles.forEach((file, index) => {
-            const img = assetFiles[index];
-            
-            // Extract and clean the filename (e.g., "papas-burgeria.html" -> "papas burgeria")
-            const rawName = file.split('/').pop().split('.')[0];
-            const cleanName = rawName.replace(/-/g, ' ');
+    // --- 5. BUTTON EVENTS ---
+    document.getElementById('panicButton').onclick = () => window.open("https://drive.google.com", "_blank");
+    
+    document.getElementById('randomBtn').onclick = () => {
+        const randomGame = gameFiles[Math.floor(Math.random() * gameFiles.length)];
+        window.location.href = randomGame.file;
+    };
 
-            gridHTML += `<a href="${file}" class="game-link">`;
-            
-            if (img && img.trim() !== "") {
-                // Use [alt text](https://accessibility.olemiss.edu/home/web/adding-alt-text-to-images/) for accessibility
-                gridHTML += `<img src="${img}" alt="${cleanName}">`;
-            } else {
-                // Fallback: Show the cleaned filename in a styled box
-                gridHTML += `<div class="no-thumb">${cleanName}</div>`;
-            }
-            
-            gridHTML += `</a>`;
-        });
-        
-        gridHTML += '</div>';
-        gridContainer.innerHTML = gridHTML;
-    }
+    document.getElementById('gameSearch').oninput = (e) => {
+        renderGrid(e.target.value);
+    };
+
+    // Initial Load
+    renderGrid();
 });
