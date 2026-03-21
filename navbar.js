@@ -8,22 +8,22 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.warn("Automation: games-list.json not found.");
     }
 
-    // --- 2. STYLES ---
+    // --- 2. STYLES (Memory & Rendering Optimized) ---
     const style = document.createElement('style');
     style.textContent = `
         :root { --accent: #ff9800; --bg: #1a1a1a; --panel: #2a2a2a; }
         
+        body { margin: 0; background: var(--bg); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
         .my-nav { 
             background: var(--bg); padding: 10px 20px; 
             display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; 
-            font-family: 'Segoe UI', sans-serif; border-bottom: 2px solid #333; 
-            position: sticky; top: 0; z-index: 1000; gap: 15px;
+            border-bottom: 2px solid #333; position: sticky; top: 0; z-index: 1000; gap: 15px;
         }
 
         .nav-left { display: flex; align-items: center; gap: 20px; }
         .nav-logo { color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
         
-        /* Search Bar Styling */
         .search-container { position: relative; flex-grow: 1; max-width: 400px; }
         .search-input { 
             width: 100%; background: var(--panel); border: 1px solid #444; 
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         .search-input:focus { border-color: var(--accent); box-shadow: 0 0 8px rgba(255,152,0,0.3); }
 
         .nav-right { display: flex; gap: 10px; align-items: center; }
-        
         .nav-btn { 
             background: var(--panel); color: white; border: none; 
             padding: 8px 15px; border-radius: 6px; cursor: pointer; 
@@ -41,25 +40,37 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         .nav-btn:hover { background: #3a3a3a; }
         .panic-btn { background: #ff4444; }
-        .panic-btn:hover { background: #cc0000; }
 
-        /* Grid Setup */
+        /* Optimized Grid */
         .projects-grid { 
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-            gap: 20px; padding: 20px; max-width: 1300px; margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 25px; padding: 25px; max-width: 1600px; margin: 0 auto; 
         }
-        .game-link { text-decoration: none; transition: 0.2s; }
+        
+        .game-link { text-decoration: none; color: inherit; }
+
         .game-card { 
-            position: relative; border-radius: 10px; overflow: hidden; 
-            background: #000; border: 2px solid #333; aspect-ratio: 1/1; 
+            position: relative; border-radius: 12px; overflow: hidden; 
+            background: #000; border: 2px solid #333; aspect-ratio: 16 / 9;
+            transition: transform 0.2s ease, border-color 0.2s;
+            /* RAM Optimization: Don't render if off-screen */
+            content-visibility: auto;
+            contain-intrinsic-size: 220px 124px;
         }
-        .game-preview { 
-            width: 1024px; height: 1024px; transform: scale(0.18); 
-            transform-origin: 0 0; border: none; pointer-events: none; 
+        
+        .game-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+
+        .game-thumbnail { 
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            background: #222; /* Placeholder color while loading */
         }
+
         .game-label { 
-            position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.8); 
-            color: white; font-size: 11px; padding: 5px; text-align: center; 
+            position: absolute; bottom: 0; width: 100%; 
+            background: linear-gradient(transparent, rgba(0,0,0,0.9)); 
+            color: white; font-size: 13px; padding: 15px 5px 8px 5px; text-align: center;
+            font-weight: 500; pointer-events: none;
         }
     `;
     document.head.appendChild(style);
@@ -74,41 +85,82 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
             </div>
             <div class="nav-right">
-                <button class="nav-btn" id="randomBtn">Random</button>
+                <button class="nav-btn" id="randomBtn">Random Game</button>
                 <button class="nav-btn panic-btn" id="panicButton">PANIC</button>
             </div>
         </nav>`;
     document.body.insertAdjacentHTML('afterbegin', navHTML);
 
-    // --- 4. GRID LOGIC ---
-    const gridContainer = document.querySelector('.projects-placeholder');
-    
-    const renderGrid = (filter = "") => {
-        if (!gridContainer) return;
-        let html = '<div class="projects-grid">';
+    // --- 4. PAGINATED GRID LOGIC (RAM SAVER) ---
+    const gridPlaceholder = document.querySelector('.projects-placeholder');
+    let filteredGames = [];
+    let currentIndex = 0;
+    const BATCH_SIZE = 24; // Number of games to load at a time
+
+    const renderBatch = () => {
+        if (!gridPlaceholder) return;
         
-        const filteredGames = gameFiles.filter(g => {
+        let grid = document.querySelector('.projects-grid');
+        if (!grid) {
+            grid = document.createElement('div');
+            grid.className = 'projects-grid';
+            gridPlaceholder.appendChild(grid);
+        }
+
+        const nextBatch = filteredGames.slice(currentIndex, currentIndex + BATCH_SIZE);
+        
+        nextBatch.forEach(game => {
+            const rawFileName = game.file.split('/').pop().split('.')[0];
+            
+            // Clean up titles: Decode %20, replace - with space, and Title Case
+            const decodedName = decodeURIComponent(rawFileName).replace(/[-_]/g, ' ');
+            const cleanName = decodedName.split(' ')
+                .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+                .join(' ');
+
+            const cardHTML = `
+                <a href="${game.file}" class="game-link">
+                    <div class="game-card">
+                        <img class="game-thumbnail" 
+                             src="assets/thumbnails/${rawFileName}.png" 
+                             alt="${cleanName}"
+                             loading="lazy"
+                             onerror="this.src='assets/default-icon.png'">
+                        <div class="game-label">${cleanName}</div>
+                    </div>
+                </a>`;
+            grid.insertAdjacentHTML('beforeend', cardHTML);
+        });
+
+        currentIndex += BATCH_SIZE;
+    };
+
+    const renderGrid = (filter = "") => {
+        currentIndex = 0;
+        gridPlaceholder.innerHTML = ''; // Wipe DOM to free up RAM
+        
+        filteredGames = gameFiles.filter(g => {
             const name = g.file.split('/').pop().toLowerCase();
             return name.includes(filter.toLowerCase());
         });
 
-        filteredGames.forEach(game => {
-            const cleanName = game.file.split('/').pop().split('.')[0].replace(/-/g, ' ');
-            html += `
-                <a href="${game.file}" class="game-link">
-                    <div class="game-card">
-                        <iframe class="game-preview" src="${game.file}" loading="lazy"></iframe>
-                        <div class="game-label">${cleanName}</div>
-                    </div>
-                </a>`;
-        });
-        gridContainer.innerHTML = html + '</div>';
+        renderBatch();
+    };
+
+    // Infinite Scroll Event
+    window.onscroll = () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 800) {
+            if (currentIndex < filteredGames.length) {
+                renderBatch();
+            }
+        }
     };
 
     // --- 5. BUTTON EVENTS ---
-    document.getElementById('panicButton').onclick = () => window.open("https://drive.google.com", "_blank");
+    document.getElementById('panicButton').onclick = () => window.open("https://classroom.google.com", "_blank");
     
     document.getElementById('randomBtn').onclick = () => {
+        if (gameFiles.length === 0) return;
         const randomGame = gameFiles[Math.floor(Math.random() * gameFiles.length)];
         window.location.href = randomGame.file;
     };
