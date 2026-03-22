@@ -1,4 +1,9 @@
 {
+  "name": "krecak-kreations",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node generate-games.js"
+  },
   "dependencies": {
     "puppeteer": "^24.40.0"
   }
