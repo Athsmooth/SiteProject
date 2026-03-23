@@ -1,15 +1,27 @@
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px; /* Adjust height as needed */
-  background-color: #333;
-  color: white;
-  transition: top 0.3s ease-in-out; /* This makes it slide */
-  z-index: 9999; /* Keeps it above full-screen embeds */
-}
+:root { --accent: #ff9800; --bg: #090412; --panel: #1a1a2e; --text: #ffffff; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: sans-serif; }
 
-/* This class will be applied by JS to hide it */
-.nav-up {
-  top: -70px !important; /* Slightly more than height to hide shadow */
+#navbar {
+  position: fixed; top: 0; width: 100%; height: 65px;
+  background: rgba(9, 4, 18, 0.95); backdrop-filter: blur(10px);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; z-index: 9999; border-bottom: 1px solid #333;
+  transition: top 0.3s; box-sizing: border-box;
 }
+.nav-up { top: -75px !important; }
+.nav-logo { color: var(--accent); font-weight: bold; text-decoration: none; font-size: 1.5rem; }
+.search-input { background: #16121e; border: 1px solid #444; padding: 8px 15px; border-radius: 20px; color: white; }
+.nav-btn { background: #2a2a4a; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-left: 5px; }
+.panic-btn { background: #ff4444; font-weight: bold; }
+
+.projects-placeholder { padding-top: 85px; max-width: 1400px; margin: 0 auto; }
+.section-header { margin: 30px 20px 10px; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; text-transform: uppercase; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px; }
+
+.game-card { 
+  background: var(--panel); border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; 
+  position: relative; border: 1px solid #222; text-decoration: none; color: white; display: block;
+}
+.game-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.game-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+.game-label { position: absolute; bottom: 0; width: 100%; padding: 20px 10px 5px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); text-align: center; }
