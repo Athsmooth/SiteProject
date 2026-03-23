@@ -35,7 +35,7 @@ async function captureGame(browser, filePath, gamesDir, thumbDir) {
         // HARD 12-SECOND LIMIT FOR THE ENTIRE LOGIC
         await Promise.race([
             (async () => {
-                await page.goto(`file://${filePath}`, { waitUntil: 'domcontentloaded', timeout: 7000 });
+                await page.goto(`file://${filePath}`, { waitUntil: 'domcontentloaded', timeout: 10000 });
                 await new Promise(r => setTimeout(r, 2000));
                 await page.screenshot({ path: thumbPath, type: 'jpeg', quality: 50 });
             })(),

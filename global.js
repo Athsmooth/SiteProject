@@ -1,61 +1,74 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    // 1. AUTO-INJECT NAVBAR
-    if (!document.getElementById('navbar')) {
-        const navHTML = `
-            <nav id="navbar">
-                <div class="nav-left">
-                    <a href="/" class="nav-logo">KRECAK</a>
-                    <div class="search-container">
-                        <input type="text" id="gameSearch" class="search-input" placeholder="Search games...">
-                    </div>
-                </div>
-                <div class="nav-right">
-                    <button class="nav-btn" id="randomBtn">Random</button>
-                    <button class="nav-btn panic-btn" id="panicButton">PANIC!</button>
-                </div>
-            </nav>`;
-        document.body.insertAdjacentHTML('afterbegin', navHTML);
+const fs = require('fs');
+const path = require('path');
+
+// root folders to scan
+const foldersToScan = ['./html5', './krecak-games'];
+const thumbDir = './assets/thumbnails';
+const outputFile = './games-list.json';
+const placeholderPath = "/assets/thumbnails/placeholder.jpg";
+
+const injectionTags = `
+    <link rel="stylesheet" href="/style.css">
+    <script src="/global.js" defer></script>
+`;
+
+const getAllFiles = (dir) => {
+    let res = [];
+    if (!fs.existsSync(dir)) return res;
+    fs.readdirSync(dir).forEach(file => {
+        const fullPath = path.join(dir, file);
+        if (fs.statSync(fullPath).isDirectory()) {
+            res = res.concat(getAllFiles(fullPath));
+        } else if (file.endsWith('.html')) {
+            res.push(fullPath);
+        }
+    });
+    return res;
+};
+
+let allHtmlFiles = [];
+foldersToScan.forEach(folder => {
+    allHtmlFiles = allHtmlFiles.concat(getAllFiles(folder));
+});
+
+const gameData = allHtmlFiles.map(filePath => {
+    const normalizedPath = filePath.replace(/\\/g, '/').replace(/^\.\//, '');
+    const pathParts = normalizedPath.split('/');
+    
+    // Check if it's a Krecak game based on the root folder name
+    const isKrecak = pathParts[0] === 'krecak-games';
+    
+    // Get game name from the folder it sits in
+    let gameSlug = pathParts.length > 1 ? pathParts[pathParts.length - 2] : path.basename(filePath, '.html');
+    
+    // Handle edge case where html is directly in the root of the category folder
+    if (gameSlug === 'html5' || gameSlug === 'krecak-games') {
+        gameSlug = path.basename(filePath, '.html');
     }
 
-    // 2. PANIC & SCROLL
-    const panicBtn = document.getElementById('panicButton');
-    if (panicBtn) panicBtn.onclick = () => window.location.href = "https://drive.google.com";
-    
-    let lastScrollTop = 0;
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('navbar');
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop && st > 65) nav.classList.add('nav-up');
-        else nav.classList.remove('nav-up');
-        lastScrollTop = st;
-    });
+    // --- AUTO INJECTION ---
+    try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        if (!content.includes('global.js')) {
+            if (content.includes('</head>')) {
+                content = content.replace('</head>', `${injectionTags}\n</head>`);
+            } else {
+                content = injectionTags + content;
+            }
+            fs.writeFileSync(filePath, content);
+            console.log(`- Auto-Injected: ${normalizedPath}`);
+        }
+    } catch (e) {
+        console.log(`- Error updating ${filePath}`);
+    }
 
-    // 3. HOME PAGE GRID AUTO-RENDER
-    const gridContainer = document.querySelector('.projects-placeholder');
-    if (!gridContainer) return; // Stop here if we aren't on the home page
-
-    const response = await fetch('/games-list.json');
-    const games = await response.json();
-
-    const render = (filter = "") => {
-        const filtered = games.filter(g => g.name.toLowerCase().includes(filter.toLowerCase()));
-        const krecak = filtered.filter(g => g.isKrecak);
-        const standard = filtered.filter(g => !g.isKrecak);
-
-        const card = (g) => `
-            <a href="/${g.file}" class="game-card">
-                <img src="/${g.thumb}" class="game-thumbnail">
-                <div class="game-label">${g.name.replace(/[-_]/g, ' ')}</div>
-            </a>`;
-
-        gridContainer.innerHTML = `
-            ${krecak.length ? `<h2 class="section-header">Krecak Originals</h2><div class="projects-grid">${krecak.map(card).join('')}</div>` : ''}
-            ${standard.length ? `<h2 class="section-header">All Games</h2><div class="projects-grid">${standard.map(card).join('')}</div>` : ''}
-        `;
+    return {
+        name: gameSlug,
+        file: '/' + normalizedPath,
+        thumb: fs.existsSync(path.join(thumbDir, `${gameSlug}.jpg`)) ? `/assets/thumbnails/${gameSlug}.jpg` : placeholderPath,
+        isKrecak: isKrecak
     };
-
-    const searchInput = document.getElementById('gameSearch');
-    if (searchInput) searchInput.addEventListener('input', (e) => render(e.target.value));
-    
-    render();
 });
+
+fs.writeFileSync(outputFile, JSON.stringify(gameData, null, 2));
+console.log(`\n✅ SYNC SUCCESS: Scanned ${allHtmlFiles.length} games across html5/ and krecak-games/`);
