@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Pro - Flicker Free Edition</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0b0b0b; overflow: hidden; }
+        
+        .game-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            background: #70c5ce;
+            border: 6px solid #1a1a1a;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        canvas { display: block; cursor: pointer; background: #70c5ce; }
+
+        .overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            display: none; flex-direction: column; justify-content: center;
+            align-items: center; background: rgba(0,0,0,0.85); color: white; z-index: 100;
+            text-align: center; padding: 25px; backdrop-filter: blur(8px);
+        }
+        .active { display: flex; }
+
+        .title { font-size: 3.2rem; color: #f1c40f; text-shadow: 4px 4px 0 #d35400; margin-bottom: 20px; font-weight: 900; line-height: 0.9; }
+
+        .btn {
+            background: #f39c12; border: none; padding: 16px 30px; color: white;
+            font-size: 1.3rem; font-weight: 900; border-radius: 12px; cursor: pointer;
+            box-shadow: 0 6px 0 #b36b00; margin: 8px; text-transform: uppercase; transition: 0.1s; width: 220px;
+        }
+        .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #b36b00; }
+        .btn-shop { background: #27ae60; box-shadow: 0 6px 0 #1e8449; }
+        .btn-back { background: #c0392b; box-shadow: 0 6px 0 #7f1911; margin-bottom: 20px; width: 90%; }
+
+        .shop-box { width: 100%; flex-grow: 1; overflow-y: auto; background: rgba(255,255,255,0.05); border-radius: 15px; padding: 10px; border: 2px solid rgba(255,255,255,0.1); }
+        .shop-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px; margin-bottom: 8px; background: #2c3e50; border-radius: 12px;
+        }
+        .shop-item.equipped { background: #16a085; border: 2px solid white; }
+        .item-name { font-weight: 800; font-size: 1rem; color: white; text-align: left;}
+        .item-price { color: #f1c40f; font-size: 0.8rem; display: block;}
+
+        #customUpload { 
+            margin-top: 10px; padding: 15px; background: rgba(255,255,255,0.08); 
+            border-radius: 15px; border: 2px dashed #f1c40f; display: none; width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container" id="gameParent">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <div id="menuOverlay" class="overlay active">
+            <h1 class="title">BIRDY<br>PRO</h1>
+            <button class="btn" onclick="startGame()">Start Game</button>
+            <button class="btn btn-shop" onclick="toggleShop(true)">The Shop</button>
+            <div id="customUpload">
+                <p style="text-transform: uppercase; font-weight: 900; color: #f1c40f; margin-bottom: 15px; font-size: 0.8rem;">📸 Custom Skin Ready</p>
+                <input type="file" id="fileInput" accept="image/*" style="width: 100%; color: white; font-size: 0.7rem;">
+            </div>
+        </div>
+
+        <div id="shopOverlay" class="overlay" style="justify-content: flex-start; padding-top: 20px;">
+            <h1 class="title" style="font-size: 2rem; margin-bottom: 10px;">SHOP</h1>
+            <button class="btn btn-back" onclick="toggleShop(false)">Back Home</button>
+            <div class="shop-box" id="shopList"></div>
+        </div>
+
+        <div id="deathOverlay" class="overlay">
+            <h1 class="title" style="color: #e74c3c;">CRASH!</h1>
+            <div id="statsBox" style="margin-bottom: 25px; font-size: 1.5rem; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 18px; width: 85%; font-weight: 800;"></div>
+            <button class="btn" onclick="startGame()">Try Again</button>
+            <button class="btn btn-shop" onclick="backToMenu()">Main Menu</button>
+        </div>
+    </div>
+
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    let gameData = JSON.parse(localStorage.getItem('flappyFinalV6')) || {
+        coins: 0, 
+        highScore: 0,
+        unlocked: ['skin_gold', 'theme_day'],
+        equippedSkin: 'skin_gold',
+        equippedTheme: 'theme_day',
+        customImage: null
+    };
+
+    const save = () => localStorage.setItem('flappyFinalV6', JSON.stringify(gameData));
+
+    const ITEMS = [
+        { id: 'skin_gold', type: 'skin', name: 'Classic Gold', price: 0, color: '#f1c40f' },
+        { id: 'skin_blue', type: 'skin', name: 'Sky Wing', price: 50, color: '#3498db' },
+        { id: 'skin_red', type: 'skin', name: 'Fire Wing', price: 150, color: '#e74c3c' },
+        { id: 'custom_slot', type: 'upgrade', name: 'Custom Photo', price: 500 },
+        { id: 'theme_day', type: 'theme', name: 'Blue Sky', price: 0, bg: '#70c5ce', pipe: '#2ecc71' },
+        { id: 'theme_night', type: 'theme', name: 'Night', price: 100, bg: '#2c3e50', pipe: '#1abc9c' }
+    ];
+
+    let isRunning = false;
+    let score = 0;
+    let pipesPassed = 0;
+    let gameSpeed = 4.8;      
+    let horizSpace = 380;   // Even farther apart
+    let currentGap = 210;   // Slightly wider gaps for fairness
+    let birdY = 300;
+    let birdV = 0;
+    let pipes = [];
+    let customImg = new Image();
+    if(gameData.customImage) customImg.src = gameData.customImage;
+
+    function startGame() {
+        score = 0; pipesPassed = 0; gameSpeed = 4.8; currentGap = 210; 
+        birdY = 300; birdV = 0; pipes = [];
+        isRunning = true;
+        document.querySelectorAll('.overlay').forEach(o => o.classList.remove('active'));
+    }
+
+    function backToMenu() {
+        document.querySelectorAll('.overlay').forEach(o => o.classList.remove('active'));
+        document.getElementById('menuOverlay').classList.add('active');
+        updateUI();
+    }
+
+    function endGame() {
+        if (!isRunning) return;
+        isRunning = false;
+        gameData.coins += score;
+        if(score > gameData.highScore) gameData.highScore = score;
+        save();
+        document.getElementById('deathOverlay').classList.add('active');
+        document.getElementById('statsBox').innerHTML = `SCORE: ${score}<br>BEST: ${gameData.highScore}`;
+        updateUI();
+    }
+
+    function toggleShop(open) {
+        document.querySelectorAll('.overlay').forEach(o => o.classList.remove('active'));
+        if (open) {
+            document.getElementById('shopOverlay').classList.add('active');
+            renderShop();
+        } else {
+            document.getElementById('menuOverlay').classList.add('active');
+            updateUI();
+        }
+    }
+
+    function renderShop() {
+        const list = document.getElementById('shopList'); list.innerHTML = '';
+        ITEMS.forEach(itm => {
+            const owned = gameData.unlocked.includes(itm.id);
+            const active = (gameData.equippedSkin === itm.id || gameData.equippedTheme === itm.id);
+            const div = document.createElement('div');
+            div.className = `shop-item ${active ? 'equipped' : ''}`;
+            div.innerHTML = `
+                <div class="item-info"><span class="item-name">${itm.name}</span><span class="item-price">${owned ? 'OWNED' : '🪙 ' + itm.price}</span></div>
+                <button class="btn" style="width:75px; padding:6px; font-size:0.7rem; margin:0; box-shadow: 0 4px 0 #000;" 
+                    onclick="${owned ? `equip('${itm.id}')` : `buy('${itm.id}')`}">
+                    ${owned ? (active ? 'EQP' : 'USE') : 'BUY'}
+                </button>`;
+            list.appendChild(div);
+        });
+        updateUI();
+    }
+
+    function buy(id) {
+        const itm = ITEMS.find(i => i.id === id);
+        if (gameData.coins >= itm.price) {
+            gameData.coins -= itm.price; gameData.unlocked.push(id);
+            save(); renderShop();
+        }
+    }
+
+    function equip(id) {
+        const itm = ITEMS.find(i => i.id === id);
+        if (id === 'custom_slot') gameData.equippedSkin = 'custom';
+        else if (itm.type === 'skin') gameData.equippedSkin = id;
+        else if (itm.type === 'theme') gameData.equippedTheme = id;
+        save(); renderShop();
+    }
+
+    function updateUI() {
+        const hasSlot = gameData.unlocked.includes('custom_slot');
+        document.getElementById('customUpload').style.display = hasSlot ? 'block' : 'none';
+    }
+
+    function drawPipe(x, y, w, h, color, isTop) {
+        const grad = ctx.createLinearGradient(x, 0, x + w, 0);
+        grad.addColorStop(0, color); grad.addColorStop(0.3, '#fff'); grad.addColorStop(0.5, color); grad.addColorStop(1, '#000');
+        ctx.fillStyle = grad; ctx.fillRect(x, y, w, h);
+        ctx.strokeStyle = '#111'; ctx.lineWidth = 3; ctx.strokeRect(x, y, w, h);
+        const cx = x - 6; const cw = w + 12; const ch = 30; const cy = isTop ? y + h - ch : y;
+        ctx.fillStyle = grad; ctx.fillRect(cx, cy, cw, ch); ctx.strokeRect(cx, cy, cw, ch);
+    }
+
+    function drawHUD() {
+        // Score (Center)
+        ctx.fillStyle = "white";
+        ctx.font = "bold 80px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText(score, 200, 100);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.strokeText(score, 200, 100);
+
+        // Multiplier
+        let bonus = Math.floor(pipesPassed / 5) + 1;
+        ctx.font = "bold 20px Arial";
+        ctx.fillStyle = "#f1c40f";
+        ctx.fillText("POW: " + bonus + "x", 200, 130);
+
+        // High Score (Top Left)
+        ctx.textAlign = "left";
+        ctx.font = "bold 16px Arial";
+        ctx.fillStyle = "rgba(255,255,255,0.8)";
+        ctx.fillText("BEST: " + gameData.highScore, 20, 30);
+
+        // Coins (Top Right)
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#f1c40f";
+        ctx.fillText("🪙 " + gameData.coins, 380, 30);
+    }
+
+    function draw() {
+        const theme = ITEMS.find(i => i.id === gameData.equippedTheme) || ITEMS[4];
+        ctx.fillStyle = theme.bg; ctx.fillRect(0, 0, 400, 600);
+
+        if (isRunning) {
+            birdV += 0.52; birdY += birdV;
+            
+            if (pipes.length === 0 || pipes[pipes.length-1].x < (400 - horizSpace)) {
+                let lastY = pipes.length > 0 ? pipes[pipes.length-1].top : 300;
+                let nextTop = Math.max(80, Math.min(380, lastY + (Math.random() * 210 - 105)));
+                pipes.push({ x: 400, top: nextTop, gap: currentGap, passed: false });
+            }
+
+            // Fixed Logic: Iterate backwards to prevent "flashing" skip frames on removal
+            for (let i = pipes.length - 1; i >= 0; i--) {
+                const p = pipes[i];
+                p.x -= gameSpeed;
+                drawPipe(p.x, 0, 70, p.top, theme.pipe, true);
+                drawPipe(p.x, p.top + p.gap, 70, 600, theme.pipe, false);
+                
+                if (!p.passed && p.x < 80) {
+                    pipesPassed++;
+                    score += (Math.floor(pipesPassed / 5) + 1);
+                    p.passed = true;
+                    if(gameSpeed < 7.5) gameSpeed += 0.1;
+                    if(currentGap > 135) currentGap -= 1.5;
+                }
+                if (80 + 12 > p.x && 80 - 12 < p.x + 70) {
+                    if (birdY - 12 < p.top || birdY + 12 > p.top + p.gap) endGame();
+                }
+                if (p.x < -100) pipes.splice(i, 1);
+            }
+            if (birdY > 540 || birdY < -20) endGame();
+        }
+
+        // Draw Bird
+        ctx.save();
+        ctx.translate(80, birdY);
+        ctx.rotate(Math.min(Math.PI/4, Math.max(-0.2, birdV * 0.05)));
+        if (gameData.equippedSkin === 'custom' && gameData.customImage) {
+            ctx.drawImage(customImg, -28, -22, 56, 44);
+        } else {
+            const skin = ITEMS.find(s => s.id === gameData.equippedSkin) || ITEMS[0];
+            ctx.fillStyle = skin.color; ctx.strokeStyle = '#000'; ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.arc(0, 0, 18, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = 'rgba(0,0,0,0.1)'; ctx.beginPath(); 
+            ctx.ellipse(-6, (birdV < 0 ? -12 : 5), 12, 8, (birdV < 0 ? -0.5 : 0.2), 0, Math.PI*2); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = 'white'; ctx.beginPath(); ctx.arc(8, -6, 7, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = 'black'; ctx.beginPath(); ctx.arc(10, -6, 2.5, 0, Math.PI*2); ctx.fill();
+            ctx.fillStyle = '#f39c12'; ctx.beginPath(); ctx.moveTo(12, 2); ctx.lineTo(24, 6); ctx.lineTo(12, 10); ctx.fill(); ctx.stroke();
+        }
+        ctx.restore();
+
+        // Floor
+        ctx.fillStyle = '#ded895'; ctx.fillRect(0, 560, 400, 40);
+        ctx.fillStyle = '#2ecc71'; ctx.fillRect(0, 555, 400, 10);
+
+        if(isRunning) drawHUD();
+        requestAnimationFrame(draw);
+    }
+
+    const jumpAction = () => { if(isRunning) birdV = -8; };
+    window.onkeydown = (e) => { if(e.code === 'Space') jumpAction(); };
+    canvas.onmousedown = jumpAction;
+    document.getElementById('fileInput').onchange = (e) => {
+        const r = new FileReader(); r.onload = (v) => {
+            gameData.customImage = v.target.result; customImg.src = v.target.result;
+            gameData.equippedSkin = 'custom'; save();
+        }; r.readAsDataURL(e.target.files[0]);
+    };
+
+    updateUI();
+    draw();
+</script>
+</body>
+</html>
