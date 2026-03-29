@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <style>
-        /* Force the body to be a flex container that fills the window */
         body {
             margin: 0;
             display: flex;
@@ -14,28 +13,41 @@
             height: 100vh;
             width: 100vw;
             overflow: hidden;
-            background-color: #000;
+            background-color: #000; /* Pure black background */
         }
 
-        /* The game container fills all remaining space below the nav */
+        #nav {
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
         #ruffle-container {
             flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
+            overflow: hidden; /* Clips anything outside the game stage */
+            background-color: #050505; 
         }
 
-        /* Ensure the Ruffle element itself expands */
+        /* This is the magic part for Ruffle */
         ruffle-player {
             width: 100%;
             height: 100%;
+            /* 'contain' ensures the game keeps its original shape 
+               without showing the hidden 'spawning' areas */
+            object-fit: contain; 
         }
     </style>
 </head>
 <body>
     <nav id="nav">
-        <a href="index.html" class="back-btn">← BACK TO GAMES</a>
+        <a href="index.html" class="back-btn">← BACK</a>
         <span id="game-title" style="margin-left: 20px; font-weight: bold; color: #eee; text-transform: uppercase;"></span>
-        <div style="width: 100px;"></div> </nav>
+        <div style="flex-grow: 1;"></div>
+    </nav>
 
     <div id="ruffle-container"></div>
 
@@ -45,18 +57,20 @@
         
         if (gamePath) {
             const decodedPath = decodeURIComponent(gamePath);
-            
-            // Set the title in the nav
             const fileName = decodedPath.split('/').pop().replace('.swf', '').replace(/[-_]/g, ' ');
             document.getElementById('game-title').innerText = fileName;
 
-            // Initialize Ruffle
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
-            const container = document.getElementById("ruffle-container");
-            container.appendChild(player);
             
-            // Load the game
+            // RUFFLE CONFIG: This tells the player to respect the stage boundaries
+            player.config = {
+                letterbox: "on",
+                forceScale: true,
+                forceAlign: true
+            };
+
+            document.getElementById("ruffle-container").appendChild(player);
             player.load(decodedPath);
         }
     </script>
