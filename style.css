@@ -1,47 +1,88 @@
 :root {
-    --flash-color: #ff9800;
-    --html-color: #00ffcc;
-    --bg: #090412;
-    --card-bg: #11111b;
+    --bg-color: #090412;
+    --nav-bg: #11111b;
+    --accent-html: #00ffcc;
+    --accent-flash: #ff9800;
+    --text: #ffffff;
 }
 
-/* Card separation styles */
-.game-card.flash { border-bottom: 3px solid var(--flash-color); }
-.game-card.html5 { border-bottom: 3px solid var(--html-color); }
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
 
-.badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 3px 8px;
-    font-size: 10px;
+/* Navbar */
+#navbar {
+    height: 60px;
+    background: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
     font-weight: 900;
-    border-radius: 4px;
-    color: #000;
-    text-transform: uppercase;
+    color: var(--accent-html);
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
-.badge.flash { background: var(--flash-color); }
-.badge.html5 { background: var(--html-color); }
+/* Search Bar */
+.search-container {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
 
-/* Grid Layout */
+.search-input {
+    width: 100%;
+    background: #1a1a2e;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: var(--accent-html);
+}
+
+/* Grid and Cards */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .game-card {
-    background: var(--card-bg);
-    border-radius: 8px;
+    background: var(--nav-bg);
+    border-radius: 12px;
     overflow: hidden;
-    position: relative;
-    transition: 0.3s;
     text-decoration: none;
     color: white;
+    border: 1px solid #222;
+    transition: 0.2s;
 }
 
-.game-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-.game-thumbnail { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
-.game-label { padding: 10px; text-align: center; font-size: 0.9rem; font-weight: bold; }
+.game-card:hover { transform: translateY(-5px); }
+.game-card.flash:hover { border-color: var(--accent-flash); }
+.game-card.html5:hover { border-color: var(--accent-html); }
+
+.badge {
+    padding: 2px 8px;
+    font-size: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: black;
+}
+.badge.flash { background: var(--accent-flash); }
+.badge.html5 { background: var(--accent-html); }
