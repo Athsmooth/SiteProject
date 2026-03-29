@@ -11,32 +11,27 @@ let gameList = [];
 
 scanConfigs.forEach(config => {
     if (!fs.existsSync(config.dir)) return;
-    
     const files = fs.readdirSync(config.dir);
     
     files.forEach(file => {
         const ext = path.extname(file).toLowerCase();
-        if (!['.swf', '.html'].includes(ext)) return;
-        
-        // Ignore system files
+        if (ext !== '.swf' && ext !== '.html') return;
+
+        // Skip the player files themselves
         if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
 
         const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
-        
         let playerPage;
-        let displayName = file.replace(ext, '').replace(/[-_]/g, ' ');
 
-        if (config.type === 'flash') {
+        // SMART ROUTING BASED ON EXTENSION
+        if (ext === '.swf') {
             playerPage = 'ruffleplayer.html';
-            displayName += " (Flash)";
-        } else {
+        } else if (ext === '.html') {
             playerPage = 'html5player.html';
-            displayName += " (HTML5)";
         }
 
         gameList.push({
-            name: displayName,
-            // The magic is here: it passes the exact path like "swf/games/game.swf"
+            name: file.replace(ext, '').replace(/[-_]/g, ' ') + (ext === '.swf' ? " (Flash)" : " (HTML5)"),
             file: `${playerPage}?game=${encodeURIComponent(fullPath)}`,
             thumb: `assets/thumbnails/${file.split('.')[0]}.jpg`,
             category: config.type
@@ -45,4 +40,4 @@ scanConfigs.forEach(config => {
 });
 
 fs.writeFileSync('games-list.json', JSON.stringify(gameList, null, 2));
-console.log(`✅ Successfully indexed ${gameList.length} games.`);
+console.log("✅ Routes corrected! SWF -> Ruffle, HTML -> HTML5Player.");
