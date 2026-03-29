@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// root folders to scan
-const foldersToScan = ['./html5', './krecak-games'];
+// 1. ADDED './swf' TO THE SCAN LIST
+const foldersToScan = ['./html5', './krecak-games', './swf']; 
 const thumbDir = './assets/thumbnails';
 const outputFile = './games-list.json';
 const placeholderPath = "/assets/thumbnails/placeholder.jpg";
@@ -19,56 +19,62 @@ const getAllFiles = (dir) => {
         const fullPath = path.join(dir, file);
         if (fs.statSync(fullPath).isDirectory()) {
             res = res.concat(getAllFiles(fullPath));
-        } else if (file.endsWith('.html')) {
-            res.push(fullPath);
+        } else {
+            // 2. NOW ACCEPTS BOTH .HTML AND .SWF
+            if (file.endsWith('.html') || file.endsWith('.swf')) {
+                res.push(fullPath);
+            }
         }
     });
     return res;
 };
 
-let allHtmlFiles = [];
+let allFiles = [];
 foldersToScan.forEach(folder => {
-    allHtmlFiles = allHtmlFiles.concat(getAllFiles(folder));
+    allFiles = allFiles.concat(getAllFiles(folder));
 });
 
-const gameData = allHtmlFiles.map(filePath => {
+const gameData = allFiles.map(filePath => {
     const normalizedPath = filePath.replace(/\\/g, '/').replace(/^\.\//, '');
     const pathParts = normalizedPath.split('/');
+    const extension = path.extname(filePath).toLowerCase();
     
-    // Check if it's a Krecak game based on the root folder name
     const isKrecak = pathParts[0] === 'krecak-games';
+    const isFlash = pathParts[0] === 'swf' || extension === '.swf';
     
-    // Get game name from the folder it sits in
-    let gameSlug = pathParts.length > 1 ? pathParts[pathParts.length - 2] : path.basename(filePath, '.html');
-    
-    // Handle edge case where html is directly in the root of the category folder
-    if (gameSlug === 'html5' || gameSlug === 'krecak-games') {
-        gameSlug = path.basename(filePath, '.html');
-    }
+    let gameSlug = path.basename(filePath, extension);
 
-    // --- AUTO INJECTION ---
-    try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        if (!content.includes('global.js')) {
-            if (content.includes('</head>')) {
-                content = content.replace('</head>', `${injectionTags}\n</head>`);
-            } else {
-                content = injectionTags + content;
+    // --- FLASH HANDLING ---
+    let finalLink = '/' + normalizedPath;
+    if (isFlash) {
+        // Redirect Flash files to your Ruffle Player
+        finalLink = `/ruffleplayer.html?game=${path.basename(filePath)}`;
+    } else {
+        // --- AUTO INJECTION (HTML ONLY) ---
+        try {
+            let content = fs.readFileSync(filePath, 'utf8');
+            if (!content.includes('global.js')) {
+                if (content.includes('</head>')) {
+                    content = content.replace('</head>', `${injectionTags}\n</head>`);
+                } else {
+                    content = injectionTags + content;
+                }
+                fs.writeFileSync(filePath, content);
+                console.log(`- Auto-Injected: ${normalizedPath}`);
             }
-            fs.writeFileSync(filePath, content);
-            console.log(`- Auto-Injected: ${normalizedPath}`);
+        } catch (e) {
+            console.log(`- Error updating ${filePath}`);
         }
-    } catch (e) {
-        console.log(`- Error updating ${filePath}`);
     }
 
     return {
         name: gameSlug,
-        file: '/' + normalizedPath,
-        thumb: fs.existsSync(path.join(thumbDir, `${gameSlug}.jpg`)) ? `/assets/thumbnails/${gameSlug}.jpg` : placeholderPath,
-        isKrecak: isKrecak
+        file: finalLink,
+        thumb: fs.existsSync(path.join(thumbDir, `${gameSlug}.jpg`)) ? `/assets/thumbnails/${gameSlug}.jpg` : (fs.existsSync(path.join(thumbDir, `${gameSlug}.png`)) ? `/assets/thumbnails/${gameSlug}.png` : placeholderPath),
+        isKrecak: isKrecak,
+        isFlash: isFlash // Added flag for future filtering
     };
 });
 
 fs.writeFileSync(outputFile, JSON.stringify(gameData, null, 2));
-console.log(`\n✅ SYNC SUCCESS: Scanned ${allHtmlFiles.length} games across html5/ and krecak-games/`);
+console.log(`\n✅ SYNC SUCCESS: Scanned ${allFiles.length} games across all directories.`);
