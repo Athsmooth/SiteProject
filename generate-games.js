@@ -1,31 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Krecak HTML5 Player</title>
-    <style>
-        body { margin: 0; background: #090412; color: white; font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
-        #nav { height: 60px; background: #11111b; display: flex; align-items: center; padding: 0 20px; border-bottom: 2px solid #222; }
-        .back-btn { color: #00ffcc; text-decoration: none; border: 1px solid #00ffcc; padding: 6px 15px; border-radius: 5px; font-weight: bold; font-size: 14px; }
-        iframe { flex-grow: 1; border: none; width: 100%; height: 100%; background: #000; }
-        #title { margin-left: 20px; font-weight: bold; color: #eee; }
-    </style>
-</head>
-<body>
-    <div id="nav">
-        <a href="index.html" class="back-btn">← BACK</a>
-        <span id="title">LOADING...</span>
-    </div>
-    <iframe id="game-frame" src="about:blank"></iframe>
+const fs = require('fs');
+const path = require('path');
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const gameUrl = params.get('game');
-        if (gameUrl) {
-            const decoded = decodeURIComponent(gameUrl);
-            document.getElementById('game-frame').src = decoded;
-            document.getElementById('title').innerText = decoded.split('/').pop().toUpperCase();
+const folders = [
+    { dir: './swf', type: 'flash' },
+    { dir: './swf/games', type: 'flash' },
+    { dir: './html5', type: 'html5' }
+];
+
+let gameList = [];
+const seenPaths = new Set();
+
+folders.forEach(folder => {
+    if (!fs.existsSync(folder.dir)) return;
+    const files = fs.readdirSync(folder.dir);
+    
+    files.forEach(file => {
+        const fullPath = path.join(folder.dir, file).replace(/\\/g, '/');
+        const ext = path.extname(file).toLowerCase();
+        
+        // Skip system files and the players themselves
+        if (fs.lstatSync(fullPath).isDirectory()) return;
+        if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
+        if (ext !== '.swf' && ext !== '.html') return;
+
+        if (seenPaths.has(fullPath)) return;
+        seenPaths.add(fullPath);
+
+        let link;
+        let name = file.replace(ext, '').replace(/[-_]/g, ' ');
+
+        if (folder.type === 'flash') {
+            link = `ruffleplayer.html?game=${encodeURIComponent(file)}`;
+            name += " (Flash)";
+        } else {
+            const cleanPath = fullPath.startsWith('./') ? fullPath.substring(2) : fullPath;
+            link = `html5player.html?game=${encodeURIComponent(cleanPath)}`;
+            name += " (HTML5)";
         }
-    </script>
-</body>
-</html>
+
+        gameList.push({ name, file: link, thumb: `./assets/thumbnails/${file.split('.')[0]}.jpg`, category: folder.type });
+    });
+});
+
+fs.writeFileSync('./games-list.json', JSON.stringify(gameList, null, 2));
+console.log("✅ Success: games-list.json generated!");
