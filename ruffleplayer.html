@@ -2,36 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flash Game Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Player | Krecak Kreations</title>
     <style>
-        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #ruffle-container { width: 90%; height: 90%; }
+        :root { --accent: #00ffcc; --bg: #090412; }
+        body { 
+            margin: 0; 
+            background: var(--bg); 
+            color: white; 
+            font-family: sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+        #controls { 
+            padding: 10px 20px; 
+            background: rgba(255,255,255,0.05); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .btn { 
+            background: transparent; 
+            border: 1px solid var(--accent); 
+            color: var(--accent); 
+            padding: 8px 15px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); color: var(--bg); }
+        #ruffle-container { 
+            flex-grow: 1; 
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        ruffle-player { width: 100%; height: 100%; }
     </style>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 <body>
 
+    <div id="controls">
+        <a href="index.html" class="btn">← BACK TO HOME</a>
+        <div id="game-title" style="text-transform: uppercase; letter-spacing: 1px;">Loading Game...</div>
+        <button class="btn" onclick="toggleFullscreen()">FULLSCREEN</button>
+    </div>
+
     <div id="ruffle-container"></div>
 
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
-        window.addEventListener("load", (event) => {
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            const container = document.getElementById("ruffle-container");
-            container.appendChild(player);
-
-            // 1. Get the game name from the URL (e.g., player.html?game=mygame.swf)
+        
+        window.addEventListener("load", async () => {
             const urlParams = new URLSearchParams(window.location.search);
             const gameName = urlParams.get('game');
+            const container = document.getElementById("ruffle-container");
+            const titleEl = document.getElementById("game-title");
 
-            if (gameName) {
-                // 2. Load the game from your /swf folder
-                player.load("/swf/" + gameName);
-            } else {
-                container.innerHTML = "<h2 style='color:white'>No game specified!</h2>";
+            if (!gameName) {
+                container.innerHTML = "<h2>No game specified in URL.</h2>";
+                return;
+            }
+
+            titleEl.innerText = gameName.replace('.swf', '').replace(/[-_]/g, ' ');
+
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            container.appendChild(player);
+
+            // --- SMART PATH DETECTION ---
+            // Based on your hierarchy, we try /swf/games/ first, then /swf/
+            const pathsToTry = [
+                `./swf/games/${gameName}`,
+                `./swf/${gameName}`
+            ];
+
+            let loaded = false;
+            for (let path of pathsToTry) {
+                try {
+                    console.log("Attempting to load:", path);
+                    await player.load(path);
+                    loaded = true;
+                    console.log("✅ Success!");
+                    break; 
+                } catch (err) {
+                    console.warn(`Failed to load from ${path}, trying next...`);
+                }
+            }
+
+            if (!loaded) {
+                container.innerHTML = `<h2 style="color:red">Error: Could not find ${gameName} in /swf/ or /swf/games/</h2>`;
             }
         });
+
+        function toggleFullscreen() {
+            const container = document.getElementById("ruffle-container");
+            if (!document.fullscreenElement) {
+                container.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
     </script>
 </body>
 </html>
