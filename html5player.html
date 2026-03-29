@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Player | Krecak Kreations</title>
+    <style>
+        :root { --accent: #00ffcc; --bg: #090412; }
+        body { margin: 0; background: var(--bg); color: white; font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+        
+        /* The Navbar stays at the top */
+        #controls { 
+            padding: 10px 20px; 
+            background: #11111b; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #333; 
+        }
+        
+        .btn { 
+            background: transparent; border: 1px solid var(--accent); 
+            color: var(--accent); padding: 8px 15px; border-radius: 5px; 
+            cursor: pointer; text-decoration: none; font-weight: bold; font-size: 13px; 
+        }
+
+        /* The Game Container fills the rest of the screen */
+        #game-container { flex-grow: 1; width: 100%; border: none; }
+        iframe { width: 100%; height: 100%; border: none; background: white; }
+    </style>
+</head>
+<body>
+
+    <div id="controls">
+        <a href="index.html" class="btn">← BACK TO GAMES</a>
+        <div id="game-title">LOADING HTML5 GAME...</div>
+        <div style="width: 100px;"></div> </div>
+
+    <div id="game-container">
+        <iframe id="game-frame" src=""></iframe>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const gamePath = urlParams.get('game');
+            const frame = document.getElementById("game-frame");
+            const titleEl = document.getElementById("game-title");
+
+            if (gamePath) {
+                // Set the iframe source to the actual game file
+                frame.src = gamePath;
+                
+                // Clean up the title for the header
+                const name = gamePath.split('/').pop().replace('.html', '').replace(/[-_]/g, ' ');
+                titleEl.innerText = name.toUpperCase();
+            } else {
+                titleEl.innerText = "ERROR: NO GAME PATH";
+            }
+        });
+    </script>
+</body>
+</html>
