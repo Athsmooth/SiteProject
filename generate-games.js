@@ -1,43 +1,49 @@
 const fs = require('fs');
 const path = require('path');
 
-const config = [
-    { dir: './swf', cat: 'flash' },
-    { dir: './swf/games', cat: 'flash' },
-    { dir: './html5', cat: 'html5' },
-    { dir: './krecak-games', cat: 'html5' }
+// Your specific folder setup
+const sourceConfigs = [
+    { dir: './swf', type: 'flash' },
+    { dir: './swf/games', type: 'flash' },
+    { dir: './html5', type: 'html5' }
 ];
 
-let gameList = [];
+let games = [];
 const seen = new Set();
 
-config.forEach(folder => {
-    if (!fs.existsSync(folder.dir)) return;
-    
-    const files = fs.readdirSync(folder.dir);
-    files.forEach(file => {
-        const ext = path.extname(file).toLowerCase();
-        
-        // System files to ignore
-        const ignore = ['index.html', 'ruffleplayer.html', 'htmlplayer.html', '404.html'];
-        if (!['.swf', '.html'].includes(ext) || ignore.includes(file.toLowerCase())) return;
-        if (seen.has(file)) return;
+sourceConfigs.forEach(config => {
+    if (!fs.existsSync(config.dir)) return;
 
-        seen.add(file);
-        const isFlash = ext === '.swf';
-        const rawPath = path.join(folder.dir, file).replace(/\\/g, '/');
+    const items = fs.readdirSync(config.dir);
+    items.forEach(item => {
+        const fullPath = path.join(config.dir, item).replace(/\\/g, '/');
         
-        gameList.push({
-            name: file.replace(ext, '').replace(/[-_]/g, ' '),
-            // This is the magic part: route through the correct player
-            file: isFlash 
-                ? `ruffleplayer.html?game=${encodeURIComponent(file)}` 
-                : `htmlplayer.html?game=${encodeURIComponent(rawPath)}`,
-            thumb: `./assets/thumbnails/${file.split('.')[0]}.jpg`,
-            category: isFlash ? 'flash' : 'html5'
+        // Skip if it's a directory (like 'games' inside 'swf') or a system file
+        if (fs.lstatSync(fullPath).isDirectory()) return;
+        const ignore = ['index.html', 'ruffleplayer.html', 'htmlplayer.html', '404.html'];
+        if (ignore.includes(item.toLowerCase())) return;
+
+        // Prevent duplicates (e.g., if the same game is in /swf and /swf/games)
+        if (seen.has(item)) return;
+        seen.add(item);
+
+        let playerLink;
+        if (config.type === 'flash') {
+            // FLASH RULE: Use the filename. Ruffle player handles the path logic.
+            playerLink = `ruffleplayer.html?game=${encodeURIComponent(item)}`;
+        } else {
+            // HTML5 RULE: Use the full relative path to the file.
+            playerLink = `htmlplayer.html?game=${encodeURIComponent(fullPath)}`;
+        }
+
+        games.push({
+            name: item.split('.')[0].replace(/[-_]/g, ' '),
+            file: playerLink,
+            thumb: `./assets/thumbnails/${item.split('.')[0]}.jpg`,
+            category: config.type
         });
     });
 });
 
-fs.writeFileSync('./games-list.json', JSON.stringify(gameList, null, 2));
-console.log(`✅ Success: ${gameList.length} games updated with custom players.`);
+fs.writeFileSync('./games-list.json', JSON.stringify(games, null, 2));
+console.log(`✅ Hierarchy Synced: ${games.length} games indexed from swf, swf/games, and html5.`);
