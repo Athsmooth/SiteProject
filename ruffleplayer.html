@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Game Player</title>
+    <style>
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        #ruffle-container { width: 90%; height: 90%; }
+    </style>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+
+    <div id="ruffle-container"></div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
+
+            // 1. Get the game name from the URL (e.g., player.html?game=mygame.swf)
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameName = urlParams.get('game');
+
+            if (gameName) {
+                // 2. Load the game from your /swf folder
+                player.load("/swf/" + gameName);
+            } else {
+                container.innerHTML = "<h2 style='color:white'>No game specified!</h2>";
+            }
+        });
+    </script>
+</body>
+</html>
