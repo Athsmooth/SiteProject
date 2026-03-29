@@ -1,59 +1,51 @@
 const fs = require('fs');
 const path = require('path');
 
-// Folders to scan
+// We scan the main folders. We don't need to scan /swf/games separately 
+// if we use a recursive scanner, but let's keep it simple and explicit.
 const foldersToScan = [
-    { dir: './html5', type: 'standard' },
-    { dir: './krecak-games', type: 'krecak' },
-    { dir: './swf', type: 'flash' },
-    { dir: './swf/games', type: 'flash' }
+    { dir: './html5', isFlash: false },
+    { dir: './krecak-games', isFlash: false },
+    { dir: './swf', isFlash: true },
+    { dir: './swf/games', isFlash: true }
 ];
 
-const gameFiles = [];
+const gameList = [];
+const seenFiles = new Set(); // Prevents adding the same game twice
 
-console.log("🚀 Starting Game List Generation...");
+console.log("🔍 Scanning for games...");
 
 foldersToScan.forEach(folder => {
-    if (!fs.existsSync(folder.dir)) {
-        console.log(`⚠️ Folder not found, skipping: ${folder.dir}`);
-        return;
-    }
+    if (!fs.existsSync(folder.dir)) return;
 
-    const items = fs.readdirSync(folder.dir);
-    
-    items.forEach(item => {
-        const fullPath = path.join(folder.dir, item);
-        const stats = fs.statSync(fullPath);
+    const files = fs.readdirSync(folder.dir);
 
-        // Only process files, skip sub-directories to avoid duplicates
-        if (stats.isDirectory()) return;
-
-        const ext = path.extname(item).toLowerCase();
+    files.forEach(file => {
+        const ext = path.extname(file).toLowerCase();
         
-        // Base object
+        // Only process .swf and .html files
+        if (ext !== '.swf' && ext !== '.html') return;
+        
+        // Skip system/index files
+        if (['index.html', 'ruffleplayer.html', '404.html', 'navbar.html'].includes(file.toLowerCase())) return;
+
+        // Prevent duplicates (if a file exists in /swf AND /swf/games)
+        if (seenFiles.has(file)) return;
+        seenFiles.add(file);
+
         let gameData = {
-            name: item,
-            thumb: `./assets/thumbnails/${item.split('.')[0]}.jpg`,
-            isKrecak: folder.type === 'krecak',
-            isFlash: false
+            name: file,
+            thumb: `./assets/thumbnails/${file.split('.')[0]}.jpg`,
+            isFlash: folder.isFlash,
+            file: folder.isFlash 
+                ? `ruffleplayer.html?game=${encodeURIComponent(file)}` 
+                : path.join(folder.dir, file).replace(/\\/g, '/')
         };
 
-        if (ext === '.swf') {
-            // FLASH: Points to the player with the filename as a parameter
-            gameData.file = `ruffleplayer.html?game=${encodeURIComponent(item)}`;
-            gameData.isFlash = true;
-            gameFiles.push(gameData);
-            console.log(`+ Added Flash: ${item}`);
-        } 
-        else if (ext === '.html' && item !== 'index.html' && item !== 'ruffleplayer.html' && item !== '404.html') {
-            // HTML5: Points directly to the file
-            gameData.file = fullPath.replace(/\\/g, '/'); // Fix Windows slashes
-            gameFiles.push(gameData);
-            console.log(`+ Added HTML5: ${item}`);
-        }
+        gameList.push(gameData);
+        console.log(`✅ Added: ${file}`);
     });
 });
 
-// Save the JSON
-fs.writeFileSync('./games-list.json', JSON.stringify(gameFiles, null, 2));
-console.log(`\n✅ Done! Found ${gameFiles.length} games. games-list.json has been updated.`);
+fs.writeFileSync('./games-list.json', JSON.stringify(gameList, null, 2));
+console.log(`\n✨ Successfully indexed ${gameList.length} games.`);
