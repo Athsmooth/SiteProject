@@ -1,53 +1,48 @@
 const fs = require('fs');
 const path = require('path');
 
-const foldersToScan = [
-    { dir: './html5', defaultCategory: 'html5' },
-    { dir: './krecak-games', defaultCategory: 'html5' },
-    { dir: './swf', defaultCategory: 'flash' },
-    { dir: './swf/games', defaultCategory: 'flash' }
+const config = [
+    { dir: './swf', cat: 'flash' },
+    { dir: './swf/games', cat: 'flash' },
+    { dir: './html5', cat: 'html5' },
+    { dir: './krecak-games', cat: 'html5' }
 ];
 
-const gameList = [];
-const seenFiles = new Set();
+let gameList = [];
+const seen = new Set();
 
-console.log("🗂️ Sorting games into categories...");
-
-foldersToScan.forEach(folder => {
+config.forEach(folder => {
     if (!fs.existsSync(folder.dir)) return;
-
-    const items = fs.readdirSync(folder.dir);
     
-    items.forEach(item => {
-        const ext = path.extname(item).toLowerCase();
-        if (ext !== '.swf' && ext !== '.html') return;
-        if (['index.html', 'ruffleplayer.html', '404.html'].includes(item.toLowerCase())) return;
-        if (seenFiles.has(item)) return;
+    const files = fs.readdirSync(folder.dir);
+    files.forEach(file => {
+        const ext = path.extname(file).toLowerCase();
+        // Skip system files and non-game files
+        if (!['.swf', '.html'].includes(ext)) return;
+        if (['index.html', 'ruffleplayer.html', '404.html'].includes(file.toLowerCase())) return;
+        if (seen.has(file)) return;
 
-        seenFiles.add(item);
-
-        // Logic to determine category and link type
-        let category = (ext === '.swf') ? 'flash' : 'html5';
-        let finalLink = "";
-
-        if (category === 'flash') {
-            finalLink = `ruffleplayer.html?game=${encodeURIComponent(item)}`;
-        } else {
-            // Construct path for HTML5 games
-            finalLink = path.join(folder.dir, item).replace(/\\/g, '/');
-        }
-
+        seen.add(file);
+        
+        // Determine the link based on file type
+        const isFlash = ext === '.swf';
+        const gamePath = path.join(folder.dir, file).replace(/\\/g, '/');
+        
         gameList.push({
-            name: item.replace(ext, '').replace(/[-_]/g, ' '),
-            filename: item,
-            file: finalLink,
-            thumb: `./assets/thumbnails/${item.split('.')[0]}.jpg`,
-            category: category
+            name: file.replace(ext, '').replace(/[-_]/g, ' '),
+            file: isFlash ? `ruffleplayer.html?game=${encodeURIComponent(file)}` : gamePath,
+            thumb: `./assets/thumbnails/${file.split('.')[0]}.jpg`,
+            category: isFlash ? 'flash' : 'html5',
+            timestamp: fs.statSync(gamePath).mtimeMs // For sorting by newest
         });
-
-        console.log(`[${category.toUpperCase()}] Sorted: ${item}`);
     });
 });
 
+// Sort by Category (Flash first), then by Newest
+gameList.sort((a, b) => {
+    if (a.category !== b.category) return a.category === 'flash' ? -1 : 1;
+    return b.timestamp - a.timestamp;
+});
+
 fs.writeFileSync('./games-list.json', JSON.stringify(gameList, null, 2));
-console.log(`\n✅ Done! Indexed ${gameList.length} total games.`);
+console.log(`✅ Success: ${gameList.length} games categorized and saved.`);
