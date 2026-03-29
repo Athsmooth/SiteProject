@@ -1,46 +1,54 @@
 const fs = require('fs');
 const path = require('path');
 
-const folders = [
+// THE CORE LOCATIONS
+const scanConfigs = [
     { dir: './swf', type: 'flash' },
     { dir: './swf/games', type: 'flash' },
     { dir: './html5', type: 'html5' }
 ];
 
 let gameList = [];
-const seenPaths = new Set();
 
-folders.forEach(folder => {
-    if (!fs.existsSync(folder.dir)) return;
-    const files = fs.readdirSync(folder.dir);
+console.log("🔍 STARTING FILE SCAN...");
+
+scanConfigs.forEach(config => {
+    if (!fs.existsSync(config.dir)) {
+        console.warn(`⚠️ Folder missing: ${config.dir}`);
+        return;
+    }
+    
+    const files = fs.readdirSync(config.dir);
     
     files.forEach(file => {
-        const fullPath = path.join(folder.dir, file).replace(/\\/g, '/');
+        const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
         const ext = path.extname(file).toLowerCase();
-        
-        // Skip system files and the players themselves
+
+        // Check if it's a valid game file
+        if (!['.swf', '.html'].includes(ext)) return;
         if (fs.lstatSync(fullPath).isDirectory()) return;
-        if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
-        if (ext !== '.swf' && ext !== '.html') return;
+        
+        // Ignore system files
+        const systemFiles = ['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'];
+        if (systemFiles.includes(file.toLowerCase())) return;
 
-        if (seenPaths.has(fullPath)) return;
-        seenPaths.add(fullPath);
+        // Clean path for URL (remove leading ./)
+        const cleanPath = fullPath.startsWith('./') ? fullPath.substring(2) : fullPath;
+        
+        let playerPage = (config.type === 'flash') ? 'ruffleplayer.html' : 'html5player.html';
+        
+        // Build the final object
+        const gameEntry = {
+            name: file.replace(ext, '').replace(/[-_]/g, ' '),
+            file: `${playerPage}?game=${encodeURIComponent(cleanPath)}`,
+            category: config.type,
+            full_path_debug: cleanPath // This tells us EXACTLY where the file is
+        };
 
-        let link;
-        let name = file.replace(ext, '').replace(/[-_]/g, ' ');
-
-        if (folder.type === 'flash') {
-            link = `ruffleplayer.html?game=${encodeURIComponent(file)}`;
-            name += " (Flash)";
-        } else {
-            const cleanPath = fullPath.startsWith('./') ? fullPath.substring(2) : fullPath;
-            link = `html5player.html?game=${encodeURIComponent(cleanPath)}`;
-            name += " (HTML5)";
-        }
-
-        gameList.push({ name, file: link, thumb: `./assets/thumbnails/${file.split('.')[0]}.jpg`, category: folder.type });
+        gameList.push(gameEntry);
+        console.log(`✅ Found ${config.type.toUpperCase()}: ${cleanPath}`);
     });
 });
 
 fs.writeFileSync('./games-list.json', JSON.stringify(gameList, null, 2));
-console.log("✅ Success: games-list.json generated!");
+console.log(`\n🚀 SCAN COMPLETE: ${gameList.length} games indexed.`);
