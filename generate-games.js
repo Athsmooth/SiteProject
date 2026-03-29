@@ -15,23 +15,21 @@ scanConfigs.forEach(config => {
     
     files.forEach(file => {
         const ext = path.extname(file).toLowerCase();
-        if (ext !== '.swf' && ext !== '.html') return;
+        const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
 
-        // Skip the player files themselves
+        // NEW RULE: If we are in a 'flash' folder, ONLY accept .swf files.
+        if (config.type === 'flash' && ext !== '.swf') return;
+        
+        // For HTML5 folder, only accept .html
+        if (config.type === 'html5' && ext !== '.html') return;
+
+        // Skip system files
         if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
 
-        const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
-        let playerPage;
-
-        // SMART ROUTING BASED ON EXTENSION
-        if (ext === '.swf') {
-            playerPage = 'ruffleplayer.html';
-        } else if (ext === '.html') {
-            playerPage = 'html5player.html';
-        }
+        let playerPage = (ext === '.swf') ? 'ruffleplayer.html' : 'html5player.html';
 
         gameList.push({
-            name: file.replace(ext, '').replace(/[-_]/g, ' ') + (ext === '.swf' ? " (Flash)" : " (HTML5)"),
+            name: file.replace(ext, '').replace(/[-_]/g, ' '),
             file: `${playerPage}?game=${encodeURIComponent(fullPath)}`,
             thumb: `assets/thumbnails/${file.split('.')[0]}.jpg`,
             category: config.type
@@ -40,4 +38,4 @@ scanConfigs.forEach(config => {
 });
 
 fs.writeFileSync('games-list.json', JSON.stringify(gameList, null, 2));
-console.log("✅ Routes corrected! SWF -> Ruffle, HTML -> HTML5Player.");
+console.log("✅ Cleaned Index: SWF folders now only provide .swf files.");

@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flash Player | Krecak</title>
-    <link rel="stylesheet" href="style.css"> <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <meta charset="UTF-8">
+    <title>Flash Player | Krecak Kreations</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <style>
-        body { margin: 0; background: #090412; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
-        #ruffle-container { flex-grow: 1; width: 100%; height: 100%; }
-        #nav { height: 60px; background: #11111b; display: flex; align-items: center; padding: 0 20px; border-bottom: 2px solid #222; }
-        .back-btn { color: #ff9800; text-decoration: none; border: 1px solid #ff9800; padding: 8px 15px; border-radius: 5px; font-weight: bold; }
+        /* Force the body to be a flex container that fills the window */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        /* The game container fills all remaining space below the nav */
+        #ruffle-container {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ensure the Ruffle element itself expands */
+        ruffle-player {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
-    <div id="nav">
-        <a href="index.html" class="back-btn">← BACK</a>
-        <span id="title" style="margin-left:20px; color:white; font-weight:bold;"></span>
-    </div>
+    <nav id="nav">
+        <a href="index.html" class="back-btn">← BACK TO GAMES</a>
+        <span id="game-title" style="margin-left: 20px; font-weight: bold; color: #eee; text-transform: uppercase;"></span>
+        <div style="width: 100px;"></div> </nav>
+
     <div id="ruffle-container"></div>
 
     <script>
@@ -23,13 +45,18 @@
         
         if (gamePath) {
             const decodedPath = decodeURIComponent(gamePath);
-            document.getElementById('title').innerText = decodedPath.split('/').pop().toUpperCase();
+            
+            // Set the title in the nav
+            const fileName = decodedPath.split('/').pop().replace('.swf', '').replace(/[-_]/g, ' ');
+            document.getElementById('game-title').innerText = fileName;
 
+            // Initialize Ruffle
             const ruffle = window.RufflePlayer.newest();
             const player = ruffle.createPlayer();
-            document.getElementById("ruffle-container").appendChild(player);
+            const container = document.getElementById("ruffle-container");
+            container.appendChild(player);
             
-            // This loads the EXACT path (e.g. swf/games/hero.swf)
+            // Load the game
             player.load(decodedPath);
         }
     </script>
