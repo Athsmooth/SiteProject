@@ -1,64 +1,68 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 
-const gamesDir = path.join(__dirname, 'html5');
-const thumbDir = path.join(__dirname, 'assets/thumbnails');
-const outputFile = path.join(__dirname, 'games-list.json');
+// --- 1. SETTINGS ---
+const TARGET_FOLDER_NAME = 'swf'; // The name of your folder
+const QUARANTINE_FOLDER_NAME = 'too-large-for-cloudflare';
+const LIMIT_MB = 25;
+const LIMIT_BYTES = LIMIT_MB * 1024 * 1024;
 
-(async () => {
-    // 1. Setup Folders
-    if (!fs.existsSync(thumbDir)) fs.mkdirSync(thumbDir, { recursive: true });
-    if (!fs.existsSync(gamesDir)) {
-        console.error("❌ Folder 'html5' not found!");
-        process.exit(1);
+// --- 2. DYNAMIC PATH RESOLVING ---
+// This finds the folder based on where THIS script is saved
+const scriptDir = __dirname;
+const swfPath = path.join(scriptDir, TARGET_FOLDER_NAME);
+const destPath = path.join(scriptDir, QUARANTINE_FOLDER_NAME);
+
+console.log("--- DEBUG INFO ---");
+console.log("Script Location:", scriptDir);
+console.log("Looking for SWF folder at:", swfPath);
+
+if (!fs.existsSync(swfPath)) {
+    console.log("❌ ERROR: The folder '/swf' was not found at that location!");
+    console.log("Make sure this script is in the same folder as your 'swf' directory.");
+    process.exit();
+}
+
+if (!fs.existsSync(destPath)) fs.mkdirSync(destPath, { recursive: true });
+
+// --- 3. THE SCANNER ---
+function scan(currentDir) {
+    const files = fs.readdirSync(currentDir);
+    
+    if (files.length === 0) {
+        console.log(`(Folder ${path.basename(currentDir)} is empty)`);
+        return;
     }
 
-    // 2. Launch Browser
-    const browser = await puppeteer.launch({
-        args: ['--allow-file-access-from-files', '--disable-web-security']
-    });
-    const page = await browser.newPage();
-    await page.setViewport({ width: 800, height: 450 });
+    files.forEach(file => {
+        const fullPath = path.join(currentDir, file);
+        const stat = fs.statSync(fullPath);
 
-    const files = fs.readdirSync(gamesDir).filter(f => f.endsWith('.html') || f.endsWith('.htm'));
-    const gameData = [];
-
-    console.log(`🔍 Checking ${files.length} games...`);
-
-    for (const file of files) {
-        const fileName = file.split('.')[0];
-        const thumbName = `${fileName}.png`;
-        const thumbPath = path.join(thumbDir, thumbName);
-        const relativeThumbPath = `assets/thumbnails/${thumbName}`;
-
-        // Only take screenshot if it doesn't exist
-        if (!fs.existsSync(thumbPath)) {
-            console.log(`📸 Generating preview for: ${file}`);
-            try {
-                // Using path.resolve for absolute file system paths
-                await page.goto(`file://${path.resolve(gamesDir, file)}`, { 
-                    waitUntil: 'networkidle2', 
-                    timeout: 8000 
-                });
-                // Brief pause for the game's intro animations to finish
-                await new Promise(r => setTimeout(r, 1500)); 
-                await page.screenshot({ path: thumbPath });
-            } catch (e) {
-                console.log(`⚠️ Failed to capture ${file}.`);
+        if (stat.isDirectory()) {
+            scan(fullPath); // Keep diving
+        } else {
+            const sizeMB = (stat.size / (1024 * 1024)).toFixed(2);
+            
+            if (stat.size > LIMIT_BYTES) {
+                console.log(`⚠️ MATCH: ${file} is ${sizeMB} MB. MOVING...`);
+                const finalDest = path.join(destPath, file);
+                
+                try {
+                    fs.renameSync(fullPath, finalDest);
+                    console.log(`✅ Success: Moved ${file}`);
+                } catch (e) {
+                    // Fallback for Windows "File in use" errors
+                    fs.copyFileSync(fullPath, finalDest);
+                    fs.unlinkSync(fullPath);
+                    console.log(`✅ Success (via Copy): Moved ${file}`);
+                }
+            } else {
+                console.log(`- Skipping: ${file} (${sizeMB} MB)`);
             }
         }
+    });
+}
 
-        // Add to the JSON list
-        gameData.push({
-            file: `html5/${file}`,
-            thumb: fs.existsSync(thumbPath) ? relativeThumbPath : "assets/default-icon.png"
-        });
-    }
-
-    // 3. Save Final JSON
-    fs.writeFileSync(outputFile, JSON.stringify(gameData, null, 2));
-    
-    await browser.close();
-    console.log(`\n✅ Success! Updated ${outputFile}`);
-})();
+console.log("\n--- STARTING SCAN ---");
+scan(swfPath);
+console.log("\nDone!");
