@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Campus Student</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.png">
-  <meta name="google-site-verification" content="ZH5PNFO4dJELDd7PfxtxN9RpdTwmCu7uR3KBDm5VKlI" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="PASTE_YOUR_TAG_HERE" />
+    <title>Krecak Kreations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
 </head>
-<body style="background-color: #090412">
-  
-  <div id="navbar">
-    <input type="text" id="gameSearch" class="search-input" placeholder="Search games...">
-    <button id="panicButton" class="panic-btn">PANIC</button>
-  </div>
+<body>
 
-  <script src="navbar.js"></script>
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">KRECAK KREATIONS</a>
+        <input type="text" class="search-input" placeholder="Search games...">
+    </nav>
 
-  <p style="text-align: center; color: white; margin-top: 80px;">(Site is in beta)</p>
-  <h1 style="text-align: center; color: white;">Welcome to Krecak Kreations!</h1>
-  
-  <div class="projects-placeholder"></div>
+    <main class="projects-placeholder">
+        <h2 class="section-header">Games Library</h2>
+        <div id="projects-placeholder" class="projects-grid">
+            <h2 style="color: white; text-align: center; width: 100%; opacity: 0.5;">Connecting to Library...</h2>
+        </div>
+    </main>
 
+    <script src="navbar.js"></script>
 </body>
 </html>
