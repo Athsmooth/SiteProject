@@ -16,19 +16,22 @@
     if (rom) {
         window.EJS_player = "#game";
         window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
-        window.EJS_pathtodata = "/data/"; 
+        
+        // Use a relative path for the server
+        window.EJS_pathtodata = "data/"; 
+        
         window.EJS_startOnLoaded = true;
 
-        // MATCH THE CORES FROM YOUR LIST
-        const extension = rom.toLowerCase().split('.').pop();
-        if (extension === 'gba') {
-            window.EJS_core = 'mgba'; // matches mgba-wasm.data
-        } else if (extension === 'gbc' || extension === 'gb') {
-            window.EJS_core = 'gambatte'; // matches gambatte-wasm.data
+        // Force the core name to match your file exactly
+        const ext = rom.toLowerCase().split('.').pop();
+        if (ext === 'gba') {
+            window.EJS_core = 'mgba'; 
+        } else {
+            window.EJS_core = 'gambatte'; 
         }
 
         const loader = document.createElement('script');
-        loader.src = "/data/loader.js"; 
+        loader.src = "data/loader.js"; 
         document.head.appendChild(loader);
     }
 </script>
