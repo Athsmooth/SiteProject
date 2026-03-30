@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Player</title>
     <style>
-        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #0d1117; color: white; overflow: hidden; }
-        #game { width: 100%; height: 100vh; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
+        #game-container { width: 100%; height: 100vh; }
     </style>
 </head>
 <body>
-    <div id="game"></div>
+    <div id="game-container"></div>
 
     <script>
+        // 1. Get the game path from the URL
         const params = new URLSearchParams(window.location.search);
         const rom = params.get('game');
 
         if (rom) {
             window.EJS_player = "#game-container";
+            
+            // 2. Decode the URL (handles spaces and special characters)
             window.EJS_gameUrl = decodeURIComponent(rom);
             
-            // Convert to lowercase to catch .GBC and .gbc
-            const fileExt = rom.toLowerCase();
+            // 3. Point to your LOCAL folder for the engine
+            // Make sure this matches your folder name EXACTLY (case-sensitive)
+            // Replace the old EJS_pathtodata line with this:
+            window.EJS_pathtodata = "/emulatorjsdata/";
 
-            if (fileExt.endsWith('.gba')) {
+            // 4. Smart Core Detection: Checks file extension
+            const lowerRom = rom.toLowerCase();
+            if (lowerRom.endsWith('.gba')) {
                 window.EJS_core = 'gba';
-            } else if (fileExt.endsWith('.gbc') || fileExt.endsWith('.gb')) {
+            } else if (lowerRom.endsWith('.gbc') || lowerRom.endsWith('.gb')) {
                 window.EJS_core = 'gbc';
             } else {
-                // Default fallback if extension is weird
-                window.EJS_core = 'gba'; 
+                window.EJS_core = 'gba'; // Fallback
             }
-
-            window.EJS_pathtodata = "emulatorjsdata/"; 
+        } else {
+            document.body.innerHTML = "<h1 style='color:white; text-align:center;'>No game selected.</h1>";
         }
     </script>
-    <script src="emulatorjsdata/loader.js"></script>
+
+    <script src="/emulatorjsdata/loader.js"></script>
 </body>
 </html>
