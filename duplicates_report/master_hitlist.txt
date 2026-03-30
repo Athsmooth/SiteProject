@@ -1,0 +1,103 @@
+GAME AUDIT REPORT - 3/29/2026, 9:03:57 PM
+Rules: Exact matches prioritized. Fuzzy matches ignored if version numbers differ.
+--------------------------------------------------------------------------------
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/chess.swf
+TRASH (HTML5): html5/chess.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/ducklife2.swf
+TRASH (HTML5): html5/ducklife2.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/ducklife3.swf
+TRASH (HTML5): html5/ducklife3.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/duck-life4.swf
+TRASH (HTML5): html5/ducklife4.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/escapingtheprison.swf
+TRASH (HTML5): html5/escapingtheprison.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/fancypantsadventure.swf
+TRASH (HTML5): html5/fancypantsadventure.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/flappy-bird.swf
+TRASH (HTML5): html5/flappybird.html
+
+[FUZZY MATCH 80%]
+KEEP  (Flash): swf/games/thefloodrunner2.swf
+TRASH (HTML5): html5/floodrunner2.html
+Note: Flash file size is 1.70 MB
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/geometrydash.swf
+TRASH (HTML5): html5/geometrydash.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/getontop.swf
+TRASH (HTML5): html5/getontop.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/HappyWheels.swf
+TRASH (HTML5): html5/happywheels.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/learntofly.swf
+TRASH (HTML5): html5/learntofly.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/learntofly2.swf
+TRASH (HTML5): html5/learntofly2.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papasbakeria.swf
+TRASH (HTML5): html5/papasbakeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papasburgeria.swf
+TRASH (HTML5): html5/papasburgeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papasdonuteria.swf
+TRASH (HTML5): html5/papasdonuteria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papasfreezeria.swf
+TRASH (HTML5): html5/papasfreezeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papashotdoggeria.swf
+TRASH (HTML5): html5/papashotdoggeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papaspizzeria.swf
+TRASH (HTML5): html5/papaspizzeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/papaswingeria.swf
+TRASH (HTML5): html5/papaswingeria.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/Run 2.swf
+TRASH (HTML5): html5/run2.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/games/run3.swf
+TRASH (HTML5): html5/run3.html
+
+[FUZZY MATCH 82%]
+KEEP  (Flash): swf/games/impossiblequiz.swf
+TRASH (HTML5): html5/theimpossiblequiz.html
+Note: Flash file size is 4.64 MB
+
+[FUZZY MATCH 83%]
+KEEP  (Flash): swf/games/impossiblequiz2.swf
+TRASH (HTML5): html5/theimpossiblequiz2.html
+Note: Flash file size is 9.36 MB
+
