@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Player</title>
-    <link rel="stylesheet" href="style.css"> <style>
+    <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #0d1117; overflow: hidden; }
-        #game-container { width: 100%; height: 100vh; }
+        #game { width: 100%; height: 100vh; }
     </style>
 </head>
 <body>
-    <div id="game-container"></div>
+    <div id="game"></div>
 
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const rom = params.get('game');
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const rom = params.get('game');
 
-    if (rom) {
-        EJS_player = "#game-container"; 
-        EJS_gameUrl = decodeURIComponent(rom);
-        
-        // UPDATED: Use the newest stable data path
-        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-        
-        // IMPORTANT: Explicitly set the core to avoid the "legacy" error
-        const isGBA = rom.toLowerCase().endsWith('.gba');
-        EJS_core = isGBA ? 'gba' : 'gbc';
-    }
-</script>
-<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+        if (rom) {
+            window.EJS_player = "#game";
+            window.EJS_gameUrl = decodeURIComponent(rom);
+            window.EJS_core = rom.toLowerCase().includes('.gba') ? 'gba' : 'gbc';
+            
+            // Try this specific stable URL - it is currently the most reliable
+            window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        }
+    </script>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 </body>
 </html>
