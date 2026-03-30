@@ -18,11 +18,16 @@
         window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
         window.EJS_pathtodata = "/data/"; 
         window.EJS_startOnLoaded = true;
-        window.EJS_core = rom.toLowerCase().endsWith('.gba') ? 'gba' : 'gbc';
+
+        // MATCH THE CORES FROM YOUR LIST
+        const extension = rom.toLowerCase().split('.').pop();
+        if (extension === 'gba') {
+            window.EJS_core = 'mgba'; // matches mgba-wasm.data
+        } else if (extension === 'gbc' || extension === 'gb') {
+            window.EJS_core = 'gambatte'; // matches gambatte-wasm.data
+        }
 
         const loader = document.createElement('script');
-        // Since we are inside the loader.js now, we don't need type="module" here 
-        // unless loader.js itself has an 'export' at the top.
         loader.src = "/data/loader.js"; 
         document.head.appendChild(loader);
     }
