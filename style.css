@@ -1,16 +1,16 @@
-/* --- Global Dark Variables --- */
+/* --- Global Variables (High-Contrast Dark) --- */
 :root {
     --bg-main: #0d1117;         /* Deepest background */
     --bg-card: #161b22;         /* Lighter card color */
     --nav-bg: #010409;          /* Pitch black navbar */
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;  /* Muted gray */
-    --accent: #58a6ff;          /* IC-style Blue */
+    --accent: #58a6ff;          /* Active Blue */
     --border: #30363d;
     --card-hover: #21262d;
 }
 
-/* --- Base Reset --- */
+/* --- Base Reset & Flash Prevention --- */
 * {
     box-sizing: border-box;
 }
@@ -18,7 +18,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg-main) !important;
+    /* Forces dark background immediately to stop the white flash */
+    background-color: var(--bg-main) !important; 
     color: var(--text-primary);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     height: 100%;
@@ -30,7 +31,7 @@ body {
     flex-direction: column;
 }
 
-/* --- Navbar Alignment & Branding --- */
+/* --- Navbar & Search Alignment --- */
 #nav {
     height: 60px;
     background-color: var(--nav-bg);
@@ -51,7 +52,7 @@ body {
     gap: 15px;
 }
 
-/* Fixes the "Purple Link" bug */
+/* Fixes the "Purple Link" Branding Bug */
 .nav-left a, .nav-left a:visited {
     color: var(--text-secondary) !important;
     text-decoration: none;
@@ -64,7 +65,7 @@ body {
 .ic-logo .campus { font-weight: 700; font-size: 20px; color: #fff; }
 .ic-logo .student { font-weight: 300; font-size: 20px; color: var(--text-secondary); margin-left: 5px; }
 
-/* Search Bar Styling */
+/* Search Bar (Centered/Right) */
 .search-input {
     background-color: #0d1117;
     border: 1px solid var(--border);
@@ -74,6 +75,7 @@ body {
     font-size: 13px;
     width: 180px;
     outline: none;
+    transition: border-color 0.2s;
 }
 
 .search-input:focus {
@@ -107,7 +109,7 @@ body {
     width: 100%;
 }
 
-/* --- Game Card & Placeholder Fix --- */
+/* --- Game Card & Placeholder System --- */
 .game-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border);
@@ -115,7 +117,7 @@ body {
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.2s, border-color 0.2s, background-color 0.2s;
     display: flex;
     flex-direction: column;
 }
@@ -129,7 +131,7 @@ body {
 .img-container {
     width: 100%;
     aspect-ratio: 16/9;
-    background-color: #010409;
+    background-color: #010409; /* Deep black for the box */
     position: relative;
     display: flex;
     align-items: center;
@@ -137,25 +139,33 @@ body {
     overflow: hidden;
 }
 
-/* THE PLACEHOLDER ICON */
+/* THE PLACEHOLDER ICON: Shows up if image is missing */
 .img-container::before {
     content: "🎮";
     font-size: 30px;
-    opacity: 0.1;
+    opacity: 0.15;
     position: absolute;
     z-index: 1;
 }
 
-/* THE BROKEN IMAGE KILLER */
+/* THE IMAGE & BROKEN ICON KILLER */
 .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
     z-index: 2;
-    /* This hides the white 'broken' icon in the top left */
+    /* This pushes the broken white "paper" icon off-screen */
     text-indent: -10000px; 
     color: transparent;
+    /* Smooth fade-in */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the image only if it exists */
+.img-container img[src] {
+    opacity: 1;
 }
 
 .game-label {
@@ -181,9 +191,9 @@ body {
 .badge.flash { background: #f39c12; color: #000; }
 .badge.html5 { background: #27ae60; color: #fff; }
 
-/* --- Modal (Disclaimer) --- */
+/* --- Modal (Disclaimer Popup) --- */
 .modal-overlay {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     inset: 0;
     z-index: 9999 !important;
@@ -202,6 +212,7 @@ body {
     max-width: 400px;
     border-radius: 12px;
     color: var(--text-primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .modal-header {
@@ -211,7 +222,22 @@ body {
     justify-content: space-between;
 }
 
-.modal-body { padding: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+.modal-header h2 { margin: 0; font-size: 18px; color: #fff; }
+
+.close-btn { 
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: var(--text-secondary); 
+}
+
+.modal-body { 
+    padding: 20px; 
+    font-size: 14px; 
+    color: var(--text-secondary); 
+    line-height: 1.5; 
+}
 
 .modal-footer { padding: 15px; text-align: right; }
 
@@ -225,6 +251,11 @@ body {
     font-weight: 600;
 }
 
-/* --- Player Pages --- */
+/* --- Player Layout --- */
 #player-wrapper { flex-grow: 1; display: flex; flex-direction: column; }
-iframe, #ruffle-container { flex-grow: 1; border: none; background: #000; }
+iframe, #ruffle-container { 
+    flex-grow: 1; 
+    width: 100%;
+    border: none; 
+    background: #000; 
+}
