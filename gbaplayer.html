@@ -15,17 +15,24 @@
         const rom = params.get('game');
 
         if (rom) {
-            window.EJS_player = "#game";
+            window.EJS_player = "#game-container";
             window.EJS_gameUrl = decodeURIComponent(rom);
-            window.EJS_core = rom.toLowerCase().includes('.gba') ? 'gba' : 'gbc';
             
-            // MAKE SURE THIS MATCHES YOUR FOLDER NAME EXACTLY
+            // Convert to lowercase to catch .GBC and .gbc
+            const fileExt = rom.toLowerCase();
+
+            if (fileExt.endsWith('.gba')) {
+                window.EJS_core = 'gba';
+            } else if (fileExt.endsWith('.gbc') || fileExt.endsWith('.gb')) {
+                window.EJS_core = 'gbc';
+            } else {
+                // Default fallback if extension is weird
+                window.EJS_core = 'gba'; 
+            }
+
             window.EJS_pathtodata = "emulatorjsdata/"; 
-        } else {
-            document.body.innerHTML = "<h1>No game selected. Check your link!</h1>";
         }
     </script>
-    
     <script src="emulatorjsdata/loader.js"></script>
 </body>
 </html>
