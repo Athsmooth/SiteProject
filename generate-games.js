@@ -3,8 +3,8 @@ const path = require('path');
 
 const scanConfigs = [
     { dir: 'swf', type: 'flash' },
-    { dir: 'swf/games', type: 'flash' },
-    { dir: 'html5', type: 'html5' }
+    { dir: 'html5', type: 'html5' },
+    { dir: 'roms', type: 'gba' } // Added your ROMs folder
 ];
 
 let gameList = [];
@@ -17,16 +17,24 @@ scanConfigs.forEach(config => {
         const ext = path.extname(file).toLowerCase();
         const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
 
-        // NEW RULE: If we are in a 'flash' folder, ONLY accept .swf files.
+        // Logic for different file types
         if (config.type === 'flash' && ext !== '.swf') return;
-        
-        // For HTML5 folder, only accept .html
         if (config.type === 'html5' && ext !== '.html') return;
+        
+        // NEW RULE: Accept GBA, GBC, and GB files in the 'roms' folder
+        const isNintendo = ['.gba', '.gbc', '.gb'].includes(ext);
+        if (config.type === 'gba' && !isNintendo) return;
 
         // Skip system files
         if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
 
-        let playerPage = (ext === '.swf') ? 'ruffleplayer.html' : 'html5player.html';
+        // Determine which player page to use
+        let playerPage = 'html5player.html'; // Default
+        if (ext === '.swf') {
+            playerPage = 'ruffleplayer.html';
+        } else if (isNintendo) {
+            playerPage = 'gba/player.html'; // Points to the new subfolder
+        }
 
         gameList.push({
             name: file.replace(ext, '').replace(/[-_]/g, ' '),
@@ -38,4 +46,4 @@ scanConfigs.forEach(config => {
 });
 
 fs.writeFileSync('games-list.json', JSON.stringify(gameList, null, 2));
-console.log("✅ Cleaned Index: SWF folders now only provide .swf files.");
+console.log("✅ Index Updated: Flash, HTML5, and GBA/GBC games categorized.");

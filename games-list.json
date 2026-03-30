@@ -1,0 +1,1856 @@
+[
+  {
+    "name": "2048",
+    "file": "ruffleplayer.html?game=swf%2F2048.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons-Tower-Defense-5",
+    "file": "ruffleplayer.html?game=swf%2FBloons-Tower-Defense-5.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "HappyWheels",
+    "file": "ruffleplayer.html?game=swf%2FHappyWheels.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "Pokemon_Tower_Defense",
+    "file": "ruffleplayer.html?game=swf%2FPokemon_Tower_Defense.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "Run 2",
+    "file": "ruffleplayer.html?game=swf%2FRun%202.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "Super Smash Flash",
+    "file": "ruffleplayer.html?game=swf%2FSuper%20Smash%20Flash.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "Swords and Sandals 2",
+    "file": "ruffleplayer.html?game=swf%2FSwords%20and%20Sandals%202%20(Full).swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "billiards",
+    "file": "ruffleplayer.html?game=swf%2Fbilliards.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "bitdungeon",
+    "file": "ruffleplayer.html?game=swf%2Fbitdungeon.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "btd5hacked",
+    "file": "ruffleplayer.html?game=swf%2Fbtd5hacked.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "chess",
+    "file": "ruffleplayer.html?game=swf%2Fchess.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "chibiknight",
+    "file": "ruffleplayer.html?game=swf%2Fchibiknight.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "clickerheroes",
+    "file": "ruffleplayer.html?game=swf%2Fclickerheroes.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "clickerheroeshacked",
+    "file": "ruffleplayer.html?game=swf%2Fclickerheroeshacked.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "dagobah_Str1ke_Force_Heroes",
+    "file": "ruffleplayer.html?game=swf%2Fdagobah_Str1ke_Force_Heroes.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "dreamcarracing",
+    "file": "ruffleplayer.html?game=swf%2Fdreamcarracing.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "duck-life4",
+    "file": "ruffleplayer.html?game=swf%2Fduck-life4.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "ducklife2",
+    "file": "ruffleplayer.html?game=swf%2Fducklife2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "ducklife3",
+    "file": "ruffleplayer.html?game=swf%2Fducklife3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "escapingtheprison",
+    "file": "ruffleplayer.html?game=swf%2Fescapingtheprison.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "fancypantsadventure",
+    "file": "ruffleplayer.html?game=swf%2Ffancypantsadventure.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "finalninja",
+    "file": "ruffleplayer.html?game=swf%2Ffinalninja.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "flappy-bird",
+    "file": "ruffleplayer.html?game=swf%2Fflappy-bird.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "frogger",
+    "file": "ruffleplayer.html?game=swf%2Ffrogger.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "geometrydash",
+    "file": "ruffleplayer.html?game=swf%2Fgeometrydash.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "geometrydashtest1",
+    "file": "ruffleplayer.html?game=swf%2Fgeometrydashtest1.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "getontop",
+    "file": "ruffleplayer.html?game=swf%2Fgetontop.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "give-up-2",
+    "file": "ruffleplayer.html?game=swf%2Fgive-up-2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "give_up_robot_2",
+    "file": "ruffleplayer.html?game=swf%2Fgive_up_robot_2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "gunmayhem2",
+    "file": "ruffleplayer.html?game=swf%2Fgunmayhem2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "idlewebtycoon",
+    "file": "ruffleplayer.html?game=swf%2Fidlewebtycoon.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "impossiblequiz",
+    "file": "ruffleplayer.html?game=swf%2Fimpossiblequiz.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "impossiblequiz2",
+    "file": "ruffleplayer.html?game=swf%2Fimpossiblequiz2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "impossiblequizhacked",
+    "file": "ruffleplayer.html?game=swf%2Fimpossiblequizhacked.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "indestructotank",
+    "file": "ruffleplayer.html?game=swf%2Findestructotank.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "jacksmith",
+    "file": "ruffleplayer.html?game=swf%2Fjacksmith.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "learn-to-fly-3",
+    "file": "ruffleplayer.html?game=swf%2Flearn-to-fly-3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "learntofly",
+    "file": "ruffleplayer.html?game=swf%2Flearntofly.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "learntofly2",
+    "file": "ruffleplayer.html?game=swf%2Flearntofly2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "miraginewar",
+    "file": "ruffleplayer.html?game=swf%2Fmiraginewar.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "multitask",
+    "file": "ruffleplayer.html?game=swf%2Fmultitask.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "n",
+    "file": "ruffleplayer.html?game=swf%2Fn.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "obeythegame",
+    "file": "ruffleplayer.html?game=swf%2Fobeythegame.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papasbakeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapasbakeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papasburgeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapasburgeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papasdonuteria",
+    "file": "ruffleplayer.html?game=swf%2Fpapasdonuteria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papasfreezeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapasfreezeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papashotdoggeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapashotdoggeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papaspizzeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapaspizzeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papasscooperia",
+    "file": "ruffleplayer.html?game=swf%2Fpapasscooperia.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papassushiria",
+    "file": "ruffleplayer.html?game=swf%2Fpapassushiria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "papaswingeria",
+    "file": "ruffleplayer.html?game=swf%2Fpapaswingeria.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "qwop",
+    "file": "ruffleplayer.html?game=swf%2Fqwop.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "raze2",
+    "file": "ruffleplayer.html?game=swf%2Fraze2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "raze3",
+    "file": "ruffleplayer.html?game=swf%2Fraze3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "run-3-unblocked-games_1531491672",
+    "file": "ruffleplayer.html?game=swf%2Frun-3-unblocked-games_1531491672.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "run3",
+    "file": "ruffleplayer.html?game=swf%2Frun3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "sportsheadsbasketballchampionship",
+    "file": "ruffleplayer.html?game=swf%2Fsportsheadsbasketballchampionship.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "sportsheadssoccer",
+    "file": "ruffleplayer.html?game=swf%2Fsportsheadssoccer.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "sportsheadstennis",
+    "file": "ruffleplayer.html?game=swf%2Fsportsheadstennis.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "sportsheadsvolleyball",
+    "file": "ruffleplayer.html?game=swf%2Fsportsheadsvolleyball.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "stealingthediamond",
+    "file": "ruffleplayer.html?game=swf%2Fstealingthediamond.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "stickrpg",
+    "file": "ruffleplayer.html?game=swf%2Fstickrpg.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "stickwar",
+    "file": "ruffleplayer.html?game=swf%2Fstickwar.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "stickwar2",
+    "file": "ruffleplayer.html?game=swf%2Fstickwar2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "str1ke-force-heroes",
+    "file": "ruffleplayer.html?game=swf%2Fstr1ke-force-heroes.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "str1keforceheroes3",
+    "file": "ruffleplayer.html?game=swf%2Fstr1keforceheroes3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "superfighters",
+    "file": "ruffleplayer.html?game=swf%2Fsuperfighters.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "superfightersultimate",
+    "file": "ruffleplayer.html?game=swf%2Fsuperfightersultimate.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "supermario63",
+    "file": "ruffleplayer.html?game=swf%2Fsupermario63.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "supermarioflash",
+    "file": "ruffleplayer.html?game=swf%2Fsupermarioflash.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "supermarioflash2",
+    "file": "ruffleplayer.html?game=swf%2Fsupermarioflash2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "swordsandsandals3",
+    "file": "ruffleplayer.html?game=swf%2Fswordsandsandals3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "swordsandsouls",
+    "file": "ruffleplayer.html?game=swf%2Fswordsandsouls.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "tank-trouble",
+    "file": "ruffleplayer.html?game=swf%2Ftank-trouble.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "territorywar",
+    "file": "ruffleplayer.html?game=swf%2Fterritorywar.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "tetris",
+    "file": "ruffleplayer.html?game=swf%2Ftetris.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "the_binding_of_isaac",
+    "file": "ruffleplayer.html?game=swf%2Fthe_binding_of_isaac.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "thefloodrunner2",
+    "file": "ruffleplayer.html?game=swf%2Fthefloodrunner2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "thelaststandunion",
+    "file": "ruffleplayer.html?game=swf%2Fthelaststandunion.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "themehotel",
+    "file": "ruffleplayer.html?game=swf%2Fthemehotel.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "themehotelhacked",
+    "file": "ruffleplayer.html?game=swf%2Fthemehotelhacked.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "unfairmario",
+    "file": "ruffleplayer.html?game=swf%2Funfairmario.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "uno",
+    "file": "ruffleplayer.html?game=swf%2Funo.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "vex",
+    "file": "ruffleplayer.html?game=swf%2Fvex.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "zombocalyps3",
+    "file": "ruffleplayer.html?game=swf%2Fzombocalyps3.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "zombocalyps32",
+    "file": "ruffleplayer.html?game=swf%2Fzombocalyps32.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "zombocalypse2",
+    "file": "ruffleplayer.html?game=swf%2Fzombocalypse2.swf",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "flash"
+  },
+  {
+    "name": "1.5",
+    "file": "html5player.html?game=html5%2F1.5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "1.8",
+    "file": "html5player.html?game=html5%2F1.8.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "12minibattles",
+    "file": "html5player.html?game=html5%2F12minibattles.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "1on1soccer",
+    "file": "html5player.html?game=html5%2F1on1soccer.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "1on1tennis",
+    "file": "html5player.html?game=html5%2F1on1tennis.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "2048cupcakes",
+    "file": "html5player.html?game=html5%2F2048cupcakes.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "8ballclassic",
+    "file": "html5player.html?game=html5%2F8ballclassic.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "Alpha_1.2.6",
+    "file": "html5player.html?game=html5%2FAlpha_1.2.6.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "Beta_1.3",
+    "file": "html5player.html?game=html5%2FBeta_1.3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "Indev",
+    "file": "html5player.html?game=html5%2FIndev.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "agariolite",
+    "file": "html5player.html?game=html5%2Fagariolite.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ageofwar",
+    "file": "html5player.html?game=html5%2Fageofwar.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ageofwar2",
+    "file": "html5player.html?game=html5%2Fageofwar2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "agesofconflict",
+    "file": "html5player.html?game=html5%2Fagesofconflict.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "amongus",
+    "file": "html5player.html?game=html5%2Famongus.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "angrybirds",
+    "file": "html5player.html?game=html5%2Fangrybirds.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "angrybirdsshowdown",
+    "file": "html5player.html?game=html5%2Fangrybirdsshowdown.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "angrybirdsspace",
+    "file": "html5player.html?game=html5%2Fangrybirdsspace.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "awesometanks",
+    "file": "html5player.html?game=html5%2Fawesometanks.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "awesometanks2",
+    "file": "html5player.html?game=html5%2Fawesometanks2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "backrooms",
+    "file": "html5player.html?game=html5%2Fbackrooms.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "baconmaydie",
+    "file": "html5player.html?game=html5%2Fbaconmaydie.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "badicecream",
+    "file": "html5player.html?game=html5%2Fbadicecream.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "badicecream2",
+    "file": "html5player.html?game=html5%2Fbadicecream2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "badicecream3",
+    "file": "html5player.html?game=html5%2Fbadicecream3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "badpiggies",
+    "file": "html5player.html?game=html5%2Fbadpiggies.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "baseballbros",
+    "file": "html5player.html?game=html5%2Fbaseballbros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "basketballlegends",
+    "file": "html5player.html?game=html5%2Fbasketballlegends.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "basketballstars",
+    "file": "html5player.html?game=html5%2Fbasketballstars.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "basketbros",
+    "file": "html5player.html?game=html5%2Fbasketbros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "basketrandom",
+    "file": "html5player.html?game=html5%2Fbasketrandom.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "blockysnakes",
+    "file": "html5player.html?game=html5%2Fblockysnakes.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloonsTD",
+    "file": "html5player.html?game=html5%2FbloonsTD.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloonsTD2",
+    "file": "html5player.html?game=html5%2FbloonsTD2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloonsTD3",
+    "file": "html5player.html?game=html5%2FbloonsTD3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloonsTD4",
+    "file": "html5player.html?game=html5%2FbloonsTD4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloonsTD5",
+    "file": "html5player.html?game=html5%2FbloonsTD5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bloxorz",
+    "file": "html5player.html?game=html5%2Fbloxorz.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "blumgiracers",
+    "file": "html5player.html?game=html5%2Fblumgiracers.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "blumgirocket",
+    "file": "html5player.html?game=html5%2Fblumgirocket.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bobtherobber",
+    "file": "html5player.html?game=html5%2Fbobtherobber.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bobtherobber2",
+    "file": "html5player.html?game=html5%2Fbobtherobber2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bobtherobber5",
+    "file": "html5player.html?game=html5%2Fbobtherobber5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "breakingthebank",
+    "file": "html5player.html?game=html5%2Fbreakingthebank.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "bubbleshooter",
+    "file": "html5player.html?game=html5%2Fbubbleshooter.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "candycrush",
+    "file": "html5player.html?game=html5%2Fcandycrush.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "capybaraclicker",
+    "file": "html5player.html?game=html5%2Fcapybaraclicker.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "cardrawing",
+    "file": "html5player.html?game=html5%2Fcardrawing.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "carkingarena",
+    "file": "html5player.html?game=html5%2Fcarkingarena.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "chess",
+    "file": "html5player.html?game=html5%2Fchess.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "choppyorc",
+    "file": "html5player.html?game=html5%2Fchoppyorc.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "chrishunters",
+    "file": "html5player.html?game=html5%2Fchrishunters.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "circloO",
+    "file": "html5player.html?game=html5%2FcircloO.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "circloO2",
+    "file": "html5player.html?game=html5%2FcircloO2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "clashofvikings",
+    "file": "html5player.html?game=html5%2Fclashofvikings.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "cleanupio",
+    "file": "html5player.html?game=html5%2Fcleanupio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "clusterrush",
+    "file": "html5player.html?game=html5%2Fclusterrush.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "crazycars",
+    "file": "html5player.html?game=html5%2Fcrazycars.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "crazymotorcycle",
+    "file": "html5player.html?game=html5%2Fcrazymotorcycle.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "dadish",
+    "file": "html5player.html?game=html5%2Fdadish.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "dadish2",
+    "file": "html5player.html?game=html5%2Fdadish2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "dadish3",
+    "file": "html5player.html?game=html5%2Fdadish3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "damiensgame",
+    "file": "html5player.html?game=html5%2Fdamiensgame.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "deathrun3D",
+    "file": "html5player.html?game=html5%2Fdeathrun3D.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "doodlejump",
+    "file": "html5player.html?game=html5%2Fdoodlejump.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "drawclimber",
+    "file": "html5player.html?game=html5%2Fdrawclimber.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ducklife",
+    "file": "html5player.html?game=html5%2Fducklife.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ducklife5",
+    "file": "html5player.html?game=html5%2Fducklife5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ducklingsio",
+    "file": "html5player.html?game=html5%2Fducklingsio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "eagleride",
+    "file": "html5player.html?game=html5%2Feagleride.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "earntodie",
+    "file": "html5player.html?game=html5%2Fearntodie.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "earntodie2",
+    "file": "html5player.html?game=html5%2Fearntodie2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "eggycar",
+    "file": "html5player.html?game=html5%2Feggycar.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "escapeevan",
+    "file": "html5player.html?game=html5%2Fescapeevan.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ethangilmore",
+    "file": "html5player.html?game=html5%2Fethangilmore.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "evilglitch",
+    "file": "html5player.html?game=html5%2Fevilglitch.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fancypantsadventure2",
+    "file": "html5player.html?game=html5%2Ffancypantsadventure2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fireboyandwatergirl",
+    "file": "html5player.html?game=html5%2Ffireboyandwatergirl.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fireboyandwatergirl2",
+    "file": "html5player.html?game=html5%2Ffireboyandwatergirl2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fireboyandwatergirl3",
+    "file": "html5player.html?game=html5%2Ffireboyandwatergirl3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fireboyandwatergirl4",
+    "file": "html5player.html?game=html5%2Ffireboyandwatergirl4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "flappybird copy",
+    "file": "html5player.html?game=html5%2Fflappybird%20copy.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "floodrunner3",
+    "file": "html5player.html?game=html5%2Ffloodrunner3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "floodrunner4",
+    "file": "html5player.html?game=html5%2Ffloodrunner4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fnaf",
+    "file": "html5player.html?game=html5%2Ffnaf.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fnaf4",
+    "file": "html5player.html?game=html5%2Ffnaf4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "footballbros",
+    "file": "html5player.html?game=html5%2Ffootballbros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "footballlegends",
+    "file": "html5player.html?game=html5%2Ffootballlegends.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "freerider3",
+    "file": "html5player.html?game=html5%2Ffreerider3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "fruitninja",
+    "file": "html5player.html?game=html5%2Ffruitninja.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "funnybattle",
+    "file": "html5player.html?game=html5%2Ffunnybattle.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "funnybattle2",
+    "file": "html5player.html?game=html5%2Ffunnybattle2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "geometryvibes",
+    "file": "html5player.html?game=html5%2Fgeometryvibes.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "googlebaseball",
+    "file": "html5player.html?game=html5%2Fgooglebaseball.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "googledino",
+    "file": "html5player.html?game=html5%2Fgoogledino.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "guesstheiranswer",
+    "file": "html5player.html?game=html5%2Fguesstheiranswer.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "hanger2",
+    "file": "html5player.html?game=html5%2Fhanger2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "helixjump",
+    "file": "html5player.html?game=html5%2Fhelixjump.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "hillclimbracinglite",
+    "file": "html5player.html?game=html5%2Fhillclimbracinglite.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "holeio",
+    "file": "html5player.html?game=html5%2Fholeio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "houseofhazards",
+    "file": "html5player.html?game=html5%2Fhouseofhazards.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "hoverracerdrive",
+    "file": "html5player.html?game=html5%2Fhoverracerdrive.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "idlebreakout",
+    "file": "html5player.html?game=html5%2Fidlebreakout.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ironsnout",
+    "file": "html5player.html?game=html5%2Fironsnout.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "jetpackjoyride",
+    "file": "html5player.html?game=html5%2Fjetpackjoyride.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "johnnytrigger",
+    "file": "html5player.html?game=html5%2Fjohnnytrigger.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "josephthesnake",
+    "file": "html5player.html?game=html5%2Fjosephthesnake.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "jumpingshell",
+    "file": "html5player.html?game=html5%2Fjumpingshell.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "karatebros",
+    "file": "html5player.html?game=html5%2Fkaratebros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "krecakkart",
+    "file": "html5player.html?game=html5%2Fkrecakkart.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "krecakmon",
+    "file": "html5player.html?game=html5%2Fkrecakmon.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "leaderoflanddownunder",
+    "file": "html5player.html?game=html5%2Fleaderoflanddownunder.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "learntoflyidle",
+    "file": "html5player.html?game=html5%2Flearntoflyidle.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "leveldevil",
+    "file": "html5player.html?game=html5%2Fleveldevil.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "lucahockey",
+    "file": "html5player.html?game=html5%2Flucahockey.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "melonplayground",
+    "file": "html5player.html?game=html5%2Fmelonplayground.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "mergeroundracers",
+    "file": "html5player.html?game=html5%2Fmergeroundracers.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "minesweeper",
+    "file": "html5player.html?game=html5%2Fminesweeper.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "monstertracks",
+    "file": "html5player.html?game=html5%2Fmonstertracks.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "motox3m2",
+    "file": "html5player.html?game=html5%2Fmotox3m2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "motox3m3",
+    "file": "html5player.html?game=html5%2Fmotox3m3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "motox3mpoolparty",
+    "file": "html5player.html?game=html5%2Fmotox3mpoolparty.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "motox3mspookyland",
+    "file": "html5player.html?game=html5%2Fmotox3mspookyland.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "motox3mwinter",
+    "file": "html5player.html?game=html5%2Fmotox3mwinter.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "noobminer",
+    "file": "html5player.html?game=html5%2Fnoobminer.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "oppositeday",
+    "file": "html5player.html?game=html5%2Foppositeday.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ovo",
+    "file": "html5player.html?game=html5%2Fovo.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ovo2",
+    "file": "html5player.html?game=html5%2Fovo2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "pacman",
+    "file": "html5player.html?game=html5%2Fpacman.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papasbakeria",
+    "file": "html5player.html?game=html5%2Fpapasbakeria.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papascheeseria",
+    "file": "html5player.html?game=html5%2Fpapascheeseria.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papascupcakeria",
+    "file": "html5player.html?game=html5%2Fpapascupcakeria.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papaspancakeria",
+    "file": "html5player.html?game=html5%2Fpapaspancakeria.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papaspastaria",
+    "file": "html5player.html?game=html5%2Fpapaspastaria.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "papastacomia",
+    "file": "html5player.html?game=html5%2Fpapastacomia.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "parkingfury",
+    "file": "html5player.html?game=html5%2Fparkingfury.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "parkingfury2",
+    "file": "html5player.html?game=html5%2Fparkingfury2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "parkingfury3",
+    "file": "html5player.html?game=html5%2Fparkingfury3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "picosschool",
+    "file": "html5player.html?game=html5%2Fpicosschool.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "pingpongchaos",
+    "file": "html5player.html?game=html5%2Fpingpongchaos.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "pixelspeedrun",
+    "file": "html5player.html?game=html5%2Fpixelspeedrun.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "plantsvszombies",
+    "file": "html5player.html?game=html5%2Fplantsvszombies.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "plonky",
+    "file": "html5player.html?game=html5%2Fplonky.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "polytrack",
+    "file": "html5player.html?game=html5%2Fpolytrack.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "poorbunny",
+    "file": "html5player.html?game=html5%2Fpoorbunny.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "pou",
+    "file": "html5player.html?game=html5%2Fpou.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ragdollhit",
+    "file": "html5player.html?game=html5%2Fragdollhit.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "ragdollsoccer",
+    "file": "html5player.html?game=html5%2Fragdollsoccer.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "redball4vol1",
+    "file": "html5player.html?game=html5%2Fredball4vol1.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "redball4vol2",
+    "file": "html5player.html?game=html5%2Fredball4vol2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "redball4vol3",
+    "file": "html5player.html?game=html5%2Fredball4vol3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "retrobowl",
+    "file": "html5player.html?game=html5%2Fretrobowl.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "retrobowlcollege",
+    "file": "html5player.html?game=html5%2Fretrobowlcollege.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "retrohighway",
+    "file": "html5player.html?game=html5%2Fretrohighway.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "retropingpong",
+    "file": "html5player.html?game=html5%2Fretropingpong.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "riddleschool",
+    "file": "html5player.html?game=html5%2Friddleschool.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "riddleschool2",
+    "file": "html5player.html?game=html5%2Friddleschool2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "riddleschool3",
+    "file": "html5player.html?game=html5%2Friddleschool3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "riddleschool4",
+    "file": "html5player.html?game=html5%2Friddleschool4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "riddleschool5",
+    "file": "html5player.html?game=html5%2Friddleschool5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "rooftopsnipers2",
+    "file": "html5player.html?game=html5%2Frooftopsnipers2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "run",
+    "file": "html5player.html?game=html5%2Frun.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "sandgame",
+    "file": "html5player.html?game=html5%2Fsandgame.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "shortlife",
+    "file": "html5player.html?game=html5%2Fshortlife.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "slope",
+    "file": "html5player.html?game=html5%2Fslope.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "slope2player",
+    "file": "html5player.html?game=html5%2Fslope2player.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "slowroads",
+    "file": "html5player.html?game=html5%2Fslowroads.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "sm64",
+    "file": "html5player.html?game=html5%2Fsm64.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "snowballio",
+    "file": "html5player.html?game=html5%2Fsnowballio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "soccerbros",
+    "file": "html5player.html?game=html5%2Fsoccerbros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "spacebarclicker",
+    "file": "html5player.html?game=html5%2Fspacebarclicker.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "spaceiskey",
+    "file": "html5player.html?game=html5%2Fspaceiskey.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "spaceiskey2",
+    "file": "html5player.html?game=html5%2Fspaceiskey2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "spacewaves",
+    "file": "html5player.html?game=html5%2Fspacewaves.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "speedstars",
+    "file": "html5player.html?game=html5%2Fspeedstars.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "sprunki",
+    "file": "html5player.html?game=html5%2Fsprunki.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stack",
+    "file": "html5player.html?game=html5%2Fstack.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stacktris",
+    "file": "html5player.html?game=html5%2Fstacktris.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stateio",
+    "file": "html5player.html?game=html5%2Fstateio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stickarchersbattle",
+    "file": "html5player.html?game=html5%2Fstickarchersbattle.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stickfighter",
+    "file": "html5player.html?game=html5%2Fstickfighter.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stickmanhook",
+    "file": "html5player.html?game=html5%2Fstickmanhook.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stickmerge",
+    "file": "html5player.html?game=html5%2Fstickmerge.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "stretchjared",
+    "file": "html5player.html?game=html5%2Fstretchjared.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "superliquidsoccer",
+    "file": "html5player.html?game=html5%2Fsuperliquidsoccer.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "tabletennisworldtour",
+    "file": "html5player.html?game=html5%2Ftabletennisworldtour.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "tag",
+    "file": "html5player.html?game=html5%2Ftag.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "templeofboom",
+    "file": "html5player.html?game=html5%2Ftempleofboom.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "territorialio",
+    "file": "html5player.html?game=html5%2Fterritorialio.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "thereisnog",
+    "file": "html5player.html?game=html5%2Fthereisnog.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "thisistheonlylevel",
+    "file": "html5player.html?game=html5%2Fthisistheonlylevel.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "thisistheonlyleveltoo",
+    "file": "html5player.html?game=html5%2Fthisistheonlyleveltoo.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "timeshooter2",
+    "file": "html5player.html?game=html5%2Ftimeshooter2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "tinyfishing",
+    "file": "html5player.html?game=html5%2Ftinyfishing.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "trapthecat",
+    "file": "html5player.html?game=html5%2Ftrapthecat.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "triviacrack",
+    "file": "html5player.html?game=html5%2Ftriviacrack.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "tubejumpers",
+    "file": "html5player.html?game=html5%2Ftubejumpers.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "tunnelrush",
+    "file": "html5player.html?game=html5%2Ftunnelrush.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "unicyclehero",
+    "file": "html5player.html?game=html5%2Funicyclehero.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "vex4",
+    "file": "html5player.html?game=html5%2Fvex4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "vex5",
+    "file": "html5player.html?game=html5%2Fvex5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "vexx3m",
+    "file": "html5player.html?game=html5%2Fvexx3m.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "vexx3m2",
+    "file": "html5player.html?game=html5%2Fvexx3m2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "volleyrandom",
+    "file": "html5player.html?game=html5%2Fvolleyrandom.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "webecomewhatwebehold",
+    "file": "html5player.html?game=html5%2Fwebecomewhatwebehold.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheeliebike",
+    "file": "html5player.html?game=html5%2Fwheeliebike.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely",
+    "file": "html5player.html?game=html5%2Fwheely.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely2",
+    "file": "html5player.html?game=html5%2Fwheely2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely3",
+    "file": "html5player.html?game=html5%2Fwheely3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely4",
+    "file": "html5player.html?game=html5%2Fwheely4.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely5",
+    "file": "html5player.html?game=html5%2Fwheely5.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely6",
+    "file": "html5player.html?game=html5%2Fwheely6.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wheely8",
+    "file": "html5player.html?game=html5%2Fwheely8.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wordleunlimited",
+    "file": "html5player.html?game=html5%2Fwordleunlimited.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "worldshardestgame",
+    "file": "html5player.html?game=html5%2Fworldshardestgame.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "worldshardestgame2",
+    "file": "html5player.html?game=html5%2Fworldshardestgame2.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "worldshardestgame3",
+    "file": "html5player.html?game=html5%2Fworldshardestgame3.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "wrestlebros",
+    "file": "html5player.html?game=html5%2Fwrestlebros.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "zombierush",
+    "file": "html5player.html?game=html5%2Fzombierush.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "zoranblaster",
+    "file": "html5player.html?game=html5%2Fzoranblaster.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "zorario",
+    "file": "html5player.html?game=html5%2Fzorario.html",
+    "thumb": "assets/thumbnails/default.jpg",
+    "category": "html5"
+  }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student - GBA Player</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</head>
+<body style="background-color: #0d1117;">
+    <script src="../navbar.js"></script>
+
+    <div id="player-wrapper">
+        <div id="game-container"></div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const romName = params.get('game');
+
+        if (romName) {
+            const ext = romName.split('.').pop().toLowerCase();
+            
+            EJS_player = "#game-container";
+            // This assumes your ROMs are in a folder called "roms" in the root
+            EJS_gameUrl = "../roms/" + romName; 
+            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            
+            // Auto-detect Console
+            if (ext === 'gba') { EJS_core = "gba"; }
+            else if (ext === 'gbc') { EJS_core = "gbc"; }
+            else { EJS_core = "gb"; }
+
+            // Theme matching
+            EJS_BackgroundColor = "#0d1117";
+            EJS_ButtonsTextColor = "#8b949e";
+        }
+    </script>
+
+    <style>
+        #game-container {
+            width: 100%;
+            height: calc(100vh - 60px);
+        }
+    </style>
+</body>
+</html>
