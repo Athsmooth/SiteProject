@@ -14,30 +14,26 @@
         <div id="game-container"></div>
     </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        // The autogen script passes the filename, e.g., "Pokemon Red.gbc"
-        const romName = params.get('game'); 
+   <script>
+    const params = new URLSearchParams(window.location.search);
+    const romPath = params.get('game'); // This will be "gba/Asteroids..."
 
-        if (romName) {
-            const ext = romName.split('.').pop().toLowerCase();
-            
-            EJS_player = "#game-container";
-            
-            // FIX: Since this HTML is in the root, it just goes into the /gba folder
-            EJS_gameUrl = "gba/" + romName; 
-            
-            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            
-            // Auto-detect Console
-            if (ext === 'gba') { EJS_core = "gba"; }
-            else if (ext === 'gbc') { EJS_core = "gbc"; }
-            else { EJS_core = "gb"; }
+    if (romPath) {
+        // We do NOT add "gba/" here because it's already in the 'game' parameter
+        EJS_gameUrl = romPath; 
+        
+        EJS_player = "#game-container";
+        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        
+        // Better Core Detection
+        const ext = romPath.split('.').pop().toLowerCase();
+        if (ext === 'gba') { EJS_core = "gba"; }
+        else if (ext === 'gbc') { EJS_core = "gbc"; }
+        else { EJS_core = "gb"; }
 
-            // Theme matching
-            EJS_BackgroundColor = "#0d1117";
-            EJS_ButtonsTextColor = "#8b949e";
-        }
+        EJS_BackgroundColor = "#0d1117";
+        EJS_ButtonsTextColor = "#8b949e";
+    }
     </script>
 
     <style>
