@@ -1,103 +1,90 @@
-GAME AUDIT REPORT - 3/29/2026, 9:03:57 PM
+GAME AUDIT REPORT - 3/30/2026, 6:38:00 PM
 Rules: Exact matches prioritized. Fuzzy matches ignored if version numbers differ.
 --------------------------------------------------------------------------------
 
 [EXACT MATCH]
-KEEP  (Flash): swf/games/chess.swf
+KEEP  (Flash): swf/Age_Of_War.swf
+TRASH (HTML5): html5/ageofwar.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Age_Of _War_2.swf
+TRASH (HTML5): html5/ageofwar2.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Bad_Piggies.swf
+TRASH (HTML5): html5/badpiggies.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Bloxorz.swf
+TRASH (HTML5): html5/bloxorz.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/chess.swf
 TRASH (HTML5): html5/chess.html
 
 [EXACT MATCH]
-KEEP  (Flash): swf/games/ducklife2.swf
-TRASH (HTML5): html5/ducklife2.html
+KEEP  (Flash): swf/Earn_To_Die.swf
+TRASH (HTML5): html5/earntodie.html
 
 [EXACT MATCH]
-KEEP  (Flash): swf/games/ducklife3.swf
-TRASH (HTML5): html5/ducklife3.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/duck-life4.swf
-TRASH (HTML5): html5/ducklife4.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/escapingtheprison.swf
-TRASH (HTML5): html5/escapingtheprison.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/fancypantsadventure.swf
-TRASH (HTML5): html5/fancypantsadventure.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/flappy-bird.swf
-TRASH (HTML5): html5/flappybird.html
-
-[FUZZY MATCH 80%]
-KEEP  (Flash): swf/games/thefloodrunner2.swf
-TRASH (HTML5): html5/floodrunner2.html
-Note: Flash file size is 1.70 MB
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/geometrydash.swf
-TRASH (HTML5): html5/geometrydash.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/getontop.swf
-TRASH (HTML5): html5/getontop.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/HappyWheels.swf
-TRASH (HTML5): html5/happywheels.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/learntofly.swf
-TRASH (HTML5): html5/learntofly.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/learntofly2.swf
-TRASH (HTML5): html5/learntofly2.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/papasbakeria.swf
+KEEP  (Flash): swf/papasbakeria.swf
 TRASH (HTML5): html5/papasbakeria.html
 
-[EXACT MATCH]
-KEEP  (Flash): swf/games/papasburgeria.swf
-TRASH (HTML5): html5/papasburgeria.html
+[FUZZY MATCH 87%]
+KEEP  (Flash): swf/Papa's_Cheezeria.swf
+TRASH (HTML5): html5/papascheeseria.html
+Note: Flash file size is 11.77 MB
+
+[FUZZY MATCH 94%]
+KEEP  (Flash): swf/Papa's_Cupcakeria.swf
+TRASH (HTML5): html5/papascupcakeria.html
+Note: Flash file size is 8.50 MB
+
+[FUZZY MATCH 94%]
+KEEP  (Flash): swf/Papa's_Pancakeria.swf
+TRASH (HTML5): html5/papaspancakeria.html
+Note: Flash file size is 6.19 MB
+
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/Papa's_Pasteria.swf
+TRASH (HTML5): html5/papaspastaria.html
+Note: Flash file size is 10.09 MB
+
+[FUZZY MATCH 92%]
+KEEP  (Flash): swf/Papa's_Taco_Mia.swf
+TRASH (HTML5): html5/papastacomia.html
+Note: Flash file size is 5.14 MB
+
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/This is the only level too.swf
+TRASH (HTML5): html5/thisistheonlylevel.html
+Note: Flash file size is 1.78 MB
 
 [EXACT MATCH]
-KEEP  (Flash): swf/games/papasdonuteria.swf
-TRASH (HTML5): html5/papasdonuteria.html
+KEEP  (Flash): swf/This is the only level.swf
+TRASH (HTML5): html5/thisistheonlylevel.html
 
 [EXACT MATCH]
-KEEP  (Flash): swf/games/papasfreezeria.swf
-TRASH (HTML5): html5/papasfreezeria.html
+KEEP  (Flash): swf/This is the only level too.swf
+TRASH (HTML5): html5/thisistheonlyleveltoo.html
 
-[EXACT MATCH]
-KEEP  (Flash): swf/games/papashotdoggeria.swf
-TRASH (HTML5): html5/papashotdoggeria.html
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/This is the only level.swf
+TRASH (HTML5): html5/thisistheonlyleveltoo.html
+Note: Flash file size is 1.26 MB
 
-[EXACT MATCH]
-KEEP  (Flash): swf/games/papaspizzeria.swf
-TRASH (HTML5): html5/papaspizzeria.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/papaswingeria.swf
-TRASH (HTML5): html5/papaswingeria.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/Run 2.swf
-TRASH (HTML5): html5/run2.html
-
-[EXACT MATCH]
-KEEP  (Flash): swf/games/run3.swf
-TRASH (HTML5): html5/run3.html
+[FUZZY MATCH 81%]
+KEEP  (Flash): swf/The World's Hardest Game.swf
+TRASH (HTML5): html5/worldshardestgame.html
+Note: Flash file size is 0.71 MB
 
 [FUZZY MATCH 82%]
-KEEP  (Flash): swf/games/impossiblequiz.swf
-TRASH (HTML5): html5/theimpossiblequiz.html
-Note: Flash file size is 4.64 MB
+KEEP  (Flash): swf/The World's Hardest Game 2.swf
+TRASH (HTML5): html5/worldshardestgame2.html
+Note: Flash file size is 2.27 MB
 
-[FUZZY MATCH 83%]
-KEEP  (Flash): swf/games/impossiblequiz2.swf
-TRASH (HTML5): html5/theimpossiblequiz2.html
-Note: Flash file size is 9.36 MB
+[FUZZY MATCH 82%]
+KEEP  (Flash): swf/The World's Hardest Game 3.swf
+TRASH (HTML5): html5/worldshardestgame3.html
+Note: Flash file size is 3.99 MB
 

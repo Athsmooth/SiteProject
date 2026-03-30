@@ -3636,9 +3636,687 @@
     "category": "flash"
   },
   {
+    "name": "ARCS",
+    "file": "ruffleplayer.html?game=swf/ARCS.swf",
+    "thumb": "assets/thumbnails/ARCS.png",
+    "category": "flash"
+  },
+  {
+    "name": "Abduction",
+    "file": "ruffleplayer.html?game=swf/Abduction.swf",
+    "thumb": "assets/thumbnails/Abduction.png",
+    "category": "flash"
+  },
+  {
+    "name": "Achievment  Unlocked 3",
+    "file": "ruffleplayer.html?game=swf/Achievment%20-Unlocked-3.swf",
+    "thumb": "assets/thumbnails/Achievment -Unlocked-3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Achievment Unlocked 2",
+    "file": "ruffleplayer.html?game=swf/Achievment-Unlocked-2.swf",
+    "thumb": "assets/thumbnails/Achievment-Unlocked-2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Achievment Unlocked",
+    "file": "ruffleplayer.html?game=swf/Achievment-Unlocked.swf",
+    "thumb": "assets/thumbnails/Achievment-Unlocked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Age Of  War 2",
+    "file": "ruffleplayer.html?game=swf/Age_Of%20_War_2.swf",
+    "thumb": "assets/thumbnails/Age_Of _War_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Age Of War",
+    "file": "ruffleplayer.html?game=swf/Age_Of_War.swf",
+    "thumb": "assets/thumbnails/Age_Of_War.png",
+    "category": "flash"
+  },
+  {
+    "name": "Age Of War 3",
+    "file": "ruffleplayer.html?game=swf/Age_Of_War_3.swf",
+    "thumb": "assets/thumbnails/Age_Of_War_3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Age Of War 7",
+    "file": "ruffleplayer.html?game=swf/Age_Of_War_7.swf",
+    "thumb": "assets/thumbnails/Age_Of_War_7.png",
+    "category": "flash"
+  },
+  {
+    "name": "Apple Shooter",
+    "file": "ruffleplayer.html?game=swf/Apple_Shooter.swf",
+    "thumb": "assets/thumbnails/Apple_Shooter.png",
+    "category": "flash"
+  },
+  {
+    "name": "Armor Mayhem",
+    "file": "ruffleplayer.html?game=swf/Armor_Mayhem.swf",
+    "thumb": "assets/thumbnails/Armor_Mayhem.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bad Piggies",
+    "file": "ruffleplayer.html?game=swf/Bad_Piggies.swf",
+    "thumb": "assets/thumbnails/Bad_Piggies.png",
+    "category": "flash"
+  },
+  {
+    "name": "BattleShips",
+    "file": "ruffleplayer.html?game=swf/BattleShips.swf",
+    "thumb": "assets/thumbnails/BattleShips.png",
+    "category": "flash"
+  },
+  {
+    "name": "Beat Up Your PC",
+    "file": "ruffleplayer.html?game=swf/Beat_Up_Your_PC.swf",
+    "thumb": "assets/thumbnails/Beat_Up_Your_PC.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bejweled 2",
+    "file": "ruffleplayer.html?game=swf/Bejweled_2.swf",
+    "thumb": "assets/thumbnails/Bejweled_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Big Red Button",
+    "file": "ruffleplayer.html?game=swf/Big_Red_Button.swf",
+    "thumb": "assets/thumbnails/Big_Red_Button.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Players Pack 2",
+    "file": "ruffleplayer.html?game=swf/Bloons-Players-Pack-2.swf",
+    "thumb": "assets/thumbnails/Bloons-Players-Pack-2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Players Pack 3",
+    "file": "ruffleplayer.html?game=swf/Bloons-Players-Pack-3.swf",
+    "thumb": "assets/thumbnails/Bloons-Players-Pack-3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Players Pack 4",
+    "file": "ruffleplayer.html?game=swf/Bloons-Players-Pack-4.swf",
+    "thumb": "assets/thumbnails/Bloons-Players-Pack-4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Players Pack 5",
+    "file": "ruffleplayer.html?game=swf/Bloons-Players-Pack-5.swf",
+    "thumb": "assets/thumbnails/Bloons-Players-Pack-5.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Players Pack",
+    "file": "ruffleplayer.html?game=swf/Bloons-Players-Pack.swf",
+    "thumb": "assets/thumbnails/Bloons-Players-Pack.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Pop 3",
+    "file": "ruffleplayer.html?game=swf/Bloons-Pop-3.swf",
+    "thumb": "assets/thumbnails/Bloons-Pop-3.png",
+    "category": "flash"
+  },
+  {
     "name": "Bloons Tower Defense 5",
     "file": "ruffleplayer.html?game=swf/Bloons-Tower-Defense-5.swf",
     "thumb": "assets/thumbnails/Bloons-Tower-Defense-5.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Super Monkey",
+    "file": "ruffleplayer.html?game=swf/Bloons_Super-Monkey.swf",
+    "thumb": "assets/thumbnails/Bloons_Super-Monkey.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense 2",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense_2.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense 3",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense_3.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense_3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense 4",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense_4.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense_4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense 4 Expansion",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense_4_Expansion.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense_4_Expansion.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloons Tower Defense 5",
+    "file": "ruffleplayer.html?game=swf/Bloons_Tower_Defense_5.swf",
+    "thumb": "assets/thumbnails/Bloons_Tower_Defense_5.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bloxorz",
+    "file": "ruffleplayer.html?game=swf/Bloxorz.swf",
+    "thumb": "assets/thumbnails/Bloxorz.png",
+    "category": "flash"
+  },
+  {
+    "name": "BoomBot 2",
+    "file": "ruffleplayer.html?game=swf/BoomBot%202.swf",
+    "thumb": "assets/thumbnails/BoomBot 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "BoomBot",
+    "file": "ruffleplayer.html?game=swf/BoomBot.swf",
+    "thumb": "assets/thumbnails/BoomBot.png",
+    "category": "flash"
+  },
+  {
+    "name": "Breaking Into The Bank",
+    "file": "ruffleplayer.html?game=swf/Breaking_Into_The_Bank.swf",
+    "thumb": "assets/thumbnails/Breaking_Into_The_Bank.png",
+    "category": "flash"
+  },
+  {
+    "name": "Bridge Tactics",
+    "file": "ruffleplayer.html?game=swf/Bridge-Tactics.swf",
+    "thumb": "assets/thumbnails/Bridge-Tactics.png",
+    "category": "flash"
+  },
+  {
+    "name": "Building Demolisher",
+    "file": "ruffleplayer.html?game=swf/Building_Demolisher.swf",
+    "thumb": "assets/thumbnails/Building_Demolisher.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cactus MCOY",
+    "file": "ruffleplayer.html?game=swf/Cactus_MCOY.swf",
+    "thumb": "assets/thumbnails/Cactus_MCOY.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cactus MCOY 2",
+    "file": "ruffleplayer.html?game=swf/Cactus_MCOY_2.swf",
+    "thumb": "assets/thumbnails/Cactus_MCOY_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Canyon Defense",
+    "file": "ruffleplayer.html?game=swf/Canyon%20Defense.swf",
+    "thumb": "assets/thumbnails/Canyon Defense.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cat Mario",
+    "file": "ruffleplayer.html?game=swf/Cat%20Mario.swf",
+    "thumb": "assets/thumbnails/Cat Mario.png",
+    "category": "flash"
+  },
+  {
+    "name": "Causality Camp",
+    "file": "ruffleplayer.html?game=swf/Causality-Camp.swf",
+    "thumb": "assets/thumbnails/Causality-Camp.png",
+    "category": "flash"
+  },
+  {
+    "name": "Causality Festival",
+    "file": "ruffleplayer.html?game=swf/Causality-Festival.swf",
+    "thumb": "assets/thumbnails/Causality-Festival.png",
+    "category": "flash"
+  },
+  {
+    "name": "Causality Kitchen",
+    "file": "ruffleplayer.html?game=swf/Causality-Kitchen.swf",
+    "thumb": "assets/thumbnails/Causality-Kitchen.png",
+    "category": "flash"
+  },
+  {
+    "name": "Caveman",
+    "file": "ruffleplayer.html?game=swf/Caveman.swf",
+    "thumb": "assets/thumbnails/Caveman.png",
+    "category": "flash"
+  },
+  {
+    "name": "Chibi Knight Hacked",
+    "file": "ruffleplayer.html?game=swf/Chibi_Knight%20Hacked.swf",
+    "thumb": "assets/thumbnails/Chibi_Knight Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Chibi Knight",
+    "file": "ruffleplayer.html?game=swf/Chibi_Knight.swf",
+    "thumb": "assets/thumbnails/Chibi_Knight.png",
+    "category": "flash"
+  },
+  {
+    "name": "Chinese Checkers",
+    "file": "ruffleplayer.html?game=swf/Chinese-Checkers.swf",
+    "thumb": "assets/thumbnails/Chinese-Checkers.png",
+    "category": "flash"
+  },
+  {
+    "name": "Click Death Bowling",
+    "file": "ruffleplayer.html?game=swf/Click-Death-Bowling.swf",
+    "thumb": "assets/thumbnails/Click-Death-Bowling.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cooking Mama Kills Animals",
+    "file": "ruffleplayer.html?game=swf/Cooking%20Mama%20Kills%20Animals.swf",
+    "thumb": "assets/thumbnails/Cooking Mama Kills Animals.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cover Orange Journey Pirates",
+    "file": "ruffleplayer.html?game=swf/Cover-Orange-Journey-Pirates.swf",
+    "thumb": "assets/thumbnails/Cover-Orange-Journey-Pirates.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cover Orange Knights",
+    "file": "ruffleplayer.html?game=swf/Cover-Orange-Knights.swf",
+    "thumb": "assets/thumbnails/Cover-Orange-Knights.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cover Orange Wild West",
+    "file": "ruffleplayer.html?game=swf/Cover-Orange-Wild-West.swf",
+    "thumb": "assets/thumbnails/Cover-Orange-Wild-West.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cover Orange",
+    "file": "ruffleplayer.html?game=swf/Cover_Orange.swf",
+    "thumb": "assets/thumbnails/Cover_Orange.png",
+    "category": "flash"
+  },
+  {
+    "name": "Crush the Castle 2",
+    "file": "ruffleplayer.html?game=swf/Crush_the_Castle_2.swf",
+    "thumb": "assets/thumbnails/Crush_the_Castle_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cube Droid Saves The Galaxy",
+    "file": "ruffleplayer.html?game=swf/Cube_Droid_Saves_The_Galaxy.swf",
+    "thumb": "assets/thumbnails/Cube_Droid_Saves_The_Galaxy.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cubefield",
+    "file": "ruffleplayer.html?game=swf/Cubefield.swf",
+    "thumb": "assets/thumbnails/Cubefield.png",
+    "category": "flash"
+  },
+  {
+    "name": "Cursor Invisible",
+    "file": "ruffleplayer.html?game=swf/Cursor_Invisible.swf",
+    "thumb": "assets/thumbnails/Cursor_Invisible.png",
+    "category": "flash"
+  },
+  {
+    "name": "DaC Ep27",
+    "file": "ruffleplayer.html?game=swf/DaC_Ep27.swf",
+    "thumb": "assets/thumbnails/DaC_Ep27.png",
+    "category": "flash"
+  },
+  {
+    "name": "Dead Paradise 2",
+    "file": "ruffleplayer.html?game=swf/Dead%20Paradise%202.swf",
+    "thumb": "assets/thumbnails/Dead Paradise 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Dino Run",
+    "file": "ruffleplayer.html?game=swf/Dino_Run.swf",
+    "thumb": "assets/thumbnails/Dino_Run.png",
+    "category": "flash"
+  },
+  {
+    "name": "Dog Fight Sim",
+    "file": "ruffleplayer.html?game=swf/Dog%20Fight%20Sim.swf",
+    "thumb": "assets/thumbnails/Dog Fight Sim.png",
+    "category": "flash"
+  },
+  {
+    "name": "Doodlegod",
+    "file": "ruffleplayer.html?game=swf/Doodlegod.swf",
+    "thumb": "assets/thumbnails/Doodlegod.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Hunt",
+    "file": "ruffleplayer.html?game=swf/Duck%20Hunt.swf",
+    "thumb": "assets/thumbnails/Duck Hunt.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 1",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_1.swf",
+    "thumb": "assets/thumbnails/Duck_Life_1.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 2",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_2.swf",
+    "thumb": "assets/thumbnails/Duck_Life_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 2 Hacked",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_2_Hacked.swf",
+    "thumb": "assets/thumbnails/Duck_Life_2_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 3",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_3.swf",
+    "thumb": "assets/thumbnails/Duck_Life_3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 3 Hacked",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_3_Hacked.swf",
+    "thumb": "assets/thumbnails/Duck_Life_3_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 4",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_4.swf",
+    "thumb": "assets/thumbnails/Duck_Life_4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Duck Life 4 Hacked",
+    "file": "ruffleplayer.html?game=swf/Duck_Life_4_Hacked.swf",
+    "thumb": "assets/thumbnails/Duck_Life_4_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Dumper Truck",
+    "file": "ruffleplayer.html?game=swf/Dumper-Truck.swf",
+    "thumb": "assets/thumbnails/Dumper-Truck.png",
+    "category": "flash"
+  },
+  {
+    "name": "Earn To Die",
+    "file": "ruffleplayer.html?game=swf/Earn_To_Die.swf",
+    "thumb": "assets/thumbnails/Earn_To_Die.png",
+    "category": "flash"
+  },
+  {
+    "name": "Earn To Die 2012",
+    "file": "ruffleplayer.html?game=swf/Earn_To_Die_2012.swf",
+    "thumb": "assets/thumbnails/Earn_To_Die_2012.png",
+    "category": "flash"
+  },
+  {
+    "name": "Earn To Die 2012 Part 2",
+    "file": "ruffleplayer.html?game=swf/Earn_To_Die_2012_Part_2.swf",
+    "thumb": "assets/thumbnails/Earn_To_Die_2012_Part_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "ElectricMan 2",
+    "file": "ruffleplayer.html?game=swf/ElectricMan_2.swf",
+    "thumb": "assets/thumbnails/ElectricMan_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "ElectricMan 2 Hacked",
+    "file": "ruffleplayer.html?game=swf/ElectricMan_2_Hacked.swf",
+    "thumb": "assets/thumbnails/ElectricMan_2_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "End  of The World",
+    "file": "ruffleplayer.html?game=swf/End%20_of_The_World.swf",
+    "thumb": "assets/thumbnails/End _of_The_World.png",
+    "category": "flash"
+  },
+  {
+    "name": "Escaping The Prison",
+    "file": "ruffleplayer.html?game=swf/Escaping_The_Prison.swf",
+    "thumb": "assets/thumbnails/Escaping_The_Prison.png",
+    "category": "flash"
+  },
+  {
+    "name": "Fancy Pants World 1",
+    "file": "ruffleplayer.html?game=swf/Fancy_Pants_World_1.swf",
+    "thumb": "assets/thumbnails/Fancy_Pants_World_1.png",
+    "category": "flash"
+  },
+  {
+    "name": "Fancy Pants World 2",
+    "file": "ruffleplayer.html?game=swf/Fancy_Pants_World_2.swf",
+    "thumb": "assets/thumbnails/Fancy_Pants_World_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us 1",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-1.swf",
+    "thumb": "assets/thumbnails/Feed-Us-1.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us 2",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-2.swf",
+    "thumb": "assets/thumbnails/Feed-Us-2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us 3",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-3.swf",
+    "thumb": "assets/thumbnails/Feed-Us-3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us 4",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-4.swf",
+    "thumb": "assets/thumbnails/Feed-Us-4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us 5",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-5.swf",
+    "thumb": "assets/thumbnails/Feed-Us-5.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us Happy",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-Happy.swf",
+    "thumb": "assets/thumbnails/Feed-Us-Happy.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us Lost Island",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-Lost-Island.swf",
+    "thumb": "assets/thumbnails/Feed-Us-Lost-Island.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us Pirates",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-Pirates.swf",
+    "thumb": "assets/thumbnails/Feed-Us-Pirates.png",
+    "category": "flash"
+  },
+  {
+    "name": "Feed Us Xmas Expansion",
+    "file": "ruffleplayer.html?game=swf/Feed-Us-Xmas-Expansion.swf",
+    "thumb": "assets/thumbnails/Feed-Us-Xmas-Expansion.png",
+    "category": "flash"
+  },
+  {
+    "name": "FireBoy and Watergirl 1 In The Forest Temple",
+    "file": "ruffleplayer.html?game=swf/FireBoy_and_Watergirl_1-In_The_Forest_Temple.swf",
+    "thumb": "assets/thumbnails/FireBoy_and_Watergirl_1-In_The_Forest_Temple.png",
+    "category": "flash"
+  },
+  {
+    "name": "FireBoy and Watergirl 2 The Light Temple",
+    "file": "ruffleplayer.html?game=swf/FireBoy_and_Watergirl_2-The_Light_Temple.swf",
+    "thumb": "assets/thumbnails/FireBoy_and_Watergirl_2-The_Light_Temple.png",
+    "category": "flash"
+  },
+  {
+    "name": "FireBoy and Watergirl 3 In The Forest Temple",
+    "file": "ruffleplayer.html?game=swf/FireBoy_and_Watergirl_3-In_The_Forest_Temple.swf",
+    "thumb": "assets/thumbnails/FireBoy_and_Watergirl_3-In_The_Forest_Temple.png",
+    "category": "flash"
+  },
+  {
+    "name": "FireBoy and Watergirl 4 The Crystal Temple",
+    "file": "ruffleplayer.html?game=swf/FireBoy_and_Watergirl_4-The_Crystal_Temple.swf",
+    "thumb": "assets/thumbnails/FireBoy_and_Watergirl_4-The_Crystal_Temple.png",
+    "category": "flash"
+  },
+  {
+    "name": "Flappy Bird",
+    "file": "ruffleplayer.html?game=swf/Flappy-Bird.swf",
+    "thumb": "assets/thumbnails/Flappy-Bird.png",
+    "category": "flash"
+  },
+  {
+    "name": "Fleeing the Complex",
+    "file": "ruffleplayer.html?game=swf/Fleeing_the_Complex.swf",
+    "thumb": "assets/thumbnails/Fleeing_the_Complex.png",
+    "category": "flash"
+  },
+  {
+    "name": "Flight",
+    "file": "ruffleplayer.html?game=swf/Flight.swf",
+    "thumb": "assets/thumbnails/Flight.png",
+    "category": "flash"
+  },
+  {
+    "name": "Fling Ecommerce",
+    "file": "ruffleplayer.html?game=swf/Fling-Ecommerce.swf",
+    "thumb": "assets/thumbnails/Fling-Ecommerce.png",
+    "category": "flash"
+  },
+  {
+    "name": "Foster's Home for Imaginary Friends   Wilt's Wash N' Swoosh",
+    "file": "ruffleplayer.html?game=swf/Foster's%20Home%20for%20Imaginary%20Friends%20-%20Wilt's%20Wash%20N'%20Swoosh.swf",
+    "thumb": "assets/thumbnails/Foster's Home for Imaginary Friends - Wilt's Wash N' Swoosh.png",
+    "category": "flash"
+  },
+  {
+    "name": "Fragger",
+    "file": "ruffleplayer.html?game=swf/Fragger.swf",
+    "thumb": "assets/thumbnails/Fragger.png",
+    "category": "flash"
+  },
+  {
+    "name": "Give Up 2",
+    "file": "ruffleplayer.html?game=swf/Give%20Up%202.swf",
+    "thumb": "assets/thumbnails/Give Up 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Give Up",
+    "file": "ruffleplayer.html?game=swf/Give%20Up.swf",
+    "thumb": "assets/thumbnails/Give Up.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gluey 2",
+    "file": "ruffleplayer.html?game=swf/Gluey_2.swf",
+    "thumb": "assets/thumbnails/Gluey_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gold Miner Special Editon",
+    "file": "ruffleplayer.html?game=swf/Gold-Miner%20Special%20Editon.swf",
+    "thumb": "assets/thumbnails/Gold-Miner Special Editon.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gold Miner Hacked",
+    "file": "ruffleplayer.html?game=swf/Gold-Miner-Hacked.swf",
+    "thumb": "assets/thumbnails/Gold-Miner-Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gold Miner",
+    "file": "ruffleplayer.html?game=swf/Gold-Miner.swf",
+    "thumb": "assets/thumbnails/Gold-Miner.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gravity Duck Hacked",
+    "file": "ruffleplayer.html?game=swf/Gravity_Duck_Hacked.swf",
+    "thumb": "assets/thumbnails/Gravity_Duck_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Grow Cube",
+    "file": "ruffleplayer.html?game=swf/Grow-Cube.swf",
+    "thumb": "assets/thumbnails/Grow-Cube.png",
+    "category": "flash"
+  },
+  {
+    "name": "Grow Island",
+    "file": "ruffleplayer.html?game=swf/Grow-Island.swf",
+    "thumb": "assets/thumbnails/Grow-Island.png",
+    "category": "flash"
+  },
+  {
+    "name": "Grow Nano",
+    "file": "ruffleplayer.html?game=swf/Grow-Nano.swf",
+    "thumb": "assets/thumbnails/Grow-Nano.png",
+    "category": "flash"
+  },
+  {
+    "name": "Grow Valley",
+    "file": "ruffleplayer.html?game=swf/Grow-Valley.swf",
+    "thumb": "assets/thumbnails/Grow-Valley.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gun Blood",
+    "file": "ruffleplayer.html?game=swf/Gun_Blood.swf",
+    "thumb": "assets/thumbnails/Gun_Blood.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gun Mayhem",
+    "file": "ruffleplayer.html?game=swf/Gun_Mayhem.swf",
+    "thumb": "assets/thumbnails/Gun_Mayhem.png",
+    "category": "flash"
+  },
+  {
+    "name": "Gun Mayhem 2",
+    "file": "ruffleplayer.html?game=swf/Gun_Mayhem_2.swf",
+    "thumb": "assets/thumbnails/Gun_Mayhem_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Handless Millionaire",
+    "file": "ruffleplayer.html?game=swf/Handless_Millionaire.swf",
+    "thumb": "assets/thumbnails/Handless_Millionaire.png",
     "category": "flash"
   },
   {
@@ -3648,9 +4326,453 @@
     "category": "flash"
   },
   {
+    "name": "Haunt The House",
+    "file": "ruffleplayer.html?game=swf/Haunt-The-House.swf",
+    "thumb": "assets/thumbnails/Haunt-The-House.png",
+    "category": "flash"
+  },
+  {
+    "name": "I Dont Even Know",
+    "file": "ruffleplayer.html?game=swf/I%20Dont%20Even%20Know.swf",
+    "thumb": "assets/thumbnails/I Dont Even Know.png",
+    "category": "flash"
+  },
+  {
+    "name": "Ice Breaker",
+    "file": "ruffleplayer.html?game=swf/Ice-Breaker.swf",
+    "thumb": "assets/thumbnails/Ice-Breaker.png",
+    "category": "flash"
+  },
+  {
+    "name": "Infiltrating The Airship",
+    "file": "ruffleplayer.html?game=swf/Infiltrating_The_Airship.swf",
+    "thumb": "assets/thumbnails/Infiltrating_The_Airship.png",
+    "category": "flash"
+  },
+  {
+    "name": "Jack Smith",
+    "file": "ruffleplayer.html?game=swf/Jack_Smith.swf",
+    "thumb": "assets/thumbnails/Jack_Smith.png",
+    "category": "flash"
+  },
+  {
+    "name": "Jump It! 2",
+    "file": "ruffleplayer.html?game=swf/Jump%20It!%202.swf",
+    "thumb": "assets/thumbnails/Jump It! 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Jump It!",
+    "file": "ruffleplayer.html?game=swf/Jump%20It!.swf",
+    "thumb": "assets/thumbnails/Jump It!.png",
+    "category": "flash"
+  },
+  {
+    "name": "KND   Flight of the Hamster",
+    "file": "ruffleplayer.html?game=swf/KND%20-%20Flight%20of%20the%20Hamster.swf",
+    "thumb": "assets/thumbnails/KND - Flight of the Hamster.png",
+    "category": "flash"
+  },
+  {
+    "name": "KND   Operation Z.E.R.O Outnumbuh'd!",
+    "file": "ruffleplayer.html?game=swf/KND%20-%20Operation%20Z.E.R.O%20Outnumbuh'd!.swf",
+    "thumb": "assets/thumbnails/KND - Operation Z.E.R.O Outnumbuh'd!.png",
+    "category": "flash"
+  },
+  {
+    "name": "KND   Rainbow Monkey Rundown",
+    "file": "ruffleplayer.html?game=swf/KND%20-%20Rainbow%20Monkey%20Rundown.swf",
+    "thumb": "assets/thumbnails/KND - Rainbow Monkey Rundown.png",
+    "category": "flash"
+  },
+  {
+    "name": "Kingdom Rush Frontiers",
+    "file": "ruffleplayer.html?game=swf/Kingdom%20Rush%20Frontiers.swf",
+    "thumb": "assets/thumbnails/Kingdom Rush Frontiers.png",
+    "category": "flash"
+  },
+  {
+    "name": "Kingdom Rush",
+    "file": "ruffleplayer.html?game=swf/Kingdom%20Rush.swf",
+    "thumb": "assets/thumbnails/Kingdom Rush.png",
+    "category": "flash"
+  },
+  {
+    "name": "Kitten Cannon",
+    "file": "ruffleplayer.html?game=swf/Kitten%20Cannon.swf",
+    "thumb": "assets/thumbnails/Kitten Cannon.png",
+    "category": "flash"
+  },
+  {
+    "name": "Learn To Fly",
+    "file": "ruffleplayer.html?game=swf/Learn%20To%20Fly.swf",
+    "thumb": "assets/thumbnails/Learn To Fly.png",
+    "category": "flash"
+  },
+  {
+    "name": "Learn To Fly 2",
+    "file": "ruffleplayer.html?game=swf/Learn_To_Fly_2.swf",
+    "thumb": "assets/thumbnails/Learn_To_Fly_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Mahjong",
+    "file": "ruffleplayer.html?game=swf/Mahjong.swf",
+    "thumb": "assets/thumbnails/Mahjong.png",
+    "category": "flash"
+  },
+  {
+    "name": "Me and the Key 2",
+    "file": "ruffleplayer.html?game=swf/Me%20and%20the%20Key%202.swf",
+    "thumb": "assets/thumbnails/Me and the Key 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Me and the Key",
+    "file": "ruffleplayer.html?game=swf/Me%20and%20the%20Key.swf",
+    "thumb": "assets/thumbnails/Me and the Key.png",
+    "category": "flash"
+  },
+  {
+    "name": "MeatBoy",
+    "file": "ruffleplayer.html?game=swf/MeatBoy.swf",
+    "thumb": "assets/thumbnails/MeatBoy.png",
+    "category": "flash"
+  },
+  {
+    "name": "Mecha Arena",
+    "file": "ruffleplayer.html?game=swf/Mecha%20Arena.swf",
+    "thumb": "assets/thumbnails/Mecha Arena.png",
+    "category": "flash"
+  },
+  {
+    "name": "Meeblings 2",
+    "file": "ruffleplayer.html?game=swf/Meeblings-2.swf",
+    "thumb": "assets/thumbnails/Meeblings-2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Miami Shark",
+    "file": "ruffleplayer.html?game=swf/Miami_Shark.swf",
+    "thumb": "assets/thumbnails/Miami_Shark.png",
+    "category": "flash"
+  },
+  {
+    "name": "Mine Blocks",
+    "file": "ruffleplayer.html?game=swf/Mine_Blocks.swf",
+    "thumb": "assets/thumbnails/Mine_Blocks.png",
+    "category": "flash"
+  },
+  {
+    "name": "Minecraft Tower Defense",
+    "file": "ruffleplayer.html?game=swf/Minecraft_Tower_Defense.swf",
+    "thumb": "assets/thumbnails/Minecraft_Tower_Defense.png",
+    "category": "flash"
+  },
+  {
+    "name": "Minecraft Tower Defense 2",
+    "file": "ruffleplayer.html?game=swf/Minecraft_Tower_Defense_2.swf",
+    "thumb": "assets/thumbnails/Minecraft_Tower_Defense_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Miragine War",
+    "file": "ruffleplayer.html?game=swf/Miragine%20War.swf",
+    "thumb": "assets/thumbnails/Miragine War.png",
+    "category": "flash"
+  },
+  {
+    "name": "Nyan Cat Lost In Space",
+    "file": "ruffleplayer.html?game=swf/Nyan-Cat-Lost-In-Space.swf",
+    "thumb": "assets/thumbnails/Nyan-Cat-Lost-In-Space.png",
+    "category": "flash"
+  },
+  {
+    "name": "Obey The Game",
+    "file": "ruffleplayer.html?game=swf/Obey%20The%20Game.swf",
+    "thumb": "assets/thumbnails/Obey The Game.png",
+    "category": "flash"
+  },
+  {
+    "name": "Off The Rails",
+    "file": "ruffleplayer.html?game=swf/Off-The-Rails.swf",
+    "thumb": "assets/thumbnails/Off-The-Rails.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pandemic 2",
+    "file": "ruffleplayer.html?game=swf/Pandemic%202.swf",
+    "thumb": "assets/thumbnails/Pandemic 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Burgeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Burgeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Burgeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Cheezeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Cheezeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Cheezeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Cupcakeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Cupcakeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Cupcakeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Donuteria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Donuteria.swf",
+    "thumb": "assets/thumbnails/Papa's_Donuteria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Freezeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Freezeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Freezeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Hotdogeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Hotdogeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Hotdogeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Pancakeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Pancakeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Pancakeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Pasteria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Pasteria.swf",
+    "thumb": "assets/thumbnails/Papa's_Pasteria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Pizzeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Pizzeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Pizzeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Taco Mia",
+    "file": "ruffleplayer.html?game=swf/Papa's_Taco_Mia.swf",
+    "thumb": "assets/thumbnails/Papa's_Taco_Mia.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa's Wingeria",
+    "file": "ruffleplayer.html?game=swf/Papa's_Wingeria.swf",
+    "thumb": "assets/thumbnails/Papa's_Wingeria.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa Louie",
+    "file": "ruffleplayer.html?game=swf/Papa_Louie.swf",
+    "thumb": "assets/thumbnails/Papa_Louie.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa Louie 2 When Pizza's Attacked",
+    "file": "ruffleplayer.html?game=swf/Papa_Louie_2_When_Pizza's_Attacked.swf",
+    "thumb": "assets/thumbnails/Papa_Louie_2_When_Pizza's_Attacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Papa Louie 3",
+    "file": "ruffleplayer.html?game=swf/Papa_Louie_3.swf",
+    "thumb": "assets/thumbnails/Papa_Louie_3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Penguin Diner",
+    "file": "ruffleplayer.html?game=swf/Penguin_Diner.swf",
+    "thumb": "assets/thumbnails/Penguin_Diner.png",
+    "category": "flash"
+  },
+  {
+    "name": "Penguin Diner 2",
+    "file": "ruffleplayer.html?game=swf/Penguin_Diner_2.swf",
+    "thumb": "assets/thumbnails/Penguin_Diner_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pixel Chix Jammin Hamster",
+    "file": "ruffleplayer.html?game=swf/Pixel_Chix_Jammin_Hamster.swf",
+    "thumb": "assets/thumbnails/Pixel_Chix_Jammin_Hamster.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pixel Chix Monster Baby",
+    "file": "ruffleplayer.html?game=swf/Pixel_Chix_Monster_Baby.swf",
+    "thumb": "assets/thumbnails/Pixel_Chix_Monster_Baby.png",
+    "category": "flash"
+  },
+  {
+    "name": "Plazma Burst 2 Hacked",
+    "file": "ruffleplayer.html?game=swf/Plazma%20Burst%202%20Hacked.swf",
+    "thumb": "assets/thumbnails/Plazma Burst 2 Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Plazma Burst 2",
+    "file": "ruffleplayer.html?game=swf/Plazma%20Burst%202.swf",
+    "thumb": "assets/thumbnails/Plazma Burst 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pokemon Tower Defense 2",
+    "file": "ruffleplayer.html?game=swf/Pokemon%20Tower%20Defense%202.swf",
+    "thumb": "assets/thumbnails/Pokemon Tower Defense 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pokemon Tower Defense",
+    "file": "ruffleplayer.html?game=swf/Pokemon-Tower-Defense.swf",
+    "thumb": "assets/thumbnails/Pokemon-Tower-Defense.png",
+    "category": "flash"
+  },
+  {
     "name": "Pokemon Tower Defense",
     "file": "ruffleplayer.html?game=swf/Pokemon_Tower_Defense.swf",
     "thumb": "assets/thumbnails/Pokemon_Tower_Defense.png",
+    "category": "flash"
+  },
+  {
+    "name": "Pong",
+    "file": "ruffleplayer.html?game=swf/Pong.swf",
+    "thumb": "assets/thumbnails/Pong.png",
+    "category": "flash"
+  },
+  {
+    "name": "Poop Clicker",
+    "file": "ruffleplayer.html?game=swf/Poop_Clicker.swf",
+    "thumb": "assets/thumbnails/Poop_Clicker.png",
+    "category": "flash"
+  },
+  {
+    "name": "Portal The Flash Version",
+    "file": "ruffleplayer.html?game=swf/Portal%20The%20Flash%20Version.swf",
+    "thumb": "assets/thumbnails/Portal The Flash Version.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers.swf",
+    "thumb": "assets/thumbnails/Potty_Racers.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 2",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_2.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 2 Hacked",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_2_Hacked.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_2_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 3.1",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_3.1.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_3.1.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 3",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_3.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 4",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_4.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers 4 Hacked",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_4_Hacked.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_4_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Potty Racers Hacked",
+    "file": "ruffleplayer.html?game=swf/Potty_Racers_Hacked.swf",
+    "thumb": "assets/thumbnails/Potty_Racers_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "QWOP",
+    "file": "ruffleplayer.html?game=swf/QWOP.swf",
+    "thumb": "assets/thumbnails/QWOP.png",
+    "category": "flash"
+  },
+  {
+    "name": "Raft Wars",
+    "file": "ruffleplayer.html?game=swf/Raft_Wars.swf",
+    "thumb": "assets/thumbnails/Raft_Wars.png",
+    "category": "flash"
+  },
+  {
+    "name": "Raft Wars 2",
+    "file": "ruffleplayer.html?game=swf/Raft_Wars_2.swf",
+    "thumb": "assets/thumbnails/Raft_Wars_2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Realm Of The Mad God",
+    "file": "ruffleplayer.html?game=swf/Realm%20Of%20The%20Mad%20God.swf",
+    "thumb": "assets/thumbnails/Realm Of The Mad God.png",
+    "category": "flash"
+  },
+  {
+    "name": "ReimagineThe Game",
+    "file": "ruffleplayer.html?game=swf/ReimagineThe%20Game.swf",
+    "thumb": "assets/thumbnails/ReimagineThe Game.png",
+    "category": "flash"
+  },
+  {
+    "name": "Revenge Of The Stickman",
+    "file": "ruffleplayer.html?game=swf/Revenge-Of-The-Stickman.swf",
+    "thumb": "assets/thumbnails/Revenge-Of-The-Stickman.png",
+    "category": "flash"
+  },
+  {
+    "name": "Road Rush",
+    "file": "ruffleplayer.html?game=swf/Road%20Rush.swf",
+    "thumb": "assets/thumbnails/Road Rush.png",
+    "category": "flash"
+  },
+  {
+    "name": "Robot Unicorn Attack",
+    "file": "ruffleplayer.html?game=swf/Robot-Unicorn-Attack.swf",
+    "thumb": "assets/thumbnails/Robot-Unicorn-Attack.png",
+    "category": "flash"
+  },
+  {
+    "name": "Robot Unicorn Heavy Metal",
+    "file": "ruffleplayer.html?game=swf/Robot-Unicorn-Heavy-Metal.swf",
+    "thumb": "assets/thumbnails/Robot-Unicorn-Heavy-Metal.png",
+    "category": "flash"
+  },
+  {
+    "name": "Rotate And Roll Players Pack",
+    "file": "ruffleplayer.html?game=swf/Rotate%20And%20Roll%20Players%20Pack.swf",
+    "thumb": "assets/thumbnails/Rotate And Roll Players Pack.png",
+    "category": "flash"
+  },
+  {
+    "name": "Rotate And Roll",
+    "file": "ruffleplayer.html?game=swf/Rotate%20And%20Roll.swf",
+    "thumb": "assets/thumbnails/Rotate And Roll.png",
     "category": "flash"
   },
   {
@@ -3660,15 +4782,375 @@
     "category": "flash"
   },
   {
+    "name": "Run And Gun",
+    "file": "ruffleplayer.html?game=swf/Run_And_Gun.swf",
+    "thumb": "assets/thumbnails/Run_And_Gun.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sandcastle v1.5.2",
+    "file": "ruffleplayer.html?game=swf/Sandcastle%20v1.5.2.swf",
+    "thumb": "assets/thumbnails/Sandcastle v1.5.2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Shop Empire 3",
+    "file": "ruffleplayer.html?game=swf/Shop%20Empire%203.swf",
+    "thumb": "assets/thumbnails/Shop Empire 3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Shopping Cart Hero",
+    "file": "ruffleplayer.html?game=swf/Shopping%20Cart%20Hero.swf",
+    "thumb": "assets/thumbnails/Shopping Cart Hero.png",
+    "category": "flash"
+  },
+  {
+    "name": "Shopping City",
+    "file": "ruffleplayer.html?game=swf/Shopping_City.swf",
+    "thumb": "assets/thumbnails/Shopping_City.png",
+    "category": "flash"
+  },
+  {
+    "name": "Shopping Street",
+    "file": "ruffleplayer.html?game=swf/Shopping_Street.swf",
+    "thumb": "assets/thumbnails/Shopping_Street.png",
+    "category": "flash"
+  },
+  {
+    "name": "Skies of War",
+    "file": "ruffleplayer.html?game=swf/Skies%20of%20War.swf",
+    "thumb": "assets/thumbnails/Skies of War.png",
+    "category": "flash"
+  },
+  {
+    "name": "Skin Craft",
+    "file": "ruffleplayer.html?game=swf/Skin-Craft.swf",
+    "thumb": "assets/thumbnails/Skin-Craft.png",
+    "category": "flash"
+  },
+  {
+    "name": "Skull Kid",
+    "file": "ruffleplayer.html?game=swf/Skull-Kid.swf",
+    "thumb": "assets/thumbnails/Skull-Kid.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sling Junior",
+    "file": "ruffleplayer.html?game=swf/Sling-Junior.swf",
+    "thumb": "assets/thumbnails/Sling-Junior.png",
+    "category": "flash"
+  },
+  {
+    "name": "Slingette",
+    "file": "ruffleplayer.html?game=swf/Slingette.swf",
+    "thumb": "assets/thumbnails/Slingette.png",
+    "category": "flash"
+  },
+  {
+    "name": "Small Town Racing",
+    "file": "ruffleplayer.html?game=swf/Small-Town-Racing.swf",
+    "thumb": "assets/thumbnails/Small-Town-Racing.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 2",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%202.swf",
+    "thumb": "assets/thumbnails/Snail Bob 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 3",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%203.swf",
+    "thumb": "assets/thumbnails/Snail Bob 3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 4 Space",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%204%20Space.swf",
+    "thumb": "assets/thumbnails/Snail Bob 4 Space.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 5 Love Story",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%205%20Love%20Story.swf",
+    "thumb": "assets/thumbnails/Snail Bob 5 Love Story.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 6 Winter Story",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%206%20Winter%20Story.swf",
+    "thumb": "assets/thumbnails/Snail Bob 6 Winter Story.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob 7 Fantasy Story",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob%207%20Fantasy%20Story.swf",
+    "thumb": "assets/thumbnails/Snail Bob 7 Fantasy Story.png",
+    "category": "flash"
+  },
+  {
+    "name": "Snail Bob",
+    "file": "ruffleplayer.html?game=swf/Snail%20Bob.swf",
+    "thumb": "assets/thumbnails/Snail Bob.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Assassin 2",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Assassin%202.swf",
+    "thumb": "assets/thumbnails/Sniper Assassin 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Assassin 3",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Assassin%203.swf",
+    "thumb": "assets/thumbnails/Sniper Assassin 3.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Assassin 4",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Assassin%204.swf",
+    "thumb": "assets/thumbnails/Sniper Assassin 4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Assassin 5",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Assassin%205.swf",
+    "thumb": "assets/thumbnails/Sniper Assassin 5.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Assassin",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Assassin.swf",
+    "thumb": "assets/thumbnails/Sniper Assassin.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sniper Team",
+    "file": "ruffleplayer.html?game=swf/Sniper%20Team.swf",
+    "thumb": "assets/thumbnails/Sniper Team.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sonic Lost In Mario World",
+    "file": "ruffleplayer.html?game=swf/Sonic-Lost-In-Mario-World.swf",
+    "thumb": "assets/thumbnails/Sonic-Lost-In-Mario-World.png",
+    "category": "flash"
+  },
+  {
+    "name": "Space Flash Arena",
+    "file": "ruffleplayer.html?game=swf/Space%20Flash%20Arena.swf",
+    "thumb": "assets/thumbnails/Space Flash Arena.png",
+    "category": "flash"
+  },
+  {
+    "name": "Stealing The Diamond RIGHT CLICK THEN CLICK PLAY",
+    "file": "ruffleplayer.html?game=swf/Stealing_The_Diamond_RIGHT_CLICK_THEN_CLICK_PLAY.swf",
+    "thumb": "assets/thumbnails/Stealing_The_Diamond_RIGHT_CLICK_THEN_CLICK_PLAY.png",
+    "category": "flash"
+  },
+  {
+    "name": "Stick War",
+    "file": "ruffleplayer.html?game=swf/Stick%20War.swf",
+    "thumb": "assets/thumbnails/Stick War.png",
+    "category": "flash"
+  },
+  {
+    "name": "Stick Squad",
+    "file": "ruffleplayer.html?game=swf/Stick_Squad.swf",
+    "thumb": "assets/thumbnails/Stick_Squad.png",
+    "category": "flash"
+  },
+  {
+    "name": "Stick Squad Hacked",
+    "file": "ruffleplayer.html?game=swf/Stick_Squad_Hacked.swf",
+    "thumb": "assets/thumbnails/Stick_Squad_Hacked.png",
+    "category": "flash"
+  },
+  {
+    "name": "Stickman Badminton",
+    "file": "ruffleplayer.html?game=swf/Stickman-Badminton.swf",
+    "thumb": "assets/thumbnails/Stickman-Badminton.png",
+    "category": "flash"
+  },
+  {
+    "name": "Super Mario 63",
+    "file": "ruffleplayer.html?game=swf/Super%20Mario%2063.swf",
+    "thumb": "assets/thumbnails/Super Mario 63.png",
+    "category": "flash"
+  },
+  {
+    "name": "Super Mario Flash",
+    "file": "ruffleplayer.html?game=swf/Super%20Mario%20Flash.swf",
+    "thumb": "assets/thumbnails/Super Mario Flash.png",
+    "category": "flash"
+  },
+  {
     "name": "Super Smash Flash",
     "file": "ruffleplayer.html?game=swf/Super%20Smash%20Flash.swf",
     "thumb": "assets/thumbnails/Super Smash Flash.png",
     "category": "flash"
   },
   {
+    "name": "Super Sudoku 2011",
+    "file": "ruffleplayer.html?game=swf/Super%20Sudoku%202011.swf",
+    "thumb": "assets/thumbnails/Super Sudoku 2011.png",
+    "category": "flash"
+  },
+  {
+    "name": "Super Drift 3D",
+    "file": "ruffleplayer.html?game=swf/Super-Drift-3D.swf",
+    "thumb": "assets/thumbnails/Super-Drift-3D.png",
+    "category": "flash"
+  },
+  {
+    "name": "Super Mario Crossover 2",
+    "file": "ruffleplayer.html?game=swf/Super-Mario-Crossover-2.swf",
+    "thumb": "assets/thumbnails/Super-Mario-Crossover-2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Sushi Cat",
+    "file": "ruffleplayer.html?game=swf/Sushi_Cat.swf",
+    "thumb": "assets/thumbnails/Sushi_Cat.png",
+    "category": "flash"
+  },
+  {
     "name": "Swords and Sandals 2",
     "file": "ruffleplayer.html?game=swf/Swords%20and%20Sandals%202%20(Full).swf",
     "thumb": "assets/thumbnails/Swords and Sandals 2 (Full).png",
+    "category": "flash"
+  },
+  {
+    "name": "T Rex",
+    "file": "ruffleplayer.html?game=swf/T-Rex.swf",
+    "thumb": "assets/thumbnails/T-Rex.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Grim Adventures of Billy and Mandy   Magnet Face",
+    "file": "ruffleplayer.html?game=swf/The%20Grim%20Adventures%20of%20Billy%20and%20Mandy%20-%20Magnet%20Face.swf",
+    "thumb": "assets/thumbnails/The Grim Adventures of Billy and Mandy - Magnet Face.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Grim Adventures of Billy and Mandy   The Fright Before Christmas",
+    "file": "ruffleplayer.html?game=swf/The%20Grim%20Adventures%20of%20Billy%20and%20Mandy%20-%20The%20Fright%20Before%20Christmas.swf",
+    "thumb": "assets/thumbnails/The Grim Adventures of Billy and Mandy - The Fright Before Christmas.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Impossible Quiz",
+    "file": "ruffleplayer.html?game=swf/The%20Impossible%20Quiz.swf",
+    "thumb": "assets/thumbnails/The Impossible Quiz.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Last Stand 2",
+    "file": "ruffleplayer.html?game=swf/The%20Last%20Stand%202.swf",
+    "thumb": "assets/thumbnails/The Last Stand 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Last Stand 3",
+    "file": "ruffleplayer.html?game=swf/The%20Last%20Stand%203.swf",
+    "thumb": "assets/thumbnails/The Last Stand 3.png",
+    "category": "flash"
+  },
+  {
+    "name": "The Last Stand",
+    "file": "ruffleplayer.html?game=swf/The%20Last%20Stand.swf",
+    "thumb": "assets/thumbnails/The Last Stand.png",
+    "category": "flash"
+  },
+  {
+    "name": "The World's Hardest Game 2",
+    "file": "ruffleplayer.html?game=swf/The%20World's%20Hardest%20Game%202.swf",
+    "thumb": "assets/thumbnails/The World's Hardest Game 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "The World's Hardest Game 3",
+    "file": "ruffleplayer.html?game=swf/The%20World's%20Hardest%20Game%203.swf",
+    "thumb": "assets/thumbnails/The World's Hardest Game 3.png",
+    "category": "flash"
+  },
+  {
+    "name": "The World's Hardest Game",
+    "file": "ruffleplayer.html?game=swf/The%20World's%20Hardest%20Game.swf",
+    "thumb": "assets/thumbnails/The World's Hardest Game.png",
+    "category": "flash"
+  },
+  {
+    "name": "This is the only level too",
+    "file": "ruffleplayer.html?game=swf/This%20is%20the%20only%20level%20too.swf",
+    "thumb": "assets/thumbnails/This is the only level too.png",
+    "category": "flash"
+  },
+  {
+    "name": "This is the only level",
+    "file": "ruffleplayer.html?game=swf/This%20is%20the%20only%20level.swf",
+    "thumb": "assets/thumbnails/This is the only level.png",
+    "category": "flash"
+  },
+  {
+    "name": "Tom and Jerry   Refriger Raiders",
+    "file": "ruffleplayer.html?game=swf/Tom%20and%20Jerry%20-%20Refriger-Raiders.swf",
+    "thumb": "assets/thumbnails/Tom and Jerry - Refriger-Raiders.png",
+    "category": "flash"
+  },
+  {
+    "name": "Tom and Jerry   Tom's Trap O Matic",
+    "file": "ruffleplayer.html?game=swf/Tom%20and%20Jerry%20-%20Tom's%20Trap-O-Matic.swf",
+    "thumb": "assets/thumbnails/Tom and Jerry - Tom's Trap-O-Matic.png",
+    "category": "flash"
+  },
+  {
+    "name": "Truck Loader 2",
+    "file": "ruffleplayer.html?game=swf/Truck%20Loader%202.swf",
+    "thumb": "assets/thumbnails/Truck Loader 2.png",
+    "category": "flash"
+  },
+  {
+    "name": "Truck Loader 4",
+    "file": "ruffleplayer.html?game=swf/Truck%20Loader%204.swf",
+    "thumb": "assets/thumbnails/Truck Loader 4.png",
+    "category": "flash"
+  },
+  {
+    "name": "Ultimate Flash Sonic",
+    "file": "ruffleplayer.html?game=swf/Ultimate%20Flash%20Sonic.swf",
+    "thumb": "assets/thumbnails/Ultimate Flash Sonic.png",
+    "category": "flash"
+  },
+  {
+    "name": "Unfair Mario",
+    "file": "ruffleplayer.html?game=swf/Unfair-Mario.swf",
+    "thumb": "assets/thumbnails/Unfair-Mario.png",
+    "category": "flash"
+  },
+  {
+    "name": "Upgrade Complete",
+    "file": "ruffleplayer.html?game=swf/Upgrade%20Complete.swf",
+    "thumb": "assets/thumbnails/Upgrade Complete.png",
+    "category": "flash"
+  },
+  {
+    "name": "Video Game The Game",
+    "file": "ruffleplayer.html?game=swf/Video%20Game%20The%20Game.swf",
+    "thumb": "assets/thumbnails/Video Game The Game.png",
+    "category": "flash"
+  },
+  {
+    "name": "Weapon   Black Hawk",
+    "file": "ruffleplayer.html?game=swf/Weapon%20-%20Black%20Hawk.swf",
+    "thumb": "assets/thumbnails/Weapon - Black Hawk.png",
+    "category": "flash"
+  },
+  {
+    "name": "Worm Food",
+    "file": "ruffleplayer.html?game=swf/Worm-Food.swf",
+    "thumb": "assets/thumbnails/Worm-Food.png",
     "category": "flash"
   },
   {
@@ -3807,6 +5289,12 @@
     "name": "gunmayhem2",
     "file": "ruffleplayer.html?game=swf/gunmayhem2.swf",
     "thumb": "assets/thumbnails/gunmayhem2.png",
+    "category": "flash"
+  },
+  {
+    "name": "i saw her too, with lasers",
+    "file": "ruffleplayer.html?game=swf/i%20saw%20her%20too%2C%20with%20lasers.swf",
+    "thumb": "assets/thumbnails/i saw her too, with lasers.png",
     "category": "flash"
   },
   {
@@ -4089,6 +5577,12 @@
     "name": "tetris",
     "file": "ruffleplayer.html?game=swf/tetris.swf",
     "thumb": "assets/thumbnails/tetris.png",
+    "category": "flash"
+  },
+  {
+    "name": "the game",
+    "file": "ruffleplayer.html?game=swf/the%20game.swf",
+    "thumb": "assets/thumbnails/the game.png",
     "category": "flash"
   },
   {
