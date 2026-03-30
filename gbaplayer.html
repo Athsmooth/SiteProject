@@ -8,32 +8,42 @@
         #game { width: 100vw; height: 100vh; }
     </style>
 </head>
-<div id="game"></div>
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const rom = params.get('game');
+<body>
+    <div id="game"></div>
 
-    if (rom) {
-        window.EJS_player = "#game";
-        window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
-        
-        // Use a relative path for the server
-        window.EJS_pathtodata = "/data/"; 
-        
-        window.EJS_startOnLoaded = true;
+    <script>
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const rom = params.get('game');
 
-        // Force the core name to match your file exactly
-        const ext = rom.toLowerCase().split('.').pop();
-        if (ext === 'gba') {
-            window.EJS_core = 'mgba'; 
-        } else {
-            window.EJS_core = 'gambatte'; 
-        }
+            if (rom) {
+                window.EJS_player = "#game";
+                
+                // Ensure the ROM path is handled correctly
+                window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
+                
+                // If the slash is required for your setup, keep it here
+                window.EJS_pathtodata = "/data/"; 
+                
+                window.EJS_startOnLoaded = true;
 
-        const loader = document.createElement('script');
-        loader.src = "data/loader.js"; 
-        document.head.appendChild(loader);
-    }
-</script>
+                // Set Core based on extension
+                const ext = rom.toLowerCase().split('.').pop();
+                if (ext === 'gba') {
+                    window.EJS_core = 'mgba'; 
+                } else {
+                    window.EJS_core = 'gambatte'; 
+                }
+
+                // Load the loader script
+                const loader = document.createElement('script');
+                // Use the absolute path if your server requires it
+                loader.src = "/data/loader.js"; 
+                document.head.appendChild(loader);
+            } else {
+                console.error("No ROM specified in the URL. Use ?game=path/to/rom.gbc");
+            }
+        })();
+    </script>
 </body>
 </html>
