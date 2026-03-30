@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Student</title>
+    <title>Campus Student - Player</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; overflow: hidden; }
+        #game-container {
+            width: 100%;
+            height: calc(100vh - 60px); /* Adjust based on your navbar height */
+        }
+    </style>
 </head>
 <body style="background-color: #0d1117;">
     <script src="./navbar.js"></script>
@@ -16,16 +22,19 @@
 
    <script>
     const params = new URLSearchParams(window.location.search);
-    const romPath = params.get('game'); // This will be "gba/Asteroids..."
+    const rawPath = params.get('game'); 
 
-    if (romPath) {
-        // We do NOT add "gba/" here because it's already in the 'game' parameter
-        EJS_gameUrl = romPath; 
+    if (rawPath) {
+        // 1. Fix the spaces and special characters
+        const romPath = decodeURIComponent(rawPath); 
+        
+        // 2. Ensure the path is correct (adds gba/ if missing)
+        EJS_gameUrl = romPath.startsWith('gba/') ? romPath : "gba/" + romPath;
         
         EJS_player = "#game-container";
         EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
         
-        // Better Core Detection
+        // 3. Core Detection
         const ext = romPath.split('.').pop().toLowerCase();
         if (ext === 'gba') { EJS_core = "gba"; }
         else if (ext === 'gbc') { EJS_core = "gbc"; }
@@ -36,11 +45,6 @@
     }
     </script>
 
-    <style>
-        #game-container {
-            width: 100%;
-            height: calc(100vh - 60px);
-        }
-    </style>
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 </body>
 </html>
