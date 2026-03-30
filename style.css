@@ -1,4 +1,8 @@
-/* --- Global Dark Variables --- */
+/* Prevents the browser from showing a white background before CSS loads */
+html {
+    background: #0d1117 !important;
+}
+
 :root {
     --bg-main: #0d1117;        /* Deep Dark Background */
     --bg-card: #161b22;        /* Slightly lighter for cards */
