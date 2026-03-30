@@ -8,8 +8,7 @@
         #game { width: 100vw; height: 100vh; }
     </style>
 </head>
-<body>
-    <div id="game"></div>
+<div id="game"></div>
 <script>
     const params = new URLSearchParams(window.location.search);
     const rom = params.get('game');
@@ -17,13 +16,13 @@
     if (rom) {
         window.EJS_player = "#game";
         window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
-        
-        // This tells the loader to look in your newly moved /data/ folder
         window.EJS_pathtodata = "/data/"; 
         window.EJS_startOnLoaded = true;
         window.EJS_core = rom.toLowerCase().endsWith('.gba') ? 'gba' : 'gbc';
 
         const loader = document.createElement('script');
+        // Since we are inside the loader.js now, we don't need type="module" here 
+        // unless loader.js itself has an 'export' at the top.
         loader.src = "/data/loader.js"; 
         document.head.appendChild(loader);
     }

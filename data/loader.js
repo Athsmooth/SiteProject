@@ -13,10 +13,16 @@
     const folderPath = (path) => path.substring(0, path.length - path.split("/").pop().length);
     let scriptPath = (typeof window.EJS_pathtodata === "string") ? window.EJS_pathtodata : folderPath((new URL(document.currentScript.src)).pathname);
     if (!scriptPath.endsWith("/")) scriptPath += "/";
-    //console.log(scriptPath);
+
     function loadScript(file) {
         return new Promise(function(resolve) {
             let script = document.createElement("script");
+            
+            // Fix for Modern Builds: Treat engine as a Module
+            if (file.endsWith("emulator.min.js") || file === "emulator.js") {
+                script.type = "module";
+            }
+
             script.src = function() {
                 if ("undefined" != typeof EJS_paths && typeof EJS_paths[file] === "string") {
                     return EJS_paths[file];
@@ -26,6 +32,7 @@
                     return scriptPath + "src/" + file;
                 }
             }();
+            
             script.onload = resolve;
             script.onerror = () => {
                 filesmissing(file).then(e => resolve());
@@ -54,11 +61,8 @@
     }
 
     async function filesmissing(file) {
-        console.error("Failed to load " + file);
         let minifiedFailed = file.includes(".min.") && !file.includes("socket");
-        console[minifiedFailed ? "warn" : "error"]("Failed to load " + file + " beacuse it's likly that the minified files are missing.\nTo fix this you have 3 options:\n1. You can download the zip from the latest release here: https://github.com/EmulatorJS/EmulatorJS/releases/latest - Stable\n2. You can download the zip from here: https://cdn.emulatorjs.org/latest/data/emulator.min.zip and extract it to the data/ folder. (easiest option) - Beta\n3. You can build the files by running `npm i && npm run build` in the data/minify folder. (hardest option) - Beta\nNote: you will probably need to do the same for the cores, extract them to the data/cores/ folder.");
         if (minifiedFailed) {
-            console.log("Attempting to load non-minified files");
             if (file === "emulator.min.js") {
                 for (let i = 0; i < scripts.length; i++) {
                     await loadScript(scripts[i]);
@@ -69,6 +73,7 @@
         }
     }
 
+    // Load Engine and CSS
     if (("undefined" != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
         for (let i = 0; i < scripts.length; i++) {
             await loadScript(scripts[i]);
@@ -78,6 +83,7 @@
         await loadScript("emulator.min.js");
         await loadStyle("emulator.min.css");
     }
+
     const config = {};
     config.gameUrl = window.EJS_gameUrl;
     config.dataPath = scriptPath;
@@ -127,44 +133,44 @@
     let systemLang;
     try {
         systemLang = Intl.DateTimeFormat().resolvedOptions().locale;
-    } catch(e) {} //Ignore
+    } catch(e) {} 
+
     if ((typeof window.EJS_language === "string" && window.EJS_language !== "en-US") || (systemLang && window.EJS_disableAutoLang !== false)) {
         const language = window.EJS_language || systemLang;
         try {
-            let path;
-            console.log("Loading language", language);
-            if ("undefined" != typeof EJS_paths && typeof EJS_paths[language] === "string") {
-                path = EJS_paths[language];
-            } else {
-                path = scriptPath + "localization/" + language + ".json";
-            }
+            let path = ("undefined" != typeof EJS_paths && typeof EJS_paths[language] === "string") ? EJS_paths[language] : scriptPath + "localization/" + language + ".json";
             config.language = language;
             config.langJson = JSON.parse(await (await fetch(path)).text());
         } catch(e) {
-            console.log("Missing language", language, "!!");
             delete config.language;
             delete config.langJson;
         }
     }
 
-    window.EJS_emulator = new EmulatorJS(EJS_player, config);
-    window.EJS_adBlocked = (url, del) => window.EJS_emulator.adBlocked(url, del);
-    if (typeof window.EJS_ready === "function") {
-        window.EJS_emulator.on("ready", window.EJS_ready);
+    // --- CRITICAL MODULE SYNC START ---
+    // If EmulatorJS isn't defined yet, try to manually import it
+    try {
+        if (typeof EmulatorJS === "undefined") {
+            const module = await import(scriptPath + "emulator.min.js");
+            window.EmulatorJS = module.EmulatorJS || module.default;
+        }
+    } catch (e) {}
+
+    // Wait up to 500ms for the browser to register the class
+    let attempts = 0;
+    while (typeof EmulatorJS === "undefined" && attempts < 5) {
+        await new Promise(res => setTimeout(res, 100));
+        attempts++;
     }
-    if (typeof window.EJS_onGameStart === "function") {
-        window.EJS_emulator.on("start", window.EJS_onGameStart);
+
+    if (typeof EmulatorJS !== "undefined") {
+        window.EJS_emulator = new EmulatorJS(EJS_player, config);
+        window.EJS_adBlocked = (url, del) => window.EJS_emulator.adBlocked(url, del);
+        if (typeof window.EJS_ready === "function") {
+            window.EJS_emulator.on("ready", window.EJS_ready);
+        }
+    } else {
+        console.error("EmulatorJS failed to load. Check that emulator.min.js is in the /data/ folder.");
     }
-    if (typeof window.EJS_onLoadState === "function") {
-        window.EJS_emulator.on("loadState", window.EJS_onLoadState);
-    }
-    if (typeof window.EJS_onSaveState === "function") {
-        window.EJS_emulator.on("saveState", window.EJS_onSaveState);
-    }
-    if (typeof window.EJS_onLoadSave === "function") {
-        window.EJS_emulator.on("loadSave", window.EJS_onLoadSave);
-    }
-    if (typeof window.EJS_onSaveSave === "function") {
-        window.EJS_emulator.on("saveSave", window.EJS_onSaveSave);
-    }
+    // --- CRITICAL MODULE SYNC END ---
 })();
