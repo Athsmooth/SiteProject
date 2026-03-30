@@ -16,14 +16,17 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const romName = params.get('game');
+        // The autogen script passes the filename, e.g., "Pokemon Red.gbc"
+        const romName = params.get('game'); 
 
         if (romName) {
             const ext = romName.split('.').pop().toLowerCase();
             
             EJS_player = "#game-container";
-            // This assumes your ROMs are in a folder called "roms" in the root
-            EJS_gameUrl = "../roms/" + romName; 
+            
+            // FIX: Since this HTML is in the root, it just goes into the /gba folder
+            EJS_gameUrl = "gba/" + romName; 
+            
             EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
             
             // Auto-detect Console
