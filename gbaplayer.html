@@ -12,29 +12,22 @@
 <body>
     <div id="game-container"></div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const rawPath = params.get('game');
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const rom = params.get('game');
 
-        if (rawPath) {
-            // Decodes %20 back into spaces for the emulator
-            const romPath = decodeURIComponent(rawPath);
-
-            EJS_player = "#game-container";
-            EJS_gameUrl = romPath; // This will be "gba/Asteroids (USA).gbc"
-            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            
-            // Core detection
-            const ext = romPath.split('.').pop().toLowerCase();
-            if (ext === 'gba') { EJS_core = "gba"; }
-            else { EJS_core = "gbc"; } // Default for .gbc and .gb
-
-            EJS_BackgroundColor = "#0d1117";
-            EJS_ButtonsTextColor = "#8b949e";
-        } else {
-            document.body.innerHTML = "<h1 style='color:white; text-align:center;'>No Game Selected</h1>";
-        }
-    </script>
-    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+    if (rom) {
+        EJS_player = "#game-container"; 
+        EJS_gameUrl = decodeURIComponent(rom);
+        
+        // UPDATED: Use the newest stable data path
+        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        
+        // IMPORTANT: Explicitly set the core to avoid the "legacy" error
+        const isGBA = rom.toLowerCase().endsWith('.gba');
+        EJS_core = isGBA ? 'gba' : 'gbc';
+    }
+</script>
+<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 </body>
 </html>
