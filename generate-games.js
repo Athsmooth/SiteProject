@@ -4,7 +4,7 @@ const path = require('path');
 const scanConfigs = [
     { dir: 'swf', type: 'flash' },
     { dir: 'html5', type: 'html5' },
-    { dir: 'roms', type: 'gba' } // Added your ROMs folder
+    { dir: 'gba', type: 'gba' } // Changed to 'gba' to match your folder
 ];
 
 let gameList = [];
@@ -15,35 +15,34 @@ scanConfigs.forEach(config => {
     
     files.forEach(file => {
         const ext = path.extname(file).toLowerCase();
+        const baseName = path.parse(file).name; // Properly gets name without extension
         const fullPath = path.join(config.dir, file).replace(/\\/g, '/');
 
-        // Logic for different file types
-        if (config.type === 'flash' && ext !== '.swf') return;
-        if (config.type === 'html5' && ext !== '.html') return;
-        
-        // NEW RULE: Accept GBA, GBC, and GB files in the 'roms' folder
+        // Filter files
         const isNintendo = ['.gba', '.gbc', '.gb'].includes(ext);
         if (config.type === 'gba' && !isNintendo) return;
+        if (config.type === 'flash' && ext !== '.swf') return;
+        if (config.type === 'html5' && ext !== '.html') return;
 
-        // Skip system files
         if (['index.html', 'ruffleplayer.html', 'html5player.html', '404.html'].includes(file.toLowerCase())) return;
 
-        // Determine which player page to use
-        let playerPage = 'html5player.html'; // Default
-        if (ext === '.swf') {
-            playerPage = 'ruffleplayer.html';
-        } else if (isNintendo) {
-            playerPage = 'gba/player.html'; // Points to the new subfolder
-        }
+        // Player routing
+        let playerPage = 'html5player.html';
+        if (ext === '.swf') playerPage = 'ruffleplayer.html';
+        // This points to your GBAPlayer.html in the root
+        if (isNintendo) playerPage = 'gbaplayer.html'; 
 
         gameList.push({
-            name: file.replace(ext, '').replace(/[-_]/g, ' '),
-            file: `${playerPage}?game=${encodeURIComponent(fullPath)}`,
-            thumb: `assets/thumbnails/${file.split('.')[0]}.jpg`,
+            // Clean up the name for the label: removes (USA) and replaces dashes
+            name: baseName.split('(')[0].replace(/[-_]/g, ' ').trim(),
+            // The full original filename encoded for the URL
+            file: `${playerPage}?game=${encodeURIComponent(file)}`,
+            // Matches your "Game Name-image.png" files
+            thumb: `assets/thumbnails/${baseName}-image.png`,
             category: config.type
         });
     });
 });
 
 fs.writeFileSync('games-list.json', JSON.stringify(gameList, null, 2));
-console.log("✅ Index Updated: Flash, HTML5, and GBA/GBC games categorized.");
+console.log(`✅ Success! Processed ${gameList.length} games.`);
