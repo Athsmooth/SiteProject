@@ -20,7 +20,7 @@ const navbarHTML = `
             <button class="close-btn" onclick="toggleDisclaimer(false)">&times;</button>
         </div>
         <div class="modal-body">
-            <p><strong>Educational Purposes Only:</strong> This site is a personal project. Whether this site is accesed when not appropriate is not my responsability. All games are properties of their respective owners. https://github.com/Susorodni/swfgalaxy/tree/master
+            <p><strong>Educational Purposes Only:</strong> This site is a personal project. Whether this site is accesed when not appropriate is not my responsibility. All games are properties of their respective owners. https://github.com/Susorodni/swfgalaxy/tree/master
 https://github.com/CoolDude2349/Offline-HTML-Games-Pack</p>
         </div>
         <div class="modal-footer">
