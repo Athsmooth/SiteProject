@@ -3,48 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Student - Player</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        body, html { margin: 0; padding: 0; overflow: hidden; }
-        #game-container {
-            width: 100%;
-            height: calc(100vh - 60px); /* Adjust based on your navbar height */
-        }
+    <title>Game Player</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #0d1117; overflow: hidden; }
+        #game-container { width: 100%; height: 100vh; }
     </style>
 </head>
-<body style="background-color: #0d1117;">
-    <script src="./navbar.js"></script>
+<body>
+    <div id="game-container"></div>
 
-    <div id="player-wrapper">
-        <div id="game-container"></div>
-    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const rawPath = params.get('game');
 
-   <script>
-    const params = new URLSearchParams(window.location.search);
-    const rawPath = params.get('game'); 
+        if (rawPath) {
+            // Decodes %20 back into spaces for the emulator
+            const romPath = decodeURIComponent(rawPath);
 
-    if (rawPath) {
-        // 1. Fix the spaces and special characters
-        const romPath = decodeURIComponent(rawPath); 
-        
-        // 2. Ensure the path is correct (adds gba/ if missing)
-        EJS_gameUrl = romPath.startsWith('gba/') ? romPath : "gba/" + romPath;
-        
-        EJS_player = "#game-container";
-        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-        
-        // 3. Core Detection
-        const ext = romPath.split('.').pop().toLowerCase();
-        if (ext === 'gba') { EJS_core = "gba"; }
-        else if (ext === 'gbc') { EJS_core = "gbc"; }
-        else { EJS_core = "gb"; }
+            EJS_player = "#game-container";
+            EJS_gameUrl = romPath; // This will be "gba/Asteroids (USA).gbc"
+            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            
+            // Core detection
+            const ext = romPath.split('.').pop().toLowerCase();
+            if (ext === 'gba') { EJS_core = "gba"; }
+            else { EJS_core = "gbc"; } // Default for .gbc and .gb
 
-        EJS_BackgroundColor = "#0d1117";
-        EJS_ButtonsTextColor = "#8b949e";
-    }
+            EJS_BackgroundColor = "#0d1117";
+            EJS_ButtonsTextColor = "#8b949e";
+        } else {
+            document.body.innerHTML = "<h1 style='color:white; text-align:center;'>No Game Selected</h1>";
+        }
     </script>
-
     <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
 </body>
 </html>
