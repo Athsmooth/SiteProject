@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game Player</title>
+    <title>GBA Player</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; background: #000; overflow: hidden; }
         #game { width: 100vw; height: 100vh; }
@@ -11,39 +11,29 @@
 <body>
     <div id="game"></div>
 
-    <script>
-        (function() {
-            const params = new URLSearchParams(window.location.search);
-            const rom = params.get('game');
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const rom = params.get('game');
+    
+    if (rom) {
+        // Basic required settings
+        window.EJS_player = "#game";
+        window.EJS_gameUrl = rom;
+        window.EJS_startOnLoaded = true;
 
-            if (rom) {
-                window.EJS_player = "#game";
-                
-                // Ensure the ROM path is handled correctly
-                window.EJS_gameUrl = rom.startsWith('/') ? rom : '/' + rom;
-                
-                // If the slash is required for your setup, keep it here
-                window.EJS_pathtodata = "/data/"; 
-                
-                window.EJS_startOnLoaded = true;
+        // Use the most recent stable version from CDN
+        window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
 
-                // Set Core based on extension
-                const ext = rom.toLowerCase().split('.').pop();
-                if (ext === 'gba') {
-                    window.EJS_core = 'mgba'; 
-                } else {
-                    window.EJS_core = 'gambatte'; 
-                }
+        // Force GBA core (mgba is much better than gambatte for GBA)
+        window.EJS_core = "mgba";
 
-                // Load the loader script
-                const loader = document.createElement('script');
-                // Use the absolute path if your server requires it
-                loader.src = "/data/loader.js"; 
-                document.head.appendChild(loader);
-            } else {
-                console.error("No ROM specified in the URL. Use ?game=path/to/rom.gbc");
-            }
-        })();
-    </script>
+        // Remove your old custom EJS_paths completely for now
+
+        // Load the loader
+        const loader = document.createElement('script');
+        loader.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+        document.head.appendChild(loader);
+    }
+</script>
 </body>
 </html>
