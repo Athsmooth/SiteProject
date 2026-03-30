@@ -1,13 +1,13 @@
-/* --- Campus Student UI Variables --- */
+/* --- Global Dark Variables --- */
 :root {
-    --ic-bg: #222222;            /* Official IC Dark Header */
-    --ic-active-blue: #4a90e2;   /* IC Blue Accent */
-    --body-bg: #f0f2f5;         /* Light gray page background */
-    --card-bg: #ffffff;          /* White cards like the portal */
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --ic-nav-text: #9ea0a3;
-    --border-light: #dee2e6;
+    --bg-main: #0d1117;        /* Deep Dark Background */
+    --bg-card: #161b22;        /* Slightly lighter for cards */
+    --nav-bg: #010409;         /* Black for Navbar */
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;         /* Blue accent */
+    --border: #30363d;
+    --placeholder-bg: #21262d; /* For games missing images */
 }
 
 /* --- Base Styles --- */
@@ -18,99 +18,109 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--body-bg);
-    color: var(--text-dark);
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* --- Infinite Campus Navbar --- */
+/* --- Navbar (Dark Version) --- */
 #nav {
     height: 60px;
-    background-color: var(--ic-bg);
+    background-color: var(--nav-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
     flex-shrink: 0;
 }
 
-.ic-logo .campus { font-weight: 700; font-size: 20px; color: white; }
-.ic-logo .student { font-weight: 300; font-size: 20px; color: #bbb; margin-left: 5px; }
+.ic-logo .campus { font-weight: 700; font-size: 20px; color: #fff; }
+.ic-logo .student { font-weight: 300; font-size: 20px; color: var(--text-secondary); margin-left: 5px; }
 
-.nav-right { 
-    display: flex; 
-    gap: 25px; 
-    height: 100%; 
-}
+.nav-right { display: flex; gap: 20px; }
 
 .nav-link {
-    color: var(--ic-nav-text);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    border-bottom: 4px solid transparent;
     transition: 0.2s;
     cursor: pointer;
 }
 
-.nav-link:hover { color: white; }
-.nav-link.active { color: white; border-bottom-color: var(--ic-active-blue); }
+.nav-link:hover, .nav-link.active { color: var(--accent); }
 
-/* --- Games Grid (Campus "Assignments" Style) --- */
+/* --- Games Grid --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     padding: 30px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
 }
 
+/* --- Game Cards & Placeholder Fix --- */
 .game-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
-    color: var(--text-dark);
-    border: 1px solid var(--border-light);
-    transition: box-shadow 0.2s, transform 0.2s;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .game-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    border-color: var(--accent);
 }
 
+/* FIX: Image Container with Placeholder */
 .img-container {
-    position: relative;
     width: 100%;
     aspect-ratio: 16/9;
-    background: #eee;
+    background-color: var(--placeholder-bg); /* Placeholder color if img fails */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* If no image exists, show a subtle "G" or icon using CSS */
+.img-container::before {
+    content: "🎮";
+    font-size: 2rem;
+    opacity: 0.2;
+    position: absolute;
 }
 
 .img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
+    /* Hide broken image icon */
+    color: transparent; 
 }
 
 .game-label {
     padding: 12px;
-    font-weight: 500;
-    font-size: 15px;
-    border-top: 1px solid #f0f0f0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(255,255,255,0.03);
 }
 
 /* --- Badges --- */
@@ -118,23 +128,24 @@ body, html {
     position: absolute;
     top: 8px;
     right: 8px;
-    padding: 4px 8px;
+    padding: 3px 8px;
     font-size: 10px;
-    font-weight: 700;
-    border-radius: 4px;
-    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    z-index: 2;
+    text-transform: uppercase;
 }
-.badge.flash { background-color: #e67e22; } /* Flash Orange */
-.badge.html5 { background-color: #2ecc71; } /* HTML5 Green */
+.badge.flash { background: #f39c12; color: #000; }
+.badge.html5 { background: #27ae60; color: #fff; }
 
-/* --- Disclaimer Modal --- */
+/* --- Disclaimer Modal (Dark) --- */
 .modal-overlay {
-    display: none; /* Important: keeps notice hidden */
+    display: none;
     position: fixed;
     inset: 0;
     z-index: 9999 !important;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
     align-items: center;
     justify-content: center;
 }
@@ -142,55 +153,36 @@ body, html {
 .modal-overlay.active { display: flex !important; }
 
 .modal-content {
-    background: white;
+    background: #1c2128;
+    border: 1px solid var(--border);
     width: 90%;
-    max-width: 450px;
-    border-radius: 10px;
+    max-width: 400px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    color: var(--text-primary);
 }
 
 .modal-header {
-    background: #f8f9fa;
-    padding: 15px 20px;
-    border-bottom: 1px solid var(--border-light);
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-.modal-header h2 { margin: 0; font-size: 18px; color: var(--text-dark); }
+.modal-body { padding: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 
-.close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #bbb; }
-
-.modal-body { padding: 25px; color: var(--text-muted); line-height: 1.5; font-size: 14px; }
-
-.modal-footer {
-    padding: 15px 20px;
-    background: #f8f9fa;
-    text-align: right;
-}
+.modal-footer { padding: 15px; text-align: right; }
 
 .agree-btn {
-    background-color: #0056b3;
-    color: white;
+    background: var(--accent);
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 8px 20px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* --- Player Styles --- */
-#player-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-iframe, #ruffle-container {
-    flex-grow: 1;
-    width: 100%;
-    border: none;
-    background: #000;
-}
+#player-wrapper { flex-grow: 1; display: flex; flex-direction: column; }
+iframe, #ruffle-container { flex-grow: 1; border: none; background: #000; }
