@@ -9,7 +9,7 @@ const navbarHTML = `
     <div class="nav-right">
         <input type="text" class="search-input" placeholder="Search games...">
         
-        <a href="index.html" class="nav-link">Today</a>
+        <a href="index.html" class="nav-link">Homepage</a>
         <a href="javascript:void(0)" class="nav-link" onclick="toggleDisclaimer(true)">Disclaimer</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAS8C_gANDaBC5AvOTb-cjWLUuUjzyqbe6eMsrSpuhiE5OaQ/viewform?usp=publish-editor" target="_blank" class="nav-link">Feedback</a>
     </div>
