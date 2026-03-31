@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = list.map(game => {
             // FIX: Ensure the thumbnail path is correct
             // If your JSON says "assets/..." but they are in "data/assets/...", change it here:
-            const thumbPath = game.thumb.startsWith('http') ? game.thumb : game.thumb;
+            const thumbPath = game.thumb;
 
             return `
                 <a href="${game.file}" class="game-card ${game.category}">
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${thumbPath}" 
                             alt="${game.name}" 
                             loading="lazy" 
-                            onerror="this.src='data/images/placeholder.png';"> 
+                            onerror="this.src='assets/thumbnails/placeholder.jpg';"> 
                         <span class="badge ${game.category}">${game.category.toUpperCase()}</span>
                     </div>
                     <div class="game-label">${game.name}</div>

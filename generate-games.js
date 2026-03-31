@@ -38,7 +38,7 @@ scanConfigs.forEach(config => {
             name: baseName.split('(')[0].replace(/[-_]/g, ' ').trim(),
             // CRITICAL: This formats the link for your navbar.js to use
             file: `${playerPage}?game=${config.dir}/${encodeURIComponent(file)}`,
-            thumb: `assets/thumbnails/${baseName}.png`, 
+            thumb: `assets/thumbnails/${baseName}.jpg`, 
             category: config.type
         });
     });

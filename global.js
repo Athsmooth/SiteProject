@@ -3,7 +3,7 @@ const path = require('path');
 
 // root folders to scan
 const foldersToScan = ['./html5', './krecak-games'];
-const thumbDir = './assets/thumbnails';
+const thumbDir = './assets/thumbnails/';
 const outputFile = './games-list.json';
 const placeholderPath = "/assets/thumbnails/placeholder.jpg";
 
