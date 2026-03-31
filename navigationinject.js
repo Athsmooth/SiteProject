@@ -22,7 +22,8 @@ const navbarHTML = `
             <button class="close-btn" onclick="toggleDisclaimer(false)">&times;</button>
         </div>
         <div class="modal-body">
-            <p><strong>Educational Purposes Only:</strong> This site is a personal project...</p>
+            <p><strong>Educational Purposes Only:</strong> This site is a personal project. Whether this site is accesed when not appropriate is not my responsibility. All games are properties of their respective owners. I own none of the games, I only used libraries and such to program this website. The files on this site that In did not create come from these repos: https://github.com/Susorodni/swfgalaxy/tree/master
+https://github.com/CoolDude2349/Offline-HTML-Games-Pack https://archive.org/details/gbc_20230205 https://archive.org/details/gbc_20230205. Anyone uncredited should be credited within these repos. If they are not, that is the matter of them not crediting the source, not me.  </p>
         </div>
         <div class="modal-footer">
             <button class="agree-btn" onclick="toggleDisclaimer(false)">I Understand</button>
