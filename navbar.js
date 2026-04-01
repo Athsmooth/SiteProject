@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('projects-placeholder');
     const searchInput = document.querySelector('.search-input');
 
-    // Fetch with cache busting
     fetch('games-list.json?v=' + Date.now())
         .then(res => res.json())
         .then(data => {
@@ -28,23 +27,47 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        container.innerHTML = list.map(game => {
-            // FIX: Ensure the thumbnail path is correct
-            // If your JSON says "assets/..." but they are in "data/assets/...", change it here:
-            const thumbPath = game.thumb;
+        const groups = list.reduce((acc, game) => {
+            const cat = game.category || 'other';
+            if (!acc[cat]) acc[cat] = [];
+            acc[cat].push(game);
+            return acc;
+        }, {});
 
-            return `
-                <a href="${game.file}" class="game-card ${game.category}">
-                    <div class="img-container">
-                        <img src="${thumbPath}" 
-                            alt="${game.name}" 
-                            loading="lazy" 
-                            onerror="this.src='assets/thumbnails/placeholder.jpg';"> 
-                        <span class="badge ${game.category}">${game.category.toUpperCase()}</span>
+        const categoryOrder = ['exclusive', 'html5', 'flash'];
+        let html = '';
+
+        categoryOrder.forEach(cat => {
+            if (groups[cat] && groups[cat].length > 0) {
+                html += `
+                    <div class="category-block">
+                        <div class="category-header">
+                            <span class="label">${cat.toUpperCase()}</span>
+                            <div class="line"></div>
+                        </div>
+                        <div class="game-flow">
+                            ${groups[cat].map(game => {
+                                let finalLink = game.file;
+                                if (game.file.includes('.gbc') || game.file.includes('.gba')) {
+                                    const type = game.file.toLowerCase().includes('.gba') ? 'gba' : 'gbc';
+                                    finalLink = `gbaplayer.html?type=${type}`;
+                                }
+                                return `
+                                    <a href="${finalLink}" class="game-card ${game.category}">
+                                        <div class="img-container">
+                                            <img src="${game.thumb}" alt="${game.name}" onerror="this.src='assets/thumbnails/placeholder.jpg';"> 
+                                            <span class="badge ${game.category}">${game.category.toUpperCase()}</span>
+                                        </div>
+                                        <div class="game-label">${game.name}</div>
+                                    </a>
+                                `;
+                            }).join('')}
+                        </div>
                     </div>
-                    <div class="game-label">${game.name}</div>
-                </a>
-            `;
-        }).join('');
+                `;
+            }
+        });
+
+        container.innerHTML = html;
     }
 });
