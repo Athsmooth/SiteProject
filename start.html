@@ -17,50 +17,43 @@
             justify-content: center;
             text-align: center;
         }
-        .message {
-            max-width: 520px;
-        }
-        button {
-            padding: 18px 48px;
-            font-size: 22px;
-            background: #0066ff;
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover { background: #0055dd; }
     </style>
 </head>
 <body>
-    <div class="message">
+    <div>
         <h1>Campus Student</h1>
-        <p>Opening Games Library...</p>
-        <button onclick="openCloaked()">Open Library</button>
+        <p>Connecting to Games Library...</p>
+        <p style="opacity: 0.7;">Please allow popups if nothing happens.</p>
     </div>
 
     <script>
         function openCloaked() {
-            const win = window.open();
+            // True about:blank — this is the key line
+            const win = window.open();   
+
             if (!win) {
-                alert("Please allow popups for this site and try again.");
+                document.body.innerHTML = `
+                    <div style="padding:40px; text-align:center; color:#ffcc00;">
+                        <h1>Popup Blocked</h1>
+                        <p>Allow popups for this site, then refresh.</p>
+                    </div>
+                `;
                 return;
             }
 
-            // Create the cloaked iframe
             const iframe = win.document.createElement('iframe');
             iframe.style.cssText = "width:100vw;height:100vh;border:none;margin:0;padding:0;overflow:hidden;";
-            iframe.src = "/index.html";   // Your real Games Library page
+            iframe.src = "/index.html";        // Your real main Games Library page
 
             win.document.body.appendChild(iframe);
             win.document.body.style.cssText = "margin:0;padding:0;overflow:hidden;";
 
-            // ←←← AUTO CLOSE the launcher tab after 800ms
-            setTimeout(() => {
-                window.close();
-            }, 800);
+            // Auto-close the launcher tab
+            setTimeout(() => window.close(), 900);
         }
+
+        // Auto-run
+        window.onload = () => setTimeout(openCloaked, 700);
     </script>
 </body>
 </html>
