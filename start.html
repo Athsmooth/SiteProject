@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .message {
+            max-width: 520px;
+        }
+        button {
+            padding: 18px 48px;
+            font-size: 22px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background: #0055dd; }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Campus Student</h1>
+        <p>Opening Games Library...</p>
+        <button onclick="openCloaked()">Open Library</button>
+    </div>
+
+    <script>
+        function openCloaked() {
+            const win = window.open();
+            if (!win) {
+                alert("Please allow popups for this site and try again.");
+                return;
+            }
+
+            // Create the cloaked iframe
+            const iframe = win.document.createElement('iframe');
+            iframe.style.cssText = "width:100vw;height:100vh;border:none;margin:0;padding:0;overflow:hidden;";
+            iframe.src = "/index.html";   // Your real Games Library page
+
+            win.document.body.appendChild(iframe);
+            win.document.body.style.cssText = "margin:0;padding:0;overflow:hidden;";
+
+            // ←←← AUTO CLOSE the launcher tab after 800ms
+            setTimeout(() => {
+                window.close();
+            }, 800);
+        }
+    </script>
+</body>
+</html>
