@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #0d1117; 
+            color: white; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+        }
+        .launch-card { 
+            text-align: center; 
+            background: #161b22; 
+            padding: 50px; 
+            border-radius: 20px; 
+            border: 1px solid #30363d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 { margin-top: 0; font-weight: 600; }
+        p { color: #8b949e; margin-bottom: 30px; }
+        button { 
+            padding: 16px 45px; 
+            font-size: 18px; 
+            cursor: pointer; 
+            background: #238636; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            transition: transform 0.2s, background 0.2s; 
+        }
+        button:hover { 
+            background: #2ea043; 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="launch-card">
+        <h1>Campus Student</h1>
+        <p>Ready to launch secure dashboard.</p>
+        <button id="launchBtn">Launch Dashboard</button>
+    </div>
+
+    <script>
+        document.getElementById('launchBtn').onclick = function() {
+            // 1. Open the blank window
+            const win = window.open('about:blank', '_blank');
+
+            if (win) {
+                // 2. Set up the blank window's document
+                win.document.title = "Campus Student";
+                win.document.body.style.margin = '0';
+                win.document.body.style.padding = '0';
+                win.document.body.style.height = '100vh';
+                win.document.body.style.overflow = 'hidden';
+
+                // 3. Create the full-screen iframe
+                const iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100vw';
+                iframe.style.height = '100vh';
+                
+                // 4. Point it to your main index file
+                // window.location.origin ensures it works on your .dev site AND local preview
+                iframe.src = window.location.origin + '/main/index.html';
+
+                win.document.body.appendChild(iframe);
+            } else {
+                alert("Pop-up blocked! Please allow pop-ups to launch the dashboard.");
+            }
+        };
+    </script>
+</body>
+</html>
