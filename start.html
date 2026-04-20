@@ -16,27 +16,41 @@
     <div id="secret-trigger">.</div>
 
     <script>
-        document.getElementById('secret-trigger').onclick = async function() {
+        document.getElementById('launchBtn').onclick = async function() {
+            // 1. Open the window first
+            const win = window.open("about:blank", "_blank");
+            if (!win) return alert("Popup blocked!");
+
             try {
-                // 1. Fetch your library
-                const response = await fetch('./index.html');
-                const text = await response.text();
+                // 2. Fetch the library
+                const response = await fetch('./index.html?v=' + Date.now());
+                const html = await response.text();
 
-                // 2. Open a window with NO URL (prevents Cloudflare from seeing it)
-                const win = window.open("", "_blank");
-                
-                // 3. Manually inject the code
-                // This bypasses every single redirect rule on Cloudflare
-                win.document.open();
-                win.document.write(text);
-                win.document.close();
+                // 3. Create a temporary parser to turn the text into real HTML
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
 
-                // 4. Update the tab look
-                win.document.title = "Campus Student";
+                // 4. Move everything from the fetched file into the new window
+                // This is much more stable than document.write
+                win.document.head.innerHTML = doc.head.innerHTML;
+                win.document.body.innerHTML = doc.body.innerHTML;
 
-            } catch (e) {
-                console.error("Secret launch failed", e);
+                // 5. MANUALLY RE-INSERT SCRIPTS
+                // Scripts inserted via innerHTML do not run. We must recreate them.
+                Array.from(win.document.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = win.document.createElement("script");
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.appendChild(win.document.createTextNode(oldScript.innerHTML));
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+
+                // 6. Close the launcher
+                setTimeout(() => window.close(), 400);
+
+            } catch (err) {
+                win.document.body.innerHTML = "<h1>Failed to load: " + err.message + "</h1>";
             }
+        };
         };
     </script>
 </body>
