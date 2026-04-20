@@ -1,16 +1,29 @@
 let allGames = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // FIX: IDs and Classes don't use folder paths
     const container = document.getElementById('projects-placeholder');
     const searchInput = document.querySelector('.search-input');
 
+    if (!container || !searchInput) {
+        console.error("Critical: Could not find HTML elements on the page.");
+        return;
+    }
+
+    // FIX: If the HTML is in the main folder, just use the filename
     fetch('games-list.json?v=' + Date.now())
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error("File not found (404)");
+            return res.json();
+        })
         .then(data => {
             allGames = data;
             render(allGames);
         })
-        .catch(err => console.error("Could not load games list:", err));
+        .catch(err => {
+            console.error("Could not load games list:", err);
+            container.innerHTML = `<div style="color:orange; padding:20px;">Library file not found. Check if games-list.json is in the /main/ folder.</div>`;
+        });
 
     searchInput.addEventListener('input', (e) => {
         const term = e.target.value.toLowerCase();

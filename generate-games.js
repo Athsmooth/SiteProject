@@ -1,11 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// We keep the scanConfigs but we will treat them differently
 const scanConfigs = [
-    { dir: 'exclusive', type: 'exclusive' },
-    { dir: 'swf', type: 'flash' },
-    { dir: 'html5', type: 'html5' }
+    { dir: 'main/exclusive', type: 'exclusive', webDir: 'exclusive' },
+    { dir: 'main/swf', type: 'flash', webDir: 'swf' },
+    { dir: 'main/html5', type: 'html5', webDir: 'html5' }
 ];
 
 let gameList = [];
@@ -24,18 +23,16 @@ scanConfigs.forEach(config => {
         const ext = path.extname(file).toLowerCase();
         const isNintendo = ['.gba', '.gbc', '.gb'].includes(ext);
         
-        // Skip flash files that aren't .swf
         if (config.type === 'flash' && ext !== '.swf') return;
 
         const baseName = path.parse(file).name;
         let playerPage = 'html5player.html';
-        let finalFileLink = `${config.dir}/${encodeURIComponent(file)}`;
+        
+        // FIX: Use webDir so the link is "exclusive/file.html", NOT "main/exclusive/file.html"
+        let finalFileLink = `${config.webDir}/${encodeURIComponent(file)}`;
 
-        // LOGIC FOR NINTENDO GAMES (LEGAL MODE)
         if (isNintendo) {
             playerPage = 'gbaplayer.html';
-            // We DON'T pass the actual file path anymore because it's deleted.
-            // We only pass the type so the emulator picks the right console.
             const consoleType = (ext === '.gba') ? 'gba' : 'gbc';
             finalFileLink = `type=${consoleType}`; 
         } else if (ext === '.swf') {
@@ -44,14 +41,12 @@ scanConfigs.forEach(config => {
 
         const gameData = {
             name: baseName.split('(')[0].replace(/[-_]/g, ' ').trim(),
-            // If it's Nintendo, the link looks like: gbaplayer.html?type=gba
-            // If it's HTML5, it looks like: html5player.html?game=html5/gamename.html
             file: isNintendo ? `${playerPage}?${finalFileLink}` : `${playerPage}?game=${finalFileLink}`,
+            // Assuming your assets folder is also inside the 'main' folder
             thumb: `assets/thumbnails/${baseName}.jpg`, 
             category: config.type
         };
 
-        // EXCLUSIVE LOGIC: Add to the start of the array to show at the top
         if (config.type === 'exclusive') {
             gameList.unshift(gameData);
         } else {
@@ -60,5 +55,6 @@ scanConfigs.forEach(config => {
     });
 });
 
-fs.writeFileSync('games-list.json', JSON.stringify(gameList, null, 2));
-console.log(`✅ Success! games-list.json updated with ${gameList.length} total games.`);
+// Save specifically to the main folder
+fs.writeFileSync(path.join(__dirname, 'main/games-list.json'), JSON.stringify(gameList, null, 2));
+console.log(`✅ Success! main/games-list.json updated with ${gameList.length} total games.`);
