@@ -22,7 +22,7 @@
             try {
                 // 2. Fetch the content of index.html directly
                 // We use a cache-buster to ensure we get the file, not a redirect
-                const response = await fetch('./index.html?nocache=' + Date.now());
+                const response = await fetch('/index.html?nocache=' + Date.now());
                 const htmlContent = await response.text();
 
                 // 3. Set the Cloak metadata
