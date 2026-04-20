@@ -2,99 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Student</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #111;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .container {
-            max-width: 400px;
-        }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        p { opacity: 0.7; margin-bottom: 30px; }
-        button {
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            background: #0066ff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.2s;
-        }
-        button:hover {
-            background: #0052cc;
-            transform: scale(1.05);
-        }
-        button:active {
-            transform: scale(0.98);
-        }
+        body { background: #111; color: white; display: flex; align-items: center; 
+               justify-content: center; height: 100vh; font-family: sans-serif; }
+        button { padding: 15px 30px; font-size: 20px; cursor: pointer; 
+                 background: #0066ff; color: white; border: none; border-radius: 8px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Campus Student</h1>
-        <p>Access your student dashboard and assignments.</p>
-        <button onclick="openCloaked()">Open Dashboard</button>
-    </div>
+    <button id="launchBtn">Open Library</button>
 
     <script>
-        function openCloaked() {
-            // 1. Open the blank tab
+        document.getElementById('launchBtn').onclick = function() {
+            // 1. RECURSION CHECK
+            // If this page is somehow inside an iframe, don't run.
+            if (window.self !== window.top) return;
+
             const win = window.open("about:blank", "_blank");
+            if (!win) return alert("Please allow popups!");
 
-            if (!win) {
-                alert("Popup blocked! Please allow popups and try again.");
-                return;
-            }
+            // 2. BUILD THE PATH CAREFULLY
+            // We get the current URL and replace ONLY the filename.
+            // This works whether you are on a server or local.
+            let path = window.location.pathname;
+            let directory = path.substring(0, path.lastIndexOf('/'));
+            let targetFile = directory + "/index.html";
+            let finalUrl = window.location.origin + targetFile;
 
-            // 2. Set the Cloak
+            // 3. CLOAK THE NEW TAB
             win.document.title = "Campus Student";
-            const link = win.document.createElement('link');
-            link.rel = 'icon';
-            link.href = 'https://ssl.gstatic.com/classroom/favicon.png'; 
-            win.document.head.appendChild(link);
+            
+            // 4. INJECT THE IFRAME
+            // We use a Template Literal to keep the code clean
+            win.document.body.innerHTML = `
+                <style>
+                    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+                    iframe { width: 100%; height: 100%; border: none; }
+                </style>
+                <iframe src="${finalUrl}"></iframe>
+            `;
 
-            // 3. Create the Full-Screen Iframe
-            const iframe = win.document.createElement('iframe');
-            const style = iframe.style;
-            style.position = "fixed";
-            style.top = "0";
-            style.left = "0";
-            style.width = "100%";
-            style.height = "100%";
-            style.border = "none";
-            style.margin = "0";
-            style.zIndex = "999999";
-
-            // 4. SMART PATH LOGIC
-            // This finds the current folder and forces it to load index.html
-            const currentPath = window.location.pathname;
-            const directory = currentPath.substring(0, currentPath.lastIndexOf('/')) || '';
-            const targetUrl = window.location.origin + directory + "/index.html";
-
-            iframe.src = targetUrl;
-
-            // 5. Inject and Clean up
-            win.document.body.style.margin = "0";
-            win.document.body.appendChild(iframe);
-
-            // Close the launcher
+            // 5. SELF-DESTRUCT LAUNCHER
+            // Delay slightly to ensure the new tab has "grabbed" the data
             setTimeout(() => {
+                window.opener = null;
                 window.close();
-            }, 500);
-        }
+            }, 300);
+        };
     </script>
 </body>
 </html>
