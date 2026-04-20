@@ -22,37 +22,39 @@
 <body>
     <div>
         <h1>Campus Student</h1>
-        <p>Connecting to Games Library...</p>
+        <p>Opening Games Library in cloaked tab...</p>
         <p style="opacity: 0.7;">Allow popups if nothing happens.</p>
     </div>
 
     <script>
         function openCloaked() {
-            // True about:blank - NO URL
-            const win = window.open();
+            // Stronger way to create true about:blank
+            const win = window.open("about:blank");
 
             if (!win) {
                 document.body.innerHTML = `
-                    <div style="padding: 40px; text-align: center;">
+                    <div style="padding:40px; text-align:center;">
                         <h1>Popup Blocked</h1>
-                        <p>Please allow popups for this site, then refresh.</p>
+                        <p>Please allow popups for this site, then refresh the page.</p>
                     </div>
                 `;
                 return;
             }
 
-            // IMPORTANT: Load your REAL index.html here
-            const iframe = win.document.createElement('iframe');
-            iframe.style.cssText = "width:100vw; height:100vh; border:none; margin:0; padding:0; overflow:hidden;";
-            iframe.src = "/index.html";     // ← Make sure this points to your real Games Library
+            // Small delay before writing the iframe (helps some browsers)
+            setTimeout(() => {
+                const iframe = win.document.createElement('iframe');
+                iframe.style.cssText = "width:100vw;height:100vh;border:none;margin:0;padding:0;overflow:hidden;";
+                iframe.src = "/index.html";
 
-            win.document.body.appendChild(iframe);
-            win.document.body.style.cssText = "margin:0; padding:0; overflow:hidden;";
+                win.document.body.appendChild(iframe);
+                win.document.body.style.cssText = "margin:0;padding:0;overflow:hidden;";
+            }, 100);
 
             // Auto close launcher tab
             setTimeout(() => {
                 window.close();
-            }, 1000);
+            }, 1200);
         }
 
         // Auto trigger
