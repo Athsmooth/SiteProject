@@ -55,14 +55,12 @@
             const win = window.open("about:blank", "_blank");
 
             if (!win) {
-                alert("Popup blocked! Please allow popups in your browser settings and try again.");
+                alert("Popup blocked! Please allow popups and try again.");
                 return;
             }
 
-            // 2. Set the "Cloak" - making the tab look like a school site
+            // 2. Set the Cloak
             win.document.title = "Campus Student";
-            
-            // Adding a generic school-like favicon (Google Classroom icon as fallback)
             const link = win.document.createElement('link');
             link.rel = 'icon';
             link.href = 'https://ssl.gstatic.com/classroom/favicon.png'; 
@@ -70,36 +68,32 @@
 
             // 3. Create the Full-Screen Iframe
             const iframe = win.document.createElement('iframe');
-            
-            // Style the iframe to cover the entire page perfectly
             const style = iframe.style;
             style.position = "fixed";
             style.top = "0";
             style.left = "0";
-            style.bottom = "0";
-            style.right = "0";
             style.width = "100%";
             style.height = "100%";
             style.border = "none";
             style.margin = "0";
-            style.padding = "0";
-            style.overflow = "hidden";
             style.zIndex = "999999";
 
-            // 4. Point the iframe to your local index.html
-            // This assumes index.html is in the same folder as this file
-            iframe.src = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/index.html";
+            // 4. SMART PATH LOGIC
+            // This finds the current folder and forces it to load index.html
+            const currentPath = window.location.pathname;
+            const directory = currentPath.substring(0, currentPath.lastIndexOf('/')) || '';
+            const targetUrl = window.location.origin + directory + "/index.html";
 
-            // 5. Inject into the new window
+            iframe.src = targetUrl;
+
+            // 5. Inject and Clean up
             win.document.body.style.margin = "0";
-            win.document.body.style.padding = "0";
             win.document.body.appendChild(iframe);
 
-            // 6. Close the launcher tab after a short delay
+            // Close the launcher
             setTimeout(() => {
-                window.opener = null;
                 window.close();
-            }, 300);
+            }, 500);
         }
     </script>
 </body>
