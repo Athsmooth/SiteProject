@@ -56,24 +56,25 @@
             const win = window.open('about:blank', '_blank');
 
             if (win) {
-                // 2. Set up the blank window's document
-                win.document.title = "Campus Student";
-                win.document.body.style.margin = '0';
-                win.document.body.style.padding = '0';
-                win.document.body.style.height = '100vh';
-                win.document.body.style.overflow = 'hidden';
+                // 2. Set up the blank window document
+                const doc = win.document;
+                doc.title = "Campus Student";
+                doc.body.style.margin = '0';
+                doc.body.style.padding = '0';
+                doc.body.style.height = '100vh';
+                doc.body.style.overflow = 'hidden';
 
                 // 3. Create the full-screen iframe
-                const iframe = win.document.createElement('iframe');
+                const iframe = doc.createElement('iframe');
                 iframe.style.border = 'none';
                 iframe.style.width = '100vw';
                 iframe.style.height = '100vh';
                 
-                // 4. Point it to your main index file
-                // window.location.origin ensures it works on your .dev site AND local preview
+                // Point to your subfolder
                 iframe.src = window.location.origin + '/main/index.html';
 
-                win.document.body.appendChild(iframe);
+                doc.body.appendChild(iframe);
+                window.close();
             } else {
                 alert("Pop-up blocked! Please allow pop-ups to launch the dashboard.");
             }
