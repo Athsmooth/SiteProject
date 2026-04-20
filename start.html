@@ -6,40 +6,41 @@
     <style>
         body { margin: 0; background: #111; color: white; font-family: sans-serif; 
                display: flex; align-items: center; justify-content: center; height: 100vh; }
-        button { padding: 15px 30px; font-size: 18px; cursor: pointer; background: #0066ff; 
-                 color: white; border: none; border-radius: 8px; font-weight: bold; }
+        button { padding: 15px 35px; font-size: 18px; cursor: pointer; background: #0066ff; 
+                 color: white; border: none; border-radius: 12px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <button id="launchBtn">Open Dashboard</button>
+    <button id="launchBtn">Open Library</button>
 
     <script>
         document.getElementById('launchBtn').onclick = async function() {
-            // 1. Prevent loop
-            if (window.name === "LibraryWindow") return;
-
-            // 2. Open the window
-            const win = window.open("about:blank", "LibraryWindow");
-            if (!win) return alert("Allow popups!");
+            // 1. Open the blank tab immediately (to avoid popup blockers)
+            const win = window.open("about:blank", "_blank");
+            if (!win) return alert("Please allow popups!");
 
             try {
-                // 3. FETCH the actual content of index.html 
-                // Adding the timestamp to force the server to give us the REAL file
-                const response = await fetch(window.location.origin + "/index.html?v=" + Date.now());
+                // 2. Fetch the content of index.html directly
+                // We use a cache-buster to ensure we get the file, not a redirect
+                const response = await fetch('./index.html?nocache=' + Date.now());
                 const htmlContent = await response.text();
 
-                // 4. INJECT the content directly
-                // We use a "blob" or direct write so the URL stays about:blank
+                // 3. Set the Cloak metadata
+                win.document.title = "Campus Student";
+                
+                // 4. Write the content directly into the new window
+                // This replaces the "about:blank" with your library code
                 win.document.open();
                 win.document.write(htmlContent);
                 win.document.close();
 
-                // 5. Close launcher
-                setTimeout(() => window.close(), 300);
+                // 5. Close this launcher
+                setTimeout(() => window.close(), 200);
 
             } catch (err) {
-                // Fallback: If fetch fails, try the iframe method one last time
-                win.document.body.innerHTML = `<iframe src="${window.location.origin}/index.html" style="width:100%;height:100%;border:none;"></iframe>`;
+                console.error(err);
+                win.close();
+                alert("Failed to load library. Check console for errors.");
             }
         };
     </script>
