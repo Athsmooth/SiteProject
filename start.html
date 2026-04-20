@@ -10,76 +10,96 @@
             padding: 0;
             background: #111;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
+        .container {
+            max-width: 400px;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        p { opacity: 0.7; margin-bottom: 30px; }
         button {
-            padding: 20px 50px;
-            font-size: 23px;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
             background: #0066ff;
             color: white;
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        button:hover {
+            background: #0052cc;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.98);
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Campus Student</h1>
-        <p>Click to open cloaked Games Library</p>
-        <button onclick="openCloaked()">Open Library</button>
+        <p>Access your student dashboard and assignments.</p>
+        <button onclick="openCloaked()">Open Dashboard</button>
     </div>
 
     <script>
         function openCloaked() {
-            // Open blank tab with extra flags to prevent redirect
-            const win = window.open("about:blank", "_blank", "noopener,noreferrer");
+            // 1. Open the blank tab
+            const win = window.open("about:blank", "_blank");
 
             if (!win) {
-                alert("Popup blocked. Allow popups then click again.");
+                alert("Popup blocked! Please allow popups in your browser settings and try again.");
                 return;
             }
 
-            setTimeout(() => {
-                try {
-                    win.document.open();
-                    win.document.write(`
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Student</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/assets/favicons/favicon.png">
-</head>
-<body style="margin:0; padding:0; overflow:hidden;">
-    <script src="/navigationinject.js"><\/script>
-    <main class="projects-placeholder">
-        <h2 class="section-header">Games Library</h2>
-        <div id="projects-placeholder" class="projects-grid">
-            <h2 style="color: white; text-align: center; width: 100%; opacity: 0.5;">Connecting to Library...</h2>
-        </div>
-    </main>
-    <script src="/navbar.js"><\/script>
-</body>
-</html>
-                    `);
-                    win.document.close();
-                } catch (e) {
-                    // Fallback
-                    win.location.replace("about:blank");
-                }
+            // 2. Set the "Cloak" - making the tab look like a school site
+            win.document.title = "Campus Student";
+            
+            // Adding a generic school-like favicon (Google Classroom icon as fallback)
+            const link = win.document.createElement('link');
+            link.rel = 'icon';
+            link.href = 'https://ssl.gstatic.com/classroom/favicon.png'; 
+            win.document.head.appendChild(link);
 
-                // Close launcher
-                setTimeout(() => window.close(), 1200);
-            }, 200);
+            // 3. Create the Full-Screen Iframe
+            const iframe = win.document.createElement('iframe');
+            
+            // Style the iframe to cover the entire page perfectly
+            const style = iframe.style;
+            style.position = "fixed";
+            style.top = "0";
+            style.left = "0";
+            style.bottom = "0";
+            style.right = "0";
+            style.width = "100%";
+            style.height = "100%";
+            style.border = "none";
+            style.margin = "0";
+            style.padding = "0";
+            style.overflow = "hidden";
+            style.zIndex = "999999";
+
+            // 4. Point the iframe to your local index.html
+            // This assumes index.html is in the same folder as this file
+            iframe.src = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/index.html";
+
+            // 5. Inject into the new window
+            win.document.body.style.margin = "0";
+            win.document.body.style.padding = "0";
+            win.document.body.appendChild(iframe);
+
+            // 6. Close the launcher tab after a short delay
+            setTimeout(() => {
+                window.opener = null;
+                window.close();
+            }, 300);
         }
     </script>
 </body>
