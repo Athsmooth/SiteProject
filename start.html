@@ -5,59 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Student</title>
     <style>
-        body { margin:0; padding:0; background:#111; color:white; font-family:Arial,sans-serif; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; }
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        button {
+            padding: 20px 50px;
+            font-size: 24px;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #0055cc;
+        }
     </style>
 </head>
 <body>
     <div>
         <h1>Campus Student</h1>
-        <p>Opening cloaked tab...</p>
-        <p style="opacity:0.7;">Allow popups if needed.</p>
+        <p>Click below to open the Games Library in a cloaked tab</p>
+        
+        <button onclick="openCloaked()">Open Games Library</button>
+        
+        <p style="margin-top: 30px; opacity: 0.7; font-size: 14px;">
+            If it still says popup blocked, try clicking again after allowing popups.
+        </p>
     </div>
 
     <script>
         function openCloaked() {
-            // Try the strongest blank method
-            let win = window.open("about:blank", "_blank", "noopener,noreferrer");
+            const win = window.open("about:blank", "_blank");
 
             if (!win) {
-                alert("Popup blocked. Allow popups and refresh.");
+                alert("Popup still blocked.\n\nPlease click the lock icon in the address bar → Allow popups → then click the button again.");
                 return;
             }
 
             setTimeout(() => {
-                try {
-                    win.document.open();
-                    win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Campus Student</title></head><body style="margin:0;padding:0;overflow:hidden;">
-                        <script src="/navigationinject.js"><\/script>
-                        <main class="projects-placeholder">
-                            <h2 class="section-header">Games Library</h2>
-                            <div id="projects-placeholder" class="projects-grid">
-                                <h2 style="color:white;text-align:center;width:100%;opacity:0.5;">Connecting to Library...</h2>
-                            </div>
-                        </main>
-                        <script src="/navbar.js"><\/script>
-                        <link rel="stylesheet" href="/style.css">
-                        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-                    </body></html>`);
-                    win.document.close();
-                } catch(e) {
-                    // Last resort fallback
-                    win.location.href = "about:blank";
-                    setTimeout(() => {
-                        const iframe = win.document.createElement('iframe');
-                        iframe.style.cssText = "width:100vw;height:100vh;border:none;";
-                        iframe.src = "/index.html";
-                        win.document.body.appendChild(iframe);
-                    }, 100);
-                }
+                win.document.open();
+                win.document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/favicons/favicon.png">
+</head>
+<body style="margin:0;padding:0;overflow:hidden;">
+    <script src="/navigationinject.js"><\/script>
+    <main class="projects-placeholder">
+        <h2 class="section-header">Games Library</h2>
+        <div id="projects-placeholder" class="projects-grid">
+            <h2 style="color: white; text-align: center; width: 100%; opacity: 0.5;">Connecting to Library...</h2>
+        </div>
+    </main>
+    <script src="/navbar.js"><\/script>
+</body>
+</html>
+                `);
+                win.document.close();
 
-                // Close launcher
-                setTimeout(() => window.close(), 1200);
-            }, 200);
+                // Close launcher tab
+                setTimeout(() => window.close(), 800);
+            }, 150);
         }
-
-        window.onload = () => setTimeout(openCloaked, 800);
     </script>
 </body>
 </html>
