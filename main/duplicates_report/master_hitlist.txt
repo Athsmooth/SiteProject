@@ -1,0 +1,90 @@
+GAME AUDIT REPORT - 3/30/2026, 6:38:00 PM
+Rules: Exact matches prioritized. Fuzzy matches ignored if version numbers differ.
+--------------------------------------------------------------------------------
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Age_Of_War.swf
+TRASH (HTML5): html5/ageofwar.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Age_Of _War_2.swf
+TRASH (HTML5): html5/ageofwar2.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Bad_Piggies.swf
+TRASH (HTML5): html5/badpiggies.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Bloxorz.swf
+TRASH (HTML5): html5/bloxorz.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/chess.swf
+TRASH (HTML5): html5/chess.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/Earn_To_Die.swf
+TRASH (HTML5): html5/earntodie.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/papasbakeria.swf
+TRASH (HTML5): html5/papasbakeria.html
+
+[FUZZY MATCH 87%]
+KEEP  (Flash): swf/Papa's_Cheezeria.swf
+TRASH (HTML5): html5/papascheeseria.html
+Note: Flash file size is 11.77 MB
+
+[FUZZY MATCH 94%]
+KEEP  (Flash): swf/Papa's_Cupcakeria.swf
+TRASH (HTML5): html5/papascupcakeria.html
+Note: Flash file size is 8.50 MB
+
+[FUZZY MATCH 94%]
+KEEP  (Flash): swf/Papa's_Pancakeria.swf
+TRASH (HTML5): html5/papaspancakeria.html
+Note: Flash file size is 6.19 MB
+
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/Papa's_Pasteria.swf
+TRASH (HTML5): html5/papaspastaria.html
+Note: Flash file size is 10.09 MB
+
+[FUZZY MATCH 92%]
+KEEP  (Flash): swf/Papa's_Taco_Mia.swf
+TRASH (HTML5): html5/papastacomia.html
+Note: Flash file size is 5.14 MB
+
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/This is the only level too.swf
+TRASH (HTML5): html5/thisistheonlylevel.html
+Note: Flash file size is 1.78 MB
+
+[EXACT MATCH]
+KEEP  (Flash): swf/This is the only level.swf
+TRASH (HTML5): html5/thisistheonlylevel.html
+
+[EXACT MATCH]
+KEEP  (Flash): swf/This is the only level too.swf
+TRASH (HTML5): html5/thisistheonlyleveltoo.html
+
+[FUZZY MATCH 86%]
+KEEP  (Flash): swf/This is the only level.swf
+TRASH (HTML5): html5/thisistheonlyleveltoo.html
+Note: Flash file size is 1.26 MB
+
+[FUZZY MATCH 81%]
+KEEP  (Flash): swf/The World's Hardest Game.swf
+TRASH (HTML5): html5/worldshardestgame.html
+Note: Flash file size is 0.71 MB
+
+[FUZZY MATCH 82%]
+KEEP  (Flash): swf/The World's Hardest Game 2.swf
+TRASH (HTML5): html5/worldshardestgame2.html
+Note: Flash file size is 2.27 MB
+
+[FUZZY MATCH 82%]
+KEEP  (Flash): swf/The World's Hardest Game 3.swf
+TRASH (HTML5): html5/worldshardestgame3.html
+Note: Flash file size is 3.99 MB
+

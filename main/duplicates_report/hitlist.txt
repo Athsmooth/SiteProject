@@ -1,0 +1,68 @@
+=== DUPLICATE REMOVAL HITLIST ===
+Generated on: 3/29/2026, 8:59:27 PM
+Use this list to manually delete bloated HTML5 wrappers.
+----------------------------------------------------------
+
+[ ] DELETE: html5/2048.html
+    Reason: Optimized Flash version exists at swf/games/2048.swf
+
+[ ] DELETE: html5/chess.html
+    Reason: Optimized Flash version exists at swf/games/chess.swf
+
+[ ] DELETE: html5/ducklife2.html
+    Reason: Optimized Flash version exists at swf/games/ducklife2.swf
+
+[ ] DELETE: html5/ducklife3.html
+    Reason: Optimized Flash version exists at swf/games/ducklife3.swf
+
+[ ] DELETE: html5/ducklife4.html
+    Reason: Optimized Flash version exists at swf/games/duck-life4.swf
+
+[ ] DELETE: html5/escapingtheprison.html
+    Reason: Optimized Flash version exists at swf/games/escapingtheprison.swf
+
+[ ] DELETE: html5/fancypantsadventure.html
+    Reason: Optimized Flash version exists at swf/games/fancypantsadventure.swf
+
+[ ] DELETE: html5/flappybird.html
+    Reason: Optimized Flash version exists at swf/games/flappy-bird.swf
+
+[ ] DELETE: html5/geometrydash.html
+    Reason: Optimized Flash version exists at swf/games/geometrydash.swf
+
+[ ] DELETE: html5/getontop.html
+    Reason: Optimized Flash version exists at swf/games/getontop.swf
+
+[ ] DELETE: html5/happywheels.html
+    Reason: Optimized Flash version exists at swf/games/HappyWheels.swf
+
+[ ] DELETE: html5/learntofly.html
+    Reason: Optimized Flash version exists at swf/games/learntofly.swf
+
+[ ] DELETE: html5/learntofly2.html
+    Reason: Optimized Flash version exists at swf/games/learntofly2.swf
+
+[ ] DELETE: html5/papasbakeria.html
+    Reason: Optimized Flash version exists at swf/games/papasbakeria.swf
+
+[ ] DELETE: html5/papasburgeria.html
+    Reason: Optimized Flash version exists at swf/games/papasburgeria.swf
+
+[ ] DELETE: html5/papasdonuteria.html
+    Reason: Optimized Flash version exists at swf/games/papasdonuteria.swf
+
+[ ] DELETE: html5/papasfreezeria.html
+    Reason: Optimized Flash version exists at swf/games/papasfreezeria.swf
+
+[ ] DELETE: html5/papashotdoggeria.html
+    Reason: Optimized Flash version exists at swf/games/papashotdoggeria.swf
+
+[ ] DELETE: html5/papaspizzeria.html
+    Reason: Optimized Flash version exists at swf/games/papaspizzeria.swf
+
+[ ] DELETE: html5/papaswingeria.html
+    Reason: Optimized Flash version exists at swf/games/papaswingeria.swf
+
+[ ] DELETE: html5/run3.html
+    Reason: Optimized Flash version exists at swf/games/run3.swf
+
