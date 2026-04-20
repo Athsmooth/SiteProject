@@ -2,100 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Student</title>
     <style>
-        body {
-            margin: 0;
-            background: #111;
-            color: white;
-            font-family: sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .card {
-            background: #1d1d1d;
-            padding: 40px;
-            border-radius: 15px;
-            border: 1px solid #333;
-        }
-        button {
-            padding: 15px 35px;
-            font-size: 18px;
-            background: #0066ff;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        button:hover { background: #0052cc; }
+        body { margin: 0; background: #111; color: white; font-family: sans-serif; 
+               display: flex; align-items: center; justify-content: center; height: 100vh; }
+        button { padding: 15px 35px; font-size: 18px; cursor: pointer; background: #0066ff; 
+                 color: white; border: none; border-radius: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
-
-    <div class="card">
-        <h1>Educational Dashboard</h1>
-        <p>Click below to launch the library securely.</p>
-        <button id="launchBtn">Launch Library</button>
-    </div>
+    <button id="launchBtn">Open Dashboard</button>
 
     <script>
-        // Use window.onload to prevent the "getElementById is null" error
-        window.onload = function() {
-            const btn = document.getElementById('launchBtn');
-            
-            btn.onclick = async function() {
-                // 1. Open the new tab immediately
-                const win = window.open("about:blank", "_blank");
-                if (!win) {
-                    alert("Popup blocked! Please allow popups for this site.");
-                    return;
-                }
+        document.getElementById('launchBtn').onclick = function() {
+            // Open the index inside the subfolder
+            // This ensures all relative JS and CSS files load perfectly
+            const win = window.open('./main/index.html', '_blank');
 
-                try {
-                    // 2. Fetch the library code
-                    const response = await fetch('./index.html?v=' + Date.now());
-                    if (!response.ok) throw new Error("Could not find index.html");
-                    const html = await response.text();
-
-                    // 3. Inject the content
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-
-                    win.document.head.innerHTML = doc.head.innerHTML;
-                    win.document.body.innerHTML = doc.body.innerHTML;
-
-                    // 4. Manually trigger scripts so they actually run
-                    const scripts = Array.from(win.document.querySelectorAll("script"));
-                    for (const oldScript of scripts) {
-                        const newScript = win.document.createElement("script");
-                        
-                        // Copy all attributes (src, async, etc.)
-                        Array.from(oldScript.attributes).forEach(attr => {
-                            newScript.setAttribute(attr.name, attr.value);
-                        });
-
-                        if (oldScript.src) {
-                            newScript.src = oldScript.src;
-                        } else {
-                            newScript.textContent = oldScript.textContent;
-                        }
-
-                        oldScript.parentNode.replaceChild(newScript, oldScript);
-                    }
-
-                    // 5. Close the launcher after it's done
-                    setTimeout(() => { window.close(); }, 1000);
-
-                } catch (err) {
-                    console.error(err);
-                    win.document.body.innerHTML = "<h2 style='color:black'>Error: " + err.message + "</h2>";
-                }
-            };
+            if (win) {
+                // Optional: Close the launcher so it doesn't stay open
+                setTimeout(() => { window.close(); }, 500);
+            } else {
+                alert("Please allow popups!");
+            }
         };
     </script>
 </body>
