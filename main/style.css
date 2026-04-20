@@ -1,0 +1,159 @@
+/* --- Global Variables (GitHub High-Contrast Dark) --- */
+:root {
+    --bg-main: #0d1117;
+    --bg-card: #161b22;
+    --nav-bg: #010409;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --border: #30363d;
+    --card-hover: #21262d;
+}
+
+/* --- Base Reset --- */
+* { box-sizing: border-box; }
+html, body {
+    margin: 0; padding: 0;
+    background-color: var(--bg-main) !important; 
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    height: 100%;
+}
+
+/* --- Navbar & Buttons --- */
+#nav {
+    height: 60px;
+    background-color: var(--nav-bg);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 20px; border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 1000;
+}
+
+.ic-logo .campus { font-weight: 700; font-size: 20px; color: #fff; }
+.ic-logo .student { font-weight: 300; font-size: 20px; color: var(--text-secondary); margin-left: 5px; }
+
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background-color: var(--card-hover);
+    border-color: var(--text-secondary);
+    transform: translateY(-1px);
+}
+
+.search-input {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+    height: 32px;
+    outline: none;
+}
+
+/* --- PARAGRAPH LAYOUT --- */
+#projects-placeholder {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-block { margin-bottom: 50px; width: 100%; }
+
+.category-header {
+    display: flex; align-items: center; gap: 15px; margin-bottom: 20px;
+}
+
+.label {
+    font-size: 11px; font-weight: 900;
+    color: var(--text-secondary);
+    letter-spacing: 2.5px; text-transform: uppercase;
+}
+
+.line { height: 1px; background: var(--border); flex-grow: 1; }
+
+/* The Flowing Paragraph Row */
+.game-flow {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* --- Game Card Style --- */
+.game-card {
+    width: 220px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-secondary);
+}
+
+.img-container {
+    width: 100%; aspect-ratio: 16/9;
+    background-color: #010409;
+    position: relative;
+}
+
+.img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+.game-label {
+    padding: 12px; font-size: 13px; font-weight: 600;
+    text-align: center; border-top: 1px solid var(--border);
+}
+
+/* --- Badges --- */
+.badge {
+    position: absolute; top: 8px; right: 8px;
+    padding: 3px 6px; font-size: 10px; font-weight: 900;
+    border-radius: 4px; z-index: 3;
+}
+.badge.exclusive { background: var(--accent); color: #000; }
+.badge.flash { background: #f39c12; color: #000; }
+.badge.html5 { background: #27ae60; color: #fff; }
+
+/* --- Modal Overlay (Window Fix) --- */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    align-items: center; justify-content: center;
+}
+
+.modal-overlay.active { display: flex !important; }
+
+.modal-content {
+    background: #1c2128; border: 1px solid var(--border);
+    width: 90%; max-width: 500px; border-radius: 12px;
+    padding: 0; overflow: hidden;
+}
+
+.modal-header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.modal-body { padding: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.modal-footer { padding: 15px; text-align: right; border-top: 1px solid var(--border); }
