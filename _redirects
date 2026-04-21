@@ -1,0 +1,6 @@
+# Force the root to load your launcher
+/ /start.html 200
+
+# Ensure the main folder works correctly
+/main /main/index.html 200
+/main/* :splat 200
