@@ -25,10 +25,67 @@ html, body {
     width: 100%;
 }
 
+/* --- TASKBAR (The Navbar) --- */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    background-color: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--border);
+    position: sticky; /* Pins it to the top */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-left .ic-logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.campus { color: var(--text-primary); }
+.student { color: var(--accent); margin-left: 4px; }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.search-input {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    width: 250px;
+}
+
+.search-input:focus {
+    border-color: var(--accent);
+}
+
 /* --- Layout Containers --- */
 .projects-placeholder {
-    padding: 20px;
-    max-width: 1800px;
+    padding: 20px 40px;
+    max-width: 100%;
     margin: 0 auto;
     display: block !important;
 }
@@ -39,7 +96,7 @@ html, body {
 }
 
 /* --- THE GRID (8 Columns) --- */
-/* We target the specific hierarchy to prevent the "break" after loading */
+/* High priority selector to stop the "flash and break" */
 #projects-placeholder .game-flow {
     display: grid !important;
     grid-template-columns: repeat(8, 1fr) !important;
@@ -50,7 +107,7 @@ html, body {
 
 /* --- Game Card Style --- */
 .game-card {
-    width: 100% !important; /* Card fills exactly 1/8th of the row */
+    width: 100% !important;
     background-color: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -60,7 +117,7 @@ html, body {
     transition: transform 0.2s, border-color 0.2s;
     display: flex;
     flex-direction: column;
-    min-width: 0; /* Prevents text from pushing grid width */
+    min-width: 0;
 }
 
 .game-card:hover {
@@ -137,25 +194,93 @@ html, body {
 .badge.flash { background: #f39c12; color: #000; }
 .badge.html5 { background: #27ae60; color: #fff; }
 
-/* --- Navbar (Simple Fix) --- */
-#navbar-container {
+/* --- DISCLAIMER MODAL --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 60px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; /* Controlled by JS .active class */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    overflow: hidden;
+    color: var(--text-primary);
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 25px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid var(--border);
+    text-align: right;
+}
+
+.agree-btn {
+    background-color: #238636;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /* --- Responsive Breakpoints --- */
 @media (max-width: 1600px) {
     #projects-placeholder .game-flow { grid-template-columns: repeat(6, 1fr) !important; }
 }
-
 @media (max-width: 1200px) {
     #projects-placeholder .game-flow { grid-template-columns: repeat(4, 1fr) !important; }
 }
-
 @media (max-width: 800px) {
     #projects-placeholder .game-flow { grid-template-columns: repeat(2, 1fr) !important; }
 }
-
 @media (max-width: 480px) {
     #projects-placeholder .game-flow { grid-template-columns: 1fr !important; }
 }
