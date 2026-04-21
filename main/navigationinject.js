@@ -1,3 +1,4 @@
+if (typeof allGames === 'undefined') {
 let allGames = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -62,3 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 });
+}

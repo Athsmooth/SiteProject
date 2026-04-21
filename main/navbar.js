@@ -1,19 +1,21 @@
-let allGames = [];
+var allGames = allGames || []; 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // FIX: IDs and Classes don't use folder paths
+function initLibrary() {
     const container = document.getElementById('projects-placeholder');
     const searchInput = document.querySelector('.search-input');
 
-    if (!container || !searchInput) {
-        console.error("Critical: Could not find HTML elements on the page.");
+    // 1. POLLING CHECK: If elements aren't there yet, wait and try again
+    if (!container) {
+        setTimeout(initLibrary, 50); 
         return;
     }
 
-    // FIX: If the HTML is in the main folder, just use the filename
+    console.log("Library container found! Loading games...");
+
+    // 2. FETCH DATA
     fetch('games-list.json?v=' + Date.now())
         .then(res => {
-            if (!res.ok) throw new Error("File not found (404)");
+            if (!res.ok) throw new Error("404");
             return res.json();
         })
         .then(data => {
@@ -22,18 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => {
             console.error("Could not load games list:", err);
-            container.innerHTML = `<div style="color:orange; padding:20px;">Library file not found. Check if games-list.json is in the /main/ folder.</div>`;
+            container.innerHTML = `<div style="color:orange; padding:20px;">Library file not found.</div>`;
         });
 
-    searchInput.addEventListener('input', (e) => {
-        const term = e.target.value.toLowerCase();
-        const filtered = allGames.filter(g => 
-            g.name.toLowerCase().includes(term) || 
-            g.category.toLowerCase().includes(term)
-        );
-        render(filtered);
-    });
+    // 3. SEARCH LOGIC (Only if search input exists)
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = allGames.filter(g => 
+                (g.name && g.name.toLowerCase().includes(term)) || 
+                (g.category && g.category.toLowerCase().includes(term))
+            );
+            render(filtered);
+        });
+    }
 
+    // 4. RENDER FUNCTION
     function render(list) {
         if (list.length === 0) {
             container.innerHTML = `<div style="padding: 20px; color: #8b949e;">No games found...</div>`;
@@ -83,4 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         container.innerHTML = html;
     }
-});
+}
+
+// Start the check
+initLibrary();
