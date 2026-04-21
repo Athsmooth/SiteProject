@@ -1,31 +1,25 @@
-/* --- Global Variables (GitHub High-Contrast Dark) --- */
+/* --- Global Variables --- */
 :root {
     --bg-main: #0d1117;
     --bg-card: #161b22;
     --nav-bg: #010409;
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;
-    --accent: #58a6ff;
-    --border: #30363d;
-    --card-hover: #21262d;
+    --accent: #1b69c3; /* Blue */
+    --html5-green: #238636;
+    --border: #002c5e;
 }
 
 /* --- Base Reset --- */
-* { 
-    box-sizing: border-box; 
-}
-
-html, body {
-    margin: 0; 
-    padding: 0;
-    background-color: var(--bg-main) !important; 
+* { box-sizing: border-box; }
+body, html {
+    margin: 0; padding: 0;
+    background-color: var(--bg-main) !important;
     color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    min-height: 100vh;
-    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* --- TASKBAR (The Navbar) --- */
+/* --- Taskbar (Navbar) --- */
 #nav {
     display: flex;
     justify-content: space-between;
@@ -34,38 +28,18 @@ html, body {
     height: 70px;
     background-color: var(--nav-bg) !important;
     border-bottom: 1px solid var(--border);
-    position: sticky; /* Pins it to the top */
+    position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
 }
 
-.nav-left .ic-logo {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
+.campus { font-weight: 800; font-size: 20px; color: #fff; }
+.student { color: var(--accent); font-weight: 800; font-size: 20px; margin-left: 4px; }
 
-.campus { color: var(--text-primary); }
-.student { color: var(--accent); margin-left: 4px; }
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-link:hover {
-    color: var(--accent);
-}
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-link { color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: 0.2s; }
+.nav-link:hover { color: var(--accent); }
 
 .search-input {
     background-color: var(--bg-main);
@@ -75,212 +49,132 @@ html, body {
     border-radius: 6px;
     outline: none;
     font-size: 14px;
-    width: 250px;
 }
 
-.search-input:focus {
-    border-color: var(--accent);
-}
+/* --- 8-Column Grid --- */
+.projects-placeholder { padding: 20px 40px; width: 100%; }
 
-/* --- Layout Containers --- */
-.projects-placeholder {
-    padding: 20px 40px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: block !important;
-}
-
-#projects-placeholder {
-    width: 100%;
-    display: block !important;
-}
-
-/* --- THE GRID (8 Columns) --- */
-/* High priority selector to stop the "flash and break" */
 #projects-placeholder .game-flow {
     display: grid !important;
     grid-template-columns: repeat(8, 1fr) !important;
     gap: 15px !important;
     width: 100% !important;
-    padding: 20px 0 !important;
 }
 
-/* --- Game Card Style --- */
+/* --- Game Cards & Dynamic Outlines --- */
 .game-card {
-    width: 100% !important;
-    background-color: var(--bg-card);
+    background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 8px;
-    overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s, border-color 0.2s;
     display: flex;
     flex-direction: column;
-    min-width: 0;
-}
-
-.game-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--text-secondary);
-    background-color: var(--card-hover);
-}
-
-.img-container {
-    width: 100%; 
-    aspect-ratio: 16/9;
-    background-color: #010409;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
     position: relative;
     overflow: hidden;
 }
 
-.img-container img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+/* Blue Outline for SWF/Flash/Exclusive */
+.game-card:has(.badge.flash), 
+.game-card:has(.badge.swf),
+.game-card:has(.badge.exclusive) {
+    border-color: rgba(88, 166, 255, 0.2);
+}
+
+.game-card:has(.badge.flash):hover, 
+.game-card:has(.badge.swf):hover,
+.game-card:has(.badge.exclusive):hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(88, 166, 255, 0.15);
+}
+
+/* Green Outline for HTML5 */
+.game-card:has(.badge.html5) {
+    border-color: rgba(35, 134, 54, 0.2);
+}
+
+.game-card:has(.badge.html5):hover {
+    border-color: var(--html5-green);
+    box-shadow: 0 0 12px rgba(35, 134, 54, 0.15);
+}
+
+.game-card:hover { transform: translateY(-5px); }
+
+/* --- Internal Card Assets --- */
+.img-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    background: #000;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .game-label {
-    padding: 10px; 
-    font-size: 12px; 
+    padding: 10px;
+    font-size: 11px;
     font-weight: 600;
-    text-align: center; 
+    text-align: center;
     border-top: 1px solid var(--border);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* --- Category Headers --- */
-.category-block { 
-    margin-bottom: 40px; 
-    width: 100%; 
-}
-
-.category-header {
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-    margin-bottom: 20px;
-}
-
-.label {
-    font-size: 11px; 
-    font-weight: 900;
-    color: var(--text-secondary);
-    letter-spacing: 2px; 
-    text-transform: uppercase;
-}
-
-.line { 
-    height: 1px; 
-    background: var(--border); 
-    flex-grow: 1; 
-}
-
-/* --- Badges --- */
+/* --- Badges (FIXED TEXT COLOR) --- */
 .badge {
-    position: absolute; 
-    top: 5px; 
-    right: 5px;
-    padding: 2px 5px; 
-    font-size: 9px; 
+    position: absolute;
+    top: 5px; right: 5px;
+    padding: 2px 6px;
+    font-size: 9px;
     font-weight: 900;
-    border-radius: 3px; 
-    z-index: 3;
+    border-radius: 4px;
     text-transform: uppercase;
+    z-index: 5;
+    color: #fff !important; /* All badge text is now white */
 }
-.badge.exclusive { background: var(--accent); color: #000; }
-.badge.flash { background: #f39c12; color: #000; }
-.badge.html5 { background: #27ae60; color: #fff; }
 
-/* --- DISCLAIMER MODAL --- */
+.badge.exclusive { background: var(--accent); }
+.badge.flash, .badge.swf { background: var(--accent); } /* SWF is now blue background */
+.badge.html5 { background: var(--html5-green); }
+
+/* --- Category Headers --- */
+.category-block { margin-bottom: 40px; }
+.category-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.label { font-size: 10px; font-weight: 900; color: var(--text-secondary); letter-spacing: 1px; }
+.line { height: 1px; background: var(--border); flex-grow: 1; }
+
+/* --- Modal --- */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: none; /* Controlled by JS .active class */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); display: none;
+    justify-content: center; align-items: center; z-index: 2000;
     backdrop-filter: blur(4px);
 }
-
-.modal-overlay.active {
-    display: flex !important;
-}
-
+.modal-overlay.active { display: flex; }
 .modal-content {
-    background-color: var(--bg-card);
+    background: var(--bg-card);
     border: 1px solid var(--border);
-    width: 90%;
-    max-width: 600px;
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    overflow: hidden;
-    color: var(--text-primary);
-}
-
-.modal-header {
-    padding: 20px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-size: 18px;
-    color: var(--accent);
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.modal-body {
-    padding: 25px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.modal-footer {
-    padding: 15px 20px;
-    border-top: 1px solid var(--border);
-    text-align: right;
+    max-width: 500px;
 }
 
 .agree-btn {
-    background-color: #238636;
+    background-color: var(--html5-green);
     color: white;
     border: none;
-    padding: 10px 24px;
+    padding: 10px 20px;
     border-radius: 6px;
-    font-weight: 600;
     cursor: pointer;
+    font-weight: 600;
 }
 
-/* --- Responsive Breakpoints --- */
-@media (max-width: 1600px) {
-    #projects-placeholder .game-flow { grid-template-columns: repeat(6, 1fr) !important; }
-}
-@media (max-width: 1200px) {
-    #projects-placeholder .game-flow { grid-template-columns: repeat(4, 1fr) !important; }
-}
-@media (max-width: 800px) {
-    #projects-placeholder .game-flow { grid-template-columns: repeat(2, 1fr) !important; }
-}
-@media (max-width: 480px) {
-    #projects-placeholder .game-flow { grid-template-columns: 1fr !important; }
-}
+/* --- Responsive --- */
+@media (max-width: 1400px) { #projects-placeholder .game-flow { grid-template-columns: repeat(4, 1fr) !important; } }
+@media (max-width: 800px) { #projects-placeholder .game-flow { grid-template-columns: repeat(2, 1fr) !important; } }
