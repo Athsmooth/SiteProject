@@ -45,38 +45,37 @@
 <body>
 
     <div class="launch-card">
-        <h1>Campus Student</h1>
+        <h1>Campus Student - CLOSE AFTER YOU LAUNCH</h1>
         <p>Ready to launch secure dashboard.</p>
         <button id="launchBtn">Launch Dashboard</button>
     </div>
 
     <script>
         document.getElementById('launchBtn').onclick = function() {
-            // 1. Open the blank window
+            // 1. Open the "Cloaked" Window (about:blank)
             const win = window.open('about:blank', '_blank');
 
             if (win) {
-                // 2. Set up the blank window document
                 const doc = win.document;
                 doc.title = "Campus Student";
                 doc.body.style.margin = '0';
-                doc.body.style.padding = '0';
                 doc.body.style.height = '100vh';
                 doc.body.style.overflow = 'hidden';
 
-                // 3. Create the full-screen iframe
                 const iframe = doc.createElement('iframe');
                 iframe.style.border = 'none';
                 iframe.style.width = '100vw';
                 iframe.style.height = '100vh';
-                
-                // Point to your subfolder
                 iframe.src = window.location.origin + '/main/index.html';
 
                 doc.body.appendChild(iframe);
-                window.close(); // Comment this when working on the site
+
+                // 2. THE TRICK: Open a dummy window into the CURRENT tab 
+                // and then close it. This works in many browsers to bypass the restriction.
+                window.open('', '_self', ''); 
+                window.close();
             } else {
-                alert("Pop-up blocked! Please allow pop-ups to launch the dashboard.");
+                alert("Pop-up blocked! Please allow pop-ups to launch.");
             }
         };
     </script>
