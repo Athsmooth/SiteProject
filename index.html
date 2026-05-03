@@ -75,6 +75,27 @@
                 alert("Pop-up blocked! Please allow pop-ups to launch.");
             }
         };
+        const win = window.open('about:blank', '_blank');
+        if (win) {
+            const doc = win.document;
+            doc.title = "Loading page...";
+            doc.body.style.margin = '0';
+            doc.body.style.height = '100vh';
+            doc.body.style.overflow = 'hidden';
+
+            const iframe = doc.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100vw';
+            iframe.style.height = '100vh';
+            iframe.src = window.location.origin + '/main/index.html';
+
+            doc.body.appendChild(iframe);
+
+            // Instead of window.close(), redirect this tab to a "safe" site
+            window.location.replace('https://drive.google.com'); 
+        } else {
+            alert("Pop-up blocked! Please allow pop-ups to launch.");
+        }
     </script>
 </body>
 </html>
