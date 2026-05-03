@@ -1,3 +1,4 @@
+/* --- NAVIGATION INJECTOR --- */
 const navbarHTML = `
 <nav id="nav">
     <div class="nav-left">
@@ -15,39 +16,72 @@ const navbarHTML = `
     </div>
 </nav>
 
+<div id="toast-container" style="
+    position: fixed; 
+    top: 85px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: center; 
+    z-index: 10001; 
+    pointer-events: none;
+"></div>
+
 <input type="file" id="importFileHandler" style="display:none" accept=".json" onchange="importUserData(event)">
 
 <div id="disclaimer-modal" class="modal-overlay">
     <div class="modal-content">
         <div class="modal-header"><h2>Notice</h2></div>
-        <div class="modal-body">
-            <p><strong>Educational Purposes Only:</strong> This site is a personal project. All games are properties of their respective owners.</p>
-        </div>
-        <div class="modal-footer">
-            <button class="agree-btn" onclick="toggleDisclaimer(false)">I Understand</button>
-        </div>
-    </div>
-</div>
-
-<div id="instructions-modal" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header"><h2>Transfer Instructions</h2></div>
-        <div class="modal-body">
-            <p>Your data backup has been downloaded! Send it to your new device and use "Load Data".</p>
-        </div>
-        <div class="modal-footer">
-            <button class="agree-btn" onclick="toggleInstructions(false)">Got it!</button>
-        </div>
+        <div class="modal-body"><p>Educational Purposes Only: Games belong to their owners.</p></div>
+        <div class="modal-footer"><button class="agree-btn" onclick="toggleDisclaimer(false)">I Understand</button></div>
     </div>
 </div>
 `;
 
-function initNavbar() {
-    const container = document.getElementById('navbar-container');
-    if (!container) return; // Exit if the container isn't found
+let isNavLocked = false;
+
+function showToast(msg) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    // Create a new toast element
+    const toast = document.createElement('div');
     
-    container.innerHTML = navbarHTML;
-    setupNavBehavior();
+    // Apply styles directly
+    Object.assign(toast.style, {
+        background: "rgba(13, 17, 23, 0.95)",
+        color: "white",
+        padding: "12px 24px",
+        borderRadius: "8px",
+        fontFamily: "sans-serif",
+        fontSize: "14px",
+        fontWeight: "500",
+        border: "1px solid #1b69c3",
+        boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
+        opacity: "0",
+        transform: "translateY(-10px)",
+        transition: "all 0.4s ease"
+    });
+
+    toast.innerText = msg;
+    container.appendChild(toast);
+
+    // Trigger animation
+    setTimeout(() => {
+        toast.style.opacity = "1";
+        toast.style.transform = "translateY(0)";
+    }, 10);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(-10px)";
+        setTimeout(() => {
+            toast.remove();
+        }, 400); // Wait for fade out to finish
+    }, 3000);
 }
 
 function setupNavBehavior() {
@@ -58,83 +92,110 @@ function setupNavBehavior() {
     const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
 
     window.showNav = function() {
+        if (isNavLocked) return;
         nav.classList.remove('nav-hidden');
         clearTimeout(navTimeout);
-
         if (!isHomePage) {
             navTimeout = setTimeout(() => {
-                const isTyping = document.activeElement.tagName === 'INPUT';
-                const isHovering = nav.matches(':hover');
-                if (!isTyping && !isHovering) {
+                if (!nav.matches(':hover') && document.activeElement.tagName !== 'INPUT') {
                     nav.classList.add('nav-hidden');
                 }
             }, 3000);
         }
     };
 
-    window.addEventListener('mousemove', showNav);
-    window.addEventListener('scroll', showNav);
-    window.addEventListener('keydown', showNav);
+    const handleShortcuts = (e) => {
+        if (e.ctrlKey && e.altKey && e.code === 'KeyH') {
+            e.preventDefault();
+            isNavLocked = !isNavLocked;
+            if (isNavLocked) {
+                nav.classList.add('nav-hidden');
+                showToast("Navbar Locked Hidden (Ctrl+Alt+H to show)");
+            } else {
+                nav.classList.remove('nav-hidden');
+                showToast("Navbar Unlocked");
+                window.showNav();
+            }
+            return;
+        }
+        if (e.ctrlKey && e.altKey && e.code === 'KeyP') {
+            e.preventDefault();
 
-    // Iframe wake-up logic (only runs if game-frame exists)
+            // Opens a new tab to a safe site
+            window.open('https://google.com', '_blank');
+
+            // Optional: Hide the navbar on the current page so it looks cleaner
+            const nav = document.getElementById('nav');
+            if (nav) {
+                isNavLocked = true;
+                nav.classList.add('nav-hidden');
+            }
+
+            showToast("New safe tab opened.");
+            return;
+        }
+    };
+
+    window.addEventListener('mousemove', window.showNav);
+    window.addEventListener('scroll', window.showNav);
+    window.addEventListener('keydown', handleShortcuts);
+
     const iframe = document.getElementById('game-frame');
     if (iframe) {
         iframe.addEventListener('load', () => {
+            setTimeout(() => showToast("For fullscren press Ctrl+Alt+H"), 1000);
+            showToast("Press Ctrl+Alt+P for panic mode");
             try {
                 const iDoc = iframe.contentDocument || iframe.contentWindow.document;
-                iDoc.addEventListener('mousemove', showNav);
-                iDoc.addEventListener('keydown', showNav);
-            } catch(e) { console.warn("Nav-wake blocked inside iframe."); }
+                iDoc.addEventListener('mousemove', window.showNav);
+                iDoc.addEventListener('keydown', handleShortcuts);
+                iDoc.addEventListener('mousedown', window.showNav);
+            } catch(e) { console.warn("Iframe blocked."); }
         });
     }
-
-    showNav();
+    window.showNav();
 }
 
-// --- GLOBAL FUNCTIONS ---
+// --- GLOBAL DATA FUNCTIONS ---
 window.exportUserData = () => {
-    const allData = JSON.stringify(localStorage);
-    if (allData === "{}") return alert("No data to save.");
-    const blob = new Blob([allData], { type: 'application/json' });
+    const data = JSON.stringify(localStorage);
+    if (data === "{}") return alert("No data found.");
+    const blob = new Blob([data], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'krethan-data.json';
+    link.download = 'backup.json';
     link.click();
     URL.revokeObjectURL(url);
-    setTimeout(() => window.toggleInstructions(true), 500);
 };
 
-window.triggerInternalFileInput = () => {
-    const handler = document.getElementById('importFileHandler');
-    if(handler) handler.click();
-};
+window.triggerInternalFileInput = () => document.getElementById('importFileHandler').click();
 
-window.importUserData = (event) => {
-    const file = event.target.files[0];
+window.importUserData = (e) => {
+    const file = e.target.files[0];
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = (event) => {
         try {
-            const data = JSON.parse(e.target.result);
+            const data = JSON.parse(event.target.result);
             if (confirm("Overwrite all data?")) {
                 localStorage.clear();
                 Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
                 window.location.reload();
             }
-        } catch(err) { alert("Invalid backup file."); }
+        } catch(err) { alert("Invalid file."); }
     };
     reader.readAsText(file);
 };
 
 window.toggleDisclaimer = (s) => document.getElementById('disclaimer-modal').classList.toggle('active', s);
-window.toggleInstructions = (s) => document.getElementById('instructions-modal').classList.toggle('active', s);
 
-window.onclick = (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-        window.toggleDisclaimer(false);
-        window.toggleInstructions(false);
+// Initialize
+(function init() {
+    const container = document.getElementById('navbar-container');
+    if (container) {
+        container.innerHTML = navbarHTML;
+        setupNavBehavior();
+    } else {
+        setTimeout(init, 50);
     }
-};
-
-// Run the script
-initNavbar();
+})();

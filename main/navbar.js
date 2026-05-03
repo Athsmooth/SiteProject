@@ -81,3 +81,35 @@ function initLibrary() {
 }
 
 initLibrary();
+
+let isNavbarHidden = false;
+const navbar = document.querySelector('.navbar');
+const notice = document.getElementById('hide-notice');
+
+document.addEventListener('keydown', function(event) {
+  // Check for Ctrl + H (event.code 'KeyH')
+  if (event.ctrlKey && event.code === 'KeyH') {
+    event.preventDefault(); // Prevent browser history from opening
+    
+    isNavbarHidden = !isNavbarHidden;
+    
+    if (isNavbarHidden) {
+      navbar.classList.add('hidden');
+      showNotice("Navbar hidden. Press Ctrl+H to show again.");
+    } else {
+      navbar.classList.remove('hidden');
+      showNotice("Navbar visible.");
+    }
+  }
+});
+
+function showNotice(message) {
+  notice.textContent = message;
+  notice.classList.add('show');
+  
+  // Hide the notice after 3 seconds, just like YouTube
+  setTimeout(() => {
+    notice.classList.remove('show');
+  }, 3000);
+}
+
