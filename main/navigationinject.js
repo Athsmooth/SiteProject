@@ -2,9 +2,11 @@
 const navbarHTML = `
 <nav id="nav">
     <div class="nav-left">
-        <div class="ic-logo">
-            <span class="logo">Krethan's Page</span>
-        </div>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="ic-logo">
+                <span class="logo">Krethan's Page</span>
+            </div>
+        </a>
     </div>
     <div class="nav-right">
         <input type="text" class="search-input" placeholder="Search games...">
@@ -41,15 +43,18 @@ const navbarHTML = `
 `;
 
 let isNavLocked = false;
+let lastToastTime = 0;
 
 function showToast(msg) {
+    const now = Date.now();
+    // Debounce: prevent same-time double triggers
+    if (now - lastToastTime < 100) return; 
+    lastToastTime = now;
+
     const container = document.getElementById('toast-container');
     if (!container) return;
 
-    // Create a new toast element
     const toast = document.createElement('div');
-    
-    // Apply styles directly
     Object.assign(toast.style, {
         background: "rgba(13, 17, 23, 0.95)",
         color: "white",
@@ -68,19 +73,15 @@ function showToast(msg) {
     toast.innerText = msg;
     container.appendChild(toast);
 
-    // Trigger animation
     setTimeout(() => {
         toast.style.opacity = "1";
         toast.style.transform = "translateY(0)";
     }, 10);
 
-    // Remove after 3 seconds
     setTimeout(() => {
         toast.style.opacity = "0";
         toast.style.transform = "translateY(-10px)";
-        setTimeout(() => {
-            toast.remove();
-        }, 400); // Wait for fade out to finish
+        setTimeout(() => toast.remove(), 400);
     }, 3000);
 }
 
@@ -105,8 +106,15 @@ function setupNavBehavior() {
     };
 
     const handleShortcuts = (e) => {
-        if (e.ctrlKey && e.altKey && e.code === 'KeyH') {
+        const isHide = e.ctrlKey && e.altKey && e.code === 'KeyH';
+        const isPanic = e.ctrlKey && e.altKey && e.code === 'KeyP';
+
+        if (isHide || isPanic) {
             e.preventDefault();
+            e.stopPropagation(); // Stop event from bubbling to window
+        }
+
+        if (isHide) {
             isNavLocked = !isNavLocked;
             if (isNavLocked) {
                 nav.classList.add('nav-hidden');
@@ -118,39 +126,42 @@ function setupNavBehavior() {
             }
             return;
         }
-        if (e.ctrlKey && e.altKey && e.code === 'KeyP') {
-            e.preventDefault();
 
-            // Opens a new tab to a safe site
+        if (isPanic) {
             window.open('https://google.com', '_blank');
-
-            // Optional: Hide the navbar on the current page so it looks cleaner
-            const nav = document.getElementById('nav');
-            if (nav) {
-                isNavLocked = true;
-                nav.classList.add('nav-hidden');
-            }
-
+            isNavLocked = true;
+            nav.classList.add('nav-hidden');
             showToast("New safe tab opened.");
             return;
         }
+
+        window.showNav();
     };
 
+    // Main window listeners
+    window.removeEventListener('keydown', handleShortcuts);
+    window.addEventListener('keydown', handleShortcuts);
     window.addEventListener('mousemove', window.showNav);
     window.addEventListener('scroll', window.showNav);
-    window.addEventListener('keydown', handleShortcuts);
 
+    // Iframe listeners
     const iframe = document.getElementById('game-frame');
     if (iframe) {
         iframe.addEventListener('load', () => {
-            setTimeout(() => showToast("For fullscren press Ctrl+Alt+H"), 1000);
-            showToast("Press Ctrl+Alt+P for panic mode");
+            // Only show tips once per frame load
+            if (!iframe.dataset.tipsShown) {
+                setTimeout(() => showToast("For fullscreen press Ctrl+Alt+H"), 1000);
+                setTimeout(() => showToast("Press Ctrl+Alt+P for panic mode"), 1200);
+                iframe.dataset.tipsShown = "true";
+            }
+
             try {
                 const iDoc = iframe.contentDocument || iframe.contentWindow.document;
-                iDoc.addEventListener('mousemove', window.showNav);
+                iDoc.removeEventListener('keydown', handleShortcuts);
                 iDoc.addEventListener('keydown', handleShortcuts);
+                iDoc.addEventListener('mousemove', window.showNav);
                 iDoc.addEventListener('mousedown', window.showNav);
-            } catch(e) { console.warn("Iframe blocked."); }
+            } catch(e) { console.warn("Iframe blocked activity listeners."); }
         });
     }
     window.showNav();
@@ -189,7 +200,7 @@ window.importUserData = (e) => {
 
 window.toggleDisclaimer = (s) => document.getElementById('disclaimer-modal').classList.toggle('active', s);
 
-// Initialize
+// Initialize with safety check
 (function init() {
     const container = document.getElementById('navbar-container');
     if (container) {
