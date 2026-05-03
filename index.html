@@ -52,7 +52,6 @@
 
     <script>
         document.getElementById('launchBtn').onclick = function() {
-            // 1. Open the "Cloaked" Window (about:blank)
             const win = window.open('about:blank', '_blank');
 
             if (win) {
@@ -70,10 +69,8 @@
 
                 doc.body.appendChild(iframe);
 
-                // 2. THE TRICK: Open a dummy window into the CURRENT tab 
-                // and then close it. This works in many browsers to bypass the restriction.
-                window.open('', '_self', ''); 
-                window.close();
+                // Instead of window.close(), redirect this tab to a "safe" site
+                window.location.replace('https://drive.google.com'); 
             } else {
                 alert("Pop-up blocked! Please allow pop-ups to launch.");
             }
