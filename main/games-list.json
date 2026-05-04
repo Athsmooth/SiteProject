@@ -1,5 +1,11 @@
 [
   {
+    "name": "Find GAMEBOY FILES",
+    "file": "html5player.html?game=exclusive/Find%20GAMEBOY%20FILES.html",
+    "thumb": "assets/thumbnails/Find GAMEBOY FILES.jpg",
+    "category": "exclusive"
+  },
+  {
     "name": "Game Boy Emulator",
     "file": "html5player.html?game=exclusive/Game%20Boy%20Emulator.html",
     "thumb": "assets/thumbnails/Game Boy Emulator.jpg",
