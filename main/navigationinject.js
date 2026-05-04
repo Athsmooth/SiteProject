@@ -81,7 +81,7 @@ function showToast(msg) {
     setTimeout(() => {
         toast.style.opacity = "0";
         toast.style.transform = "translateY(-10px)";
-        setTimeout(() => toast.remove(), 400);
+        setTimeout(() => toast.remove(), 3000);
     }, 3000);
 }
 

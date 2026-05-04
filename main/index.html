@@ -21,5 +21,26 @@
 
     <script src="navigationinject.js"></script>
     <script src="navbar.js"></script>
+    <script>
+        // Newsletter / Status Update Logic
+        window.addEventListener('load', () => {
+            // Use sessionStorage so they only see the "newsletter" once per browser session
+            if (!sessionStorage.getItem('statusRead')) {
+                
+                // Wait for the navbar/toast container to be ready
+                const checkSystem = setInterval(() => {
+                    if (typeof showToast === "function" && document.getElementById('toast-container')) {
+                        clearInterval(checkSystem);
+
+                        setTimeout(() => {
+                            showToast("Site version 3.2 ATTENTION: OLD VERSION OF COOKIE CLICKER WILL BE REMOVED! TRANSFER YOUR SAVE!!!");
+                        }, 1000);
+
+                        sessionStorage.setItem('statusRead', 'true');
+                    }
+                }, 100);
+            }
+        });
+    </script>
 </body>
 </html>

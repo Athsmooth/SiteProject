@@ -2046,6 +2046,12 @@
     "category": "html5"
   },
   {
+    "name": "Cookie Clicker Updated",
+    "file": "html5player.html?game=html5/Cookie%20Clicker%20Updated",
+    "thumb": "assets/thumbnails/Cookie Clicker Updated.jpg",
+    "category": "html5"
+  },
+  {
     "name": "Indev",
     "file": "html5player.html?game=html5/Indev.html",
     "thumb": "assets/thumbnails/Indev.jpg",
@@ -2685,6 +2691,12 @@
     "name": "ironsnout",
     "file": "html5player.html?game=html5/ironsnout.html",
     "thumb": "assets/thumbnails/ironsnout.jpg",
+    "category": "html5"
+  },
+  {
+    "name": "jellymar",
+    "file": "html5player.html?game=html5/jellymar",
+    "thumb": "assets/thumbnails/jellymar.jpg",
     "category": "html5"
   },
   {
