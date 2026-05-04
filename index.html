@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching page</title>
+    <title>Campus Student</title>
     <style>
         body { 
             margin: 0; 
@@ -23,7 +23,7 @@
             border: 1px solid #30363d;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { margin-top: 0; font-weight: 600; }
+        h1 { margin-top: 0; font-weight: 600; font-size: 24px; }
         p { color: #8b949e; margin-bottom: 30px; }
         button { 
             padding: 16px 45px; 
@@ -45,18 +45,19 @@
 <body>
 
     <div class="launch-card">
-        <h1>Campus Student - CLOSE AFTER YOU LAUNCH</h1>
+        <h1>Campus Student</h1>
         <p>Ready to launch secure dashboard.</p>
         <button id="launchBtn">Launch Dashboard</button>
     </div>
 
     <script>
         document.getElementById('launchBtn').onclick = function() {
+            // Open the new tab
             const win = window.open('about:blank', '_blank');
 
             if (win) {
                 const doc = win.document;
-                doc.title = "Loading page...";
+                doc.title = "Google Drive"; // Sneaky title for the new tab
                 doc.body.style.margin = '0';
                 doc.body.style.height = '100vh';
                 doc.body.style.overflow = 'hidden';
@@ -65,37 +66,17 @@
                 iframe.style.border = 'none';
                 iframe.style.width = '100vw';
                 iframe.style.height = '100vh';
+                // Using window.location.pathname logic to find your index
                 iframe.src = window.location.origin + '/main/index.html';
 
                 doc.body.appendChild(iframe);
 
-                // Instead of window.close(), redirect this tab to a "safe" site
+                // Redirect THIS tab to something boring immediately
                 window.location.replace('https://drive.google.com'); 
             } else {
-                alert("Pop-up blocked! Please allow pop-ups to launch.");
+                alert("Pop-up blocked! Please click the 'Pop-ups Blocked' icon in your URL bar and select 'Always Allow'.");
             }
         };
-        const win = window.open('about:blank', '_blank');
-        if (win) {
-            const doc = win.document;
-            doc.title = "Loading page...";
-            doc.body.style.margin = '0';
-            doc.body.style.height = '100vh';
-            doc.body.style.overflow = 'hidden';
-
-            const iframe = doc.createElement('iframe');
-            iframe.style.border = 'none';
-            iframe.style.width = '100vw';
-            iframe.style.height = '100vh';
-            iframe.src = window.location.origin + '/main/index.html';
-
-            doc.body.appendChild(iframe);
-
-            // Instead of window.close(), redirect this tab to a "safe" site
-            window.close()
-        } else {
-            alert("Pop-up blocked! Please allow pop-ups to launch.");
-        }
     </script>
 </body>
 </html>

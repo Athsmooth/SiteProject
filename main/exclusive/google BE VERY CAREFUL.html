@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page...</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon.png">
+    <style>
+        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; background-color: #1a1a1a; color: white; }
+        #navbar-container { flex-shrink: 0; }
+        
+        /* The container for the file list */
+        #file-browser-container {
+            flex-grow: 1;
+            width: 100%;
+            overflow-y: auto;
+            background: #ffffff; /* Keeping background white so standard links are visible */
+            color: #000000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling to make the injected links look like a list */
+        #file-browser-container pre { white-space: pre-wrap; font-family: monospace; }
+        #file-browser-container a { color: #0000EE; text-decoration: underline; display: block; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+    <div id="file-browser-container">
+        <p>Loading game files from Archive.org...</p>
+    </div>
+
+    <script>
+        const container = document.getElementById('file-browser-container');
+        const archiveUrl = 'https://google.com';
+        
+        // Using a different proxy (Codetabs) because AllOrigins is throwing 500 errors
+        const proxyUrl = `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(archiveUrl)}`;
+
+        fetch(proxyUrl)
+            .then(response => {
+                if (!response.ok) throw new Error('Proxy is down');
+                return response.text(); // Codetabs returns raw text, not JSON
+            })
+            .then(data => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+
+                const links = tempDiv.getElementsByTagName('a');
+                for (let i = 0; i < links.length; i++) {
+                    let href = links[i].getAttribute('href');
+                    if (href && !href.startsWith('http')) {
+                        // Force the links to point back to the Archive
+                        links[i].href = archiveUrl + '/' + href;
+                    }
+                    links[i].setAttribute('target', '_blank');
+                }
+
+                container.innerHTML = '<h3>File Directory:</h3>' + tempDiv.innerHTML;
+            })
+            .catch(err => {
+                console.error("Fetch Error:", err);
+                container.innerHTML = `
+                    <p style="color: red;">The Proxy is currently down or blocked.</p>
+                    <a href="${archiveUrl}" target="_blank" style="color: blue; font-weight: bold; text-decoration: underline;">
+                        CLICK HERE TO BROWSE FILES DIRECTLY ON ARCHIVE.ORG
+                    </a>`;
+            });
+    </script>
+
+    <script src="navigationinject.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (!sessionStorage.getItem('statusRead')) {
+                const checkSystem = setInterval(() => {
+                    if (typeof showToast === "function" && document.getElementById('toast-container')) {
+                        clearInterval(checkSystem);
+                        setTimeout(() => {
+                            showToast("BE VERY CAREFUL USING THIS. OINLY USE THIS IF YOU ARE AWARE OF THE RISKS!");
+                        }, 1000);
+                        sessionStorage.setItem('statusRead', 'true');
+                    }
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>

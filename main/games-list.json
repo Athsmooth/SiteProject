@@ -12,6 +12,12 @@
     "category": "exclusive"
   },
   {
+    "name": "google BE VERY CAREFUL",
+    "file": "html5player.html?game=exclusive/google%20BE%20VERY%20CAREFUL.html",
+    "thumb": "assets/thumbnails/google BE VERY CAREFUL.jpg",
+    "category": "exclusive"
+  },
+  {
     "name": "2048",
     "file": "ruffleplayer.html?game=swf/2048.swf",
     "thumb": "assets/thumbnails/2048.jpg",
