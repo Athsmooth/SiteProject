@@ -3502,5 +3502,419 @@
     "file": "html5player.html?game=html5/zorario.html",
     "thumb": "assets/thumbnails/zorario.jpg",
     "category": "html5"
+  },
+  {
+    "name": "102 Dalmatians   Puppies to the Rescue",
+    "file": "gbaplayer.html?game=gameboy/102%20Dalmatians%20-%20Puppies%20to%20the%20Rescue.gbc&type=gbc",
+    "thumb": "assets/thumbnails/102 Dalmatians - Puppies to the Rescue.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "AirForce Delta",
+    "file": "gbaplayer.html?game=gameboy/AirForce%20Delta.gbc&type=gbc",
+    "thumb": "assets/thumbnails/AirForce Delta.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Alone in the Dark   The New Nightmare",
+    "file": "gbaplayer.html?game=gameboy/Alone%20in%20the%20Dark%20-%20The%20New%20Nightmare.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Alone in the Dark - The New Nightmare.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Army Men",
+    "file": "gbaplayer.html?game=gameboy/Army%20Men.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Army Men.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Batman Beyond   Return of the Joker",
+    "file": "gbaplayer.html?game=gameboy/Batman%20Beyond%20-%20Return%20of%20the%20Joker.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Batman Beyond - Return of the Joker.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Bionic Commando   Elite Forces",
+    "file": "gbaplayer.html?game=gameboy/Bionic%20Commando%20-%20Elite%20Forces.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Bionic Commando - Elite Forces.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Bomberman Max   Blue Champion",
+    "file": "gbaplayer.html?game=gameboy/Bomberman%20Max%20-%20Blue%20Champion.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Bomberman Max - Blue Champion.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Buffy   The Vampire Slayer (BR)",
+    "file": "gbaplayer.html?game=gameboy/Buffy%20-%20The%20Vampire%20Slayer%20(BR).gbc&type=gbc",
+    "thumb": "assets/thumbnails/Buffy - The Vampire Slayer (BR).jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Classic Bubble Bobble",
+    "file": "gbaplayer.html?game=gameboy/Classic%20Bubble%20Bobble.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Classic Bubble Bobble.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Croc",
+    "file": "gbaplayer.html?game=gameboy/Croc.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Croc.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Crystalis",
+    "file": "gbaplayer.html?game=gameboy/Crystalis.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Crystalis.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Donkey Kong Country",
+    "file": "gbaplayer.html?game=gameboy/Donkey%20Kong%20Country.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Donkey Kong Country.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Dragon Warrior Monsters",
+    "file": "gbaplayer.html?game=gameboy/Dragon%20Warrior%20Monsters.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Dragon Warrior Monsters.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Driver   You are the Wheelman",
+    "file": "gbaplayer.html?game=gameboy/Driver%20-%20You%20are%20the%20Wheelman.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Driver - You are the Wheelman.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Extreme Ghostbusters",
+    "file": "gbaplayer.html?game=gameboy/Extreme%20Ghostbusters.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Extreme Ghostbusters.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Flipper & Lopaka",
+    "file": "gbaplayer.html?game=gameboy/Flipper%20%26%20Lopaka.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Flipper & Lopaka.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Fort Boyard",
+    "file": "gbaplayer.html?game=gameboy/Fort%20Boyard.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Fort Boyard.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Gex   Enter the Gecko",
+    "file": "gbaplayer.html?game=gameboy/Gex%20-%20Enter%20the%20Gecko.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Gex - Enter the Gecko.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Gremlins Unleashed",
+    "file": "gbaplayer.html?game=gameboy/Gremlins%20Unleashed.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Gremlins Unleashed.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Halloween Racer",
+    "file": "gbaplayer.html?game=gameboy/Halloween%20Racer.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Halloween Racer.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Harry Potter and the Chamber of Secrets",
+    "file": "gbaplayer.html?game=gameboy/Harry%20Potter%20and%20the%20Chamber%20of%20Secrets.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Harry Potter and the Chamber of Secrets.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "file": "gbaplayer.html?game=gameboy/Harry%20Potter%20and%20the%20Sorcerer's%20Stone.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Harry Potter and the Sorcerer's Stone.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Harvest Moon 2 GBC",
+    "file": "gbaplayer.html?game=gameboy/Harvest%20Moon%202%20GBC.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Harvest Moon 2 GBC.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Harvest Moon 3 GBC",
+    "file": "gbaplayer.html?game=gameboy/Harvest%20Moon%203%20GBC.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Harvest Moon 3 GBC.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Harvest Moon GB",
+    "file": "gbaplayer.html?game=gameboy/Harvest%20Moon%20GB.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Harvest Moon GB.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Hugo   Black Diamond Fever",
+    "file": "gbaplayer.html?game=gameboy/Hugo%20-%20Black%20Diamond%20Fever.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Hugo - Black Diamond Fever.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Hugo   The Evil Mirror",
+    "file": "gbaplayer.html?game=gameboy/Hugo%20-%20The%20Evil%20Mirror.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Hugo - The Evil Mirror.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "International Superstar Soccer '99",
+    "file": "gbaplayer.html?game=gameboy/International%20Superstar%20Soccer%20'99.gbc&type=gbc",
+    "thumb": "assets/thumbnails/International Superstar Soccer '99.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Kirikou",
+    "file": "gbaplayer.html?game=gameboy/Kirikou.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Kirikou.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "LEGO Alpha Team",
+    "file": "gbaplayer.html?game=gameboy/LEGO%20Alpha%20Team.gbc&type=gbc",
+    "thumb": "assets/thumbnails/LEGO Alpha Team.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "LEGO Island 2   The Brickster's Revenge",
+    "file": "gbaplayer.html?game=gameboy/LEGO%20Island%202%20-%20The%20Brickster's%20Revenge.gbc&type=gbc",
+    "thumb": "assets/thumbnails/LEGO Island 2 - The Brickster's Revenge.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "LEGO Racers",
+    "file": "gbaplayer.html?game=gameboy/LEGO%20Racers.gbc&type=gbc",
+    "thumb": "assets/thumbnails/LEGO Racers.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "LEGO Stunt Rally",
+    "file": "gbaplayer.html?game=gameboy/LEGO%20Stunt%20Rally.gbc&type=gbc",
+    "thumb": "assets/thumbnails/LEGO Stunt Rally.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Legend of Zelda, The   Link's Awakening DX (Rev B)",
+    "file": "gbaplayer.html?game=gameboy/Legend%20of%20Zelda%2C%20The%20-%20Link's%20Awakening%20DX%20(Rev%20B).gbc&type=gbc",
+    "thumb": "assets/thumbnails/Legend of Zelda, The - Link's Awakening DX (Rev B).jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Legend of Zelda, The   Oracle of Ages",
+    "file": "gbaplayer.html?game=gameboy/Legend%20of%20Zelda%2C%20The%20-%20Oracle%20of%20Ages.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Legend of Zelda, The - Oracle of Ages.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Legend of Zelda, The   Oracle of Seasons",
+    "file": "gbaplayer.html?game=gameboy/Legend%20of%20Zelda%2C%20The%20-%20Oracle%20of%20Seasons.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Legend of Zelda, The - Oracle of Seasons.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "MTV Sports   Skateboarding featuring Andy MacDonald",
+    "file": "gbaplayer.html?game=gameboy/MTV%20Sports%20-%20Skateboarding%20featuring%20Andy%20MacDonald.gbc&type=gbc",
+    "thumb": "assets/thumbnails/MTV Sports - Skateboarding featuring Andy MacDonald.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Megaman Xtreme 2",
+    "file": "gbaplayer.html?game=gameboy/Megaman%20Xtreme%202.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Megaman Xtreme 2.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Megaman Xtreme",
+    "file": "gbaplayer.html?game=gameboy/Megaman%20Xtreme.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Megaman Xtreme.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "N.Y. Race",
+    "file": "gbaplayer.html?game=gameboy/N.Y.%20Race.gbc&type=gbc",
+    "thumb": "assets/thumbnails/N.Y. Race.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "New Addams Family Series, The",
+    "file": "gbaplayer.html?game=gameboy/New%20Addams%20Family%20Series%2C%20The.gbc&type=gbc",
+    "thumb": "assets/thumbnails/New Addams Family Series, The.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Perfect Dark",
+    "file": "gbaplayer.html?game=gameboy/Perfect%20Dark.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Perfect Dark.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pocket Bomberman",
+    "file": "gbaplayer.html?game=gameboy/Pocket%20Bomberman.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pocket Bomberman.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pocket Monsters Kin",
+    "file": "gbaplayer.html?game=gameboy/Pocket%20Monsters%20Kin.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pocket Monsters Kin.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pocket Monsters",
+    "file": "gbaplayer.html?game=gameboy/Pocket%20Monsters.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pocket Monsters.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pocket Soccer",
+    "file": "gbaplayer.html?game=gameboy/Pocket%20Soccer.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pocket Soccer.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon   Crystal Version (Rev A)",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20-%20Crystal%20Version%20(Rev%20A).GBC&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon - Crystal Version (Rev A).jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon   Gold Version",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20-%20Gold%20Version.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon - Gold Version.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon   Silver Version",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20-%20Silver%20Version.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon - Silver Version.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon Pinball",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20Pinball.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon Pinball.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon Puzzle Challenge",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20Puzzle%20Challenge.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon Puzzle Challenge.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon Special Pikachu Edition",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20Special%20Pikachu%20Edition.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon Special Pikachu Edition.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Pokemon Trading Card Game",
+    "file": "gbaplayer.html?game=gameboy/Pokemon%20Trading%20Card%20Game.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Pokemon Trading Card Game.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Power Spike   Pro Beach Volleyball",
+    "file": "gbaplayer.html?game=gameboy/Power%20Spike%20-%20Pro%20Beach%20Volleyball.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Power Spike - Pro Beach Volleyball.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Quest RPG   Brian's Journey",
+    "file": "gbaplayer.html?game=gameboy/Quest%20RPG%20-%20Brian's%20Journey.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Quest RPG - Brian's Journey.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Resident Evil Gaiden",
+    "file": "gbaplayer.html?game=gameboy/Resident%20Evil%20Gaiden.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Resident Evil Gaiden.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Return of the Ninja",
+    "file": "gbaplayer.html?game=gameboy/Return%20of%20the%20Ninja.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Return of the Ninja.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Revelations   The Demon Slayer",
+    "file": "gbaplayer.html?game=gameboy/Revelations%20-%20The%20Demon%20Slayer.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Revelations - The Demon Slayer.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Ronaldo V Soccer",
+    "file": "gbaplayer.html?game=gameboy/Ronaldo%20V-Soccer.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Ronaldo V-Soccer.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Shantae",
+    "file": "gbaplayer.html?game=gameboy/Shantae.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Shantae.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "SnowCross",
+    "file": "gbaplayer.html?game=gameboy/SnowCross.gbc&type=gbc",
+    "thumb": "assets/thumbnails/SnowCross.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Spider Man 2   The Sinister Six",
+    "file": "gbaplayer.html?game=gameboy/Spider-Man%202%20-%20The%20Sinister%20Six.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Spider-Man 2 - The Sinister Six.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Spider Man",
+    "file": "gbaplayer.html?game=gameboy/Spider-Man.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Spider-Man.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Star Wars Episode I   Obi Wan's Adventures",
+    "file": "gbaplayer.html?game=gameboy/Star%20Wars%20Episode%20I%20-%20Obi-Wan's%20Adventures.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Star Wars Episode I - Obi-Wan's Adventures.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Suzuki Alstare Extreme Racing",
+    "file": "gbaplayer.html?game=gameboy/Suzuki%20Alstare%20Extreme%20Racing.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Suzuki Alstare Extreme Racing.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Tetris DX (World)",
+    "file": "gbaplayer.html?game=gameboy/Tetris%20DX%20(World).gbc&type=gbc",
+    "thumb": "assets/thumbnails/Tetris DX (World).jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Top Gear Pocket",
+    "file": "gbaplayer.html?game=gameboy/Top%20Gear%20Pocket.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Top Gear Pocket.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Wario Land II",
+    "file": "gbaplayer.html?game=gameboy/Wario%20Land%20II.gb&type=gb",
+    "thumb": "assets/thumbnails/Wario Land II.jpg",
+    "category": "gameboy"
+  },
+  {
+    "name": "Yu Gi Oh!   Dark Duel Stories",
+    "file": "gbaplayer.html?game=gameboy/Yu-Gi-Oh!%20-%20Dark%20Duel%20Stories.gbc&type=gbc",
+    "thumb": "assets/thumbnails/Yu-Gi-Oh! - Dark Duel Stories.jpg",
+    "category": "gameboy"
   }
 ]

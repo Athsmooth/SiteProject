@@ -4,7 +4,8 @@ const path = require('path');
 const scanConfigs = [
     { dir: 'main/exclusive', web: 'exclusive' },
     { dir: 'main/swf', web: 'swf' },
-    { dir: 'main/html5', web: 'html5' }
+    { dir: 'main/html5', web: 'html5' },
+    { dir: 'main/gb', web: 'gameboy' }
 ];
 
 let gameList = [];
@@ -22,15 +23,13 @@ scanConfigs.forEach(config => {
 
         if (['.gba', '.gbc', '.gb'].includes(ext)) {
             player = 'gbaplayer.html';
-            link = `type=${ext.slice(1)}`;
+            link = `${config.web}/${encodeURIComponent(file)}&type=${ext.slice(1)}`;
         } else if (ext === '.swf') {
             player = 'ruffleplayer.html';
         }
 
         gameList.push({
             name: base.replace(/[-_]/g, ' '),
-            // REMOVED the leading slash. 
-            // This makes the path "html5player.html" instead of "/html5player.html"
             file: `${player}?game=${link}`,
             thumb: `assets/thumbnails/${base}.jpg`,
             category: config.web
@@ -38,5 +37,6 @@ scanConfigs.forEach(config => {
     });
 });
 
-fs.writeFileSync('main/games-list.json', JSON.stringify(gameList, null, 2));
-console.log("✅ Fixed games-list.json generated in /main/");
+const outputPath = path.join(__dirname, 'main/games-list.json');
+fs.writeFileSync(outputPath, JSON.stringify(gameList, null, 2));
+console.log("✅ Generated games-list.json");

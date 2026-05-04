@@ -1,5 +1,20 @@
 var allGames = allGames || []; 
 
+// Helper function to handle broken images
+function handleImageError(image) {
+    image.onerror = null; // Prevents infinite loops
+    
+    // ROOT-RELATIVE PATH: Starts with / to look in the project root
+    const localPath = '/main/assets/thumbnails/placeholder.jpg';
+    
+    if (!image.src.includes(localPath)) {
+        image.src = localPath;
+    } else {
+        // Ultimate fallback if your local placeholder is ALSO missing
+        image.src = "https://placehold.co/600x400/222/ffffff?text=No+Thumbnail";
+    }
+}
+
 function initLibrary() {
     const container = document.getElementById('projects-placeholder');
     const searchInput = document.querySelector('.search-input');
@@ -9,9 +24,10 @@ function initLibrary() {
         return;
     }
 
-    fetch('games-list.json?v=' + Date.now())
+    // ROOT-RELATIVE PATH: Fetching from the root main folder
+    fetch('/main/games-list.json?v=' + Date.now())
         .then(res => {
-            if (!res.ok) throw new Error("404");
+            if (!res.ok) throw new Error(`File not found at ${res.url}`);
             return res.json();
         })
         .then(data => {
@@ -19,8 +35,8 @@ function initLibrary() {
             render(allGames);
         })
         .catch(err => {
-            console.error("Could not load games list:", err);
-            container.innerHTML = `<div style="color:orange; padding:20px;">Library file not found.</div>`;
+            console.error("Library Load Error:", err);
+            container.innerHTML = `<div style="color:orange; padding:20px;">Error: ${err.message}</div>`;
         });
 
     if (searchInput) {
@@ -45,7 +61,7 @@ function initLibrary() {
             return acc;
         }, {});
 
-        const categories = ['exclusive', 'html5', 'flash', 'swf'];
+        const categories = ['exclusive', 'html5', 'swf', 'gameboy'];
 
         categories.forEach(cat => {
             if (groups[cat] && groups[cat].length > 0) {
@@ -57,15 +73,14 @@ function initLibrary() {
                     </div>
                     <div class="game-flow">
                         ${groups[cat].map(game => {
-                            let finalLink = "";
-                            const fileName = game.file;
-
-                            finalLink = fileName;
+                            // Using ROOT-RELATIVE paths for links and thumbs
+                            const finalLink = `/main/${game.file}`;
+                            const thumbPath = `/main/${game.thumb}`;
 
                             return `
                                 <a href="${finalLink}" class="game-card">
                                     <div class="img-container">
-                                        <img src="${game.thumb}" onerror="this.src='assets/thumbnails/placeholder.jpg';">
+                                        <img src="${thumbPath}" onerror="handleImageError(this)">
                                         <span class="badge ${cat}">${cat}</span>
                                     </div>
                                     <div class="game-label">${game.name}</div>
@@ -80,36 +95,24 @@ function initLibrary() {
     }
 }
 
-initLibrary();
-
+// UI Controls
 let isNavbarHidden = false;
 const navbar = document.querySelector('.navbar');
 const notice = document.getElementById('hide-notice');
 
 document.addEventListener('keydown', function(event) {
-  // Check for Ctrl + H (event.code 'KeyH')
-  if (event.ctrlKey && event.code === 'KeyH') {
-    event.preventDefault(); // Prevent browser history from opening
-    
-    isNavbarHidden = !isNavbarHidden;
-    
-    if (isNavbarHidden) {
-      navbar.classList.add('hidden');
-      showNotice("Navbar hidden. Press Ctrl+H to show again.");
-    } else {
-      navbar.classList.remove('hidden');
-      showNotice("Navbar visible.");
+    if (event.ctrlKey && event.code === 'KeyH') {
+        event.preventDefault(); 
+        isNavbarHidden = !isNavbarHidden;
+        if (navbar) {
+            navbar.classList.toggle('hidden', isNavbarHidden);
+            if (notice) {
+                notice.textContent = isNavbarHidden ? "Navbar hidden. Press Ctrl+H to show." : "Navbar visible.";
+                notice.classList.add('show');
+                setTimeout(() => notice.classList.remove('show'), 3000);
+            }
+        }
     }
-  }
 });
 
-function showNotice(message) {
-  notice.textContent = message;
-  notice.classList.add('show');
-  
-  // Hide the notice after 3 seconds, just like YouTube
-  setTimeout(() => {
-    notice.classList.remove('show');
-  }, 3000);
-}
-
+initLibrary();
