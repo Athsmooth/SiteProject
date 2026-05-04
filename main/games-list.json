@@ -2688,6 +2688,12 @@
     "category": "html5"
   },
   {
+    "name": "incredibox",
+    "file": "html5player.html?game=html5/incredibox",
+    "thumb": "assets/thumbnails/incredibox.jpg",
+    "category": "html5"
+  },
+  {
     "name": "ironsnout",
     "file": "html5player.html?game=html5/ironsnout.html",
     "thumb": "assets/thumbnails/ironsnout.jpg",
