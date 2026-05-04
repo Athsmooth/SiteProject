@@ -1,6 +1,52 @@
-<iframe src="https://archive.org/details/beavisandbuttheadusaeurope"; width="100%" height="200%"></iframe>
-<script>
-            setTimeout(() => {
-                showToast("TEST");
-            }, 1000);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page...</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon.png">
+    <style>
+        /* This ensures the body takes up the full screen so height="100%" works */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        #navbar-container {
+            flex-shrink: 0;
+        }
+        iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+    <iframe src="http://archive.org/download/pokemon-kanto-expansion-pack-hack-shira-the-mogul-1.3.1-t-spa-calentadas-tcg-magno-tv-1.4"></iframe>
+
+    <script src="navigationinject.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            if (!sessionStorage.getItem('statusRead')) {
+                const checkSystem = setInterval(() => {
+                    if (typeof showToast === "function" && document.getElementById('toast-container')) {
+                        clearInterval(checkSystem);
+                        setTimeout(() => {
+                            showToast("Site version 3.2 ATTENTION: OLD VERSION OF COOKIE CLICKER WILL BE REMOVED! TRANSFER YOUR SAVE!!!");
+                        }, 1000);
+                        sessionStorage.setItem('statusRead', 'true');
+                    }
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
