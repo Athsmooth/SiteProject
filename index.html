@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERR 404</title> <style>
+    <title>ERR 404</title> 
+    <style>
         body { 
             margin: 0; 
-            background: #ffffff; /* Or #0d1117 if you prefer dark mode blankness */
+            background: #ffffff;
             height: 100vh;
             cursor: default;
         }
@@ -28,23 +29,23 @@
                 iframe.style.border = 'none';
                 iframe.style.width = '100vw';
                 iframe.style.height = '100vh';
-                // Directs to your main folder
                 iframe.src = window.location.origin + '/main/index.html';
 
                 doc.body.appendChild(iframe);
 
-                // Instantly hide this tab by going to a "safe" site
                 window.location.replace('https://www.google.com'); 
             }
         }
 
-        // Listen for Alt + J
+        // Cross-platform Alt + L listener
         document.addEventListener('keydown', function(e) {
+            // Detects Alt (Windows/Linux) or Option (Mac)
             if (e.altKey && e.key.toLowerCase() === 'l') {
-                e.preventDefault();
+                e.preventDefault(); 
+                e.stopPropagation(); 
                 launchDashboard();
             }
-        });
+        }, true); // Captures the event before the browser can react to it
     </script>
 </body>
 </html>
