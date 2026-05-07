@@ -1,59 +1,36 @@
 var allGames = allGames || []; 
 
-// Helper function to handle broken images
 function handleImageError(image) {
-    image.onerror = null; // Prevents infinite loops
-    
-    // ROOT-RELATIVE PATH: Starts with / to look in the project root
-    const localPath = '/main/assets/thumbnails/placeholder.jpg';
-    
+    image.onerror = null; 
+    // Try local placeholder first
+    const localPath = 'assets/thumbnails/placeholder.png';
     if (!image.src.includes(localPath)) {
         image.src = localPath;
+        image.style.objectFit = "contain"; // Don't stretch small icons
+        image.style.padding = "15px";
     } else {
-        // Ultimate fallback if your local placeholder is ALSO missing
-        image.src = "https://placehold.co/600x400/222/ffffff?text=No+Thumbnail";
+        // Ultimate fallback
+        image.src = "https://placehold.co/600x400/222/ffffff?text=No+Thumb";
     }
 }
 
 function initLibrary() {
     const container = document.getElementById('projects-placeholder');
-    const searchInput = document.querySelector('.search-input');
+    if (!container) { setTimeout(initLibrary, 50); return; }
 
-    if (!container) {
-        setTimeout(initLibrary, 50); 
-        return;
-    }
-
-    // ROOT-RELATIVE PATH: Fetching from the root main folder
-    fetch('/main/games-list.json?v=' + Date.now())
-        .then(res => {
-            if (!res.ok) throw new Error(`File not found at ${res.url}`);
-            return res.json();
-        })
+    fetch('games-list.json?v=' + Date.now())
+        .then(res => { if (!res.ok) throw new Error("404"); return res.json(); })
         .then(data => {
             allGames = data;
             render(allGames);
         })
         .catch(err => {
-            console.error("Library Load Error:", err);
-            container.innerHTML = `<div style="color:orange; padding:20px;">Error: ${err.message}</div>`;
+            container.innerHTML = `<div style="color:orange; padding:20px;">Library not found.</div>`;
         });
-
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = allGames.filter(g => 
-                (g.name && g.name.toLowerCase().includes(term)) || 
-                (g.category && g.category.toLowerCase().includes(term))
-            );
-            render(filtered);
-        });
-    }
 
     function render(list) {
         const container = document.getElementById('projects-placeholder');
         let html = '';
-
         const groups = list.reduce((acc, game) => {
             const cat = (game.category || 'other').toLowerCase();
             if (!acc[cat]) acc[cat] = [];
@@ -67,26 +44,17 @@ function initLibrary() {
             if (groups[cat] && groups[cat].length > 0) {
                 html += `
                 <div class="category-block">
-                    <div class="category-header">
-                        <span class="label">${cat.toUpperCase()}</span>
-                        <div class="line"></div>
-                    </div>
+                    <div class="category-header"><span class="label">${cat.toUpperCase()}</span><div class="line"></div></div>
                     <div class="game-flow">
-                        ${groups[cat].map(game => {
-                            // Using ROOT-RELATIVE paths for links and thumbs
-                            const finalLink = `/main/${game.file}`;
-                            const thumbPath = `/main/${game.thumb}`;
-
-                            return `
-                                <a href="${finalLink}" class="game-card">
-                                    <div class="img-container">
-                                        <img src="${thumbPath}" onerror="handleImageError(this)">
-                                        <span class="badge ${cat}">${cat}</span>
-                                    </div>
-                                    <div class="game-label">${game.name}</div>
-                                </a>
-                            `;
-                        }).join('')}
+                        ${groups[cat].map(game => `
+                            <a href="${game.file}" class="game-card">
+                                <div class="img-container">
+                                    <img src="${game.thumb}" onerror="handleImageError(this)" loading="lazy">
+                                    <span class="badge ${cat}">${cat}</span>
+                                </div>
+                                <div class="game-label">${game.name}</div>
+                            </a>
+                        `).join('')}
                     </div>
                 </div>`;
             }
@@ -95,23 +63,12 @@ function initLibrary() {
     }
 }
 
-// UI Controls
-let isNavbarHidden = false;
-const navbar = document.querySelector('.navbar');
-const notice = document.getElementById('hide-notice');
-
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.code === 'KeyH') {
-        event.preventDefault(); 
-        isNavbarHidden = !isNavbarHidden;
-        if (navbar) {
-            navbar.classList.toggle('hidden', isNavbarHidden);
-            if (notice) {
-                notice.textContent = isNavbarHidden ? "Navbar hidden. Press Ctrl+H to show." : "Navbar visible.";
-                notice.classList.add('show');
-                setTimeout(() => notice.classList.remove('show'), 3000);
-            }
-        }
+// Navbar Toggle (Ctrl+H)
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && e.code === 'KeyH') {
+        e.preventDefault();
+        const nav = document.querySelector('.navbar');
+        if (nav) nav.classList.toggle('hidden');
     }
 });
 

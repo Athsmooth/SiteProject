@@ -5,14 +5,17 @@ const scanConfigs = [
     { dir: 'main/exclusive', web: 'exclusive' },
     { dir: 'main/swf', web: 'swf' },
     { dir: 'main/html5', web: 'html5' },
-    { dir: 'main/gb', web: 'gameboy' }
+    { dir: 'main/gb', web: 'gb' } // Updated to match your gb/ folder
 ];
 
 let gameList = [];
 
 scanConfigs.forEach(config => {
     const p = path.join(__dirname, config.dir);
-    if (!fs.existsSync(p)) return;
+    if (!fs.existsSync(p)) {
+        console.log(`⚠️ Folder not found: ${config.dir}`);
+        return;
+    }
 
     fs.readdirSync(p).forEach(file => {
         const ext = path.extname(file).toLowerCase();
@@ -21,6 +24,7 @@ scanConfigs.forEach(config => {
         let player = 'html5player.html';
         let link = `${config.web}/${encodeURIComponent(file)}`;
 
+        // GameBoy Logic
         if (['.gba', '.gbc', '.gb'].includes(ext)) {
             player = 'gbaplayer.html';
             link = `${config.web}/${encodeURIComponent(file)}&type=${ext.slice(1)}`;
@@ -32,11 +36,11 @@ scanConfigs.forEach(config => {
             name: base.replace(/[-_]/g, ' '),
             file: `${player}?game=${link}`,
             thumb: `assets/thumbnails/${base}.jpg`,
-            category: config.web
+            category: config.web === 'gb' ? 'gameboy' : config.web // Keep 'gameboy' as the UI label
         });
     });
 });
 
 const outputPath = path.join(__dirname, 'main/games-list.json');
 fs.writeFileSync(outputPath, JSON.stringify(gameList, null, 2));
-console.log("✅ Generated games-list.json");
+console.log(`✅ Success! Generated ${gameList.length} games.`);
