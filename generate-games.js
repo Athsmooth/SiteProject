@@ -26,7 +26,7 @@ scanConfigs.forEach(config => {
 
         // GameBoy Logic
         if (['.gba', '.gbc', '.gb'].includes(ext)) {
-            player = 'gbaplayer.html';
+            player = 'gbplayer.html';
             link = `${config.web}/${encodeURIComponent(file)}&type=${ext.slice(1)}`;
         } else if (ext === '.swf') {
             player = 'ruffleplayer.html';

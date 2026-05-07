@@ -3,80 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Student</title>
-    <style>
+    <title>New Tab</title> <style>
         body { 
             margin: 0; 
-            background: #0d1117; 
-            color: white; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            height: 100vh; 
-        }
-        .launch-card { 
-            text-align: center; 
-            background: #161b22; 
-            padding: 50px; 
-            border-radius: 20px; 
-            border: 1px solid #30363d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        h1 { margin-top: 0; font-weight: 600; font-size: 24px; }
-        p { color: #8b949e; margin-bottom: 30px; }
-        button { 
-            padding: 16px 45px; 
-            font-size: 18px; 
-            cursor: pointer; 
-            background: #238636; 
-            color: white; 
-            border: none; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            transition: transform 0.2s, background 0.2s; 
-        }
-        button:hover { 
-            background: #2ea043; 
-            transform: scale(1.05);
+            background: #ffffff; /* Or #0d1117 if you prefer dark mode blankness */
+            height: 100vh;
+            cursor: default;
         }
     </style>
 </head>
 <body>
 
-    <div class="launch-card">
-        <h1>Campus Student</h1>
-        <p>Ready to launch secure dashboard.</p>
-        <button id="launchBtn">Launch Dashboard</button>
-    </div>
-
     <script>
-        document.getElementById('launchBtn').onclick = function() {
-            // Open the new tab
+        function launchDashboard() {
             const win = window.open('about:blank', '_blank');
 
             if (win) {
                 const doc = win.document;
-                doc.title = " "; // Sneaky title for the new tab
+                doc.title = " "; 
                 doc.body.style.margin = '0';
-                doc.body.style.height = '100vh';
                 doc.body.style.overflow = 'hidden';
-
+                
                 const iframe = doc.createElement('iframe');
                 iframe.style.border = 'none';
                 iframe.style.width = '100vw';
                 iframe.style.height = '100vh';
-                // Using window.location.pathname logic to find your index
+                // Directs to your main folder
                 iframe.src = window.location.origin + '/main/index.html';
 
                 doc.body.appendChild(iframe);
 
-                // Redirect THIS tab to something boring immediately
-                window.location.replace('https://drive.google.com'); 
-            } else {
-                alert("Pop-up blocked! Please click the 'Pop-ups Blocked' icon in your URL bar and select 'Always Allow'.");
+                // Instantly hide this tab by going to a "safe" site
+                window.location.replace('https://www.google.com'); 
             }
-        };
+        }
+
+        // Listen for Alt + J
+        document.addEventListener('keydown', function(e) {
+            if (e.altKey && e.key.toLowerCase() === 'l') {
+                e.preventDefault();
+                launchDashboard();
+            }
+        });
     </script>
 </body>
 </html>
