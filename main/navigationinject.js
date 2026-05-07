@@ -47,7 +47,6 @@ let lastToastTime = 0;
 
 function showToast(msg) {
     const now = Date.now();
-    // Debounce: prevent same-time double triggers
     if (now - lastToastTime < 100) return; 
     lastToastTime = now;
 
@@ -87,10 +86,36 @@ function showToast(msg) {
 
 function setupNavBehavior() {
     const nav = document.getElementById('nav');
+    const searchInput = document.querySelector('.search-input');
     if (!nav) return;
 
     let navTimeout;
     const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
+
+    // --- SEARCH REDIRECT LOGIC ---
+    if (searchInput) {
+        // If we just arrived via a search redirect, fill the box and trigger filter
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialSearch = urlParams.get('search');
+        if (initialSearch && isHomePage) {
+            searchInput.value = initialSearch;
+            // Wait slightly for the library to load, then trigger the search filter
+            setTimeout(() => {
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+            }, 100);
+        }
+
+        // Listen for "Enter" to break out of players and go home
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                const term = searchInput.value.trim();
+                if (!isHomePage && term.length > 0) {
+                    e.preventDefault();
+                    window.location.href = 'index.html?search=' + encodeURIComponent(term);
+                }
+            }
+        });
+    }
 
     window.showNav = function() {
         if (isNavLocked) return;
@@ -111,7 +136,7 @@ function setupNavBehavior() {
 
         if (isHide || isPanic) {
             e.preventDefault();
-            e.stopPropagation(); // Stop event from bubbling to window
+            e.stopPropagation();
         }
 
         if (isHide) {
@@ -129,42 +154,16 @@ function setupNavBehavior() {
 
         if (isPanic) {
             window.open('https://google.com', '_blank');
-            isNavLocked = true;
-            nav.classList.add('nav-hidden');
-            showToast("New safe tab opened.");
+            window.location.replace('https://drive.google.com'); 
             return;
         }
 
         window.showNav();
     };
 
-    // Main window listeners
-    window.removeEventListener('keydown', handleShortcuts);
     window.addEventListener('keydown', handleShortcuts);
     window.addEventListener('mousemove', window.showNav);
     window.addEventListener('scroll', window.showNav);
-
-    // Iframe listeners
-    const iframe = document.getElementById('game-frame');
-    if (iframe) {
-        iframe.addEventListener('load', () => {
-            // Only show tips once per frame load
-            if (!iframe.dataset.tipsShown) {
-                setTimeout(() => showToast("For fullscreen press Ctrl+Alt+H"), 1000);
-                setTimeout(() => showToast("Press Ctrl+Alt+P for panic mode"), 1200);
-                iframe.dataset.tipsShown = "true";
-            }
-
-            try {
-                const iDoc = iframe.contentDocument || iframe.contentWindow.document;
-                iDoc.removeEventListener('keydown', handleShortcuts);
-                iDoc.addEventListener('keydown', handleShortcuts);
-                iDoc.addEventListener('mousemove', window.showNav);
-                iDoc.addEventListener('mousedown', window.showNav);
-            } catch(e) { console.warn("Iframe blocked activity listeners."); }
-        });
-    }
-    window.showNav();
 }
 
 // --- GLOBAL DATA FUNCTIONS ---
@@ -200,7 +199,6 @@ window.importUserData = (e) => {
 
 window.toggleDisclaimer = (s) => document.getElementById('disclaimer-modal').classList.toggle('active', s);
 
-// Initialize with safety check
 (function init() {
     const container = document.getElementById('navbar-container');
     if (container) {

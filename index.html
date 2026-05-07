@@ -10,6 +10,10 @@
             background: #ffffff;
             height: 100vh;
             cursor: default;
+            /* Prevents mobile UI interference during fast tapping */
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
         }
     </style>
 </head>
@@ -37,15 +41,37 @@
             }
         }
 
-        // Cross-platform Alt + L listener
+        // --- DESKTOP: Alt + L ---
         document.addEventListener('keydown', function(e) {
-            // Detects Alt (Windows/Linux) or Option (Mac)
             if (e.altKey && e.key.toLowerCase() === 'l') {
                 e.preventDefault(); 
                 e.stopPropagation(); 
                 launchDashboard();
             }
-        }, true); // Captures the event before the browser can react to it
+        }, true);
+
+        // --- MOBILE: Triple Tap ---
+        let tapCount = 0;
+        let lastTap = 0;
+
+        document.addEventListener('touchend', function(e) {
+            const currentTime = Date.now();
+            const tapGap = currentTime - lastTap;
+
+            if (tapGap > 500) {
+                // Too much time passed, reset to 1
+                tapCount = 1;
+            } else {
+                tapCount++;
+            }
+
+            lastTap = currentTime;
+
+            if (tapCount === 3) {
+                tapCount = 0; // Reset
+                launchDashboard();
+            }
+        });
     </script>
 </body>
 </html>

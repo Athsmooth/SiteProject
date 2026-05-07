@@ -2,18 +2,13 @@ var allGames = allGames || [];
 
 // Helper function to handle broken images
 function handleImageError(image) {
-    image.onerror = null; // Prevents infinite loops
-    
-    // Kept as .jpg per your request
+    image.onerror = null; 
     const localPath = '/main/assets/thumbnails/placeholder.jpg';
-    
     if (!image.src.includes(localPath)) {
         image.src = localPath;
-        // Ensures the placeholder doesn't look stretched in the card
         image.style.objectFit = "contain";
         image.style.padding = "10px";
     } else {
-        // Ultimate fallback if even the placeholder.jpg is missing
         image.src = "https://placehold.co/600x400/222/ffffff?text=No+Thumbnail";
     }
 }
@@ -27,7 +22,6 @@ function initLibrary() {
         return;
     }
 
-    // ROOT-RELATIVE PATH: Fetching from the root main folder
     fetch('/main/games-list.json?v=' + Date.now())
         .then(res => {
             if (!res.ok) throw new Error(`File not found at ${res.url}`);
@@ -53,10 +47,28 @@ function initLibrary() {
         });
     }
 
+    // --- UPDATED RENDER FUNCTION ---
     function render(list) {
         const container = document.getElementById('projects-placeholder');
-        let html = '';
+        
+        // 1. Check if the list is empty first
+        if (list.length === 0) {
+            container.innerHTML = `
+                <div class="no-results" style="
+                    text-align: center; 
+                    width: 100%; 
+                    padding: 100px 20px; 
+                    color: #8b949e; 
+                    font-family: sans-serif;
+                ">
+                    <h2 style="font-size: 32px; color: #f0f6fc; margin-bottom: 10px;">Game not found</h2>
+                    <p style="font-size: 18px;">Try searching for a different title or category.</p>
+                </div>
+            `;
+            return;
+        }
 
+        let html = '';
         const groups = list.reduce((acc, game) => {
             const cat = (game.category || 'other').toLowerCase();
             if (!acc[cat]) acc[cat] = [];
@@ -64,7 +76,6 @@ function initLibrary() {
             return acc;
         }, {});
 
-        // Defined categories including gameboy
         const categories = ['exclusive', 'html5', 'swf', 'gameboy'];
 
         categories.forEach(cat => {
@@ -77,10 +88,8 @@ function initLibrary() {
                     </div>
                     <div class="game-flow">
                         ${groups[cat].map(game => {
-                            // ROOT-RELATIVE paths to solve the 404/nesting issues
                             const finalLink = `/main/${game.file}`;
                             const thumbPath = `/main/${game.thumb}`;
-
                             return `
                                 <a href="${finalLink}" class="game-card">
                                     <div class="img-container">
@@ -99,7 +108,7 @@ function initLibrary() {
     }
 }
 
-// UI Controls (Navbar Toggle)
+// UI Controls (Navbar Toggle) - Keep as is
 let isNavbarHidden = false;
 const navbar = document.querySelector('.navbar');
 const notice = document.getElementById('hide-notice');
@@ -110,11 +119,6 @@ document.addEventListener('keydown', function(event) {
         isNavbarHidden = !isNavbarHidden;
         if (navbar) {
             navbar.classList.toggle('hidden', isNavbarHidden);
-            if (notice) {
-                notice.textContent = isNavbarHidden ? "Navbar hidden. Press Ctrl+H to show." : "Navbar visible.";
-                notice.classList.add('show');
-                setTimeout(() => notice.classList.remove('show'), 3000);
-            }
         }
     }
 });
