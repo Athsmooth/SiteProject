@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ERR 404</title> 
     <style>
         body { 
@@ -10,9 +10,7 @@
             background: #ffffff;
             height: 100vh;
             cursor: default;
-            /* Prevents mobile UI interference during fast tapping */
-            user-select: none;
-            -webkit-user-select: none;
+            /* Helps mobile recognize fast taps without zooming */
             touch-action: manipulation;
         }
     </style>
@@ -44,11 +42,10 @@
         // --- DESKTOP: Alt + L ---
         document.addEventListener('keydown', function(e) {
             if (e.altKey && e.key.toLowerCase() === 'l') {
-                e.preventDefault(); 
-                e.stopPropagation(); 
+                e.preventDefault();
                 launchDashboard();
             }
-        }, true);
+        });
 
         // --- MOBILE: Triple Tap ---
         let tapCount = 0;
@@ -58,8 +55,8 @@
             const currentTime = Date.now();
             const tapGap = currentTime - lastTap;
 
+            // If the gap between taps is more than 500ms, reset count to 1
             if (tapGap > 500) {
-                // Too much time passed, reset to 1
                 tapCount = 1;
             } else {
                 tapCount++;

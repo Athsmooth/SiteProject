@@ -18,18 +18,7 @@ const navbarHTML = `
     </div>
 </nav>
 
-<div id="toast-container" style="
-    position: fixed; 
-    top: 85px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
-    align-items: center; 
-    z-index: 10001; 
-    pointer-events: none;
-"></div>
+<div id="toast-container" style="position: fixed; top: 85px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; gap: 10px; align-items: center; z-index: 10001; pointer-events: none;"></div>
 
 <input type="file" id="importFileHandler" style="display:none" accept=".json" onchange="importUserData(event)">
 
@@ -42,45 +31,33 @@ const navbarHTML = `
 </div>
 `;
 
-let isNavLocked = false;
+// Set to false initially so it is VISIBLE by default
+let isNavLockedVisible = true; 
 let lastToastTime = 0;
 
 function showToast(msg) {
     const now = Date.now();
     if (now - lastToastTime < 100) return; 
     lastToastTime = now;
-
     const container = document.getElementById('toast-container');
     if (!container) return;
-
     const toast = document.createElement('div');
     Object.assign(toast.style, {
-        background: "rgba(13, 17, 23, 0.95)",
-        color: "white",
-        padding: "12px 24px",
-        borderRadius: "8px",
-        fontFamily: "sans-serif",
-        fontSize: "14px",
-        fontWeight: "500",
-        border: "1px solid #1b69c3",
-        boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
-        opacity: "0",
-        transform: "translateY(-10px)",
-        transition: "all 0.4s ease"
+        background: "rgba(13, 17, 23, 0.95)", 
+        color: "white", 
+        padding: "12px 24px", 
+        borderRadius: "8px", 
+        border: "1px solid #1b69c3", 
+        opacity: "0", 
+        transition: "all 0.4s ease",
+        fontFamily: "sans-serif"
     });
-
     toast.innerText = msg;
     container.appendChild(toast);
-
-    setTimeout(() => {
-        toast.style.opacity = "1";
-        toast.style.transform = "translateY(0)";
-    }, 10);
-
-    setTimeout(() => {
-        toast.style.opacity = "0";
-        toast.style.transform = "translateY(-10px)";
-        setTimeout(() => toast.remove(), 3000);
+    setTimeout(() => toast.style.opacity = "1", 10);
+    setTimeout(() => { 
+        toast.style.opacity = "0"; 
+        setTimeout(() => toast.remove(), 400); 
     }, 3000);
 }
 
@@ -89,115 +66,89 @@ function setupNavBehavior() {
     const searchInput = document.querySelector('.search-input');
     if (!nav) return;
 
-    let navTimeout;
-    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
+    // Ensure the nav is visible immediately upon injection
+    nav.classList.remove('nav-hidden');
 
-    // --- SEARCH REDIRECT LOGIC ---
+    // --- SEARCH REDIRECT ---
     if (searchInput) {
-        // If we just arrived via a search redirect, fill the box and trigger filter
-        const urlParams = new URLSearchParams(window.location.search);
-        const initialSearch = urlParams.get('search');
-        if (initialSearch && isHomePage) {
-            searchInput.value = initialSearch;
-            // Wait slightly for the library to load, then trigger the search filter
-            setTimeout(() => {
-                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-            }, 100);
-        }
-
-        // Listen for "Enter" to break out of players and go home
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                const term = searchInput.value.trim();
-                if (!isHomePage && term.length > 0) {
-                    e.preventDefault();
-                    window.location.href = 'index.html?search=' + encodeURIComponent(term);
-                }
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value;
+            // Improved home detection
+            const isHome = window.location.pathname.endsWith('index.html') || 
+                           window.location.pathname === '/' || 
+                           window.location.pathname === '';
+                           
+            if (!isHome && term.length > 0) {
+                window.location.href = 'index.html?search=' + encodeURIComponent(term);
             }
         });
     }
 
-    window.showNav = function() {
-        if (isNavLocked) return;
-        nav.classList.remove('nav-hidden');
-        clearTimeout(navTimeout);
-        if (!isHomePage) {
-            navTimeout = setTimeout(() => {
-                if (!nav.matches(':hover') && document.activeElement.tagName !== 'INPUT') {
-                    nav.classList.add('nav-hidden');
-                }
-            }, 3000);
-        }
-    };
-
     const handleShortcuts = (e) => {
-        const isHide = e.ctrlKey && e.altKey && e.code === 'KeyH';
+        const isToggle = e.ctrlKey && e.altKey && e.code === 'KeyH';
         const isPanic = e.ctrlKey && e.altKey && e.code === 'KeyP';
 
-        if (isHide || isPanic) {
+        if (isToggle) {
             e.preventDefault();
-            e.stopPropagation();
-        }
-
-        if (isHide) {
-            isNavLocked = !isNavLocked;
-            if (isNavLocked) {
-                nav.classList.add('nav-hidden');
-                showToast("Navbar Locked Hidden (Ctrl+Alt+H to show)");
-            } else {
+            // This purely toggles the hidden state manually
+            const currentlyHidden = nav.classList.contains('nav-hidden');
+            if (currentlyHidden) {
                 nav.classList.remove('nav-hidden');
-                showToast("Navbar Unlocked");
-                window.showNav();
+                showToast("Navbar Visible");
+            } else {
+                nav.classList.add('nav-hidden');
+                showToast("Navbar Hidden");
             }
-            return;
         }
 
         if (isPanic) {
+            e.preventDefault();
             window.open('https://google.com', '_blank');
-            window.location.replace('https://drive.google.com'); 
-            return;
+            window.location.replace('https://drive.google.com');
         }
-
-        window.showNav();
     };
 
     window.addEventListener('keydown', handleShortcuts);
-    window.addEventListener('mousemove', window.showNav);
-    window.addEventListener('scroll', window.showNav);
+    
+    // REMOVED: Mousemove and Timeout logic that causes disappearing.
+    // The navbar will now stay put unless Ctrl+Alt+H is pressed.
 }
 
 // --- GLOBAL DATA FUNCTIONS ---
 window.exportUserData = () => {
     const data = JSON.stringify(localStorage);
-    if (data === "{}") return alert("No data found.");
-    const blob = new Blob([data], { type: 'application/json' });
+    const blob = new Blob([data], {type: 'application/json'});
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'backup.json';
-    link.click();
-    URL.revokeObjectURL(url);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'save_backup.json';
+    a.click();
+    showToast("Data Exported");
 };
 
 window.triggerInternalFileInput = () => document.getElementById('importFileHandler').click();
 
 window.importUserData = (e) => {
     const file = e.target.files[0];
+    if (!file) return;
     const reader = new FileReader();
     reader.onload = (event) => {
         try {
             const data = JSON.parse(event.target.result);
-            if (confirm("Overwrite all data?")) {
-                localStorage.clear();
-                Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
-                window.location.reload();
-            }
-        } catch(err) { alert("Invalid file."); }
+            Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
+            showToast("Data Imported! Reloading...");
+            setTimeout(() => window.location.reload(), 1000);
+        } catch(err) {
+            alert("Error importing file.");
+        }
     };
     reader.readAsText(file);
 };
 
-window.toggleDisclaimer = (s) => document.getElementById('disclaimer-modal').classList.toggle('active', s);
+window.toggleDisclaimer = (s) => {
+    const modal = document.getElementById('disclaimer-modal');
+    if(modal) modal.style.display = s ? 'flex' : 'none';
+};
 
 (function init() {
     const container = document.getElementById('navbar-container');
