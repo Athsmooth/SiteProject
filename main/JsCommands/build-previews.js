@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const GAME_FILES_DIR = path.join(__dirname, '../gameFiles');
+const GAME_FILES_DIR = path.join(__dirname, '../core');
 const PLAYERS_DIR = path.join(__dirname, '../players');
 const OUTPUT_FILE = path.join(__dirname, '../games-list.json');
 
