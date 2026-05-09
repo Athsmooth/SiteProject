@@ -6,8 +6,8 @@ var navbarHTML = `
     </div>
     <div class="nav-right">
         <input type="text" class="search-input" placeholder="Search games...">
-        <a href="/main/index.html" class="nav-link">Home</a>
-        <a href="javascript:void(0)" class="nav-link" onclick="customAlert('⌨️ Commands', '<ul><li>Ctrl+Alt+H: Stealth Mode</li><li>Ctrl+Alt+P: Panic</li><li>Enter: Search</li></ul>')">Cmds</a>
+        <a href="/main/index.html" class="nav-link">Homepage</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="customAlert('⌨️ Commands', '<ul><li>Ctrl+Alt+H: Stealth Mode</li><li>Ctrl+Alt+P: Panic</li><li>Enter: Search</li></ul>')">!! Commands !!</a>
         <a href="javascript:void(0)" class="nav-link" onclick="exportUserData()">Save</a>
         <a href="javascript:void(0)" class="nav-link" onclick="triggerInternalFileInput()">Load</a>
         <a href="https://docs.google.com" target="_blank" class="nav-link">Feedback</a>

@@ -5,9 +5,17 @@
     --nav-bg: #010409;
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;
-    --accent: #1b69c3; /* Blue */
-    --html5-green: #238636;
-    --border: #002c5e;
+    
+    /* Brand Accents */
+    --accent: #1b69c3;      /* Primary Blue */
+    --html5-green: #238636; /* Success Green */
+    --border: #002c5e;      /* Muted Navy */
+    
+    /* Dynamic Badge Colors (Synced) */
+    --color-flash-theme: var(--accent); /* Both Flash and SWF use this */
+    --color-html5: var(--html5-green);
+    --color-retro: #f39c12; 
+    --color-unity: #9b59b6; 
 }
 
 /* --- Base Reset --- */
@@ -19,7 +27,6 @@ body, html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Added padding to body so content doesn't hide under the fixed navbar */
 body {
     padding-top: 70px;
 }
@@ -33,26 +40,14 @@ body {
     height: 70px;
     background-color: var(--nav-bg) !important;
     border-bottom: 1px solid var(--border);
-    
-    /* Changed to fixed for scrolling following */
     position: fixed; 
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     z-index: 1000;
     width: 100%;
-
-    /* Animation for the auto-hide */
-    transition: transform 0.3s ease; 
-}
-
-/* New class for the auto-hide feature triggered by JS */
-.nav-hidden {
-    transform: translateY(-100%);
 }
 
 .logo { font-weight: 800; font-size: 20px; color: #fff; padding-right: 20px;}
 
-/* nav-right now acts as the container for the stretching search bar */
 .nav-right { 
     display: flex; 
     align-items: center; 
@@ -60,21 +55,17 @@ body {
     flex-grow: 1; 
 }
 
+/* --- Modern Buttons --- */
 .nav-link { 
-    /* Base Styles */
-    color: #f0f6fc; 
+    color: var(--text-primary);
     text-decoration: none; 
     font-size: 14px; 
     font-weight: 600;
     white-space: nowrap;
-    
-    /* Button Shape & Color */
-    background-color: #101214; /* Modern mid-gray */
+    background-color: #141216; 
     padding: 10px 20px;
     border-radius: 15px;
-    border: 1px solid #30363d;
-    
-    /* Smooth interaction */
+    border: 1px solid var(--border);
     display: inline-flex;
     align-items: center;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,17 +73,9 @@ body {
 
 .nav-link:hover { 
     background-color: #30363d; 
-    border-color: #3b3f43;
-    color: #ffffff;
-    /* Subtle lift effect */
+    border-color: var(--accent);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.nav-link:active {
-    /* Click effect */
-    transform: translateY(0);
-    background-color: #161b22;
+    box-shadow: 0 4px 12px rgba(27, 105, 195, 0.3);
 }
 
 .search-input {
@@ -102,13 +85,10 @@ body {
     padding: 8px 16px;
     border-radius: 6px;
     outline: none;
-    font-size: 14px;
-    
-    /* Makes the bar fill the empty space */
     flex-grow: 1; 
 }
 
-/* --- 8-Column Grid --- */
+/* --- Grid Layout --- */
 .projects-placeholder { padding: 20px 40px; width: 100%; }
 
 #projects-placeholder .game-flow {
@@ -118,8 +98,10 @@ body {
     width: 100% !important;
 }
 
-/* --- Game Cards & Dynamic Outlines --- */
+/* --- AUTOMATIC TYPE SYSTEM (Game Cards) --- */
+
 .game-card {
+    --type-color: var(--border); 
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -132,37 +114,31 @@ body {
     overflow: hidden;
 }
 
-/* Blue Outline for SWF/Flash/Exclusive */
+/* Map SWF and Flash to the exact same variable */
 .game-card:has(.badge.flash), 
-.game-card:has(.badge.swf),
-.game-card:has(.badge.exclusive) {
-    border-color: rgba(88, 166, 255, 0.2);
+.game-card:has(.badge.swf), 
+.game-card:has(.badge.exclusive) { 
+    --type-color: var(--color-flash-theme); 
 }
 
-.game-card:has(.badge.flash):hover, 
-.game-card:has(.badge.swf):hover,
-.game-card:has(.badge.exclusive):hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 12px rgba(88, 166, 255, 0.15);
+.game-card:has(.badge.html5) { --type-color: var(--color-html5); }
+.game-card:has(.badge.retro) { --type-color: var(--color-retro); }
+
+/* Apply styling based on detected type */
+.game-card {
+    border-color: color-mix(in srgb, var(--type-color), transparent 80%);
 }
 
-/* Green Outline for HTML5 */
-.game-card:has(.badge.html5) {
-    border-color: rgba(35, 134, 54, 0.2);
+.game-card:hover { 
+    transform: translateY(-5px);
+    border-color: var(--type-color);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--type-color), transparent 85%);
 }
-
-.game-card:has(.badge.html5):hover {
-    border-color: var(--html5-green);
-    box-shadow: 0 0 12px rgba(35, 134, 54, 0.15);
-}
-
-.game-card:hover { transform: translateY(-5px); }
 
 /* --- Internal Card Assets --- */
 .img-container {
     width: 100%;
     aspect-ratio: 16/9;
-    position: relative;
     background: #000;
 }
 
@@ -183,7 +159,7 @@ body {
     text-overflow: ellipsis;
 }
 
-/* --- Badges (FIXED TEXT COLOR) --- */
+/* --- Badges (Universal Style) --- */
 .badge {
     position: absolute;
     top: 5px; right: 5px;
@@ -196,9 +172,15 @@ body {
     color: #fff !important; 
 }
 
-.badge.exclusive { background: var(--accent); }
-.badge.flash, .badge.swf { background: var(--accent); } 
-.badge.html5 { background: var(--html5-green); }
+/* Swf and Flash now explicitly share the accent background */
+.badge.flash, 
+.badge.swf, 
+.badge.exclusive { 
+    background: var(--color-flash-theme); 
+}
+
+.badge.html5 { background: var(--color-html5); }
+.badge.retro { background: var(--color-retro); }
 
 /* --- Category Headers --- */
 .category-block { margin-bottom: 40px; }
@@ -219,17 +201,6 @@ body {
     border: 1px solid var(--border);
     padding: 30px;
     border-radius: 12px;
-    max-width: 500px;
-}
-
-.agree-btn {
-    background-color: var(--html5-green);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
 }
 
 /* --- Responsive --- */
