@@ -1,115 +1,105 @@
-var allGames = allGames || []; 
+/* --- NAVIGATION INJECTOR --- */
+var navbarHTML = `
+<nav id="nav">
+    <div class="nav-left">
+        <a href="/main/index.html" style="text-decoration:none;"><span class="logo">Krethan's Page</span></a>
+    </div>
+    <div class="nav-right">
+        <input type="text" class="search-input" placeholder="Search games...">
+        <a href="/main/index.html" class="nav-link">Home</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="customAlert('⌨️ Commands', '<ul><li>Ctrl+Alt+H: Stealth Mode</li><li>Ctrl+Alt+P: Panic</li><li>Enter: Search</li></ul>')">Cmds</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="exportUserData()">Save</a>
+        <a href="javascript:void(0)" class="nav-link" onclick="triggerInternalFileInput()">Load</a>
+        <a href="https://docs.google.com" target="_blank" class="nav-link">Feedback</a>
+    </div>
+</nav>
 
-function handleImageError(image) {
-    image.onerror = null; 
-    const localPath = '/main/assets/thumbnails/placeholder.jpg';
-    image.src = localPath;
-    image.style.objectFit = "contain";
-    image.style.padding = "10px";
-}
+<div id="universal-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body" style="color:#8b949e; margin-bottom:20px; line-height:1.6;"></div>
+        <button onclick="closeModal()" class="modal-close-btn">Close</button>
+    </div>
+</div>
 
-function render(list) {
-    const container = document.getElementById('projects-placeholder');
-    if (!container) return;
-    
-    if (list.length === 0) {
-        container.innerHTML = `
-            <div class="no-results" style="text-align:center; width:100%; padding:100px 20px; color:#8b949e; font-family:sans-serif;">
-                <h2 style="font-size:32px; color:#f0f6fc; margin-bottom:10px;">Game not found</h2>
-                <p style="font-size:18px;">Try searching for a different title or category.</p>
-            </div>`;
-        return;
-    }
+<input type="file" id="importFileHandler" style="display:none" accept=".json" onchange="importUserData(event)">
+`;
 
-    // 1. DYNAMIC CATEGORIES: Instead of a hardcoded list, we get all categories present in the data
-    const groups = list.reduce((acc, game) => {
-        const cat = (game.category || 'other').toLowerCase();
-        if (!acc[cat]) acc[cat] = [];
-        acc[cat].push(game);
-        return acc;
-    }, {});
+window.customAlert = function(title, body) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-body').innerHTML = body;
+    document.getElementById('universal-modal').classList.add('active');
+};
 
-    // Sort categories alphabetically so the page is organized
-    const sortedCategories = Object.keys(groups).sort();
+window.closeModal = function() {
+    document.getElementById('universal-modal').classList.remove('active');
+};
 
-    let html = '';
-    sortedCategories.forEach(cat => {
-        html += `
-        <div class="category-block">
-            <div class="category-header">
-                <span class="label">${cat.toUpperCase()}</span>
-                <div class="line"></div>
-            </div>
-            <div class="game-flow">
-                ${groups[cat].map(game => {
-                    // 2. PATH FIX: The scanner already provides the full path from /main/
-                    // So we just ensure we aren't doubling up on the folder names.
-                    const finalLink = game.file.startsWith('/') ? game.file : `/main/${game.file}`;
-                    const thumbPath = game.thumb.startsWith('/') ? game.thumb : `/main/${game.thumb}`;
-                    
-                    return `
-                        <a href="${finalLink}" class="game-card">
-                            <div class="img-container">
-                                <img src="${thumbPath}" onerror="handleImageError(this)" loading="lazy">
-                                <span class="badge ${cat}">${cat}</span>
-                            </div>
-                            <div class="game-label">${game.name}</div>
-                        </a>
-                    `;
-                }).join('')}
-            </div>
-        </div>`;
-    });
-    container.innerHTML = html;
-}
+var isNavLocked = false;
 
-function initLibrary() {
-    const container = document.getElementById('projects-placeholder');
-    const searchInput = document.querySelector('.search-input');
+function setupNavBehavior() {
+    var nav = document.getElementById('nav');
+    var body = document.body;
+    var searchInput = document.querySelector('.search-input');
 
-    if (!container) {
-        setTimeout(initLibrary, 50); 
-        return;
-    }
-
-    // Cache busting with timestamp
-    fetch('/main/games-list.json?v=' + Date.now())
-        .then(res => {
-            if (!res.ok) throw new Error(`File not found`);
-            return res.json();
-        })
-        .then(data => {
-            allGames = data;
+    window.addEventListener('keydown', function(e) {
+        // Ctrl + Alt + H: Stealth Mode (Toggle Fullscreen)
+        if (e.ctrlKey && e.altKey && e.code === 'KeyH') {
+            e.preventDefault();
+            isNavLocked = !isNavLocked;
             
-            // 3. SEARCH REDIRECT HANDLING: Check URL for ?search= term
-            const params = new URLSearchParams(window.location.search);
-            const query = params.get('search');
-            if (query && searchInput) {
-                searchInput.value = query;
-                const filtered = allGames.filter(g => 
-                    g.name.toLowerCase().includes(query.toLowerCase()) || 
-                    g.category.toLowerCase().includes(query.toLowerCase())
-                );
-                render(filtered);
+            if (nav) nav.style.display = isNavLocked ? 'none' : 'flex';
+            
+            if (isNavLocked) {
+                body.style.paddingTop = "0px";
+                var game = document.querySelector('.game-content');
+                if (game) game.style.height = "100vh";
             } else {
-                render(allGames);
+                body.style.paddingTop = "70px";
+                var game = document.querySelector('.game-content');
+                if (game) game.style.height = "calc(100vh - 70px)";
             }
-        })
-        .catch(err => {
-            console.error("Library Load Error:", err);
-            container.innerHTML = `<div style="color:orange; padding:20px;">Error loading library. Run scanner.js?</div>`;
-        });
+        }
+
+        // Ctrl + Alt + P: Panic
+        if (e.ctrlKey && e.altKey && e.code === 'KeyP') {
+            window.location.replace('https://www.google.com');
+        }
+    });
 
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = allGames.filter(g => 
-                (g.name && g.name.toLowerCase().includes(term)) || 
-                (g.category && g.category.toLowerCase().includes(term))
-            );
-            render(filtered);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') window.location.href = '/main/index.html?search=' + encodeURIComponent(searchInput.value);
         });
     }
 }
 
-initLibrary();
+// Data Handlers
+window.triggerInternalFileInput = () => document.getElementById('importFileHandler').click();
+window.exportUserData = () => {
+    const data = JSON.stringify(localStorage);
+    const blob = new Blob([data], {type: 'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'save.json';
+    a.click();
+};
+window.importUserData = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+        const data = JSON.parse(event.target.result);
+        localStorage.clear();
+        for (let key in data) localStorage.setItem(key, data[key]);
+        window.location.reload();
+    };
+    reader.readAsText(file);
+};
+
+(function init() {
+    var container = document.getElementById('navbar-container');
+    if (container) {
+        container.innerHTML = navbarHTML;
+        setupNavBehavior();
+    } else { setTimeout(init, 50); }
+})();
