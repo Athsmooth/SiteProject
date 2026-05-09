@@ -10,7 +10,6 @@
             background: #ffffff;
             height: 100vh;
             cursor: default;
-            /* Helps mobile recognize fast taps without zooming */
             touch-action: manipulation;
         }
     </style>
@@ -25,16 +24,21 @@
                 const doc = win.document;
                 doc.title = " "; 
                 doc.body.style.margin = '0';
+                doc.body.style.padding = '0';
                 doc.body.style.overflow = 'hidden';
                 
-                const iframe = doc.createElement('iframe');
-                iframe.style.border = 'none';
-                iframe.style.width = '100vw';
-                iframe.style.height = '100vh';
-                iframe.src = window.location.origin + '/main/index.html';
+                // Using 'embed' instead of 'iframe'
+                const view = doc.createElement('embed');
+                view.style.border = 'none';
+                view.style.width = '100vw';
+                view.style.height = '100vh';
+                // Using type="text/html" ensures it renders the page correctly
+                view.setAttribute('type', 'text/html');
+                view.src = window.location.origin + '/main/index.html';
 
-                doc.body.appendChild(iframe);
+                doc.body.appendChild(view);
 
+                // Immediate redirect of the launcher page to stay stealthy
                 window.location.replace('https://www.google.com'); 
             }
         }
@@ -55,7 +59,6 @@
             const currentTime = Date.now();
             const tapGap = currentTime - lastTap;
 
-            // If the gap between taps is more than 500ms, reset count to 1
             if (tapGap > 500) {
                 tapCount = 1;
             } else {
@@ -65,7 +68,7 @@
             lastTap = currentTime;
 
             if (tapCount === 3) {
-                tapCount = 0; // Reset
+                tapCount = 0; 
                 launchDashboard();
             }
         });
