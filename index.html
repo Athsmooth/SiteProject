@@ -1,77 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ERR 404</title> 
+    <title>New Tab</title>
     <style>
-        body { 
-            margin: 0; 
-            background: #ffffff;
-            height: 100vh;
-            cursor: default;
-            touch-action: manipulation;
-        }
+        body { background-color: white; margin: 0; padding: 0; }
     </style>
 </head>
 <body>
 
     <script>
-        function launchDashboard() {
-            const win = window.open('about:blank', '_blank');
+        const targetUrl = "https://krethan.pages.dev/main/index.html";
+        const coverSite = "https://drive.google.com"; // The "innocent" site
 
-            if (win) {
-                const doc = win.document;
-                doc.title = " "; 
-                doc.body.style.margin = '0';
-                doc.body.style.padding = '0';
-                doc.body.style.overflow = 'hidden';
-                
-                // Using 'embed' instead of 'iframe'
-                const view = doc.createElement('embed');
-                view.style.border = 'none';
-                view.style.width = '100vw';
-                view.style.height = '100vh';
-                // Using type="text/html" ensures it renders the page correctly
-                view.setAttribute('type', 'text/html');
-                view.src = window.location.origin + '/main/index.html';
-
-                doc.body.appendChild(view);
-
-                // Immediate redirect of the launcher page to stay stealthy
-                window.location.replace('https://www.google.com'); 
+        document.addEventListener('keydown', function(event) {
+            if (event.altKey && event.code === 'KeyL') {
+                event.preventDefault();
+                launchAndCover();
             }
+        });
+
+        function launchAndCover() {
+            var win = window.open();
+            if (!win) {
+                // If it fails, we don't redirect so you can try again
+                alert("Pop-up blocked! Click once on the page then try Alt+L.");
+                return;
+            }
+
+            // 1. Setup the cloaked window
+            win.document.title = "about:blank";
+            var obj = win.document.createElement('object');
+            obj.style.width = "100%";
+            obj.style.height = "100%";
+            obj.style.position = "fixed";
+            obj.style.top = "0";
+            obj.style.left = "0";
+            obj.style.border = "none";
+            obj.data = targetUrl;
+
+            win.document.body.style.margin = "0";
+            win.document.body.style.overflow = "hidden";
+            win.document.body.appendChild(obj);
+
+            // 2. TRANSFORM THE LAUNCHER PAGE
+            // This replaces the launcher with Google Drive immediately
+            window.location.replace(coverSite);
         }
-
-        // --- DESKTOP: Alt + L ---
-        document.addEventListener('keydown', function(e) {
-            if (e.altKey && e.key.toLowerCase() === 'l') {
-                e.preventDefault();
-                launchDashboard();
-            }
-        });
-
-        // --- MOBILE: Triple Tap ---
-        let tapCount = 0;
-        let lastTap = 0;
-
-        document.addEventListener('touchend', function(e) {
-            const currentTime = Date.now();
-            const tapGap = currentTime - lastTap;
-
-            if (tapGap > 500) {
-                tapCount = 1;
-            } else {
-                tapCount++;
-            }
-
-            lastTap = currentTime;
-
-            if (tapCount === 3) {
-                tapCount = 0; 
-                launchDashboard();
-            }
-        });
     </script>
 </body>
 </html>
