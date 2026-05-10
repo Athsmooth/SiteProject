@@ -1,14 +1,1 @@
-<!DOCTYPE html><html><head>
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../embedstyle.css">
-        <script src="../navbar.js"></script>
-        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    </head><body><div id="navbar-container"></div><div id="ruffle-container" class="game-content"></div><script>
-        const urlParams = new URLSearchParams(window.location.search);
-        let g = urlParams.get('game'); 
-        // Ensure path starts with /main/
-        if(g && !g.startsWith('/main/')) g = '/main/'+g;
-        window.RufflePlayer = window.RufflePlayer || {};
-        const ruffle = window.RufflePlayer.newest(); const player = ruffle.createPlayer();
-        document.getElementById("ruffle-container").appendChild(player); player.load(g);
-    </script></body></html>
+<!DOCTYPE html><html><head><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../embedstyle.css"><script src="../navbar.js"></script><script src="https://unpkg.com/@ruffle-rs/ruffle"></script></head><body><div id="navbar-container"></div><div id="ruffle-container" class="game-content"></div><script>const urlParams=new URLSearchParams(window.location.search);let g=urlParams.get("game");g&&!g.startsWith("/main/")&&(g="/main/"+g),window.RufflePlayer=window.RufflePlayer||{};const ruffle=window.RufflePlayer.newest(),player=ruffle.createPlayer();document.getElementById("ruffle-container").appendChild(player),player.load(g)</script></body></html>

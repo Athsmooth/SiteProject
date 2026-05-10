@@ -1,9 +1,1 @@
-define(['Game', 'hud/Overlay'], function (Game, Overlay) {
-  var screen = $('#loading-screen');
-
-  Overlay(screen);
-
-  Game.events.subscribe('main screen loaded', function () {
-    screen.hide();
-  });
-});
+define(["Game","hud/Overlay"],function(e,n){var i=$("#loading-screen");n(i),e.events.subscribe("main screen loaded",function(){i.hide()})});

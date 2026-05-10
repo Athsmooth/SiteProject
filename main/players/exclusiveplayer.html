@@ -1,10 +1,1 @@
-<!DOCTYPE html><html><head>
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../embedstyle.css">
-        <script src="../navbar.js"></script>
-    </head><body><div id="navbar-container"></div><iframe id="game" class="game-content" src=""></iframe><script>
-        const urlParams = new URLSearchParams(window.location.search);
-        let g = urlParams.get('game');
-        if(g && !g.startsWith('/main/')) g = '/main/'+g;
-        document.getElementById('game').src = g;
-    </script></body></html>
+<!DOCTYPE html><html><head><link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../embedstyle.css"><script src="../navbar.js"></script></head><body><div id="navbar-container"></div><iframe id="game" class="game-content" src=""></iframe><script>const urlParams=new URLSearchParams(window.location.search);let g=urlParams.get("game");g&&!g.startsWith("/main/")&&(g="/main/"+g),document.getElementById("game").src=g</script></body></html>

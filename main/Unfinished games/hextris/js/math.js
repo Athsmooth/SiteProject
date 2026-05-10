@@ -1,14 +1,1 @@
-function rotatePoint(x, y, theta) {
-	var thetaRad = theta * (Math.PI / 180);
-	var rotX = Math.cos(thetaRad) * x - Math.sin(thetaRad) * y;
-	var rotY = Math.sin(thetaRad) * x + Math.cos(thetaRad) * y;
-
-	return {
-		x: rotX,
-		y: rotY
-	};
-}
-
-function randInt(min, max) {
-	return Math.floor((Math.random() * max) + min);
-}
+function rotatePoint(t,n,a){var o=a*(Math.PI/180);return{x:Math.cos(o)*t-Math.sin(o)*n,y:Math.sin(o)*t+Math.cos(o)*n}}function randInt(t,n){return Math.floor(Math.random()*n+t)}

@@ -1,15 +1,1 @@
-define(function () {
-
-  var mouseEvents = "dblclick,mousedown,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave";
-
-  var stopHandler = function (e) {
-    e.stopImmediatePropagation();
-    return false;
-  };
-
-  return function (overlay, mousedownHandler) {
-    overlay.bind(mouseEvents, stopHandler);
-    overlay.click(mousedownHandler || stopHandler);
-  };
-
-});
+define(function(){var e=function(e){return e.stopImmediatePropagation(),!1};return function(o,u){o.bind("dblclick,mousedown,mouseup,mousemove,mouseover,mouseout,mouseenter,mouseleave",e),o.click(u||e)}});
