@@ -1,0 +1,4566 @@
+[
+    {
+        "name": "Game Boy Emulator",
+        "category": "exclusive",
+        "badgeClass": "exclusive",
+        "file": "players/exclusive.html?game=exclusive/Game Boy Emulator.html&system=exclusive",
+        "thumb": "assets/thumbnails/Game Boy Emulator.png"
+    },
+    {
+        "name": "gbplayer",
+        "category": "exclusive",
+        "badgeClass": "exclusive",
+        "file": "players/exclusive.html?game=exclusive/gbplayer.html&system=exclusive",
+        "thumb": "assets/thumbnails/gbplayer.png"
+    },
+    {
+        "name": "102 Dalmatians   Puppies to the Rescue",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/102 Dalmatians - Puppies to the Rescue.gbc&system=gb",
+        "thumb": "assets/thumbnails/102 Dalmatians - Puppies to the Rescue.png"
+    },
+    {
+        "name": "AirForce Delta",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/AirForce Delta.gbc&system=gb",
+        "thumb": "assets/thumbnails/AirForce Delta.png"
+    },
+    {
+        "name": "Alone in the Dark   The New Nightmare",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Alone in the Dark - The New Nightmare.gbc&system=gb",
+        "thumb": "assets/thumbnails/Alone in the Dark - The New Nightmare.png"
+    },
+    {
+        "name": "Army Men",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Army Men.gbc&system=gb",
+        "thumb": "assets/thumbnails/Army Men.png"
+    },
+    {
+        "name": "Batman Beyond   Return of the Joker",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Batman Beyond - Return of the Joker.gbc&system=gb",
+        "thumb": "assets/thumbnails/Batman Beyond - Return of the Joker.png"
+    },
+    {
+        "name": "Bionic Commando   Elite Forces",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Bionic Commando - Elite Forces.gbc&system=gb",
+        "thumb": "assets/thumbnails/Bionic Commando - Elite Forces.png"
+    },
+    {
+        "name": "Bomberman Max   Blue Champion",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Bomberman Max - Blue Champion.gbc&system=gb",
+        "thumb": "assets/thumbnails/Bomberman Max - Blue Champion.png"
+    },
+    {
+        "name": "Buffy   The Vampire Slayer (BR)",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Buffy - The Vampire Slayer (BR).gbc&system=gb",
+        "thumb": "assets/thumbnails/Buffy - The Vampire Slayer (BR).png"
+    },
+    {
+        "name": "Classic Bubble Bobble",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Classic Bubble Bobble.gbc&system=gb",
+        "thumb": "assets/thumbnails/Classic Bubble Bobble.png"
+    },
+    {
+        "name": "Croc",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Croc.gbc&system=gb",
+        "thumb": "assets/thumbnails/Croc.png"
+    },
+    {
+        "name": "Crystalis",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Crystalis.gbc&system=gb",
+        "thumb": "assets/thumbnails/Crystalis.png"
+    },
+    {
+        "name": "Donkey Kong Country",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Donkey Kong Country.gbc&system=gb",
+        "thumb": "assets/thumbnails/Donkey Kong Country.png"
+    },
+    {
+        "name": "Dragon Warrior Monsters",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Dragon Warrior Monsters.gbc&system=gb",
+        "thumb": "assets/thumbnails/Dragon Warrior Monsters.png"
+    },
+    {
+        "name": "Driver   You are the Wheelman",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Driver - You are the Wheelman.gbc&system=gb",
+        "thumb": "assets/thumbnails/Driver - You are the Wheelman.png"
+    },
+    {
+        "name": "Extreme Ghostbusters",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Extreme Ghostbusters.gbc&system=gb",
+        "thumb": "assets/thumbnails/Extreme Ghostbusters.png"
+    },
+    {
+        "name": "Flipper & Lopaka",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Flipper & Lopaka.gbc&system=gb",
+        "thumb": "assets/thumbnails/Flipper & Lopaka.png"
+    },
+    {
+        "name": "Fort Boyard",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Fort Boyard.gbc&system=gb",
+        "thumb": "assets/thumbnails/Fort Boyard.png"
+    },
+    {
+        "name": "Gex   Enter the Gecko",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Gex - Enter the Gecko.gbc&system=gb",
+        "thumb": "assets/thumbnails/Gex - Enter the Gecko.png"
+    },
+    {
+        "name": "Gremlins Unleashed",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Gremlins Unleashed.gbc&system=gb",
+        "thumb": "assets/thumbnails/Gremlins Unleashed.png"
+    },
+    {
+        "name": "Halloween Racer",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Halloween Racer.gbc&system=gb",
+        "thumb": "assets/thumbnails/Halloween Racer.png"
+    },
+    {
+        "name": "Harry Potter and the Chamber of Secrets",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Harry Potter and the Chamber of Secrets.gbc&system=gb",
+        "thumb": "assets/thumbnails/Harry Potter and the Chamber of Secrets.png"
+    },
+    {
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Harry Potter and the Sorcerer's Stone.gbc&system=gb",
+        "thumb": "assets/thumbnails/Harry Potter and the Sorcerer's Stone.png"
+    },
+    {
+        "name": "Harvest Moon 2 GBC",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Harvest Moon 2 GBC.gbc&system=gb",
+        "thumb": "assets/thumbnails/Harvest Moon 2 GBC.png"
+    },
+    {
+        "name": "Harvest Moon 3 GBC",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Harvest Moon 3 GBC.gbc&system=gb",
+        "thumb": "assets/thumbnails/Harvest Moon 3 GBC.png"
+    },
+    {
+        "name": "Harvest Moon GB",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Harvest Moon GB.gbc&system=gb",
+        "thumb": "assets/thumbnails/Harvest Moon GB.png"
+    },
+    {
+        "name": "Hugo   Black Diamond Fever",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Hugo - Black Diamond Fever.gbc&system=gb",
+        "thumb": "assets/thumbnails/Hugo - Black Diamond Fever.png"
+    },
+    {
+        "name": "Hugo   The Evil Mirror",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Hugo - The Evil Mirror.gbc&system=gb",
+        "thumb": "assets/thumbnails/Hugo - The Evil Mirror.png"
+    },
+    {
+        "name": "International Superstar Soccer '99",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/International Superstar Soccer '99.gbc&system=gb",
+        "thumb": "assets/thumbnails/International Superstar Soccer '99.png"
+    },
+    {
+        "name": "Kirikou",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Kirikou.gbc&system=gb",
+        "thumb": "assets/thumbnails/Kirikou.png"
+    },
+    {
+        "name": "LEGO Alpha Team",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/LEGO Alpha Team.gbc&system=gb",
+        "thumb": "assets/thumbnails/LEGO Alpha Team.png"
+    },
+    {
+        "name": "LEGO Island 2   The Brickster's Revenge",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/LEGO Island 2 - The Brickster's Revenge.gbc&system=gb",
+        "thumb": "assets/thumbnails/LEGO Island 2 - The Brickster's Revenge.png"
+    },
+    {
+        "name": "LEGO Racers",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/LEGO Racers.gbc&system=gb",
+        "thumb": "assets/thumbnails/LEGO Racers.png"
+    },
+    {
+        "name": "LEGO Stunt Rally",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/LEGO Stunt Rally.gbc&system=gb",
+        "thumb": "assets/thumbnails/LEGO Stunt Rally.png"
+    },
+    {
+        "name": "Legend of Zelda, The   Link's Awakening DX (Rev B)",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Legend of Zelda, The - Link's Awakening DX (Rev B).gbc&system=gb",
+        "thumb": "assets/thumbnails/Legend of Zelda, The - Link's Awakening DX (Rev B).png"
+    },
+    {
+        "name": "Legend of Zelda, The   Oracle of Ages",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Legend of Zelda, The - Oracle of Ages.gbc&system=gb",
+        "thumb": "assets/thumbnails/Legend of Zelda, The - Oracle of Ages.png"
+    },
+    {
+        "name": "Legend of Zelda, The   Oracle of Seasons",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Legend of Zelda, The - Oracle of Seasons.gbc&system=gb",
+        "thumb": "assets/thumbnails/Legend of Zelda, The - Oracle of Seasons.png"
+    },
+    {
+        "name": "MTV Sports   Skateboarding featuring Andy MacDonald",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/MTV Sports - Skateboarding featuring Andy MacDonald.gbc&system=gb",
+        "thumb": "assets/thumbnails/MTV Sports - Skateboarding featuring Andy MacDonald.png"
+    },
+    {
+        "name": "Megaman Xtreme 2",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Megaman Xtreme 2.gbc&system=gb",
+        "thumb": "assets/thumbnails/Megaman Xtreme 2.png"
+    },
+    {
+        "name": "Megaman Xtreme",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Megaman Xtreme.gbc&system=gb",
+        "thumb": "assets/thumbnails/Megaman Xtreme.png"
+    },
+    {
+        "name": "N.Y. Race",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/N.Y. Race.gbc&system=gb",
+        "thumb": "assets/thumbnails/N.Y. Race.png"
+    },
+    {
+        "name": "New Addams Family Series, The",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/New Addams Family Series, The.gbc&system=gb",
+        "thumb": "assets/thumbnails/New Addams Family Series, The.png"
+    },
+    {
+        "name": "Perfect Dark",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Perfect Dark.gbc&system=gb",
+        "thumb": "assets/thumbnails/Perfect Dark.png"
+    },
+    {
+        "name": "Pocket Bomberman",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pocket Bomberman.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pocket Bomberman.png"
+    },
+    {
+        "name": "Pocket Monsters Kin",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pocket Monsters Kin.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pocket Monsters Kin.png"
+    },
+    {
+        "name": "Pocket Monsters",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pocket Monsters.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pocket Monsters.png"
+    },
+    {
+        "name": "Pocket Soccer",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pocket Soccer.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pocket Soccer.png"
+    },
+    {
+        "name": "Pokemon   Crystal Version (Rev A)",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon - Crystal Version (Rev A).GBC&system=gb",
+        "thumb": "assets/thumbnails/Pokemon - Crystal Version (Rev A).png"
+    },
+    {
+        "name": "Pokemon   Gold Version",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon - Gold Version.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon - Gold Version.png"
+    },
+    {
+        "name": "Pokemon   Silver Version",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon - Silver Version.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon - Silver Version.png"
+    },
+    {
+        "name": "Pokemon Pinball",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon Pinball.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon Pinball.png"
+    },
+    {
+        "name": "Pokemon Puzzle Challenge",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon Puzzle Challenge.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon Puzzle Challenge.png"
+    },
+    {
+        "name": "Pokemon Special Pikachu Edition",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon Special Pikachu Edition.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon Special Pikachu Edition.png"
+    },
+    {
+        "name": "Pokemon Trading Card Game",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Pokemon Trading Card Game.gbc&system=gb",
+        "thumb": "assets/thumbnails/Pokemon Trading Card Game.png"
+    },
+    {
+        "name": "Power Spike   Pro Beach Volleyball",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Power Spike - Pro Beach Volleyball.gbc&system=gb",
+        "thumb": "assets/thumbnails/Power Spike - Pro Beach Volleyball.png"
+    },
+    {
+        "name": "Quest RPG   Brian's Journey",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Quest RPG - Brian's Journey.gbc&system=gb",
+        "thumb": "assets/thumbnails/Quest RPG - Brian's Journey.png"
+    },
+    {
+        "name": "Resident Evil Gaiden",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Resident Evil Gaiden.gbc&system=gb",
+        "thumb": "assets/thumbnails/Resident Evil Gaiden.png"
+    },
+    {
+        "name": "Return of the Ninja",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Return of the Ninja.gbc&system=gb",
+        "thumb": "assets/thumbnails/Return of the Ninja.png"
+    },
+    {
+        "name": "Revelations   The Demon Slayer",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Revelations - The Demon Slayer.gbc&system=gb",
+        "thumb": "assets/thumbnails/Revelations - The Demon Slayer.png"
+    },
+    {
+        "name": "Ronaldo V Soccer",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Ronaldo V-Soccer.gbc&system=gb",
+        "thumb": "assets/thumbnails/Ronaldo V-Soccer.png"
+    },
+    {
+        "name": "Shantae",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Shantae.gbc&system=gb",
+        "thumb": "assets/thumbnails/Shantae.png"
+    },
+    {
+        "name": "SnowCross",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/SnowCross.gbc&system=gb",
+        "thumb": "assets/thumbnails/SnowCross.png"
+    },
+    {
+        "name": "Spider Man 2   The Sinister Six",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Spider-Man 2 - The Sinister Six.gbc&system=gb",
+        "thumb": "assets/thumbnails/Spider-Man 2 - The Sinister Six.png"
+    },
+    {
+        "name": "Spider Man",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Spider-Man.gbc&system=gb",
+        "thumb": "assets/thumbnails/Spider-Man.png"
+    },
+    {
+        "name": "Star Wars Episode I   Obi Wan's Adventures",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Star Wars Episode I - Obi-Wan's Adventures.gbc&system=gb",
+        "thumb": "assets/thumbnails/Star Wars Episode I - Obi-Wan's Adventures.png"
+    },
+    {
+        "name": "Suzuki Alstare Extreme Racing",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Suzuki Alstare Extreme Racing.gbc&system=gb",
+        "thumb": "assets/thumbnails/Suzuki Alstare Extreme Racing.png"
+    },
+    {
+        "name": "Tetris DX (World)",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Tetris DX (World).gbc&system=gb",
+        "thumb": "assets/thumbnails/Tetris DX (World).png"
+    },
+    {
+        "name": "Top Gear Pocket",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Top Gear Pocket.gbc&system=gb",
+        "thumb": "assets/thumbnails/Top Gear Pocket.png"
+    },
+    {
+        "name": "Wario Land II",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Wario Land II.gb&system=gb",
+        "thumb": "assets/thumbnails/Wario Land II.png"
+    },
+    {
+        "name": "Yu Gi Oh!   Dark Duel Stories",
+        "category": "gb",
+        "badgeClass": "gb",
+        "file": "players/gb.html?game=gb/Yu-Gi-Oh! - Dark Duel Stories.gbc&system=gb",
+        "thumb": "assets/thumbnails/Yu-Gi-Oh! - Dark Duel Stories.png"
+    },
+    {
+        "name": "12minibattles",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/12minibattles.html&system=html5",
+        "thumb": "assets/thumbnails/12minibattles.png"
+    },
+    {
+        "name": "1on1soccer",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/1on1soccer.html&system=html5",
+        "thumb": "assets/thumbnails/1on1soccer.png"
+    },
+    {
+        "name": "1on1tennis",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/1on1tennis.html&system=html5",
+        "thumb": "assets/thumbnails/1on1tennis.png"
+    },
+    {
+        "name": "2048cupcakes",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/2048cupcakes.html&system=html5",
+        "thumb": "assets/thumbnails/2048cupcakes.png"
+    },
+    {
+        "name": "8ballclassic",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/8ballclassic.html&system=html5",
+        "thumb": "assets/thumbnails/8ballclassic.png"
+    },
+    {
+        "name": "Cookie Clicker Updated",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/Cookie Clicker Updated&system=html5",
+        "thumb": "assets/thumbnails/Cookie Clicker Updated.png"
+    },
+    {
+        "name": "Indev",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/Indev.html&system=html5",
+        "thumb": "assets/thumbnails/Indev.png"
+    },
+    {
+        "name": "agariolite",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/agariolite.html&system=html5",
+        "thumb": "assets/thumbnails/agariolite.png"
+    },
+    {
+        "name": "ageofwar",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ageofwar.html&system=html5",
+        "thumb": "assets/thumbnails/ageofwar.png"
+    },
+    {
+        "name": "ageofwar2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ageofwar2.html&system=html5",
+        "thumb": "assets/thumbnails/ageofwar2.png"
+    },
+    {
+        "name": "agesofconflict",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/agesofconflict.html&system=html5",
+        "thumb": "assets/thumbnails/agesofconflict.png"
+    },
+    {
+        "name": "amongus",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/amongus.html&system=html5",
+        "thumb": "assets/thumbnails/amongus.png"
+    },
+    {
+        "name": "angrybirds",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/angrybirds.html&system=html5",
+        "thumb": "assets/thumbnails/angrybirds.png"
+    },
+    {
+        "name": "angrybirdsshowdown",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/angrybirdsshowdown.html&system=html5",
+        "thumb": "assets/thumbnails/angrybirdsshowdown.png"
+    },
+    {
+        "name": "angrybirdsspace",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/angrybirdsspace.html&system=html5",
+        "thumb": "assets/thumbnails/angrybirdsspace.png"
+    },
+    {
+        "name": "awesometanks",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/awesometanks.html&system=html5",
+        "thumb": "assets/thumbnails/awesometanks.png"
+    },
+    {
+        "name": "awesometanks2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/awesometanks2.html&system=html5",
+        "thumb": "assets/thumbnails/awesometanks2.png"
+    },
+    {
+        "name": "backrooms",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/backrooms.html&system=html5",
+        "thumb": "assets/thumbnails/backrooms.png"
+    },
+    {
+        "name": "baconmaydie",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/baconmaydie.html&system=html5",
+        "thumb": "assets/thumbnails/baconmaydie.png"
+    },
+    {
+        "name": "badicecream",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/badicecream.html&system=html5",
+        "thumb": "assets/thumbnails/badicecream.png"
+    },
+    {
+        "name": "badicecream2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/badicecream2.html&system=html5",
+        "thumb": "assets/thumbnails/badicecream2.png"
+    },
+    {
+        "name": "badicecream3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/badicecream3.html&system=html5",
+        "thumb": "assets/thumbnails/badicecream3.png"
+    },
+    {
+        "name": "badpiggies",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/badpiggies.html&system=html5",
+        "thumb": "assets/thumbnails/badpiggies.png"
+    },
+    {
+        "name": "baseballbros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/baseballbros.html&system=html5",
+        "thumb": "assets/thumbnails/baseballbros.png"
+    },
+    {
+        "name": "basketballlegends",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/basketballlegends.html&system=html5",
+        "thumb": "assets/thumbnails/basketballlegends.png"
+    },
+    {
+        "name": "basketballstars",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/basketballstars.html&system=html5",
+        "thumb": "assets/thumbnails/basketballstars.png"
+    },
+    {
+        "name": "basketbros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/basketbros.html&system=html5",
+        "thumb": "assets/thumbnails/basketbros.png"
+    },
+    {
+        "name": "basketrandom",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/basketrandom.html&system=html5",
+        "thumb": "assets/thumbnails/basketrandom.png"
+    },
+    {
+        "name": "bitplanes",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bitplanes.htm&system=html5",
+        "thumb": "assets/thumbnails/bitplanes.png"
+    },
+    {
+        "name": "blockysnakes",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/blockysnakes.html&system=html5",
+        "thumb": "assets/thumbnails/blockysnakes.png"
+    },
+    {
+        "name": "bloonsTD",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloonsTD.html&system=html5",
+        "thumb": "assets/thumbnails/bloonsTD.png"
+    },
+    {
+        "name": "bloonsTD2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloonsTD2.html&system=html5",
+        "thumb": "assets/thumbnails/bloonsTD2.png"
+    },
+    {
+        "name": "bloonsTD3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloonsTD3.html&system=html5",
+        "thumb": "assets/thumbnails/bloonsTD3.png"
+    },
+    {
+        "name": "bloonsTD4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloonsTD4.html&system=html5",
+        "thumb": "assets/thumbnails/bloonsTD4.png"
+    },
+    {
+        "name": "bloonsTD5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloonsTD5.html&system=html5",
+        "thumb": "assets/thumbnails/bloonsTD5.png"
+    },
+    {
+        "name": "bloxorz",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bloxorz.html&system=html5",
+        "thumb": "assets/thumbnails/bloxorz.png"
+    },
+    {
+        "name": "blumgiracers",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/blumgiracers.html&system=html5",
+        "thumb": "assets/thumbnails/blumgiracers.png"
+    },
+    {
+        "name": "blumgirocket",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/blumgirocket.html&system=html5",
+        "thumb": "assets/thumbnails/blumgirocket.png"
+    },
+    {
+        "name": "bobtherobber",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bobtherobber.html&system=html5",
+        "thumb": "assets/thumbnails/bobtherobber.png"
+    },
+    {
+        "name": "bobtherobber2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bobtherobber2.html&system=html5",
+        "thumb": "assets/thumbnails/bobtherobber2.png"
+    },
+    {
+        "name": "bobtherobber5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bobtherobber5.html&system=html5",
+        "thumb": "assets/thumbnails/bobtherobber5.png"
+    },
+    {
+        "name": "boxingrandom",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/boxingrandom.htm&system=html5",
+        "thumb": "assets/thumbnails/boxingrandom.png"
+    },
+    {
+        "name": "breakingthebank",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/breakingthebank.html&system=html5",
+        "thumb": "assets/thumbnails/breakingthebank.png"
+    },
+    {
+        "name": "bubbleshooter",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/bubbleshooter.html&system=html5",
+        "thumb": "assets/thumbnails/bubbleshooter.png"
+    },
+    {
+        "name": "candycrush",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/candycrush.html&system=html5",
+        "thumb": "assets/thumbnails/candycrush.png"
+    },
+    {
+        "name": "capybaraclicker",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/capybaraclicker.html&system=html5",
+        "thumb": "assets/thumbnails/capybaraclicker.png"
+    },
+    {
+        "name": "cardrawing",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/cardrawing.html&system=html5",
+        "thumb": "assets/thumbnails/cardrawing.png"
+    },
+    {
+        "name": "carkingarena",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/carkingarena.html&system=html5",
+        "thumb": "assets/thumbnails/carkingarena.png"
+    },
+    {
+        "name": "chess",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/chess.html&system=html5",
+        "thumb": "assets/thumbnails/chess.png"
+    },
+    {
+        "name": "choppyorc",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/choppyorc.html&system=html5",
+        "thumb": "assets/thumbnails/choppyorc.png"
+    },
+    {
+        "name": "chrishunters",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/chrishunters.html&system=html5",
+        "thumb": "assets/thumbnails/chrishunters.png"
+    },
+    {
+        "name": "circloO",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/circloO.html&system=html5",
+        "thumb": "assets/thumbnails/circloO.png"
+    },
+    {
+        "name": "circloO2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/circloO2.html&system=html5",
+        "thumb": "assets/thumbnails/circloO2.png"
+    },
+    {
+        "name": "clashofvikings",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/clashofvikings.html&system=html5",
+        "thumb": "assets/thumbnails/clashofvikings.png"
+    },
+    {
+        "name": "cleanupio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/cleanupio.html&system=html5",
+        "thumb": "assets/thumbnails/cleanupio.png"
+    },
+    {
+        "name": "clicker",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/clicker.htm&system=html5",
+        "thumb": "assets/thumbnails/clicker.png"
+    },
+    {
+        "name": "clusterrush",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/clusterrush.html&system=html5",
+        "thumb": "assets/thumbnails/clusterrush.png"
+    },
+    {
+        "name": "cookieclicker",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/cookieclicker.htm&system=html5",
+        "thumb": "assets/thumbnails/cookieclicker.png"
+    },
+    {
+        "name": "crazycars",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/crazycars.html&system=html5",
+        "thumb": "assets/thumbnails/crazycars.png"
+    },
+    {
+        "name": "crazymotorcycle",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/crazymotorcycle.html&system=html5",
+        "thumb": "assets/thumbnails/crazymotorcycle.png"
+    },
+    {
+        "name": "crossyroad",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/crossyroad.htm&system=html5",
+        "thumb": "assets/thumbnails/crossyroad.png"
+    },
+    {
+        "name": "dadish",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/dadish.html&system=html5",
+        "thumb": "assets/thumbnails/dadish.png"
+    },
+    {
+        "name": "dadish2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/dadish2.html&system=html5",
+        "thumb": "assets/thumbnails/dadish2.png"
+    },
+    {
+        "name": "dadish3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/dadish3.html&system=html5",
+        "thumb": "assets/thumbnails/dadish3.png"
+    },
+    {
+        "name": "damiensgame",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/damiensgame.html&system=html5",
+        "thumb": "assets/thumbnails/damiensgame.png"
+    },
+    {
+        "name": "deathrun3D",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/deathrun3D.html&system=html5",
+        "thumb": "assets/thumbnails/deathrun3D.png"
+    },
+    {
+        "name": "doodlejump",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/doodlejump.html&system=html5",
+        "thumb": "assets/thumbnails/doodlejump.png"
+    },
+    {
+        "name": "drawclimber",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/drawclimber.html&system=html5",
+        "thumb": "assets/thumbnails/drawclimber.png"
+    },
+    {
+        "name": "dreadheadparkour",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/dreadheadparkour.htm&system=html5",
+        "thumb": "assets/thumbnails/dreadheadparkour.png"
+    },
+    {
+        "name": "driftboss",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/driftboss.htm&system=html5",
+        "thumb": "assets/thumbnails/driftboss.png"
+    },
+    {
+        "name": "drivemad",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/drivemad.htm&system=html5",
+        "thumb": "assets/thumbnails/drivemad.png"
+    },
+    {
+        "name": "ducklife",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ducklife.html&system=html5",
+        "thumb": "assets/thumbnails/ducklife.png"
+    },
+    {
+        "name": "ducklife5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ducklife5.html&system=html5",
+        "thumb": "assets/thumbnails/ducklife5.png"
+    },
+    {
+        "name": "ducklingsio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ducklingsio.html&system=html5",
+        "thumb": "assets/thumbnails/ducklingsio.png"
+    },
+    {
+        "name": "eagleride",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/eagleride.html&system=html5",
+        "thumb": "assets/thumbnails/eagleride.png"
+    },
+    {
+        "name": "earntodie",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/earntodie.html&system=html5",
+        "thumb": "assets/thumbnails/earntodie.png"
+    },
+    {
+        "name": "earntodie2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/earntodie2.html&system=html5",
+        "thumb": "assets/thumbnails/earntodie2.png"
+    },
+    {
+        "name": "eggycar",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/eggycar.html&system=html5",
+        "thumb": "assets/thumbnails/eggycar.png"
+    },
+    {
+        "name": "elasticface",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/elasticface.htm&system=html5",
+        "thumb": "assets/thumbnails/elasticface.png"
+    },
+    {
+        "name": "escapeevan",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/escapeevan.html&system=html5",
+        "thumb": "assets/thumbnails/escapeevan.png"
+    },
+    {
+        "name": "ethangilmore",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ethangilmore.html&system=html5",
+        "thumb": "assets/thumbnails/ethangilmore.png"
+    },
+    {
+        "name": "evilglitch",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/evilglitch.html&system=html5",
+        "thumb": "assets/thumbnails/evilglitch.png"
+    },
+    {
+        "name": "fancypantsadventure2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fancypantsadventure2.html&system=html5",
+        "thumb": "assets/thumbnails/fancypantsadventure2.png"
+    },
+    {
+        "name": "fireboyandwatergirl",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fireboyandwatergirl.html&system=html5",
+        "thumb": "assets/thumbnails/fireboyandwatergirl.png"
+    },
+    {
+        "name": "fireboyandwatergirl2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fireboyandwatergirl2.html&system=html5",
+        "thumb": "assets/thumbnails/fireboyandwatergirl2.png"
+    },
+    {
+        "name": "fireboyandwatergirl3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fireboyandwatergirl3.html&system=html5",
+        "thumb": "assets/thumbnails/fireboyandwatergirl3.png"
+    },
+    {
+        "name": "fireboyandwatergirl4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fireboyandwatergirl4.html&system=html5",
+        "thumb": "assets/thumbnails/fireboyandwatergirl4.png"
+    },
+    {
+        "name": "flappybird copy",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/flappybird copy.html&system=html5",
+        "thumb": "assets/thumbnails/flappybird copy.png"
+    },
+    {
+        "name": "floodrunner3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/floodrunner3.html&system=html5",
+        "thumb": "assets/thumbnails/floodrunner3.png"
+    },
+    {
+        "name": "floodrunner4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/floodrunner4.html&system=html5",
+        "thumb": "assets/thumbnails/floodrunner4.png"
+    },
+    {
+        "name": "fnaf",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fnaf.html&system=html5",
+        "thumb": "assets/thumbnails/fnaf.png"
+    },
+    {
+        "name": "fnaf4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fnaf4.html&system=html5",
+        "thumb": "assets/thumbnails/fnaf4.png"
+    },
+    {
+        "name": "footballbros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/footballbros.html&system=html5",
+        "thumb": "assets/thumbnails/footballbros.png"
+    },
+    {
+        "name": "footballlegends",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/footballlegends.html&system=html5",
+        "thumb": "assets/thumbnails/footballlegends.png"
+    },
+    {
+        "name": "freerider3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/freerider3.html&system=html5",
+        "thumb": "assets/thumbnails/freerider3.png"
+    },
+    {
+        "name": "fruitninja",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/fruitninja.html&system=html5",
+        "thumb": "assets/thumbnails/fruitninja.png"
+    },
+    {
+        "name": "funnybattle",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/funnybattle.html&system=html5",
+        "thumb": "assets/thumbnails/funnybattle.png"
+    },
+    {
+        "name": "funnybattle2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/funnybattle2.html&system=html5",
+        "thumb": "assets/thumbnails/funnybattle2.png"
+    },
+    {
+        "name": "geometryvibes",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/geometryvibes.html&system=html5",
+        "thumb": "assets/thumbnails/geometryvibes.png"
+    },
+    {
+        "name": "getawayshootout",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/getawayshootout.htm&system=html5",
+        "thumb": "assets/thumbnails/getawayshootout.png"
+    },
+    {
+        "name": "googlebaseball",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/googlebaseball.html&system=html5",
+        "thumb": "assets/thumbnails/googlebaseball.png"
+    },
+    {
+        "name": "googledino",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/googledino.html&system=html5",
+        "thumb": "assets/thumbnails/googledino.png"
+    },
+    {
+        "name": "guesstheiranswer",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/guesstheiranswer.html&system=html5",
+        "thumb": "assets/thumbnails/guesstheiranswer.png"
+    },
+    {
+        "name": "hanger2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/hanger2.html&system=html5",
+        "thumb": "assets/thumbnails/hanger2.png"
+    },
+    {
+        "name": "helixjump",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/helixjump.html&system=html5",
+        "thumb": "assets/thumbnails/helixjump.png"
+    },
+    {
+        "name": "hillclimbracinglite",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/hillclimbracinglite.html&system=html5",
+        "thumb": "assets/thumbnails/hillclimbracinglite.png"
+    },
+    {
+        "name": "holeio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/holeio.html&system=html5",
+        "thumb": "assets/thumbnails/holeio.png"
+    },
+    {
+        "name": "hollowknightonline",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/hollowknightonline.html&system=html5",
+        "thumb": "assets/thumbnails/hollowknightonline.png"
+    },
+    {
+        "name": "hollowknightweb",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/hollowknightweb.html&system=html5",
+        "thumb": "assets/thumbnails/hollowknightweb.png"
+    },
+    {
+        "name": "houseofhazards",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/houseofhazards.html&system=html5",
+        "thumb": "assets/thumbnails/houseofhazards.png"
+    },
+    {
+        "name": "hoverracerdrive",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/hoverracerdrive.html&system=html5",
+        "thumb": "assets/thumbnails/hoverracerdrive.png"
+    },
+    {
+        "name": "idlebreakout",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/idlebreakout.html&system=html5",
+        "thumb": "assets/thumbnails/idlebreakout.png"
+    },
+    {
+        "name": "incredibox",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/incredibox&system=html5",
+        "thumb": "assets/thumbnails/incredibox.png"
+    },
+    {
+        "name": "ironsnout",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ironsnout.html&system=html5",
+        "thumb": "assets/thumbnails/ironsnout.png"
+    },
+    {
+        "name": "jellymar",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/jellymar&system=html5",
+        "thumb": "assets/thumbnails/jellymar.png"
+    },
+    {
+        "name": "jetpackjoyride",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/jetpackjoyride.html&system=html5",
+        "thumb": "assets/thumbnails/jetpackjoyride.png"
+    },
+    {
+        "name": "johnnytrigger",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/johnnytrigger.html&system=html5",
+        "thumb": "assets/thumbnails/johnnytrigger.png"
+    },
+    {
+        "name": "josephthesnake",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/josephthesnake.html&system=html5",
+        "thumb": "assets/thumbnails/josephthesnake.png"
+    },
+    {
+        "name": "jumpingshell",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/jumpingshell.html&system=html5",
+        "thumb": "assets/thumbnails/jumpingshell.png"
+    },
+    {
+        "name": "karatebros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/karatebros.html&system=html5",
+        "thumb": "assets/thumbnails/karatebros.png"
+    },
+    {
+        "name": "krecak",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/krecak&system=html5",
+        "thumb": "assets/thumbnails/krecak.png"
+    },
+    {
+        "name": "krecakkart",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/krecakkart.html&system=html5",
+        "thumb": "assets/thumbnails/krecakkart.png"
+    },
+    {
+        "name": "krecakmon",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/krecakmon.html&system=html5",
+        "thumb": "assets/thumbnails/krecakmon.png"
+    },
+    {
+        "name": "leaderoflanddownunder",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/leaderoflanddownunder.html&system=html5",
+        "thumb": "assets/thumbnails/leaderoflanddownunder.png"
+    },
+    {
+        "name": "learntoflyidle",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/learntoflyidle.html&system=html5",
+        "thumb": "assets/thumbnails/learntoflyidle.png"
+    },
+    {
+        "name": "leveldevil",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/leveldevil.html&system=html5",
+        "thumb": "assets/thumbnails/leveldevil.png"
+    },
+    {
+        "name": "lucahockey",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/lucahockey.html&system=html5",
+        "thumb": "assets/thumbnails/lucahockey.png"
+    },
+    {
+        "name": "melonplayground",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/melonplayground.html&system=html5",
+        "thumb": "assets/thumbnails/melonplayground.png"
+    },
+    {
+        "name": "mergeroundracers",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/mergeroundracers.html&system=html5",
+        "thumb": "assets/thumbnails/mergeroundracers.png"
+    },
+    {
+        "name": "minesweeper",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/minesweeper.html&system=html5",
+        "thumb": "assets/thumbnails/minesweeper.png"
+    },
+    {
+        "name": "monkeymart",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/monkeymart.htm&system=html5",
+        "thumb": "assets/thumbnails/monkeymart.png"
+    },
+    {
+        "name": "monstertracks",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/monstertracks.html&system=html5",
+        "thumb": "assets/thumbnails/monstertracks.png"
+    },
+    {
+        "name": "motox3m",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3m.htm&system=html5",
+        "thumb": "assets/thumbnails/motox3m.png"
+    },
+    {
+        "name": "motox3m2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3m2.html&system=html5",
+        "thumb": "assets/thumbnails/motox3m2.png"
+    },
+    {
+        "name": "motox3m3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3m3.html&system=html5",
+        "thumb": "assets/thumbnails/motox3m3.png"
+    },
+    {
+        "name": "motox3mpoolparty",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3mpoolparty.html&system=html5",
+        "thumb": "assets/thumbnails/motox3mpoolparty.png"
+    },
+    {
+        "name": "motox3mspookyland",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3mspookyland.html&system=html5",
+        "thumb": "assets/thumbnails/motox3mspookyland.png"
+    },
+    {
+        "name": "motox3mwinter",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/motox3mwinter.html&system=html5",
+        "thumb": "assets/thumbnails/motox3mwinter.png"
+    },
+    {
+        "name": "noobminer",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/noobminer.html&system=html5",
+        "thumb": "assets/thumbnails/noobminer.png"
+    },
+    {
+        "name": "oppositeday",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/oppositeday.html&system=html5",
+        "thumb": "assets/thumbnails/oppositeday.png"
+    },
+    {
+        "name": "ovo",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ovo.html&system=html5",
+        "thumb": "assets/thumbnails/ovo.png"
+    },
+    {
+        "name": "ovo2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ovo2.html&system=html5",
+        "thumb": "assets/thumbnails/ovo2.png"
+    },
+    {
+        "name": "pacman",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/pacman.html&system=html5",
+        "thumb": "assets/thumbnails/pacman.png"
+    },
+    {
+        "name": "papasbakeria",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papasbakeria.html&system=html5",
+        "thumb": "assets/thumbnails/papasbakeria.png"
+    },
+    {
+        "name": "papascheeseria",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papascheeseria.html&system=html5",
+        "thumb": "assets/thumbnails/papascheeseria.png"
+    },
+    {
+        "name": "papascupcakeria",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papascupcakeria.html&system=html5",
+        "thumb": "assets/thumbnails/papascupcakeria.png"
+    },
+    {
+        "name": "papaspancakeria",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papaspancakeria.html&system=html5",
+        "thumb": "assets/thumbnails/papaspancakeria.png"
+    },
+    {
+        "name": "papaspastaria",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papaspastaria.html&system=html5",
+        "thumb": "assets/thumbnails/papaspastaria.png"
+    },
+    {
+        "name": "papastacomia",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/papastacomia.html&system=html5",
+        "thumb": "assets/thumbnails/papastacomia.png"
+    },
+    {
+        "name": "paperio2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/paperio2.htm&system=html5",
+        "thumb": "assets/thumbnails/paperio2.png"
+    },
+    {
+        "name": "parkingfury",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/parkingfury.html&system=html5",
+        "thumb": "assets/thumbnails/parkingfury.png"
+    },
+    {
+        "name": "parkingfury2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/parkingfury2.html&system=html5",
+        "thumb": "assets/thumbnails/parkingfury2.png"
+    },
+    {
+        "name": "parkingfury3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/parkingfury3.html&system=html5",
+        "thumb": "assets/thumbnails/parkingfury3.png"
+    },
+    {
+        "name": "picosschool",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/picosschool.html&system=html5",
+        "thumb": "assets/thumbnails/picosschool.png"
+    },
+    {
+        "name": "pingpongchaos",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/pingpongchaos.html&system=html5",
+        "thumb": "assets/thumbnails/pingpongchaos.png"
+    },
+    {
+        "name": "pixelspeedrun",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/pixelspeedrun.html&system=html5",
+        "thumb": "assets/thumbnails/pixelspeedrun.png"
+    },
+    {
+        "name": "plantsvszombies",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/plantsvszombies.html&system=html5",
+        "thumb": "assets/thumbnails/plantsvszombies.png"
+    },
+    {
+        "name": "plonky",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/plonky.html&system=html5",
+        "thumb": "assets/thumbnails/plonky.png"
+    },
+    {
+        "name": "polytrack",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/polytrack.html&system=html5",
+        "thumb": "assets/thumbnails/polytrack.png"
+    },
+    {
+        "name": "poorbunny",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/poorbunny.html&system=html5",
+        "thumb": "assets/thumbnails/poorbunny.png"
+    },
+    {
+        "name": "pou",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/pou.html&system=html5",
+        "thumb": "assets/thumbnails/pou.png"
+    },
+    {
+        "name": "ragdollarchers",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ragdollarchers.htm&system=html5",
+        "thumb": "assets/thumbnails/ragdollarchers.png"
+    },
+    {
+        "name": "ragdollhit",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ragdollhit.html&system=html5",
+        "thumb": "assets/thumbnails/ragdollhit.png"
+    },
+    {
+        "name": "ragdollsoccer",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/ragdollsoccer.html&system=html5",
+        "thumb": "assets/thumbnails/ragdollsoccer.png"
+    },
+    {
+        "name": "redball4vol1",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/redball4vol1.html&system=html5",
+        "thumb": "assets/thumbnails/redball4vol1.png"
+    },
+    {
+        "name": "redball4vol2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/redball4vol2.html&system=html5",
+        "thumb": "assets/thumbnails/redball4vol2.png"
+    },
+    {
+        "name": "redball4vol3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/redball4vol3.html&system=html5",
+        "thumb": "assets/thumbnails/redball4vol3.png"
+    },
+    {
+        "name": "retrobowl",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/retrobowl.html&system=html5",
+        "thumb": "assets/thumbnails/retrobowl.png"
+    },
+    {
+        "name": "retrobowlcollege",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/retrobowlcollege.html&system=html5",
+        "thumb": "assets/thumbnails/retrobowlcollege.png"
+    },
+    {
+        "name": "retrohighway",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/retrohighway.html&system=html5",
+        "thumb": "assets/thumbnails/retrohighway.png"
+    },
+    {
+        "name": "retropingpong",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/retropingpong.html&system=html5",
+        "thumb": "assets/thumbnails/retropingpong.png"
+    },
+    {
+        "name": "riddleschool",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/riddleschool.html&system=html5",
+        "thumb": "assets/thumbnails/riddleschool.png"
+    },
+    {
+        "name": "riddleschool2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/riddleschool2.html&system=html5",
+        "thumb": "assets/thumbnails/riddleschool2.png"
+    },
+    {
+        "name": "riddleschool3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/riddleschool3.html&system=html5",
+        "thumb": "assets/thumbnails/riddleschool3.png"
+    },
+    {
+        "name": "riddleschool4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/riddleschool4.html&system=html5",
+        "thumb": "assets/thumbnails/riddleschool4.png"
+    },
+    {
+        "name": "riddleschool5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/riddleschool5.html&system=html5",
+        "thumb": "assets/thumbnails/riddleschool5.png"
+    },
+    {
+        "name": "rooftopsnipers",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/rooftopsnipers.htm&system=html5",
+        "thumb": "assets/thumbnails/rooftopsnipers.png"
+    },
+    {
+        "name": "rooftopsnipers2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/rooftopsnipers2.html&system=html5",
+        "thumb": "assets/thumbnails/rooftopsnipers2.png"
+    },
+    {
+        "name": "run",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/run.html&system=html5",
+        "thumb": "assets/thumbnails/run.png"
+    },
+    {
+        "name": "sandgame",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/sandgame.html&system=html5",
+        "thumb": "assets/thumbnails/sandgame.png"
+    },
+    {
+        "name": "shortlife",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/shortlife.html&system=html5",
+        "thumb": "assets/thumbnails/shortlife.png"
+    },
+    {
+        "name": "slope",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/slope.html&system=html5",
+        "thumb": "assets/thumbnails/slope.png"
+    },
+    {
+        "name": "slope2player",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/slope2player.html&system=html5",
+        "thumb": "assets/thumbnails/slope2player.png"
+    },
+    {
+        "name": "slowroads",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/slowroads.html&system=html5",
+        "thumb": "assets/thumbnails/slowroads.png"
+    },
+    {
+        "name": "sm64",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/sm64.html&system=html5",
+        "thumb": "assets/thumbnails/sm64.png"
+    },
+    {
+        "name": "snowballio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/snowballio.html&system=html5",
+        "thumb": "assets/thumbnails/snowballio.png"
+    },
+    {
+        "name": "snowrider",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/snowrider.htm&system=html5",
+        "thumb": "assets/thumbnails/snowrider.png"
+    },
+    {
+        "name": "snowroad",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/snowroad.htm&system=html5",
+        "thumb": "assets/thumbnails/snowroad.png"
+    },
+    {
+        "name": "soccerbros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/soccerbros.html&system=html5",
+        "thumb": "assets/thumbnails/soccerbros.png"
+    },
+    {
+        "name": "soccerrandom",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/soccerrandom.htm&system=html5",
+        "thumb": "assets/thumbnails/soccerrandom.png"
+    },
+    {
+        "name": "spacebarclicker",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/spacebarclicker.html&system=html5",
+        "thumb": "assets/thumbnails/spacebarclicker.png"
+    },
+    {
+        "name": "spaceiskey",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/spaceiskey.html&system=html5",
+        "thumb": "assets/thumbnails/spaceiskey.png"
+    },
+    {
+        "name": "spaceiskey2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/spaceiskey2.html&system=html5",
+        "thumb": "assets/thumbnails/spaceiskey2.png"
+    },
+    {
+        "name": "spacewaves",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/spacewaves.html&system=html5",
+        "thumb": "assets/thumbnails/spacewaves.png"
+    },
+    {
+        "name": "speedstars",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/speedstars.html&system=html5",
+        "thumb": "assets/thumbnails/speedstars.png"
+    },
+    {
+        "name": "sprunki",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/sprunki.html&system=html5",
+        "thumb": "assets/thumbnails/sprunki.png"
+    },
+    {
+        "name": "stack",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stack.html&system=html5",
+        "thumb": "assets/thumbnails/stack.png"
+    },
+    {
+        "name": "stacktris",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stacktris.html&system=html5",
+        "thumb": "assets/thumbnails/stacktris.png"
+    },
+    {
+        "name": "stateio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stateio.html&system=html5",
+        "thumb": "assets/thumbnails/stateio.png"
+    },
+    {
+        "name": "stickarchersbattle",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stickarchersbattle.html&system=html5",
+        "thumb": "assets/thumbnails/stickarchersbattle.png"
+    },
+    {
+        "name": "stickfighter",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stickfighter.html&system=html5",
+        "thumb": "assets/thumbnails/stickfighter.png"
+    },
+    {
+        "name": "stickmanhook",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stickmanhook.html&system=html5",
+        "thumb": "assets/thumbnails/stickmanhook.png"
+    },
+    {
+        "name": "stickmerge",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stickmerge.html&system=html5",
+        "thumb": "assets/thumbnails/stickmerge.png"
+    },
+    {
+        "name": "stretchjared",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/stretchjared.html&system=html5",
+        "thumb": "assets/thumbnails/stretchjared.png"
+    },
+    {
+        "name": "superliquidsoccer",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/superliquidsoccer.html&system=html5",
+        "thumb": "assets/thumbnails/superliquidsoccer.png"
+    },
+    {
+        "name": "tabletennisworldtour",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/tabletennisworldtour.html&system=html5",
+        "thumb": "assets/thumbnails/tabletennisworldtour.png"
+    },
+    {
+        "name": "tag",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/tag.html&system=html5",
+        "thumb": "assets/thumbnails/tag.png"
+    },
+    {
+        "name": "templeofboom",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/templeofboom.html&system=html5",
+        "thumb": "assets/thumbnails/templeofboom.png"
+    },
+    {
+        "name": "templerun2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/templerun2.htm&system=html5",
+        "thumb": "assets/thumbnails/templerun2.png"
+    },
+    {
+        "name": "territorialio",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/territorialio.html&system=html5",
+        "thumb": "assets/thumbnails/territorialio.png"
+    },
+    {
+        "name": "thereisnog",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/thereisnog.html&system=html5",
+        "thumb": "assets/thumbnails/thereisnog.png"
+    },
+    {
+        "name": "thisistheonlylevel",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/thisistheonlylevel.html&system=html5",
+        "thumb": "assets/thumbnails/thisistheonlylevel.png"
+    },
+    {
+        "name": "thisistheonlyleveltoo",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/thisistheonlyleveltoo.html&system=html5",
+        "thumb": "assets/thumbnails/thisistheonlyleveltoo.png"
+    },
+    {
+        "name": "timeshooter2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/timeshooter2.html&system=html5",
+        "thumb": "assets/thumbnails/timeshooter2.png"
+    },
+    {
+        "name": "timeshooter3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/timeshooter3.htm&system=html5",
+        "thumb": "assets/thumbnails/timeshooter3.png"
+    },
+    {
+        "name": "tinyfishing",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/tinyfishing.html&system=html5",
+        "thumb": "assets/thumbnails/tinyfishing.png"
+    },
+    {
+        "name": "trapthecat",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/trapthecat.html&system=html5",
+        "thumb": "assets/thumbnails/trapthecat.png"
+    },
+    {
+        "name": "triviacrack",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/triviacrack.html&system=html5",
+        "thumb": "assets/thumbnails/triviacrack.png"
+    },
+    {
+        "name": "tubejumpers",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/tubejumpers.html&system=html5",
+        "thumb": "assets/thumbnails/tubejumpers.png"
+    },
+    {
+        "name": "tunnelrush",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/tunnelrush.html&system=html5",
+        "thumb": "assets/thumbnails/tunnelrush.png"
+    },
+    {
+        "name": "unicyclehero",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/unicyclehero.html&system=html5",
+        "thumb": "assets/thumbnails/unicyclehero.png"
+    },
+    {
+        "name": "vex4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vex4.html&system=html5",
+        "thumb": "assets/thumbnails/vex4.png"
+    },
+    {
+        "name": "vex5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vex5.html&system=html5",
+        "thumb": "assets/thumbnails/vex5.png"
+    },
+    {
+        "name": "vex6",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vex6.htm&system=html5",
+        "thumb": "assets/thumbnails/vex6.png"
+    },
+    {
+        "name": "vex7",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vex7.htm&system=html5",
+        "thumb": "assets/thumbnails/vex7.png"
+    },
+    {
+        "name": "vex8",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vex8.htm&system=html5",
+        "thumb": "assets/thumbnails/vex8.png"
+    },
+    {
+        "name": "vexx3m",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vexx3m.html&system=html5",
+        "thumb": "assets/thumbnails/vexx3m.png"
+    },
+    {
+        "name": "vexx3m2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/vexx3m2.html&system=html5",
+        "thumb": "assets/thumbnails/vexx3m2.png"
+    },
+    {
+        "name": "volleyrandom",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/volleyrandom.html&system=html5",
+        "thumb": "assets/thumbnails/volleyrandom.png"
+    },
+    {
+        "name": "webecomewhatwebehold",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/webecomewhatwebehold.html&system=html5",
+        "thumb": "assets/thumbnails/webecomewhatwebehold.png"
+    },
+    {
+        "name": "wheeliebike",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheeliebike.html&system=html5",
+        "thumb": "assets/thumbnails/wheeliebike.png"
+    },
+    {
+        "name": "wheely",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely.html&system=html5",
+        "thumb": "assets/thumbnails/wheely.png"
+    },
+    {
+        "name": "wheely2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely2.html&system=html5",
+        "thumb": "assets/thumbnails/wheely2.png"
+    },
+    {
+        "name": "wheely3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely3.html&system=html5",
+        "thumb": "assets/thumbnails/wheely3.png"
+    },
+    {
+        "name": "wheely4",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely4.html&system=html5",
+        "thumb": "assets/thumbnails/wheely4.png"
+    },
+    {
+        "name": "wheely5",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely5.html&system=html5",
+        "thumb": "assets/thumbnails/wheely5.png"
+    },
+    {
+        "name": "wheely6",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely6.html&system=html5",
+        "thumb": "assets/thumbnails/wheely6.png"
+    },
+    {
+        "name": "wheely8",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wheely8.html&system=html5",
+        "thumb": "assets/thumbnails/wheely8.png"
+    },
+    {
+        "name": "wordleunlimited",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wordleunlimited.html&system=html5",
+        "thumb": "assets/thumbnails/wordleunlimited.png"
+    },
+    {
+        "name": "worldshardestgame",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/worldshardestgame.html&system=html5",
+        "thumb": "assets/thumbnails/worldshardestgame.png"
+    },
+    {
+        "name": "worldshardestgame2",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/worldshardestgame2.html&system=html5",
+        "thumb": "assets/thumbnails/worldshardestgame2.png"
+    },
+    {
+        "name": "worldshardestgame3",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/worldshardestgame3.html&system=html5",
+        "thumb": "assets/thumbnails/worldshardestgame3.png"
+    },
+    {
+        "name": "wrestlebros",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/wrestlebros.html&system=html5",
+        "thumb": "assets/thumbnails/wrestlebros.png"
+    },
+    {
+        "name": "zombierush",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/zombierush.html&system=html5",
+        "thumb": "assets/thumbnails/zombierush.png"
+    },
+    {
+        "name": "zoranblaster",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/zoranblaster.html&system=html5",
+        "thumb": "assets/thumbnails/zoranblaster.png"
+    },
+    {
+        "name": "zorario",
+        "category": "html5",
+        "badgeClass": "html5",
+        "file": "players/html5.html?game=html5/zorario.html&system=html5",
+        "thumb": "assets/thumbnails/zorario.png"
+    },
+    {
+        "name": "2048",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/2048.swf&system=swf",
+        "thumb": "assets/thumbnails/2048.png"
+    },
+    {
+        "name": "ARCS",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ARCS.swf&system=swf",
+        "thumb": "assets/thumbnails/ARCS.png"
+    },
+    {
+        "name": "Abduction",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Abduction.swf&system=swf",
+        "thumb": "assets/thumbnails/Abduction.png"
+    },
+    {
+        "name": "Achievment  Unlocked 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Achievment -Unlocked-3.swf&system=swf",
+        "thumb": "assets/thumbnails/Achievment -Unlocked-3.png"
+    },
+    {
+        "name": "Achievment Unlocked 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Achievment-Unlocked-2.swf&system=swf",
+        "thumb": "assets/thumbnails/Achievment-Unlocked-2.png"
+    },
+    {
+        "name": "Achievment Unlocked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Achievment-Unlocked.swf&system=swf",
+        "thumb": "assets/thumbnails/Achievment-Unlocked.png"
+    },
+    {
+        "name": "Age Of  War 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Age_Of _War_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Age_Of _War_2.png"
+    },
+    {
+        "name": "Age Of War",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Age_Of_War.swf&system=swf",
+        "thumb": "assets/thumbnails/Age_Of_War.png"
+    },
+    {
+        "name": "Age Of War 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Age_Of_War_3.swf&system=swf",
+        "thumb": "assets/thumbnails/Age_Of_War_3.png"
+    },
+    {
+        "name": "Age Of War 7",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Age_Of_War_7.swf&system=swf",
+        "thumb": "assets/thumbnails/Age_Of_War_7.png"
+    },
+    {
+        "name": "Apple Shooter",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Apple_Shooter.swf&system=swf",
+        "thumb": "assets/thumbnails/Apple_Shooter.png"
+    },
+    {
+        "name": "Armor Mayhem",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Armor_Mayhem.swf&system=swf",
+        "thumb": "assets/thumbnails/Armor_Mayhem.png"
+    },
+    {
+        "name": "Bad Piggies",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bad_Piggies.swf&system=swf",
+        "thumb": "assets/thumbnails/Bad_Piggies.png"
+    },
+    {
+        "name": "BattleShips",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/BattleShips.swf&system=swf",
+        "thumb": "assets/thumbnails/BattleShips.png"
+    },
+    {
+        "name": "Beat Up Your PC",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Beat_Up_Your_PC.swf&system=swf",
+        "thumb": "assets/thumbnails/Beat_Up_Your_PC.png"
+    },
+    {
+        "name": "Bejweled 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bejweled_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Bejweled_2.png"
+    },
+    {
+        "name": "Big Red Button",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Big_Red_Button.swf&system=swf",
+        "thumb": "assets/thumbnails/Big_Red_Button.png"
+    },
+    {
+        "name": "Bloons Players Pack 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Players-Pack-2.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Players-Pack-2.png"
+    },
+    {
+        "name": "Bloons Players Pack 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Players-Pack-3.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Players-Pack-3.png"
+    },
+    {
+        "name": "Bloons Players Pack 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Players-Pack-4.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Players-Pack-4.png"
+    },
+    {
+        "name": "Bloons Players Pack 5",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Players-Pack-5.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Players-Pack-5.png"
+    },
+    {
+        "name": "Bloons Players Pack",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Players-Pack.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Players-Pack.png"
+    },
+    {
+        "name": "Bloons Pop 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Pop-3.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Pop-3.png"
+    },
+    {
+        "name": "Bloons Tower Defense 5",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons-Tower-Defense-5.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons-Tower-Defense-5.png"
+    },
+    {
+        "name": "Bloons Super Monkey",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Super-Monkey.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Super-Monkey.png"
+    },
+    {
+        "name": "Bloons Tower Defense",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense.png"
+    },
+    {
+        "name": "Bloons Tower Defense 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense_2.png"
+    },
+    {
+        "name": "Bloons Tower Defense 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense_3.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense_3.png"
+    },
+    {
+        "name": "Bloons Tower Defense 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense_4.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense_4.png"
+    },
+    {
+        "name": "Bloons Tower Defense 4 Expansion",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense_4_Expansion.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense_4_Expansion.png"
+    },
+    {
+        "name": "Bloons Tower Defense 5",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloons_Tower_Defense_5.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloons_Tower_Defense_5.png"
+    },
+    {
+        "name": "Bloxorz",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bloxorz.swf&system=swf",
+        "thumb": "assets/thumbnails/Bloxorz.png"
+    },
+    {
+        "name": "BoomBot 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/BoomBot 2.swf&system=swf",
+        "thumb": "assets/thumbnails/BoomBot 2.png"
+    },
+    {
+        "name": "BoomBot",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/BoomBot.swf&system=swf",
+        "thumb": "assets/thumbnails/BoomBot.png"
+    },
+    {
+        "name": "Breaking Into The Bank",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Breaking_Into_The_Bank.swf&system=swf",
+        "thumb": "assets/thumbnails/Breaking_Into_The_Bank.png"
+    },
+    {
+        "name": "Bridge Tactics",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Bridge-Tactics.swf&system=swf",
+        "thumb": "assets/thumbnails/Bridge-Tactics.png"
+    },
+    {
+        "name": "Building Demolisher",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Building_Demolisher.swf&system=swf",
+        "thumb": "assets/thumbnails/Building_Demolisher.png"
+    },
+    {
+        "name": "Cactus MCOY",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cactus_MCOY.swf&system=swf",
+        "thumb": "assets/thumbnails/Cactus_MCOY.png"
+    },
+    {
+        "name": "Cactus MCOY 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cactus_MCOY_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Cactus_MCOY_2.png"
+    },
+    {
+        "name": "Canyon Defense",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Canyon Defense.swf&system=swf",
+        "thumb": "assets/thumbnails/Canyon Defense.png"
+    },
+    {
+        "name": "Cat Mario",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cat Mario.swf&system=swf",
+        "thumb": "assets/thumbnails/Cat Mario.png"
+    },
+    {
+        "name": "Causality Camp",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Causality-Camp.swf&system=swf",
+        "thumb": "assets/thumbnails/Causality-Camp.png"
+    },
+    {
+        "name": "Causality Festival",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Causality-Festival.swf&system=swf",
+        "thumb": "assets/thumbnails/Causality-Festival.png"
+    },
+    {
+        "name": "Causality Kitchen",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Causality-Kitchen.swf&system=swf",
+        "thumb": "assets/thumbnails/Causality-Kitchen.png"
+    },
+    {
+        "name": "Caveman",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Caveman.swf&system=swf",
+        "thumb": "assets/thumbnails/Caveman.png"
+    },
+    {
+        "name": "Chibi Knight Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Chibi_Knight Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Chibi_Knight Hacked.png"
+    },
+    {
+        "name": "Chibi Knight",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Chibi_Knight.swf&system=swf",
+        "thumb": "assets/thumbnails/Chibi_Knight.png"
+    },
+    {
+        "name": "Chinese Checkers",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Chinese-Checkers.swf&system=swf",
+        "thumb": "assets/thumbnails/Chinese-Checkers.png"
+    },
+    {
+        "name": "Click Death Bowling",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Click-Death-Bowling.swf&system=swf",
+        "thumb": "assets/thumbnails/Click-Death-Bowling.png"
+    },
+    {
+        "name": "Cooking Mama Kills Animals",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cooking Mama Kills Animals.swf&system=swf",
+        "thumb": "assets/thumbnails/Cooking Mama Kills Animals.png"
+    },
+    {
+        "name": "Cover Orange Journey Pirates",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cover-Orange-Journey-Pirates.swf&system=swf",
+        "thumb": "assets/thumbnails/Cover-Orange-Journey-Pirates.png"
+    },
+    {
+        "name": "Cover Orange Knights",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cover-Orange-Knights.swf&system=swf",
+        "thumb": "assets/thumbnails/Cover-Orange-Knights.png"
+    },
+    {
+        "name": "Cover Orange Wild West",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cover-Orange-Wild-West.swf&system=swf",
+        "thumb": "assets/thumbnails/Cover-Orange-Wild-West.png"
+    },
+    {
+        "name": "Cover Orange",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cover_Orange.swf&system=swf",
+        "thumb": "assets/thumbnails/Cover_Orange.png"
+    },
+    {
+        "name": "Crush the Castle 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Crush_the_Castle_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Crush_the_Castle_2.png"
+    },
+    {
+        "name": "Cube Droid Saves The Galaxy",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cube_Droid_Saves_The_Galaxy.swf&system=swf",
+        "thumb": "assets/thumbnails/Cube_Droid_Saves_The_Galaxy.png"
+    },
+    {
+        "name": "Cubefield",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cubefield.swf&system=swf",
+        "thumb": "assets/thumbnails/Cubefield.png"
+    },
+    {
+        "name": "Cursor Invisible",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Cursor_Invisible.swf&system=swf",
+        "thumb": "assets/thumbnails/Cursor_Invisible.png"
+    },
+    {
+        "name": "DaC Ep27",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/DaC_Ep27.swf&system=swf",
+        "thumb": "assets/thumbnails/DaC_Ep27.png"
+    },
+    {
+        "name": "Dead Paradise 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Dead Paradise 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Dead Paradise 2.png"
+    },
+    {
+        "name": "Dino Run",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Dino_Run.swf&system=swf",
+        "thumb": "assets/thumbnails/Dino_Run.png"
+    },
+    {
+        "name": "Dog Fight Sim",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Dog Fight Sim.swf&system=swf",
+        "thumb": "assets/thumbnails/Dog Fight Sim.png"
+    },
+    {
+        "name": "Doodlegod",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Doodlegod.swf&system=swf",
+        "thumb": "assets/thumbnails/Doodlegod.png"
+    },
+    {
+        "name": "Duck Hunt",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck Hunt.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck Hunt.png"
+    },
+    {
+        "name": "Duck Life 1",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_1.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_1.png"
+    },
+    {
+        "name": "Duck Life 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_2.png"
+    },
+    {
+        "name": "Duck Life 2 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_2_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_2_Hacked.png"
+    },
+    {
+        "name": "Duck Life 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_3.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_3.png"
+    },
+    {
+        "name": "Duck Life 3 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_3_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_3_Hacked.png"
+    },
+    {
+        "name": "Duck Life 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_4.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_4.png"
+    },
+    {
+        "name": "Duck Life 4 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Duck_Life_4_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Duck_Life_4_Hacked.png"
+    },
+    {
+        "name": "Dumper Truck",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Dumper-Truck.swf&system=swf",
+        "thumb": "assets/thumbnails/Dumper-Truck.png"
+    },
+    {
+        "name": "Earn To Die",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Earn_To_Die.swf&system=swf",
+        "thumb": "assets/thumbnails/Earn_To_Die.png"
+    },
+    {
+        "name": "Earn To Die 2012",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Earn_To_Die_2012.swf&system=swf",
+        "thumb": "assets/thumbnails/Earn_To_Die_2012.png"
+    },
+    {
+        "name": "Earn To Die 2012 Part 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Earn_To_Die_2012_Part_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Earn_To_Die_2012_Part_2.png"
+    },
+    {
+        "name": "ElectricMan 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ElectricMan_2.swf&system=swf",
+        "thumb": "assets/thumbnails/ElectricMan_2.png"
+    },
+    {
+        "name": "ElectricMan 2 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ElectricMan_2_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/ElectricMan_2_Hacked.png"
+    },
+    {
+        "name": "End  of The World",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/End _of_The_World.swf&system=swf",
+        "thumb": "assets/thumbnails/End _of_The_World.png"
+    },
+    {
+        "name": "Escaping The Prison",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Escaping_The_Prison.swf&system=swf",
+        "thumb": "assets/thumbnails/Escaping_The_Prison.png"
+    },
+    {
+        "name": "Fancy Pants World 1",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Fancy_Pants_World_1.swf&system=swf",
+        "thumb": "assets/thumbnails/Fancy_Pants_World_1.png"
+    },
+    {
+        "name": "Fancy Pants World 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Fancy_Pants_World_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Fancy_Pants_World_2.png"
+    },
+    {
+        "name": "Feed Us 1",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-1.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-1.png"
+    },
+    {
+        "name": "Feed Us 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-2.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-2.png"
+    },
+    {
+        "name": "Feed Us 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-3.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-3.png"
+    },
+    {
+        "name": "Feed Us 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-4.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-4.png"
+    },
+    {
+        "name": "Feed Us 5",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-5.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-5.png"
+    },
+    {
+        "name": "Feed Us Happy",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-Happy.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-Happy.png"
+    },
+    {
+        "name": "Feed Us Lost Island",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-Lost-Island.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-Lost-Island.png"
+    },
+    {
+        "name": "Feed Us Pirates",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-Pirates.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-Pirates.png"
+    },
+    {
+        "name": "Feed Us Xmas Expansion",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Feed-Us-Xmas-Expansion.swf&system=swf",
+        "thumb": "assets/thumbnails/Feed-Us-Xmas-Expansion.png"
+    },
+    {
+        "name": "FireBoy and Watergirl 1 In The Forest Temple",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/FireBoy_and_Watergirl_1-In_The_Forest_Temple.swf&system=swf",
+        "thumb": "assets/thumbnails/FireBoy_and_Watergirl_1-In_The_Forest_Temple.png"
+    },
+    {
+        "name": "FireBoy and Watergirl 2 The Light Temple",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/FireBoy_and_Watergirl_2-The_Light_Temple.swf&system=swf",
+        "thumb": "assets/thumbnails/FireBoy_and_Watergirl_2-The_Light_Temple.png"
+    },
+    {
+        "name": "FireBoy and Watergirl 3 In The Forest Temple",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/FireBoy_and_Watergirl_3-In_The_Forest_Temple.swf&system=swf",
+        "thumb": "assets/thumbnails/FireBoy_and_Watergirl_3-In_The_Forest_Temple.png"
+    },
+    {
+        "name": "FireBoy and Watergirl 4 The Crystal Temple",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/FireBoy_and_Watergirl_4-The_Crystal_Temple.swf&system=swf",
+        "thumb": "assets/thumbnails/FireBoy_and_Watergirl_4-The_Crystal_Temple.png"
+    },
+    {
+        "name": "Flappy Bird",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Flappy-Bird.swf&system=swf",
+        "thumb": "assets/thumbnails/Flappy-Bird.png"
+    },
+    {
+        "name": "Flight",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Flight.swf&system=swf",
+        "thumb": "assets/thumbnails/Flight.png"
+    },
+    {
+        "name": "Fling Ecommerce",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Fling-Ecommerce.swf&system=swf",
+        "thumb": "assets/thumbnails/Fling-Ecommerce.png"
+    },
+    {
+        "name": "Foster's Home for Imaginary Friends   Wilt's Wash N' Swoosh",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Foster's Home for Imaginary Friends - Wilt's Wash N' Swoosh.swf&system=swf",
+        "thumb": "assets/thumbnails/Foster's Home for Imaginary Friends - Wilt's Wash N' Swoosh.png"
+    },
+    {
+        "name": "Fragger",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Fragger.swf&system=swf",
+        "thumb": "assets/thumbnails/Fragger.png"
+    },
+    {
+        "name": "Give Up 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Give Up 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Give Up 2.png"
+    },
+    {
+        "name": "Give Up",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Give Up.swf&system=swf",
+        "thumb": "assets/thumbnails/Give Up.png"
+    },
+    {
+        "name": "Gluey 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gluey_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Gluey_2.png"
+    },
+    {
+        "name": "Gold Miner Special Editon",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gold-Miner Special Editon.swf&system=swf",
+        "thumb": "assets/thumbnails/Gold-Miner Special Editon.png"
+    },
+    {
+        "name": "Gold Miner Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gold-Miner-Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Gold-Miner-Hacked.png"
+    },
+    {
+        "name": "Gold Miner",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gold-Miner.swf&system=swf",
+        "thumb": "assets/thumbnails/Gold-Miner.png"
+    },
+    {
+        "name": "Gravity Duck Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gravity_Duck_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Gravity_Duck_Hacked.png"
+    },
+    {
+        "name": "Grow Cube",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Grow-Cube.swf&system=swf",
+        "thumb": "assets/thumbnails/Grow-Cube.png"
+    },
+    {
+        "name": "Grow Island",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Grow-Island.swf&system=swf",
+        "thumb": "assets/thumbnails/Grow-Island.png"
+    },
+    {
+        "name": "Grow Nano",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Grow-Nano.swf&system=swf",
+        "thumb": "assets/thumbnails/Grow-Nano.png"
+    },
+    {
+        "name": "Grow Valley",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Grow-Valley.swf&system=swf",
+        "thumb": "assets/thumbnails/Grow-Valley.png"
+    },
+    {
+        "name": "Gun Blood",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gun_Blood.swf&system=swf",
+        "thumb": "assets/thumbnails/Gun_Blood.png"
+    },
+    {
+        "name": "Gun Mayhem",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gun_Mayhem.swf&system=swf",
+        "thumb": "assets/thumbnails/Gun_Mayhem.png"
+    },
+    {
+        "name": "Gun Mayhem 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Gun_Mayhem_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Gun_Mayhem_2.png"
+    },
+    {
+        "name": "Handless Millionaire",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Handless_Millionaire.swf&system=swf",
+        "thumb": "assets/thumbnails/Handless_Millionaire.png"
+    },
+    {
+        "name": "HappyWheels",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/HappyWheels.swf&system=swf",
+        "thumb": "assets/thumbnails/HappyWheels.png"
+    },
+    {
+        "name": "Haunt The House",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Haunt-The-House.swf&system=swf",
+        "thumb": "assets/thumbnails/Haunt-The-House.png"
+    },
+    {
+        "name": "I Dont Even Know",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/I Dont Even Know.swf&system=swf",
+        "thumb": "assets/thumbnails/I Dont Even Know.png"
+    },
+    {
+        "name": "Ice Breaker",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Ice-Breaker.swf&system=swf",
+        "thumb": "assets/thumbnails/Ice-Breaker.png"
+    },
+    {
+        "name": "Jack Smith",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Jack_Smith.swf&system=swf",
+        "thumb": "assets/thumbnails/Jack_Smith.png"
+    },
+    {
+        "name": "Jump It! 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Jump It! 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Jump It! 2.png"
+    },
+    {
+        "name": "Jump It!",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Jump It!.swf&system=swf",
+        "thumb": "assets/thumbnails/Jump It!.png"
+    },
+    {
+        "name": "KND   Flight of the Hamster",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/KND - Flight of the Hamster.swf&system=swf",
+        "thumb": "assets/thumbnails/KND - Flight of the Hamster.png"
+    },
+    {
+        "name": "KND   Operation Z.E.R.O Outnumbuh'd!",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/KND - Operation Z.E.R.O Outnumbuh'd!.swf&system=swf",
+        "thumb": "assets/thumbnails/KND - Operation Z.E.R.O Outnumbuh'd!.png"
+    },
+    {
+        "name": "KND   Rainbow Monkey Rundown",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/KND - Rainbow Monkey Rundown.swf&system=swf",
+        "thumb": "assets/thumbnails/KND - Rainbow Monkey Rundown.png"
+    },
+    {
+        "name": "Kitten Cannon",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Kitten Cannon.swf&system=swf",
+        "thumb": "assets/thumbnails/Kitten Cannon.png"
+    },
+    {
+        "name": "Learn To Fly",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Learn To Fly.swf&system=swf",
+        "thumb": "assets/thumbnails/Learn To Fly.png"
+    },
+    {
+        "name": "Learn To Fly 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Learn_To_Fly_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Learn_To_Fly_2.png"
+    },
+    {
+        "name": "Mahjong",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Mahjong.swf&system=swf",
+        "thumb": "assets/thumbnails/Mahjong.png"
+    },
+    {
+        "name": "Me and the Key 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Me and the Key 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Me and the Key 2.png"
+    },
+    {
+        "name": "Me and the Key",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Me and the Key.swf&system=swf",
+        "thumb": "assets/thumbnails/Me and the Key.png"
+    },
+    {
+        "name": "MeatBoy",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/MeatBoy.swf&system=swf",
+        "thumb": "assets/thumbnails/MeatBoy.png"
+    },
+    {
+        "name": "Mecha Arena",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Mecha Arena.swf&system=swf",
+        "thumb": "assets/thumbnails/Mecha Arena.png"
+    },
+    {
+        "name": "Meeblings 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Meeblings-2.swf&system=swf",
+        "thumb": "assets/thumbnails/Meeblings-2.png"
+    },
+    {
+        "name": "Miami Shark",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Miami_Shark.swf&system=swf",
+        "thumb": "assets/thumbnails/Miami_Shark.png"
+    },
+    {
+        "name": "Mine Blocks",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Mine_Blocks.swf&system=swf",
+        "thumb": "assets/thumbnails/Mine_Blocks.png"
+    },
+    {
+        "name": "Minecraft Tower Defense",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Minecraft_Tower_Defense.swf&system=swf",
+        "thumb": "assets/thumbnails/Minecraft_Tower_Defense.png"
+    },
+    {
+        "name": "Minecraft Tower Defense 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Minecraft_Tower_Defense_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Minecraft_Tower_Defense_2.png"
+    },
+    {
+        "name": "Miragine War",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Miragine War.swf&system=swf",
+        "thumb": "assets/thumbnails/Miragine War.png"
+    },
+    {
+        "name": "Nyan Cat Lost In Space",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Nyan-Cat-Lost-In-Space.swf&system=swf",
+        "thumb": "assets/thumbnails/Nyan-Cat-Lost-In-Space.png"
+    },
+    {
+        "name": "Obey The Game",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Obey The Game.swf&system=swf",
+        "thumb": "assets/thumbnails/Obey The Game.png"
+    },
+    {
+        "name": "Off The Rails",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Off-The-Rails.swf&system=swf",
+        "thumb": "assets/thumbnails/Off-The-Rails.png"
+    },
+    {
+        "name": "Pandemic 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pandemic 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Pandemic 2.png"
+    },
+    {
+        "name": "Papa's Burgeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Burgeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Burgeria.png"
+    },
+    {
+        "name": "Papa's Cheezeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Cheezeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Cheezeria.png"
+    },
+    {
+        "name": "Papa's Cupcakeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Cupcakeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Cupcakeria.png"
+    },
+    {
+        "name": "Papa's Donuteria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Donuteria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Donuteria.png"
+    },
+    {
+        "name": "Papa's Freezeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Freezeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Freezeria.png"
+    },
+    {
+        "name": "Papa's Hotdogeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Hotdogeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Hotdogeria.png"
+    },
+    {
+        "name": "Papa's Pancakeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Pancakeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Pancakeria.png"
+    },
+    {
+        "name": "Papa's Pasteria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Pasteria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Pasteria.png"
+    },
+    {
+        "name": "Papa's Pizzeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Pizzeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Pizzeria.png"
+    },
+    {
+        "name": "Papa's Taco Mia",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Taco_Mia.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Taco_Mia.png"
+    },
+    {
+        "name": "Papa's Wingeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa's_Wingeria.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa's_Wingeria.png"
+    },
+    {
+        "name": "Papa Louie",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa_Louie.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa_Louie.png"
+    },
+    {
+        "name": "Papa Louie 2 When Pizza's Attacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa_Louie_2_When_Pizza's_Attacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa_Louie_2_When_Pizza's_Attacked.png"
+    },
+    {
+        "name": "Papa Louie 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Papa_Louie_3.swf&system=swf",
+        "thumb": "assets/thumbnails/Papa_Louie_3.png"
+    },
+    {
+        "name": "Penguin Diner",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Penguin_Diner.swf&system=swf",
+        "thumb": "assets/thumbnails/Penguin_Diner.png"
+    },
+    {
+        "name": "Penguin Diner 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Penguin_Diner_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Penguin_Diner_2.png"
+    },
+    {
+        "name": "Pixel Chix Jammin Hamster",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pixel_Chix_Jammin_Hamster.swf&system=swf",
+        "thumb": "assets/thumbnails/Pixel_Chix_Jammin_Hamster.png"
+    },
+    {
+        "name": "Pixel Chix Monster Baby",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pixel_Chix_Monster_Baby.swf&system=swf",
+        "thumb": "assets/thumbnails/Pixel_Chix_Monster_Baby.png"
+    },
+    {
+        "name": "Plazma Burst 2 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Plazma Burst 2 Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Plazma Burst 2 Hacked.png"
+    },
+    {
+        "name": "Plazma Burst 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Plazma Burst 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Plazma Burst 2.png"
+    },
+    {
+        "name": "Pokemon Tower Defense 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pokemon Tower Defense 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Pokemon Tower Defense 2.png"
+    },
+    {
+        "name": "Pokemon Tower Defense",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pokemon-Tower-Defense.swf&system=swf",
+        "thumb": "assets/thumbnails/Pokemon-Tower-Defense.png"
+    },
+    {
+        "name": "Pokemon Tower Defense",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pokemon_Tower_Defense.swf&system=swf",
+        "thumb": "assets/thumbnails/Pokemon_Tower_Defense.png"
+    },
+    {
+        "name": "Pong",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Pong.swf&system=swf",
+        "thumb": "assets/thumbnails/Pong.png"
+    },
+    {
+        "name": "Poop Clicker",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Poop_Clicker.swf&system=swf",
+        "thumb": "assets/thumbnails/Poop_Clicker.png"
+    },
+    {
+        "name": "Portal The Flash Version",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Portal The Flash Version.swf&system=swf",
+        "thumb": "assets/thumbnails/Portal The Flash Version.png"
+    },
+    {
+        "name": "Potty Racers",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers.png"
+    },
+    {
+        "name": "Potty Racers 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_2.png"
+    },
+    {
+        "name": "Potty Racers 2 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_2_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_2_Hacked.png"
+    },
+    {
+        "name": "Potty Racers 3.1",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_3.1.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_3.1.png"
+    },
+    {
+        "name": "Potty Racers 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_3.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_3.png"
+    },
+    {
+        "name": "Potty Racers 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_4.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_4.png"
+    },
+    {
+        "name": "Potty Racers 4 Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_4_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_4_Hacked.png"
+    },
+    {
+        "name": "Potty Racers Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Potty_Racers_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Potty_Racers_Hacked.png"
+    },
+    {
+        "name": "QWOP",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/QWOP.swf&system=swf",
+        "thumb": "assets/thumbnails/QWOP.png"
+    },
+    {
+        "name": "Raft Wars",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Raft_Wars.swf&system=swf",
+        "thumb": "assets/thumbnails/Raft_Wars.png"
+    },
+    {
+        "name": "Raft Wars 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Raft_Wars_2.swf&system=swf",
+        "thumb": "assets/thumbnails/Raft_Wars_2.png"
+    },
+    {
+        "name": "Realm Of The Mad God",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Realm Of The Mad God.swf&system=swf",
+        "thumb": "assets/thumbnails/Realm Of The Mad God.png"
+    },
+    {
+        "name": "ReimagineThe Game",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ReimagineThe Game.swf&system=swf",
+        "thumb": "assets/thumbnails/ReimagineThe Game.png"
+    },
+    {
+        "name": "Revenge Of The Stickman",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Revenge-Of-The-Stickman.swf&system=swf",
+        "thumb": "assets/thumbnails/Revenge-Of-The-Stickman.png"
+    },
+    {
+        "name": "Road Rush",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Road Rush.swf&system=swf",
+        "thumb": "assets/thumbnails/Road Rush.png"
+    },
+    {
+        "name": "Robot Unicorn Attack",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Robot-Unicorn-Attack.swf&system=swf",
+        "thumb": "assets/thumbnails/Robot-Unicorn-Attack.png"
+    },
+    {
+        "name": "Robot Unicorn Heavy Metal",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Robot-Unicorn-Heavy-Metal.swf&system=swf",
+        "thumb": "assets/thumbnails/Robot-Unicorn-Heavy-Metal.png"
+    },
+    {
+        "name": "Rotate And Roll Players Pack",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Rotate And Roll Players Pack.swf&system=swf",
+        "thumb": "assets/thumbnails/Rotate And Roll Players Pack.png"
+    },
+    {
+        "name": "Rotate And Roll",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Rotate And Roll.swf&system=swf",
+        "thumb": "assets/thumbnails/Rotate And Roll.png"
+    },
+    {
+        "name": "Run 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Run 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Run 2.png"
+    },
+    {
+        "name": "Run And Gun",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Run_And_Gun.swf&system=swf",
+        "thumb": "assets/thumbnails/Run_And_Gun.png"
+    },
+    {
+        "name": "Sandcastle v1.5.2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sandcastle v1.5.2.swf&system=swf",
+        "thumb": "assets/thumbnails/Sandcastle v1.5.2.png"
+    },
+    {
+        "name": "Shop Empire 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Shop Empire 3.swf&system=swf",
+        "thumb": "assets/thumbnails/Shop Empire 3.png"
+    },
+    {
+        "name": "Shopping Cart Hero",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Shopping Cart Hero.swf&system=swf",
+        "thumb": "assets/thumbnails/Shopping Cart Hero.png"
+    },
+    {
+        "name": "Shopping City",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Shopping_City.swf&system=swf",
+        "thumb": "assets/thumbnails/Shopping_City.png"
+    },
+    {
+        "name": "Shopping Street",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Shopping_Street.swf&system=swf",
+        "thumb": "assets/thumbnails/Shopping_Street.png"
+    },
+    {
+        "name": "Skies of War",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Skies of War.swf&system=swf",
+        "thumb": "assets/thumbnails/Skies of War.png"
+    },
+    {
+        "name": "Skin Craft",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Skin-Craft.swf&system=swf",
+        "thumb": "assets/thumbnails/Skin-Craft.png"
+    },
+    {
+        "name": "Skull Kid",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Skull-Kid.swf&system=swf",
+        "thumb": "assets/thumbnails/Skull-Kid.png"
+    },
+    {
+        "name": "Sling Junior",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sling-Junior.swf&system=swf",
+        "thumb": "assets/thumbnails/Sling-Junior.png"
+    },
+    {
+        "name": "Slingette",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Slingette.swf&system=swf",
+        "thumb": "assets/thumbnails/Slingette.png"
+    },
+    {
+        "name": "Small Town Racing",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Small-Town-Racing.swf&system=swf",
+        "thumb": "assets/thumbnails/Small-Town-Racing.png"
+    },
+    {
+        "name": "Snail Bob 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 2.png"
+    },
+    {
+        "name": "Snail Bob 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 3.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 3.png"
+    },
+    {
+        "name": "Snail Bob 4 Space",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 4 Space.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 4 Space.png"
+    },
+    {
+        "name": "Snail Bob 5 Love Story",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 5 Love Story.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 5 Love Story.png"
+    },
+    {
+        "name": "Snail Bob 6 Winter Story",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 6 Winter Story.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 6 Winter Story.png"
+    },
+    {
+        "name": "Snail Bob 7 Fantasy Story",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob 7 Fantasy Story.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob 7 Fantasy Story.png"
+    },
+    {
+        "name": "Snail Bob",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Snail Bob.swf&system=swf",
+        "thumb": "assets/thumbnails/Snail Bob.png"
+    },
+    {
+        "name": "Sniper Assassin 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Assassin 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Assassin 2.png"
+    },
+    {
+        "name": "Sniper Assassin 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Assassin 3.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Assassin 3.png"
+    },
+    {
+        "name": "Sniper Assassin 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Assassin 4.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Assassin 4.png"
+    },
+    {
+        "name": "Sniper Assassin 5",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Assassin 5.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Assassin 5.png"
+    },
+    {
+        "name": "Sniper Assassin",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Assassin.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Assassin.png"
+    },
+    {
+        "name": "Sniper Team",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sniper Team.swf&system=swf",
+        "thumb": "assets/thumbnails/Sniper Team.png"
+    },
+    {
+        "name": "Sonic Lost In Mario World",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sonic-Lost-In-Mario-World.swf&system=swf",
+        "thumb": "assets/thumbnails/Sonic-Lost-In-Mario-World.png"
+    },
+    {
+        "name": "Space Flash Arena",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Space Flash Arena.swf&system=swf",
+        "thumb": "assets/thumbnails/Space Flash Arena.png"
+    },
+    {
+        "name": "Stealing The Diamond RIGHT CLICK THEN CLICK PLAY",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Stealing_The_Diamond_RIGHT_CLICK_THEN_CLICK_PLAY.swf&system=swf",
+        "thumb": "assets/thumbnails/Stealing_The_Diamond_RIGHT_CLICK_THEN_CLICK_PLAY.png"
+    },
+    {
+        "name": "Stick War",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Stick War.swf&system=swf",
+        "thumb": "assets/thumbnails/Stick War.png"
+    },
+    {
+        "name": "Stick Squad",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Stick_Squad.swf&system=swf",
+        "thumb": "assets/thumbnails/Stick_Squad.png"
+    },
+    {
+        "name": "Stick Squad Hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Stick_Squad_Hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/Stick_Squad_Hacked.png"
+    },
+    {
+        "name": "Stickman Badminton",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Stickman-Badminton.swf&system=swf",
+        "thumb": "assets/thumbnails/Stickman-Badminton.png"
+    },
+    {
+        "name": "Super Mario 63",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super Mario 63.swf&system=swf",
+        "thumb": "assets/thumbnails/Super Mario 63.png"
+    },
+    {
+        "name": "Super Mario Flash",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super Mario Flash.swf&system=swf",
+        "thumb": "assets/thumbnails/Super Mario Flash.png"
+    },
+    {
+        "name": "Super Smash Flash",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super Smash Flash.swf&system=swf",
+        "thumb": "assets/thumbnails/Super Smash Flash.png"
+    },
+    {
+        "name": "Super Sudoku 2011",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super Sudoku 2011.swf&system=swf",
+        "thumb": "assets/thumbnails/Super Sudoku 2011.png"
+    },
+    {
+        "name": "Super Drift 3D",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super-Drift-3D.swf&system=swf",
+        "thumb": "assets/thumbnails/Super-Drift-3D.png"
+    },
+    {
+        "name": "Super Mario Crossover 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Super-Mario-Crossover-2.swf&system=swf",
+        "thumb": "assets/thumbnails/Super-Mario-Crossover-2.png"
+    },
+    {
+        "name": "Sushi Cat",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Sushi_Cat.swf&system=swf",
+        "thumb": "assets/thumbnails/Sushi_Cat.png"
+    },
+    {
+        "name": "Swords and Sandals 2 (Full)",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Swords and Sandals 2 (Full).swf&system=swf",
+        "thumb": "assets/thumbnails/Swords and Sandals 2 (Full).png"
+    },
+    {
+        "name": "T Rex",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/T-Rex.swf&system=swf",
+        "thumb": "assets/thumbnails/T-Rex.png"
+    },
+    {
+        "name": "The Grim Adventures of Billy and Mandy   Magnet Face",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Grim Adventures of Billy and Mandy - Magnet Face.swf&system=swf",
+        "thumb": "assets/thumbnails/The Grim Adventures of Billy and Mandy - Magnet Face.png"
+    },
+    {
+        "name": "The Grim Adventures of Billy and Mandy   The Fright Before Christmas",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Grim Adventures of Billy and Mandy - The Fright Before Christmas.swf&system=swf",
+        "thumb": "assets/thumbnails/The Grim Adventures of Billy and Mandy - The Fright Before Christmas.png"
+    },
+    {
+        "name": "The Impossible Quiz",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Impossible Quiz.swf&system=swf",
+        "thumb": "assets/thumbnails/The Impossible Quiz.png"
+    },
+    {
+        "name": "The Last Stand 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Last Stand 2.swf&system=swf",
+        "thumb": "assets/thumbnails/The Last Stand 2.png"
+    },
+    {
+        "name": "The Last Stand 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Last Stand 3.swf&system=swf",
+        "thumb": "assets/thumbnails/The Last Stand 3.png"
+    },
+    {
+        "name": "The Last Stand",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The Last Stand.swf&system=swf",
+        "thumb": "assets/thumbnails/The Last Stand.png"
+    },
+    {
+        "name": "The World's Hardest Game 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The World's Hardest Game 2.swf&system=swf",
+        "thumb": "assets/thumbnails/The World's Hardest Game 2.png"
+    },
+    {
+        "name": "The World's Hardest Game 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The World's Hardest Game 3.swf&system=swf",
+        "thumb": "assets/thumbnails/The World's Hardest Game 3.png"
+    },
+    {
+        "name": "The World's Hardest Game",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/The World's Hardest Game.swf&system=swf",
+        "thumb": "assets/thumbnails/The World's Hardest Game.png"
+    },
+    {
+        "name": "This is the only level too",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/This is the only level too.swf&system=swf",
+        "thumb": "assets/thumbnails/This is the only level too.png"
+    },
+    {
+        "name": "This is the only level",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/This is the only level.swf&system=swf",
+        "thumb": "assets/thumbnails/This is the only level.png"
+    },
+    {
+        "name": "Tom and Jerry   Refriger Raiders",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Tom and Jerry - Refriger-Raiders.swf&system=swf",
+        "thumb": "assets/thumbnails/Tom and Jerry - Refriger-Raiders.png"
+    },
+    {
+        "name": "Tom and Jerry   Tom's Trap O Matic",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Tom and Jerry - Tom's Trap-O-Matic.swf&system=swf",
+        "thumb": "assets/thumbnails/Tom and Jerry - Tom's Trap-O-Matic.png"
+    },
+    {
+        "name": "Truck Loader 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Truck Loader 2.swf&system=swf",
+        "thumb": "assets/thumbnails/Truck Loader 2.png"
+    },
+    {
+        "name": "Truck Loader 4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Truck Loader 4.swf&system=swf",
+        "thumb": "assets/thumbnails/Truck Loader 4.png"
+    },
+    {
+        "name": "Ultimate Flash Sonic",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Ultimate Flash Sonic.swf&system=swf",
+        "thumb": "assets/thumbnails/Ultimate Flash Sonic.png"
+    },
+    {
+        "name": "Unfair Mario",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Unfair-Mario.swf&system=swf",
+        "thumb": "assets/thumbnails/Unfair-Mario.png"
+    },
+    {
+        "name": "Upgrade Complete",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Upgrade Complete.swf&system=swf",
+        "thumb": "assets/thumbnails/Upgrade Complete.png"
+    },
+    {
+        "name": "Video Game The Game",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Video Game The Game.swf&system=swf",
+        "thumb": "assets/thumbnails/Video Game The Game.png"
+    },
+    {
+        "name": "Weapon   Black Hawk",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Weapon - Black Hawk.swf&system=swf",
+        "thumb": "assets/thumbnails/Weapon - Black Hawk.png"
+    },
+    {
+        "name": "Worm Food",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/Worm-Food.swf&system=swf",
+        "thumb": "assets/thumbnails/Worm-Food.png"
+    },
+    {
+        "name": "billiards",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/billiards.swf&system=swf",
+        "thumb": "assets/thumbnails/billiards.png"
+    },
+    {
+        "name": "bitdungeon",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/bitdungeon.swf&system=swf",
+        "thumb": "assets/thumbnails/bitdungeon.png"
+    },
+    {
+        "name": "btd5hacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/btd5hacked.swf&system=swf",
+        "thumb": "assets/thumbnails/btd5hacked.png"
+    },
+    {
+        "name": "chess",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/chess.swf&system=swf",
+        "thumb": "assets/thumbnails/chess.png"
+    },
+    {
+        "name": "chibiknight",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/chibiknight.swf&system=swf",
+        "thumb": "assets/thumbnails/chibiknight.png"
+    },
+    {
+        "name": "clickerheroes",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/clickerheroes.swf&system=swf",
+        "thumb": "assets/thumbnails/clickerheroes.png"
+    },
+    {
+        "name": "clickerheroeshacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/clickerheroeshacked.swf&system=swf",
+        "thumb": "assets/thumbnails/clickerheroeshacked.png"
+    },
+    {
+        "name": "dagobah Str1ke Force Heroes",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/dagobah_Str1ke_Force_Heroes.swf&system=swf",
+        "thumb": "assets/thumbnails/dagobah_Str1ke_Force_Heroes.png"
+    },
+    {
+        "name": "dreamcarracing",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/dreamcarracing.swf&system=swf",
+        "thumb": "assets/thumbnails/dreamcarracing.png"
+    },
+    {
+        "name": "duck life4",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/duck-life4.swf&system=swf",
+        "thumb": "assets/thumbnails/duck-life4.png"
+    },
+    {
+        "name": "ducklife2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ducklife2.swf&system=swf",
+        "thumb": "assets/thumbnails/ducklife2.png"
+    },
+    {
+        "name": "ducklife3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/ducklife3.swf&system=swf",
+        "thumb": "assets/thumbnails/ducklife3.png"
+    },
+    {
+        "name": "escapingtheprison",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/escapingtheprison.swf&system=swf",
+        "thumb": "assets/thumbnails/escapingtheprison.png"
+    },
+    {
+        "name": "fancypantsadventure",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/fancypantsadventure.swf&system=swf",
+        "thumb": "assets/thumbnails/fancypantsadventure.png"
+    },
+    {
+        "name": "finalninja",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/finalninja.swf&system=swf",
+        "thumb": "assets/thumbnails/finalninja.png"
+    },
+    {
+        "name": "flappy bird",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/flappy-bird.swf&system=swf",
+        "thumb": "assets/thumbnails/flappy-bird.png"
+    },
+    {
+        "name": "frogger",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/frogger.swf&system=swf",
+        "thumb": "assets/thumbnails/frogger.png"
+    },
+    {
+        "name": "geometrydash",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/geometrydash.swf&system=swf",
+        "thumb": "assets/thumbnails/geometrydash.png"
+    },
+    {
+        "name": "geometrydashtest1",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/geometrydashtest1.swf&system=swf",
+        "thumb": "assets/thumbnails/geometrydashtest1.png"
+    },
+    {
+        "name": "getontop",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/getontop.swf&system=swf",
+        "thumb": "assets/thumbnails/getontop.png"
+    },
+    {
+        "name": "give up 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/give-up-2.swf&system=swf",
+        "thumb": "assets/thumbnails/give-up-2.png"
+    },
+    {
+        "name": "give up robot 2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/give_up_robot_2.swf&system=swf",
+        "thumb": "assets/thumbnails/give_up_robot_2.png"
+    },
+    {
+        "name": "gunmayhem2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/gunmayhem2.swf&system=swf",
+        "thumb": "assets/thumbnails/gunmayhem2.png"
+    },
+    {
+        "name": "i saw her too, with lasers",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/i saw her too, with lasers.swf&system=swf",
+        "thumb": "assets/thumbnails/i saw her too, with lasers.png"
+    },
+    {
+        "name": "idlewebtycoon",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/idlewebtycoon.swf&system=swf",
+        "thumb": "assets/thumbnails/idlewebtycoon.png"
+    },
+    {
+        "name": "impossiblequiz",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/impossiblequiz.swf&system=swf",
+        "thumb": "assets/thumbnails/impossiblequiz.png"
+    },
+    {
+        "name": "impossiblequiz2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/impossiblequiz2.swf&system=swf",
+        "thumb": "assets/thumbnails/impossiblequiz2.png"
+    },
+    {
+        "name": "impossiblequizhacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/impossiblequizhacked.swf&system=swf",
+        "thumb": "assets/thumbnails/impossiblequizhacked.png"
+    },
+    {
+        "name": "indestructotank",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/indestructotank.swf&system=swf",
+        "thumb": "assets/thumbnails/indestructotank.png"
+    },
+    {
+        "name": "jacksmith",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/jacksmith.swf&system=swf",
+        "thumb": "assets/thumbnails/jacksmith.png"
+    },
+    {
+        "name": "learn to fly 3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/learn-to-fly-3.swf&system=swf",
+        "thumb": "assets/thumbnails/learn-to-fly-3.png"
+    },
+    {
+        "name": "learntofly",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/learntofly.swf&system=swf",
+        "thumb": "assets/thumbnails/learntofly.png"
+    },
+    {
+        "name": "learntofly2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/learntofly2.swf&system=swf",
+        "thumb": "assets/thumbnails/learntofly2.png"
+    },
+    {
+        "name": "miraginewar",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/miraginewar.swf&system=swf",
+        "thumb": "assets/thumbnails/miraginewar.png"
+    },
+    {
+        "name": "multitask",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/multitask.swf&system=swf",
+        "thumb": "assets/thumbnails/multitask.png"
+    },
+    {
+        "name": "n",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/n.swf&system=swf",
+        "thumb": "assets/thumbnails/n.png"
+    },
+    {
+        "name": "obeythegame",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/obeythegame.swf&system=swf",
+        "thumb": "assets/thumbnails/obeythegame.png"
+    },
+    {
+        "name": "papalouie v2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papalouie_v2.swf&system=swf",
+        "thumb": "assets/thumbnails/papalouie_v2.png"
+    },
+    {
+        "name": "papalouie whenburgersattack",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papalouie_whenburgersattack.swf&system=swf",
+        "thumb": "assets/thumbnails/papalouie_whenburgersattack.png"
+    },
+    {
+        "name": "papasbakeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papasbakeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papasbakeria.png"
+    },
+    {
+        "name": "papasburgeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papasburgeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papasburgeria.png"
+    },
+    {
+        "name": "papasdonuteria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papasdonuteria.swf&system=swf",
+        "thumb": "assets/thumbnails/papasdonuteria.png"
+    },
+    {
+        "name": "papasfreezeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papasfreezeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papasfreezeria.png"
+    },
+    {
+        "name": "papashotdoggeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papashotdoggeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papashotdoggeria.png"
+    },
+    {
+        "name": "papaspizzeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papaspizzeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papaspizzeria.png"
+    },
+    {
+        "name": "papasscooperia",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papasscooperia.swf&system=swf",
+        "thumb": "assets/thumbnails/papasscooperia.png"
+    },
+    {
+        "name": "papassushiria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papassushiria.swf&system=swf",
+        "thumb": "assets/thumbnails/papassushiria.png"
+    },
+    {
+        "name": "papaswingeria",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/papaswingeria.swf&system=swf",
+        "thumb": "assets/thumbnails/papaswingeria.png"
+    },
+    {
+        "name": "qwop",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/qwop.swf&system=swf",
+        "thumb": "assets/thumbnails/qwop.png"
+    },
+    {
+        "name": "raze2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/raze2.swf&system=swf",
+        "thumb": "assets/thumbnails/raze2.png"
+    },
+    {
+        "name": "raze3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/raze3.swf&system=swf",
+        "thumb": "assets/thumbnails/raze3.png"
+    },
+    {
+        "name": "run 3 unblocked games 1531491672",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/run-3-unblocked-games_1531491672.swf&system=swf",
+        "thumb": "assets/thumbnails/run-3-unblocked-games_1531491672.png"
+    },
+    {
+        "name": "run3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/run3.swf&system=swf",
+        "thumb": "assets/thumbnails/run3.png"
+    },
+    {
+        "name": "sportsheadsbasketballchampionship",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/sportsheadsbasketballchampionship.swf&system=swf",
+        "thumb": "assets/thumbnails/sportsheadsbasketballchampionship.png"
+    },
+    {
+        "name": "sportsheadssoccer",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/sportsheadssoccer.swf&system=swf",
+        "thumb": "assets/thumbnails/sportsheadssoccer.png"
+    },
+    {
+        "name": "sportsheadstennis",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/sportsheadstennis.swf&system=swf",
+        "thumb": "assets/thumbnails/sportsheadstennis.png"
+    },
+    {
+        "name": "sportsheadsvolleyball",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/sportsheadsvolleyball.swf&system=swf",
+        "thumb": "assets/thumbnails/sportsheadsvolleyball.png"
+    },
+    {
+        "name": "stealingthediamond",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/stealingthediamond.swf&system=swf",
+        "thumb": "assets/thumbnails/stealingthediamond.png"
+    },
+    {
+        "name": "stickrpg",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/stickrpg.swf&system=swf",
+        "thumb": "assets/thumbnails/stickrpg.png"
+    },
+    {
+        "name": "stickwar",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/stickwar.swf&system=swf",
+        "thumb": "assets/thumbnails/stickwar.png"
+    },
+    {
+        "name": "stickwar2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/stickwar2.swf&system=swf",
+        "thumb": "assets/thumbnails/stickwar2.png"
+    },
+    {
+        "name": "str1ke force heroes",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/str1ke-force-heroes.swf&system=swf",
+        "thumb": "assets/thumbnails/str1ke-force-heroes.png"
+    },
+    {
+        "name": "str1keforceheroes3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/str1keforceheroes3.swf&system=swf",
+        "thumb": "assets/thumbnails/str1keforceheroes3.png"
+    },
+    {
+        "name": "superfighters",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/superfighters.swf&system=swf",
+        "thumb": "assets/thumbnails/superfighters.png"
+    },
+    {
+        "name": "superfightersultimate",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/superfightersultimate.swf&system=swf",
+        "thumb": "assets/thumbnails/superfightersultimate.png"
+    },
+    {
+        "name": "supermario63",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/supermario63.swf&system=swf",
+        "thumb": "assets/thumbnails/supermario63.png"
+    },
+    {
+        "name": "supermarioflash",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/supermarioflash.swf&system=swf",
+        "thumb": "assets/thumbnails/supermarioflash.png"
+    },
+    {
+        "name": "supermarioflash2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/supermarioflash2.swf&system=swf",
+        "thumb": "assets/thumbnails/supermarioflash2.png"
+    },
+    {
+        "name": "swordsandsandals3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/swordsandsandals3.swf&system=swf",
+        "thumb": "assets/thumbnails/swordsandsandals3.png"
+    },
+    {
+        "name": "swordsandsouls",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/swordsandsouls.swf&system=swf",
+        "thumb": "assets/thumbnails/swordsandsouls.png"
+    },
+    {
+        "name": "tank trouble",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/tank-trouble.swf&system=swf",
+        "thumb": "assets/thumbnails/tank-trouble.png"
+    },
+    {
+        "name": "territorywar",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/territorywar.swf&system=swf",
+        "thumb": "assets/thumbnails/territorywar.png"
+    },
+    {
+        "name": "tetris",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/tetris.swf&system=swf",
+        "thumb": "assets/thumbnails/tetris.png"
+    },
+    {
+        "name": "the game",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/the game.swf&system=swf",
+        "thumb": "assets/thumbnails/the game.png"
+    },
+    {
+        "name": "the binding of isaac",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/the_binding_of_isaac.swf&system=swf",
+        "thumb": "assets/thumbnails/the_binding_of_isaac.png"
+    },
+    {
+        "name": "thefloodrunner2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/thefloodrunner2.swf&system=swf",
+        "thumb": "assets/thumbnails/thefloodrunner2.png"
+    },
+    {
+        "name": "thelaststandunion",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/thelaststandunion.swf&system=swf",
+        "thumb": "assets/thumbnails/thelaststandunion.png"
+    },
+    {
+        "name": "themehotel",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/themehotel.swf&system=swf",
+        "thumb": "assets/thumbnails/themehotel.png"
+    },
+    {
+        "name": "themehotelhacked",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/themehotelhacked.swf&system=swf",
+        "thumb": "assets/thumbnails/themehotelhacked.png"
+    },
+    {
+        "name": "unfairmario",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/unfairmario.swf&system=swf",
+        "thumb": "assets/thumbnails/unfairmario.png"
+    },
+    {
+        "name": "uno",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/uno.swf&system=swf",
+        "thumb": "assets/thumbnails/uno.png"
+    },
+    {
+        "name": "vex",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/vex.swf&system=swf",
+        "thumb": "assets/thumbnails/vex.png"
+    },
+    {
+        "name": "zombocalyps3",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/zombocalyps3.swf&system=swf",
+        "thumb": "assets/thumbnails/zombocalyps3.png"
+    },
+    {
+        "name": "zombocalyps32",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/zombocalyps32.swf&system=swf",
+        "thumb": "assets/thumbnails/zombocalyps32.png"
+    },
+    {
+        "name": "zombocalypse2",
+        "category": "swf",
+        "badgeClass": "swf",
+        "file": "players/swf.html?game=swf/zombocalypse2.swf&system=swf",
+        "thumb": "assets/thumbnails/zombocalypse2.png"
+    }
+]
